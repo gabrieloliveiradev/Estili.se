@@ -13,11 +13,21 @@
 </head>
 
 <body>
-    <div>
-
-        <!-- Começo da nav falsa/temporária -->
-        <div style="width: 100%; height: 100px; background-color: salmon;"></div>
-        <!-- Fim da nav falsa/temporária -->
+        <!-- Começo da nav -->
+        <nav id="nav-bar">
+            <div id="logo">
+                <img id="logo-img" src="./assets/img/logo@2x.png" alt="">
+            </div>
+            <div id="nav-botao">
+                <button>
+                    Login
+                </button>
+                <button>
+                    Cadastro
+                </button>
+            </div>
+        </nav>
+        <!-- Fim da nav -->
 
         <div class="caixa">
             <h1 class="titulo">Nossa História</h1>
@@ -34,6 +44,7 @@
                     criatividade e ao mesmo tempo em que atinge a satisfação.</p>
         </div>
 
+        <!-- Começo do carrossel     -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -76,7 +87,44 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+        <!-- Fim do carrossel     -->
+
+        <!-- Começo do footer     -->
+        <footer id="rodape">
+            <div id="endereco">
+                <section id=endereco-info>
+                    <h3>Endereço</h3>
+                    <p>Rua Tito, Vila Romana</p>
+                    <p>São Paulo</p>
+                    <img src="./assets/img/local.png" alt="">
+                </section>
+            </div>
+            <div id="redes">
+                <h3>Redes Sociais</h3>
+                <div class="redes-img">
+                    <img src="./assets/img/face.png" alt="">
+                    <img src="./assets/img/insta.png" alt="">
+                    <img src="./assets/img/youtube.png" alt="">
+                </div>
+                <div class="redes-img">
+                    <img src="./assets/img/twitter.png" alt="">
+                    <img src="./assets/img/linkedin.png" alt="">
+                    <img src="./assets/img/github.png" alt="">
+                </div>
+            </div>
+            <div id="paginas">
+                <h3>Páginas do site</h3>
+                <div id="div-lista">
+                    <li>Home</li>
+                    <li>Quem Somos</li>
+                    <li>Contato</li>
+                    <li>Produtos</li>
+                    <li>Trabalhe Conosco</li>
+                    <li>Corpyright &copy;</li>
+                </div>
+            </div>
+        </footer>
+        <!-- Fim do footer     -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
