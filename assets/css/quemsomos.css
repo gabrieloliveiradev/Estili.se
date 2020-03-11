@@ -4,9 +4,20 @@
     padding: 0;
 }
 
-h1 {
-    top: 208px;
-    left: 762px;
-    width: 397px;
-    height: 108px;
+.titulo {
+    text-align: center;
+    font-size: 90px;
+    padding: 30px;
+    font-family: 'Cookie', cursive;
+}
+
+.textoQuemSomos {
+    margin: 2% 5% 8% 5%;    
+}
+
+p {
+    text-align: left;
+    line-height: 195%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
 }
