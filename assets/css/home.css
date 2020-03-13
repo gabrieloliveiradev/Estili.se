@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 110px;
+    width: 100%;
+    background-color: none;
+    position: fixed;
+    z-index: 16;
+}
+
+#nav_bar_depois {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 110px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 16;
+}
+
+#logo_nav {
+    font-size: 98px;
+    font-family: 'Cookie', cursive;
+    color:white;
+    width: 33%;
+    text-align: center;
+}
+#nav_links {
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+}
+#nav_botoes{
+    width: 33%;
+    text-align: center;
+}
+#nav_links > a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+#nav_links >a:hover{
+    border-bottom: #168591 2px solid;
+}
+
+span {
+    color:#168591;
+}
+#header_principal{
+    background-image: url("../img/imagem_header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#titulo_header {
+    font-size: 180px;
+    color: white;
+    font-family: 'Cookie', cursive;
+}
+#texto_header{
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#botao_cadastro, #botao_login {
+    background-color:none;
+    border-color: #168591;
+    border:20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    list-style: none;
+}
+main {
+    height: 500px;
+}
+#section1, #section2 {
+    width: 40%;
+}
+
+#botao_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#botao_header > button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: #168591;
+    border: 0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;;
+}
