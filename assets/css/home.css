@@ -47,7 +47,7 @@
     font-family: 'Roboto', sans-serif;
 }
 #nav_links >a:hover{
-    border-bottom: #168591 2px solid;
+     color: #168591;
 }
 
 span {
