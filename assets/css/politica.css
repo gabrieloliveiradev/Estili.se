@@ -9,8 +9,17 @@ section{
     width: 100%;
 }
 h1{
-    text-align: center;
+    text-align: center;    
+    font-weight: 300;
+    line-height: 1.65;
+    color: #565961;
+    font-size: 33px;
+    padding-top: 8em;
+    font-family: 'Cookie', cursive;
+    font-size: 50px;
+    
 }
+
 article{
     /* width: 100%;
     height: 524px; */
@@ -31,15 +40,16 @@ aside{
     justify-content: center;
     align-items: center;
 }
-img{
+.imgPoliticaPrivacidade{
     width: 21rem;
 }
-h3{
-    margin-bottom: 13px;
-}
 .txt{
-    text-align: justify;
-    /* margin-left: 10%;*/
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #565961;
+    text-align: left;
 }
 .imagemPoliticaPrivacidade{
     display: flex;
@@ -47,11 +57,11 @@ h3{
     align-items: center;
     height: 500px;
 }
-.mudarTamanhoArticle{
-    height: 676px;
+.sessaoServicos-e-Divulgacao{
+    margin-bottom: 11em;
 }
 .sessaoConsentimento{
-    height: 715px;
+    margin-bottom: 11em;
 
 }
 .paddingDireita{
@@ -59,4 +69,26 @@ h3{
 }
 .paddingEsquerda{
     padding-left: 13px;
+}
+.divsubtitulo{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 39px;
+}
+.subtitulo{
+    width: 76%;
+    font-size: 16px;
+}
+.h3sessao{
+    margin-bottom: 13px;
+    margin-top: 13px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #2f3031;
+}
+#sessaoDivulgacao{
+    margin-top: 11em;
 }
