@@ -3,47 +3,69 @@
     margin: 0;
     padding: 0;
 }
-#nav-bar {
-    background-color: #ECA4A6;
-    height: 90px;
+
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 110px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#logo {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 40px;
-}
-#logo-img {
-    width:auto;
-    height: 60%;
-}
-#nav-botao {
-    width: 30%;
-}
-#nav-botao > button {
-    list-style: none;
-    background-color: white;
-    border: 0;
-    float: left;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ECA4A6;
-    font-size: 25px;
+    background-color: black;
+    position: fixed;
+    z-index: 16;
 }
 
-button:first-child {
-    width: 20%;
-    height: 45px;
+#logo_nav {
+    width: 17%;
+    height: 75%;
 }
-button:nth-child(2) {
-    width: 30%;
-    height: 45px;
-    margin-left: 10px;
+#logo_nav > img {
+    width: 100%;
+    height: 100%;
+}
+#nav_links {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+}
+#nav_botoes{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav_botao{
+    width: 45%;
+    height: 30%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#botao_cadastro {
+    background-color: none;
+    border: white 2px solid;
+}
+#botao_cadastro > a {
+    color: white;
+}
+#botao_login, #botao_login > a {
+    background-color: white;
+    color: black;
+}
+.nav_botao > a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+#nav_links > a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+#nav_links >a:hover{
+    color: #168591;
 }
 
 #espaco {
@@ -54,7 +76,7 @@ button:nth-child(2) {
 #rodape {
     width: 100%;
     height: 300px;
-    background-color: #ECA4A6;
+    background-color: black;
     display: flex;
     justify-content: space-around;
 }
