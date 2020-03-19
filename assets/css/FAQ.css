@@ -31,3 +31,7 @@ header > h1 {
 .btn {
     color: black;
 }
+
+.btn:hover {
+    color: black;
+}
