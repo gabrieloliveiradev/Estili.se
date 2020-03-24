@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+@media screen and (max-width: 300px){}
+
+@media screen and (max-width: 600px){}
 #nav_bar {
     display: flex;
     align-items: center;
@@ -26,7 +29,7 @@
 }
 
 #logo_nav {
-    font-size: 98px;
+    font-size: 60px;
     font-family: 'Cookie', cursive;
     color:white;
     width: 33%;
@@ -102,9 +105,52 @@ main {
     width: 200px;
     height: 50px;
     color: white;
-    background-color: #168591;
+    background-color: #8daaad;
     border: 0;
     border-radius: 3px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #168591;
+    font-family: 'Cookie', cursive;
+    
+}
+.card-deck{
+    text-align: center;
+    font-size: 20px;
+    
+}
+.card{
+    width: 80px;
+    height: 550px;
+    text-align: center;
+    border: dotted 20%;
+    border-color:#168591;
+    font-size: 20px;
+    
+}
+h5{
+    color: #168591;
+}
+#moto{
+    margin-top: 40%;
+    margin-left: 25%;
+    width: 180px;
+    height: 180px;
+    position:relative;}
+#Maquina{
+    margin-top: 40%;
+    margin-left: 25%;
+    width: 180px;
+    height: 180px;
+}
+#vestido{
+    margin-top: 40%;
+    margin-left: 25%;
+    text-align: center;
+    width: 180px;
+    height: 180px;
 }
