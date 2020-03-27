@@ -4,61 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/nav_footer.css">
     <title>Nav_Footer</title>
     <link rel="icon" href="">
 </head>
 <body>
-    <nav id="nav_bar">
-        <div id="logo_nav"><img src="./assets/img/logo.png" alt=""></div>
-        <div id="nav_links">
-            <a href="#">PRODUTOS &#8227;</a>
-            <a href="#">QUEM SOMOS &#8227;</a>
-            <a href="#">CONTATO &#8227;</a>
-        </div>
-        <div id="nav_botoes">
-            <div class="nav_botao" id="botao_cadastro"><a href="">CADASTRO</a></div>
-            <div class="nav_botao" id="botao_login"><a href="">LOGIN</a></div>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#"><img src="./assets/img/logo.svg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./assets/img/menu.svg" alt="" class="navbar-toggler-icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link d-flex justify-content-center" href="#">PRODUTOS <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-center" href="#">QUEM SOMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-center" href="#">CONTATO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item d-flex justify-content-center w-100%">
+                    <a href="#" class="btn btn-outline-light mr-md-2 mb-2 d-flex justify-content-center">LOGIN</a>
+                </li>
+                <li class="nav-item  ml-auto mr-auto w-100%">
+                    <a href="#" class="btn btn-light mr-2 d-flex justify-content-center" style="max-width: 200px;">CADASTRE-SE</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    
-    <div style="background-color: white" id="espaco">
-        
-    </div>
-    
-    <footer id="rodape">
-        <div id="endereco">
-            <section id=endereco-info>
-                <h3>Endereço</h3>
-                <p>Rua Tito, Vila Romana</p>
-                <p>São Paulo</p>
-                <img src="./assets/img/local.png" alt="">
-            </section>
-        </div>
-        <div id="redes">
-            <h3>Redes Sociais</h3>
-            <div class="redes-img">
-                <img src="./assets/img/face.png" alt="">
-                <img src="./assets/img/insta.png" alt="">
-                <img src="./assets/img/youtube.png" alt="">
-            </div>
-            <div class="redes-img">
-                <img src="./assets/img/twitter.png" alt="">
-                <img src="./assets/img/linkedin.png" alt="">
-                <img src="./assets/img/github.png" alt="">
-            </div>
-        </div>
-        <div id="paginas">
-            <h3>Páginas do site</h3>
-            <div id="div-lista">
-                <li>Home</li>
-                <li>Quem Somos</li>
-                <li>Contato</li>
-                <li>Produtos</li>
-                <li>Trabalhe Conosco</li>
-                <li>Corpyright &copy;</li>
+    <div id="espaco"></div>
+    <footer>
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-md-4">
+                    <h5>ENDEREÇO</h5>
+                    <h6>Rua Tito, Vila Romana</h6>
+                    <h6>São Paulo</h6>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14632.496579342622!2d-46.6918087!3d-23.5280369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1585254746762!5m2!1spt-BR!2sbr" width="95%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-md-4">
+                    <div class="row justify-content-center">
+                        <h5>REDES SOCIAIS</h5>
+                    </div>
+                    <div class="mb-auto d-flex flex-column justify-content-center" >
+                        <div class="row justify-content-center p-0">
+                            <div class="col-4 mb-3">
+                                <a href="">
+                                    <img src="./assets/img/twitter.png" alt="">
+                                </a> 
+                            </div>
+                            <div class="col-4">
+                                <a href="">
+                                    <img src="./assets/img/face.png" alt="">
+                                </a> 
+                            </div>
+                            <div class="col-4">
+                                <a href="">
+                                    <img src="./assets/img/youtube.png" alt="">
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="row justify-content-center p-0">
+                            <div class="col-4">
+                                <a href="">
+                                    <img src="./assets/img/github.png" alt="">
+                                </a> 
+                            </div>
+                            <div class="col-4">
+                                <a href="">
+                                    <img src="./assets/img/linkedin.png" alt="">
+                                </a> 
+                            </div>
+                            <div class="col-4">
+                                <a href="">
+                                    <img src="./assets/img/insta.png" alt="">
+                                </a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>PÁGINAS DO SITE</h5>
+                    <h6> Rua Tito, Vila Romana</h6>
+                    <h6>São Paulo</h6>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
