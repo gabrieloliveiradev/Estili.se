@@ -1,0 +1,17 @@
+footer {
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+h6 > a {
+    color: white;
+}
+
+h6 > a:hover {
+    color: white;
+}
+
+#copyright {
+    background-color: black;
+    color: white;
+}

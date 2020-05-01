@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover{
+    color: #168591;
+}
+
+.nav-item > .btn-outline-light:hover{
+    background-color: #168591;
+    border: #168591;
+}
+
+.nav-item > .btn-light:hover{
+    background-color: #168591;
+    border: #168591;
+}
