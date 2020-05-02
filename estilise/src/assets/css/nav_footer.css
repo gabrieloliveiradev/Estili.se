@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover{
+    color: #168591;
+}
+
+.nav-item > .btn-outline-light:hover{
+    background-color: #168591;
+    border: #168591;
+}
+
+.nav-item > .btn-light:hover{
+    background-color: #168591;
+    border: #168591;
+}
+
+#espaco {
+    height: 500px;
+}
+
+footer {
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+h6 > a {
+    color: white;
+}
+
+h6 > a:hover {
+    color: white;
+}
+
+#copyright {
+    background-color: black;
+    color: white;
+}

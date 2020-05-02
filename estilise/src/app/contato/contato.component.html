@@ -1,0 +1,100 @@
+<body>
+    <!-- <main style="background-color: ghostwhite;"> -->
+    <!-- Nav -->
+    <nav id="nav-bar">
+        <div id="logo">
+            <img id="logo-img" src="./assets/img/logo@2x.png" alt="">
+        </div>
+        <div id="nav-botao">
+            <button>
+                Login
+            </button>
+            <button>
+                Cadastro
+            </button>
+        </div>
+    </nav>
+    <!-- Fim da Nav -->
+
+    <!-- Abre container -->
+
+    <div>
+        <div class="jumbotron" style="width: 50%; height: 50%;">
+            <form style="width: 90%; height: 90%;">
+                <h1>Fale conosco</h1>
+                <br><br>
+                <label for="">Nome completo</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">E-mail </label>
+                    <input type="email" class="form-control" id="email"
+                        placeholder="name@exemplo.com">
+                </div>
+
+                <label for="">Telefone</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="tel" class="form-control" id="telefone" placeholder=" (00) 00000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Mensagem</label>
+                    <textarea class="form-control" id="mensagemContato" rows="3"
+                        placeholder="Digite sua mensagem..."></textarea>
+                </div>
+                <br><br>
+                <button type="submit" class="btn btn-outline-dark" id="validar">Enviar</button>
+                <button type="button" class="btn btn-outline-dark">Limpar</button>
+
+            </form>
+
+        </div>
+        <footer id="rodape">
+            <div id="endereco">
+                <section id=endereco-info>
+                    <h3>Endereço</h3>
+                    <p>Rua Tito, Vila Romana</p>
+                    <p>São Paulo</p>
+                </section>
+            </div>
+            <div id="redes">
+                <h3>Redes Sociais</h3>
+                <div class="redes-img">
+                    <img src="./assets/img/face.png" alt="">
+                    <img src="./assets/img/insta.png" alt="">
+                    <img src="./assets/img/youtube.png" alt="">
+                </div>
+                <div class="redes-img">
+                    <img src="./assets/img/twitter.png" alt="">
+                    <img src="./assets/img/linkedin.png" alt="">
+                    <img src="./assets/img/github.png" alt="">
+                </div>
+            </div>
+            <div id="paginas">
+                <h3>Páginas do site</h3>
+                <div id="div-lista">
+                    <li>Home</li>
+                    <li>Quem Somos</li>
+                    <li>Contato</li>
+                    <li>Produtos</li>
+                    <li>Trabalhe Conosco</li>
+                    <li>Corpyright &copy;</li>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Fecha container -->
+    <!-- </main> -->
+    <script src="/assets/js/bootstrap.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/contato.js"></script>
+</body>

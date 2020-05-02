@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 90px;
+    padding: 30px;
+    font-family: 'Cookie', cursive;
+}
+
+.textoQuemSomos {
+    margin: 2% 5% 8% 5%;    
+}
+
+p {
+    text-align: left;
+    line-height: 195%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
