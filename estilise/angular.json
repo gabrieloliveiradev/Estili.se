@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "estilise"
+    }
+  },
+  "defaultProject": "estilise",
+  "cli": {
+    "analytics": false
+  }
 }
