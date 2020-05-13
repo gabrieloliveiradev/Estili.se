@@ -22,16 +22,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],  
+            ],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/font-awesome/css/font-awesome.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
+              "./node_modules/popper.js/dist/umd/popper.min.js",
               "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./node_modules/popper.js/dist/umd/popper.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -129,6 +128,6 @@
   },
   "defaultProject": "estilise",
   "cli": {
-    "analytics": "56b88731-eb4d-4885-a88e-56b8e1cbc459"
+    "analytics": "149255e7-6d28-4740-992c-d4d3a5dd8737"
   }
 }

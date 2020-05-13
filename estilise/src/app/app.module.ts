@@ -10,7 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { QuemsomosComponent } from './quemsomos/quemsomos.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavComponent,
     FooterComponent,
     PoliticaComponent,
-    QuemsomosComponent
+    QuemsomosComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
