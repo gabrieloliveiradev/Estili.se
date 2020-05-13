@@ -1,10 +1,8 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+main{
+    height: 270em;
 }
 article{
-    height: 600px;
+    height: 483px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -16,57 +14,83 @@ aside{
     justify-content: center;
     align-items: center;
 }
-.tituloPoliticaPrivacidade{
-    font-weight: 300;
-    line-height: 1.65;
-    color: #565961;
-    font-size: 50px;
-}
 
+
+/* -------------- animação ---------------------------*/
+@keyframes subirAbaixar{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+}
 .imgPoliticaPrivacidade{
     width: 21rem;
+    margin-bottom: 20px;
+    animation-name: subirAbaixar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* -------------- fim da animação ---------------------------*/
+
+/* Alterções nos textos */
+.tituloPoliticaPrivacidade, .h3sessao, .txt{
+    font-weight: 300;
+    line-height: 1.65;
+}
+.tituloPoliticaPrivacidade{
+    color: #565961;
+    font-size: 50px;
 }
 .txt{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16px;
-    font-weight: 300;
-    line-height: 1.65;
     color: #565961;
     text-align: left;
 }
+.subtitulo{
+    width: 76%;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #565961;
+}
+.h3sessao{
+    margin-bottom: 13px;
+    margin-top: 21px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #2f3031;
+    font-size: 24px;
+
+}
+/*  ------ fim da alterações em textos ------------- */
+
+/* Alterações nas imagens */
 .imagemPoliticaPrivacidade{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 500px;
 }
-.divsubtitulo{
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 39px;
-}
-.subtitulo{
-    width: 76%;
-    font-size: 16px;
-}
-.h3sessao{
-    margin-bottom: 13px;
-    margin-top: 13px;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-weight: 300;
-    line-height: 1.65;
-    color: #2f3031;
-}
+/* Configuração na sessão Divulgação */
 #sessaoDivulgacao{
-    margin-top: 11em;
+    margin-top: 13em;
 }
+
+/* Visibilidade de algumas sessões conforme responsividade */
 .visivel{
     visibility: hidden;
     display: none;
 }
-@media(max-width: 790px){
+
+
+/* Medias queries */
+@media(max-width:1000px){
+    main{
+        height: 421em;
+    }
     aside{
         height: 279px;
         width: 100%;
@@ -77,11 +101,11 @@ aside{
         align-items: center;
     }
     article{
-        height: 55em;
+        height: 55em!important;
         display: block;
     }
     .caixa-div-sessao{
-        width: 80%;
+        width: 85%;
     }
     .sessaoConsentimento, .invisivel{
         display: none;
@@ -91,7 +115,7 @@ aside{
         display: block!important;
     }
     .sessaoServicos-e-Divulgacao{
-        height: 80em;
+        height: 71em!important;
     }
     .centralizadoComMedia{
         display: flex;
@@ -102,5 +126,70 @@ aside{
     }
     .asideSessao3e6{
         height: 40em;
+    }
+    .subtitulo{
+        width: 100%!important;
+    }
+}
+@media(max-width:780px){
+    article{
+        height: 65em!important;
+    }
+    main{
+        height: 478em!important;
+    }
+    .h3sessao{
+        margin-top: 10em;
+    }
+    .sessaoServicos-e-Divulgacao{
+        height: 81em!important;
+    }
+    .caixa-div-sessao{
+        width: 100%!important;
+    }
+    .tituloPoliticaPrivacidade{
+        font-size: 40px;
+    }
+}
+@media(max-width: 520px){
+    main{
+        height: 489em!important;
+    }
+    .sessaoConsentimento{
+        height: 73em!important;
+    }
+    .tituloPoliticaPrivacidade{
+        font-size: 30px;
+    }
+}
+@media(max-width:420px){
+    main{
+        height: 510em!important;
+    }
+    .imgPoliticaPrivacidade{
+        width: 18rem;
+    }
+    .imgservicosConsentimento{
+        margin-bottom: 15em;
+    }
+    .h3sessao{
+        font-size: 20px;
+    }
+    .linhaservico{
+        margin-top: 15em!important;
+    }
+}
+@media(max-width:340px){
+    .imgservicos{
+        margin-bottom: 30em!important;
+    }
+    .linhaservico{
+        margin-top: 25em!important;
+    }
+    .imgPoliticaPrivacidade{
+        width: 13em!important;
+    }
+    .sessaoConsentimento{
+        height: 76em!important;
     }
 }
