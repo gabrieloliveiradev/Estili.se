@@ -10,6 +10,8 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { QuemsomosComponent } from './quemsomos/quemsomos.component';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { QuemsomosComponent } from './quemsomos/quemsomos.component';
     NavComponent,
     FooterComponent,
     PoliticaComponent,
-    QuemsomosComponent
+    QuemsomosComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
