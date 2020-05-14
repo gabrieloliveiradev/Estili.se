@@ -28,8 +28,17 @@ header > h1 {
 #collapse_costureiro {
     width: 60%;
 }
+
 .btn {
+    display: inline-block;
+    font-weight: btn-font-weight;
+    text-align: left;
+    white-space: normal;
+    vertical-align: middle;
+    user-select: none;
+    border: btn-border-width solid transparent;
     color: black;
+    text-decoration: none;
 }
 
 .btn:hover {
