@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { QuemsomosComponent } from './quemsomos/quemsomos.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { QuemsomosComponent } from './quemsomos/quemsomos.component';
     NavComponent,
     FooterComponent,
     PoliticaComponent,
-    QuemsomosComponent
+    QuemsomosComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
