@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { QuemsomosComponent } from './quemsomos/quemsomos.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ProdutoComponent } from './produto/produto.component';
     FooterComponent,
     PoliticaComponent,
     QuemsomosComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
