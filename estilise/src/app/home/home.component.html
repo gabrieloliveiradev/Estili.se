@@ -1,78 +1,57 @@
-<body >
-    <nav id="nav_bar">
-        <div id="logo_nav"></div>
-        <div id="nav_links">
-            <a href="">PRODUTOS &#8227;</a>
-            <a href="">QUEM SOMOS &#8227;</a>
-            <a href="">CONTATO &#8227;</a>
-        </div>
-        <div id="nav_botoes">
-            <button id="botao_cadastro">CADASTRO</button>
-            <button id="botao_login">LOGIN</button>
-        </div>
-    </nav>
-    <header id="header_principal">
-        <section id="section1">
-            <div id="titulo_header">Estili<span>.se</span></div>
-            <div id="texto_header">COMPRE E ENCOMENDE ROUPAS COM OS MELHORES <span> <strong> COSTUREIROS E ALFAIATES</strong></span> <br>PELO BRASIL.
-                <br>
-                <div id="botao_header">
-                    <button>VER PRODUTOS</button>
-                </div>
+<body>
+    <header class="container-fluid row justify-content-around" id="header">
+        <div class="col-5 d-flex flex-column justify-content-center align-items-start pl-5" id="header_esquerdo ">
+            <div class="img-header mb-5">
+                <img src="../../assets/img/logo.png" alt="">
             </div>
-            <br><br>
-            
-        </section>
-        <section id="section2">
-            
-        </section>
+            <p class="header-texto text-white">COMPRE E ENCOMENDE ROUPAS COM OS <span>MELHORES COSTUREIROS</span>  E ALFAIATES PELO BRASIL.</p>
+            <a href="" class="btn btn-estilise p-3 mt-1">VER PRODUTOS</a>
+        </div>
+        <div class="col-5 d-flex justify-content-center align-items-end">
+            <div class="arara-header mt-auto">
+                <img src="../../assets/img/arara.png" alt="" class="mt-auto">
+            </div>
+        </div>
     </header>
-    <main>
-        <br><br>
-        <h1>Uma Nova forma de Vestir</h1>
-        <br><br>
-        
-        <div class="container">    
-            <div class="card-deck">     
-                <div class="col-3">
-                    <div class="card1">    
-                        <img id='vestido'src="assets/img/vestido.png" class="card-img-top" alt="vestido">
-                        <div class="card-body">
-                            <h5 class="card-title">PERSONALIZAÇÃO</h5>
-                            <p class="card-text">No ESTILI.SE Você tem a Oportunidade de Deixar as Roupas com sua Cara.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-                <br>
-                <div class="col-3">
-                    <div class="card2">
-                        <img id='Maquina'src="assets/img/maquina.png" class="card-img-top" alt="Maquina">
-                        <div class="card-body">
-                            <h5 class="card-title">MELHORES PROFISSIONAIS</h5>
-                            <p class="card-text">Encontre os Melhores Profissionais do Mundo da Costura na Nossa Plataforma.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-                <br>
-                <div class="col-3">
-                    <div class="card3">
-                        <img id='moto'src="assets/img/moto.png" class="card-img-top" alt="Moto">
-                        <div class="card-body">
-                            <h5 class="card-title">ENTREGA EM CASA</h5>
-                            <p class="card-text">Receba suas Compras E Encomendas no Conforto da sua Casa.</p>
-                        </div>
-                    </div>
-                </div>
+    <main class="d-flex justify-content-center row my-5">
+        <h1 class="mb-5">Uma Nova forma de Vestir</h1>
+        <div class="container-fluid card-deck d-flex justify-content-around w-100">  
+            <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center">    
+                <img src="assets/img/vestido.png" class="card-img-top img-beneficio" alt="vestido">
+                <h5 class="card-title my-3">PERSONALIZAÇÃO</h5>
+                <p class="card-text px-5">NO ESTILI.SE VOCÊ TEM A OPORTUNIDADE DE DEIXAR AS ROUPAS COM SUA CARA</p>
+            </div>
+            
+            
+            <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                <img src="assets/img/maquina.png" class="card-img-top img-beneficio" alt="Maquina">
+                <h5 class="card-title my-3">MELHORES PROFISSIONAIS</h5>
+                <p class="card-text px-5">ENCONTRE OS MELHORES PROFISSIONAIS DO MUNDO DA COSTURA NA NOSSA PLATAFORMA</p>
+            </div>
+            
+            <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                <img src="assets/img/moto.png" class="card-img-top img-beneficio" alt="Moto">
+                <h5 class="card-title my-3">ENTREGA EM CASA</h5>
+                <p class="card-text px-5">RECEBA SUAS COMPRAS E ENCOMENDAS NO CONFORTO DA SUA CASA</p>
             </div>
         </div>
-        
-    </main>
-    <footer>
-    </footer>
-    
-    
-    <script src="./assets/js/home.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
+    </main>    
+    <article class="container-fluid row justify-content-around">
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <div id="article-img">
+                <img src="../../assets/img/fotos_costureiros.png" alt="">
+            </div>
+        </div>
+        <div class="col-5 d-flex flex-column align-items-end justify-content-center mr-5">
+            <h1 class="text-right mb-3" style="color: #147C4C; width: 80%;">ENCONTRE OS MELHORES PROFISSIONAIS</h1>
+            <span style="width: 300px; height: 1px; background-color: #147C4C;"></span>
+            <p class="text-right mt-3" style="width: 60%; color:white; font-size: 20px;">Nós contamos com um catálogo de centenas de profissionais qualificados que estão esperando por você</p>
+            <a href="" class="btn btn-verde p-3 mt-3" style="width: 30%;">PROFISSIONAIS</a>
+        </div>
+    </article>
+    <blockquote class="d-flex flex-column justify-content-center align-items-center">
+        <p class="display-4 p-5 text-center">"A moda é incessantemente fascinante porque ela é uma 
+            expressão de você mesmo"</p>
+            <small>-Anna Wintour</small>
+    </blockquote>
 </body>
