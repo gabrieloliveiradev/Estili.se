@@ -1,5 +1,50 @@
-footer {
-    background-color: rgb(12, 12, 12);
+footer {   
+   
+    background: rgb(0,232,211);
+background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
+}
+
+#font
+{
+    color:#158591;
+    margin-right: 30px;
+    /* padding: 40px; */
+    
+}
+
+#footer2 {
+    background: #158591;
+    color: white;
+    
+}
+
+
+
+#barfooter2
+{
+   margin-left: 15%;
+   width: 700px;    
+}
+
+
+#sociAll
+{
+    width:350px;
+}
+
+
+
+#copyright
+{
+font-size: small;
+
+margin-top: auto;
+
+}
+
+
+
+h5 > a {
     color: white;
 }
 
@@ -11,7 +56,3 @@ h6 > a:hover {
     color: white;
 }
 
-#copyright {
-    background-color: black;
-    color: white;
-}
