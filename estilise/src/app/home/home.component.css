@@ -3,98 +3,52 @@
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width: 300px){}
-
-@media screen and (max-width: 600px){}
-#nav_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 110px;
-    width: 100%;
-    background-color: none;
-    position: fixed;
-    z-index: 16;
-    }
-
-#nav_bar_depois {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 110px;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    z-index: 16;
-    }
-
-#logo_nav {
-    font-size: 60px;
-    font-family: 'Cookie', cursive;
-    color:white;
-    width: 33%;
-    text-align: center;
-}
-#nav_links {
-    width: 33%;
-    display: flex;
-    justify-content: space-around;
-}
-#nav_botoes{
-    width: 33%;
-    text-align: center;
-}
-#nav_links > a{
-    text-decoration: none;
+.btn-estilise {
+    background-color: #158591;
     color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .85);
+}
+.btn-verde {
+    background-color: #147C4C;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .85);
+}
+p > span {
+    color: #158591;
+}
+
+#header{
+    background: rgb(0,232,211);
+    background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
+    height: 90vh;
     font-family: 'Roboto', sans-serif;
 }
-#nav_links >a:hover{
-     color: #168591;
+.img-header {
+    height: auto;
+    width: 95%;
 }
-
-span {
-    color:#168591;
-}
-#header_principal{
-    /* background-image: url("../img/imagem_header.png"); */
-    background-repeat: no-repeat;
-    background-size: cover;
+.img-header > img {
+    height: 100%;
     width: 100%;
-    height: 80%;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+.arara-header {
+    height: auto;
+    width: 90%;
+}
+.arara-header > img {
+    height: 100%;
+    width: 100%;
 }
 
-#titulo_header {
-    font-size: 180px;
-    color: white;
-    font-family: 'Cookie', cursive;
-}
-#texto_header{
-    color: white;
-    font-size: 40px;
+.header-texto {
     font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    width:95%;
 }
 
-#botao_cadastro, #botao_login {
-    background-color:none;
-    border-color: #168591;
-    border:20px;
-    width: 100px;
-    height: 30px;
-    border-radius: 2px;
-    list-style: none;
-}
 main {
-    height: 500px;
+    width:98vw;
 }
-#section1, #section2 {
-    width: 40%;
-}
-
 #botao_header {
     display: flex;    
     width: 100%;
@@ -107,9 +61,9 @@ main {
     border: 0;
     border-radius: 3px;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
-h1 {
+main > h1 {
     text-align: center;
     font-size: 80px;
     color: #168591;
@@ -122,52 +76,50 @@ h1 {
     
     
 }
-.card1{
+.card-beneficio{
     width: 330px;
-    height: 600px;
+    height: 400px;
     text-align: center;
     border-style: dashed;
     border-color:#168591;
-    font-size: 20px;
-    
+    font-size: 15px;
 }
-.card2{
-    width: 330px;
-    height: 600px;
-    text-align: center;
-    border-style: dashed;
-    border-color:#168591;
-    font-size: 20px;
-    
-}
-.card3{
-    width: 330px;
-    height: 600px;
-    text-align: center;
-    border-style: dashed;
-    border-color:#168591;
-    font-size: 20px;
-    
-}
+
 h5{
     color: #168591;
 }
-#moto{
-    margin-top: 50%;
-    margin-left: 8%;
-    width: 180px;
-    height: 180px;
-    position:relative;}
-#Maquina{
-    margin-top: 50%;
-    margin-left: 8%;
-    width: 180px;
-    height: 180px;
+.img-beneficio{
+    width: auto;
+    height: 130px;
 }
-#vestido{
-    margin-top: 50%;
-    margin-left: 8%;
-    text-align: center;
-    width: 180px;
-    height: 180px;
+article {
+    height: 500px;
+    background: rgb(135,255,238);
+    background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgba(123,232,186,1) 25%, rgba(149,255,180,1) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%);
+    width: 100%;
+}
+article > div {
+    height: 100%;
+    width: 100%;
+}
+#article-img {
+    height: auto;
+    width: 70%;
+}
+#article-img > img {
+    height: 100%;
+    width: 100%;
+}
+blockquote {
+    height: 500px;
+}
+blockquote > p {
+    font-family: 'Cookie', cursive;
+    color: #158591;
+    font-size: 80px;
+}
+blockquote > small {
+    font-family: 'Roboto', sans-serif;
+    color: #158591;
+    font-size: 30px;
 }
