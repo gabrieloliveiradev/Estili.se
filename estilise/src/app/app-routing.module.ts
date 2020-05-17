@@ -5,7 +5,7 @@ import { FAQComponent } from './faq/faq.component';
 import { QuemsomosComponent } from './quemsomos/quemsomos.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { ContatoComponent } from './contato/contato.component';
-import { ProdutoComponent } from './produto/produto.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'faq', component: FAQComponent},
   { path: 'quemsomos', component: QuemsomosComponent},
   { path: 'politica', component: PoliticaComponent},
-  { path: 'contato', component: ContatoComponent},
-  {path: 'produto', component: ProdutoComponent}
+  { path: 'contato', component: ContatoComponent}
+ 
 ];
 
 @NgModule({

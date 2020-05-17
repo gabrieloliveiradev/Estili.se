@@ -2,67 +2,97 @@
     <div class="container-lg">
         <div class="row py-3">
             <div class="col-md-4">
-                <h5>ENDEREÇO</h5>
-                <h6>Rua Tito, Vila Romana</h6>
-                <h6>São Paulo</h6>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14632.496579342622!2d-46.6918087!3d-23.5280369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1585254746762!5m2!1spt-BR!2sbr" width="100%" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
             </div>
             <div class="col-md-4">
-                <div class="row justify-content-center mb-3">
-                    <h5>REDES SOCIAIS</h5>
+                <div class="row justify-content-center mb-3"><img src="./assets/img/logo.svg" alt=""></div>
+
+                <hr class="mt-2 mb-6">
+
+                <div class="FooterLink d-flex justify-content-around mt-4 mb-4">
+                    <a class="d-flex justify-content-around" routerLink="/quemsomos">
+                        Sobre nós<span class="sr-only">(current)</span></a>
+
+                    <a class="d-flex justify-justify-content-around" routerLink="/login">
+                        Login<span class="sr-only">(current)</span></a>
+
+                    <a class="d-flex justify-justify-content-around" routerLink="/cadastro">
+                        Cadastro<span class="sr-only">(current)</span></a>
+
+                    <a class="d-flex justify-justify-content-around" routerLink="/profissionais">
+                        Profissionais<span class="sr-only">(current)</span></a>
+
+                        <a class="d-flex justify-justify-content-around" routerLink="/categoria">
+                            Categorias<span class="sr-only">(current)</span></a>
                 </div>
-                <div class="mb-3 d-flex flex-column justify-content-center" >
-                    <div class="row justify-content-center p-0 mb-3">
-                        <div class="col-3">
+
+                <div class="mb-3 d-flex justify-content-around" id="sociAll">
+
+                    <div class="row justify-content-center p-0 mb-3" id="socialItem">
+                        <div class="col-6">
                             <a href="">
-                                <img src="./assets/img/twitter.png" alt="">
-                            </a> 
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <img src="./assets/img/face.png" alt="">
-                            </a> 
+                                <img src="./assets/img/twitter_verde.png" alt="">
+                            </a>
                         </div>
                     </div>
-                    <div class="row justify-content-center p-0 mb-3">
-                        <div class="col-3">
+
+                    <div class="row justify-content-center p-0 mb-3" id="socialItem">
+                        <div class="col-6">
                             <a href="">
-                                <img src="./assets/img/github.png" alt="">
-                            </a> 
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <img src="./assets/img/linkedin.png" alt="">
-                            </a> 
+                                <img src="./assets/img/facebook_verde.png" alt="">
+                            </a>
                         </div>
                     </div>
-                    <div class="row justify-content-center p-0">
-                        <div class="col-3">
+
+                    <div class="row justify-content-center p-0 mb-3" id="socialItem">
+                        <div class="col-6">
                             <a href="">
-                                <img src="./assets/img/insta.png" alt="">
-                            </a> 
+                                <img src="./assets/img/github_verde.png" alt="">
+                            </a>
                         </div>
-                        <div class="col-3">
+                    </div>
+
+                    <div class="row justify-content-center p-0 mb-3" id="socialItem">
+                        <div class="col-6">
+                            <a href="">
+                                <img src="./assets/img/Instagram_verde.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row justify-content-center p-0 mb-3" id="social">   
+                        <div class="col-6">
                             <a href="">
                                 <img src="./assets/img/youtube.png" alt="">
                             </a> 
                         </div>
-                    </div>
+                    </div> -->
+
+                    <!-- <div class="row justify-content-center p-0 mb-3" id="social">
+                        <div class="col-6">
+                            <a href="">
+                                <img src="./assets/img/linkedin.png" alt="">
+                            </a> 
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-md-4 d-flex flex-column align-items-center align-items-mb-end">
-                <h5>PÁGINAS DO SITE</h5>
-                <h6><a href="">HOME</a></h6>
-                <h6><a href="">INSCREVA-SE</a></h6>
-                <h6><a href="">PRODUTOS</a></h6>
-                <h6><a href="">CONTATO</a></h6>
-                <h6><a href="">PERGUNTAS FREQUENTES</a></h6>
-                <h6><a href="">POLÍTICAS DE PRIVACIDADE</a></h6>
-                <h6><a href="">QUEM SOMOS</a></h6>
-            </div>
+
         </div>
     </div>
 </footer>
-<footer id="copyright" class="d-flex justify-content-center">
-    <p class="my-auto">Estili-se &copy; 2020 - Todos os direitos reservados</p>
+<footer id="footer2" class="d-flex  ">
+
+    <h6 id="copyright">&copy; 2020 - Estili-se </h6>
+    <!-- class="my-auto" -->
+
+    <div class="d-flex justify-content-around" id="barfooter2">
+
+        <h6><a routerLink="/politica">Politicas de privacidade</a></h6>
+        <h6><a routerLink="/faq">Perguntas frequentes</a></h6>
+        <h6><a routerLink="/contato">Contato</a></h6>
+
+    </div>
+
 </footer>
