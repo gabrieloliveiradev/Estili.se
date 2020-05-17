@@ -7,14 +7,13 @@ article{
     justify-content: space-evenly;
 }
 aside{
-    height: 500px;
     width: 51%;
     float: left;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 /* -------------- animação ---------------------------*/
 @keyframes subirAbaixar{
@@ -27,7 +26,7 @@ aside{
 }
 .imgPoliticaPrivacidade{
     width: 21rem;
-    margin-bottom: 20px;
+    margin-bottom: 68px;
     animation-name: subirAbaixar;
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -36,7 +35,7 @@ aside{
 }
 /* -------------- fim da animação ---------------------------*/
 
-/* Alterções nos textos */
+/*--------------- Alterações nos textos ---------------------*/
 .tituloPoliticaPrivacidade, .h3sessao, .txt{
     font-weight: 300;
     line-height: 1.65;
@@ -44,152 +43,315 @@ aside{
 .tituloPoliticaPrivacidade{
     color: #565961;
     font-size: 50px;
+    margin-top: 8rem;
 }
-.txt{
+.txt, .subtitulo, .h3sessao{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16px;
     color: #565961;
-    text-align: left;
 }
 .subtitulo{
     width: 76%;
-    font-size: 16px;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    color: #565961;
+    line-height: 24px;
 }
 .h3sessao{
     margin-bottom: 13px;
-    margin-top: 21px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+    margin-top: 21px;
     color: #2f3031;
     font-size: 24px;
-
+}
+.caixa-div-sessao,.txt{
+    text-align: justify;
 }
 /*  ------ fim da alterações em textos ------------- */
 
-/* Alterações nas imagens */
+/* -------Alterações nas imagens --------------------*/
 .imagemPoliticaPrivacidade{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
 }
-/* Configuração na sessão Divulgação */
-#sessaoDivulgacao{
-    margin-top: 13em;
+/*---------------- Configuração na sessão Servicos ------------------ */
+#Sessao3ServicosDeTerceiros-article{
+    height: 53rem;
 }
-
-/* Visibilidade de algumas sessões conforme responsividade */
+#Sessao2Consentimento-article{
+    height: 36rem;
+}
+/* ----------- Visibilidade de algumas sessões conforme responsividade ------------------ */
 .visivel{
     visibility: hidden;
     display: none;
 }
-
-
-/* Medias queries */
+/* ------------ Medias queries ------------- */
 @media(max-width:1000px){
     main{
-        height: 421em;
+        height: 427em;
     }
     aside{
-        height: 279px;
         width: 100%;
-        float: left;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     article{
-        height: 55em!important;
         display: block;
     }
     .caixa-div-sessao{
         width: 85%;
     }
-    .sessaoConsentimento, .invisivel{
-        display: none;
-    }
-     .visivel{
-        visibility: visible!important;
-        display: block!important;
-    }
-    .sessaoServicos-e-Divulgacao{
-        height: 71em!important;
-    }
     .centralizadoComMedia{
         display: flex;
         justify-content: center;
     }
-    #sessaoDivulgacao{
-        height: 50em;
+    .imagemPoliticaPrivacidade, .centralizadoComMedia{
+        margin-top: 134px;
     }
-    .asideSessao3e6{
-        height: 40em;
+    .visivel{
+        visibility: visible!important;
+        display: block!important;
     }
-    .subtitulo{
-        width: 100%!important;
+    #Sessao4Seguranca-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 48em!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 68rem!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 56rem!important;
+    }
+    #Sessao2Consentimento-article, .invisivel{
+        display: none;
+    }
+    #Sessao5Divulgacao-article{
+        height: 50rem!important;
     }
 }
 @media(max-width:780px){
-    article{
-        height: 65em!important;
-    }
     main{
-        height: 478em!important;
-    }
-    .h3sessao{
-        margin-top: 10em;
-    }
-    .sessaoServicos-e-Divulgacao{
-        height: 81em!important;
+        height: 400em!important;
     }
     .caixa-div-sessao{
         width: 100%!important;
     }
+    .subtitulo{
+        text-align: justify;
+        width: 89%;
+    }
+    .h3sessao{
+        font-size: 23px;
+    }
     .tituloPoliticaPrivacidade{
         font-size: 40px;
     }
-}
-@media(max-width: 520px){
-    main{
-        height: 489em!important;
+    #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        margin-top: 9em;
     }
-    .sessaoConsentimento{
+    #Sessao4Seguranca-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 46rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 64rem!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 54rem!important;
+    }
+    #Sessao5Divulgacao-article{
+        height: 48rem!important;
+    }
+}
+@media(max-width: 770px){
+    main{
+        height: 435em!important;
+    }
+    #Sessao2Consentimento-article{
         height: 73em!important;
     }
     .tituloPoliticaPrivacidade{
         font-size: 30px;
     }
+    #Sessao4Seguranca-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 52rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 74rem!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 60rem!important;
+    }
+    #Sessao5Divulgacao-article{
+        height: 54rem!important;
+    }
 }
-@media(max-width:420px){
+@media(max-width:570px){
     main{
-        height: 510em!important;
+        height: 419em!important;
     }
     .imgPoliticaPrivacidade{
         width: 18rem;
     }
-    .imgservicosConsentimento{
-        margin-bottom: 15em;
-    }
     .h3sessao{
-        font-size: 20px;
+        font-size: 19px;
     }
-    .linhaservico{
-        margin-top: 15em!important;
+    #Sessao4Seguranca-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 48rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 74rem!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 58rem!important;
+    }
+    #Sessao5Divulgacao-article{
+        height: 50rem!important;
     }
 }
-@media(max-width:340px){
-    .imgservicos{
-        margin-bottom: 30em!important;
+@media(max-width:504px){
+    main{
+        height: 434em!important;
     }
-    .linhaservico{
-        margin-top: 25em!important;
+    #Sessao2Consentimento-article{
+        height: 61rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 80rem!important;
+    }
+}
+@media(max-width:460px){
+    main{
+        height: 461em!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 65rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 84rem!important;
+    }
+    #Sessao4Seguranca-article, #Sessao5Divulgacao-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 53rem!important;
+    }
+}
+@media(max-width:425px){
+    main{
+        height: 486em!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 70rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 91rem!important;
+    }
+    #Sessao4Seguranca-article, #Sessao5Divulgacao-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 56rem!important;
+    }
+}
+@media(max-width:400px){
+    #Sessao3ServicosDeTerceiros-article{
+        height: 96rem!important;
+    }
+}
+@media(max-width:375px){
+    main{
+        height: 518em!important;
+    }
+    hr{
+        margin-left: 3px!important;
+        margin-right: 3px!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 76rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 102rem!important;
+    }
+    #Sessao4Seguranca-article, #Sessao5Divulgacao-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 59rem!important;
+    }
+}
+@media(max-width:330px){
+    main{
+        height: 565em!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 86rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 115rem!important;
+    }
+    #Sessao4Seguranca-article, #Sessao5Divulgacao-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 65rem!important;
+    }
+}
+@media(max-width:320px){
+    main{
+        height: 550em!important;
+    }
+    .tituloPoliticaPrivacidade{
+        font-size: 27px;
     }
     .imgPoliticaPrivacidade{
-        width: 13em!important;
+        width: 15rem;
     }
-    .sessaoConsentimento{
-        height: 76em!important;
+    #Sessao2Consentimento-article{
+        height: 83rem!important;
+    }
+    .h3sessao{
+        font-size: 16px;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 115rem!important;
+    }
+    #Sessao4Seguranca-article, #Sessao5Divulgacao-article, #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 63rem!important;
+    }
+}
+@media(max-width:310px){
+    main{
+        height: 575em!important;
+    }
+    .imgPoliticaPrivacidade{
+        width: 15rem;
+    }
+    #Sessao2Consentimento-article{
+        height: 89rem!important;
+    }
+    .h3sessao{
+        font-size: 16px;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 123rem!important;
+    }
+    #Sessao4Seguranca-article{
+        height: 67rem!important;
+    }
+}
+@media(max-width:290px){
+    main{
+        height: 562em!important;
+    }
+    aside{
+        padding: 0;
+    }
+    .imgPoliticaPrivacidade{
+        width: 13rem;
+    }
+    #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        margin-top: 0!important;
+    }
+    .imagemPoliticaPrivacidade, .centralizadoComMedia{
+        margin-top: 70px!important;
+    }
+    #Sessao2Consentimento-article{
+        height: 88rem!important;
+    }
+    #Sessao3ServicosDeTerceiros-article{
+        height: 123rem!important;
+    }
+    #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
+        height: 62rem!important;
+    }
+    #Sessao5Divulgacao-article{
+        height: 64rem!important;
+    }
+    #Sessao4Seguranca-article{
+        height: 68rem!important;
     }
 }
