@@ -7,6 +7,7 @@ import { PoliticaComponent } from './politica/politica.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'politica', component: PoliticaComponent},
   { path: 'contato', component: ContatoComponent},
   {path: 'produto', component: ProdutoComponent},
-  { path: 'users', component: ListaUsuariosComponent}
+  { path: 'users', component: ListaUsuariosComponent},
+  { path: 'cadastro-usuario', component: CadClienteComponent}
 ];
 
 @NgModule({

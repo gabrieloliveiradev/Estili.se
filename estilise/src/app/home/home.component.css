@@ -125,7 +125,7 @@ blockquote > small {
 
 #categorias {
     height: 500px;
-    width: 99vw;
+    width: 100%;
     background: rgb(126,152,206);
 background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 50%, rgba(165,163,235,1) 100%);
 }
