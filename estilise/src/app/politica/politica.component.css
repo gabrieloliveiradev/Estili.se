@@ -339,19 +339,10 @@ aside{
     .imagemPoliticaPrivacidade, .centralizadoComMedia{
         margin-top: 70px!important;
     }
-    #Sessao2Consentimento-article{
-        height: 88rem!important;
-    }
-    #Sessao3ServicosDeTerceiros-article{
-        height: 123rem!important;
-    }
     #Sessao1OqueFaremosInformacao-article, #Sessao6AlteracoesParaPoliticaPrivacidade-article{
         height: 62rem!important;
     }
     #Sessao5Divulgacao-article{
         height: 64rem!important;
-    }
-    #Sessao4Seguranca-article{
-        height: 68rem!important;
     }
 }
