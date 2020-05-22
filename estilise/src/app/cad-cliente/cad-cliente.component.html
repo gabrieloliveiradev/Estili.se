@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="alerta">
+        <div class="alert alert-success mt-5" role="alert">
+            Cadastrado com sucesso
+        </div>
+    </div>
+    <div class="form-group mt-5">
+        <label for="exampleInputNome">Nome</label>
+        <input type="email" class="form-control" id="exampleInputNome" aria-describedby="emailHelp" [(ngModel)]="usuario.nome">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email">
+    </div>
+    <div class="form-group">
+        <label for="Password1">Senha</label>
+        <input type="password" class="form-control" id="Password1" [(ngModel)]="senhas.senha" [(ngModel)]="usuario.senha" required>
+    </div>
+    <div class="form-group">
+        <label for="Password2">Confirme sua senha</label>
+        <input type="password" class="form-control" id="Password2" [(ngModel)]="senhas.confirma_senha"  required>
+    </div>
+    <a type="" class="btn btn-primary mb-5" (click)="validar()">Cadastre-se</a>
+    
+</div>

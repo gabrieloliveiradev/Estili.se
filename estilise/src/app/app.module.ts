@@ -13,6 +13,8 @@ import { QuemsomosComponent } from './quemsomos/quemsomos.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { HttpClientModule } from '@angular/common/http';
     PoliticaComponent,
     QuemsomosComponent,
     ProdutoComponent,
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+    CadClienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

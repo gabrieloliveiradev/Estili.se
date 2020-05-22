@@ -1,59 +1,33 @@
-<nav class="navbar navbar-expand-md">
-    <a class="navbar-brand ml-5" href="#"><img src="./assets/img/logo.svg" alt=""></a>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand ml-5" routerLink="/home"><img src="./assets/img/logo.svg" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img src="./assets/img/menu.svg" alt="" class="navbar-toggler-icon">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         
-        <ul class="navbar-nav ml-auto d-flex justify-content-center align-items-center">
-            
-            <!-- <li class="nav-item dropdown d-flex justify-content-center">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIA</a>
-                <div class="dropdown-menu">
-                    <hr class="mt-4 mb-4">
-                    
-                    <a class="dropdown-item d-flex justify-content-center" routerLink="/produto">PRODUTOS</a>
-                    <hr class="mt-4 mb-4">
-                    <a class="dropdown-item d-flex justify-content-center" routerLink="/produto">###</a>
-                    <hr class="mt-4 mb-4">
-                    <a class="dropdown-item d-flex justify-content-center" routerLink="/produto">###</a>  
-                    <hr class="mt-4 mb-4">                
-                </div>    -->
-                <!-- <li class="nav-item dropdown d-flex justify-content-center">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MAIS INFORMAÇÕES</a>
-                    <div class="dropdown-menu">
-                        <hr class="mt-4 mb-4">
-                        <a class="dropdown-item d-flex justify-content-center" routerLink="/quemsomos">QUEM SOMOS</a>
-                        <hr class="mt-4 mb-4">
-                        <a class="dropdown-item d-flex justify-content-center" routerLink="/politica">NOSSA POLITICA</a>
-                        <hr class="mt-4 mb-4">
-                        <a class="dropdown-item d-flex justify-content-center" routerLink="/faq">FAQ</a>  
-                        <hr class="mt-4 mb-4">                
-                    </div>
-                </li> -->
-                <li class="nav-item ">
-                    <a class="nav-link" routerLink="/produto">CATEGORIAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contato">PROFISSIONAIS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/produto">PRODUTOS</a>
-                </li>
-                <li class="nav-item d-flex">
-                    <a class="nav-link" routerLink="/quemsomos">CONHEÇA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contato">CONTATO</a>
-                </li>
-                
-                <li class="nav-item w-100 mx-3">
-                    <a href="#" class="btn btn-outline-light  text-center">CADASTRO</a>
-                </li>
-                <li class="nav-item w-100 mr-5">
-                    <a href="#" class="btn btn-light  text-center">LOGIN</a>
-                </li>
-            </ul>
-            
-        </div>
-    </nav>
+        <ul class="navbar-nav ml-auto d-flex justify-content-center align-items-center mg-md-transparent">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="/produto">CATEGORIAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contato">PROFISSIONAIS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/produto">PRODUTOS</a>
+            </li>
+            <li class="nav-item d-flex">
+                <a class="nav-link" routerLink="/quemsomos">CONHEÇA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contato">CONTATO</a>
+            </li>
+            <li class="nav-item w-100 mx-lg-3 mt-3 mt-lg-0 d-flex justify-content-center">
+                <a routerLink="/cadastro-usuario" class="btn btn-outline-light  text-center">CADASTRO</a>
+            </li>
+            <li class="nav-item w-100 mr-lg-5 my-3 my-lg-0 d-flex justify-content-center">
+                <a href="#" class="btn btn-light  text-center">LOGIN</a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
