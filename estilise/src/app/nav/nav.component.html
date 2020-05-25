@@ -22,12 +22,19 @@
                 <a class="nav-link" routerLink="/contato">CONTATO</a>
             </li>
             <li class="nav-item w-100 mx-lg-3 mt-3 mt-lg-0 d-flex justify-content-center">
-                <a routerLink="/cadastro-usuario" class="btn btn-outline-light  text-center">CADASTRO</a>
+                <a class="btn btn-outline-light  text-center" (click)="popupCadastro()" data-toggle="modal" data-target="#popupdeCadastro" data-whatever="@mdo">CADASTRO</a>
             </li>
             <li class="nav-item w-100 mr-lg-5 my-3 my-lg-0 d-flex justify-content-center">
-                <a href="#" class="btn btn-light  text-center">LOGIN</a>
+                <a class="btn btn-light  text-center" (click)="popupLogin()" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo">LOGIN</a>
             </li>
         </ul>
         
     </div>
 </nav>
+<!-- POPUP de CADASTRO -->
+<div *ngIf="mostrarPopupCadastro">
+    <app-cad-cliente></app-cad-cliente>
+</div>
+<div *ngIf="mostrarPopupLogin">
+    <app-login-cliente></app-login-cliente>
+</div>

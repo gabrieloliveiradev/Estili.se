@@ -34,7 +34,7 @@ export class CadClienteComponent implements OnInit {
   cadastrar(){
     this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      location.assign("/cadastro-usuario")
+      // location.assign("/cadastro-usuario")
       this.validado = true
       this.router.navigate(["/cadastro-usuario"])
       localStorage.setItem("validado", this.validado.toString())
@@ -42,7 +42,7 @@ export class CadClienteComponent implements OnInit {
     })
   }
   refresh(){
-    this.router.navigateByUrl("/cadastro-usuario", {skipLocationChange:true}).then(()=>{
+    this.router.navigateByUrl("/home", {skipLocationChange:true}).then(()=>{
      this.router.navigate([this.locationPage.path()])
     })
   }

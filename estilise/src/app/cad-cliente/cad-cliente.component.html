@@ -1,9 +1,98 @@
-<div class="container">
-    <div *ngIf="alerta">
-        <div class="alert alert-success mt-5" role="alert">
-            Cadastrado com sucesso
+<div class="modal fade" id="popupdeCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog tamanhoPopupWidth">
+      <div class="modal-content tamanhoPopupHeight">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-11 d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                        <div *ngIf="alerta">
+                            <div class="alert alert-success mt-5" role="alert">
+                                Cadastrado com sucesso
+                            </div>
+                        </div>
+                        <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg" style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
+                        <div class="text-left" style="width:75%">
+                            <p class="font-thin">Nos dê algumas informações para que possamos realizar
+                                seu cadastro, suas informações são importantes e por isso temos uma politica dura
+                                com isso.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-1" style="height:545px">
+                        <div class="mt-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 p-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <hr style="width: 20%;"><h1 class="font-roboto" style="font-weight: 100;">Cadastro</h1><hr style="width: 20%;">
+                </div>
+                <div class="mt-5">
+                    <div class="form-group d-flex justify-content-center">
+                        <input type="text" class="form-control input-estilo" name="nome" id="nome" [(ngModel)]="usuario.nome" minlength="3" required>
+                        <span class="linhaSpan"></span>
+                        <label for="nome" class="col-form-label">Nome</label>
+                      </div>
+                      <div class="form-group d-flex justify-content-center">
+                          <input type="email" class="form-control input-estilo" name="email" id="email" [(ngModel)]="usuario.email" minlength="10" required>
+                          <span class="linhaSpan"></span>
+                          <label for="Email" class="col-form-label">Email</label>
+                      </div>
+                      <div class="form-group d-flex justify-content-center">
+                          <input type="password" class="form-control input-estilo" name="senha" id="Password1" [(ngModel)]="senhas.senha" [(ngModel)]="usuario.senha" minlength="5" required>
+                          <span class="linhaSpan"></span>
+                          <label for="senha" class="col-form-label">Senha</label>
+                      </div>
+                      <div class="form-group d-flex justify-content-center mb-2">
+                          <input type="password" class="form-control input-estilo" name="confirmar_senha"  id="Password2" [ngModel]="senhas.confirma_senha" minlength="5" required>
+                          <span class="linhaSpan"></span>
+                          <label for="confirmarSenha" class="col-form-label">Confirmar senha</label>
+                      </div>
+                      <div class="form-group d-flex pl-5 mb-4">
+                          <input type="checkbox" style="margin: 3px;" name="" id="" required>
+                          <p class="m-0" style="color: rgb(161, 156, 156); font-size: 12px;">Aceito os termos de politica e privacidade</p>
+                      </div>
+                      <div class="form-group d-flex justify-content-center" style="margin-bottom: 6px;">
+                          <button class="btn w-50 text-light" type="submit" (click)="validar()" style="background-color: #71F6A6; border-radius: 1px;">Cadastrar</button>
+                      </div>
+                      <li class="text-center mb-3" style="list-style: none; font-size: 13px;">
+                        <a href="#">Fazer login</a>
+                      </li>
+                </div>
+                <div class="d-flex justify-content-center align-items-center" style="height: 37px;">
+                    <hr style="width: 39%; margin: 10px;"><p class="font-roboto pt-3" style="font-weight: 100;">ou</p><hr style="width: 39%; margin: 10px;">
+                </div>
+                <ul class="p-0">
+                    <li class="d-flex justify-content-center align-items-center">
+                        <a href="#" class="mr-5 text-dark" style="text-decoration: none">Facebook</a>
+                        <a href="#" class="ml-5 text-dark"  style="text-decoration: none">Google</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
+
+<!-- Imagem para login
+  <div class="col-md-6">
+    
+</div> -->
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    
     <div class="form-group mt-5">
         <label for="exampleInputNome">Nome</label>
         <input type="email" class="form-control" id="exampleInputNome" aria-describedby="emailHelp" [(ngModel)]="usuario.nome">
@@ -22,4 +111,4 @@
     </div>
     <a type="" class="btn btn-primary mb-5" (click)="validar()">Cadastre-se</a>
     
-</div>
+</div> -->
