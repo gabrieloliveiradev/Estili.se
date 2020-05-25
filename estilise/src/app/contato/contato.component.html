@@ -1,36 +1,130 @@
-
-    <div>
-        <div class="jumbotron" style="width: 50%; height: 50%;">
-            <form style="width: 90%; height: 90%;">
-                <h1>Fale conosco</h1>
-                <br><br>
-                <label for="">Nome completo</label>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">E-mail </label>
-                    <input type="email" class="form-control" id="email"
-                        placeholder="name@exemplo.com">
-                </div>
-
-                <label for="">Telefone</label>
-                <div class="row">
-                    <div class="col">
-                        <input type="tel" class="form-control" id="telefone" placeholder=" (00) 00000-0000">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Mensagem</label>
-                    <textarea class="form-control" id="mensagemContato" rows="3"
-                        placeholder="Digite sua mensagem..."></textarea>
-                </div>
-                <br><br>
-                <button type="submit" class="btn btn-outline-dark" id="validar">Enviar</button>
-                <button type="button" class="btn btn-outline-dark">Limpar</button>
-
-            </form>
+<div class="topo">
+    <div class="nuvem">
+        <img src="../../assets/img/contato/nuvem-verde.svg" class="img-fluid" alt="">
+        <div class="texto text-left">
+            <p style="font-size: 38px;">Tem algo a nos dizer?</p>
+            <p>Precisamos de algumas informações para conseguirmos entrar em contato com você o mais rápido possível.</p>
         </div>
+    </div>
+    <div class="mulher">
+        <img src="../../assets/img/contato/mulher-fone.svg" class="img-fluid" alt="" style="width: 100%;">
+    </div>
+</div>
+
+<div class="container">
+
+<!--Início do bloco 1-->
+
+    <div class="bloco1"[hidden]="bloco1">
+        <div class="container">
+            <div class="fila">
+                
+                <div class="esfera-v">1</div>
+                <div id="linha-c-esquerda"></div>
+                
+                <div class="esfera-c">2</div>
+                
+                <div id="linha-c-direita"></div>
+                <div class="esfera-c">&#10003;</div>
+                
+            </div>
+        </div>
+
+        <div class="container m-5">
+            <div class="text-center">
+                <p style="font-size: 38px;">Quem é você?</p>
+                <p>Nos diga o seu nome, email e telefone. Não se preocupe essas informações estarão seguras, apenas facilitará para falarmos com você.</p>
+            </div>
+        </div>
+
+        <div class="container caixa-formulario">
+            <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control formulario" placeholder="Nome">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Email</label>
+                <input type="text" class="form-control formulario" placeholder="Email">
+                </div>
+                <div class="col">
+                    <label>Telefone</label>
+                <input type="text" class="form-control formulario" placeholder="Telefone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Assunto</label>
+                <input class="form-control formulario" placeholder="Assunto">
+            </div>
+            <div class="d-flex justify-content-center m-5">
+                <button type="submit" class="btn botao" (click)=botao1()>Próximo passo &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+<!--Início do bloco 2-->
+    <div class="bloco2"[hidden]="bloco2">
+        <div class="container">
+            <div class="fila">
+                
+                <div class="esfera-v">1</div>
+                <div id="linha-v-esquerda"></div>
+                
+                <div class="esfera-v">2</div>
+                
+                <div id="linha-c-direita"></div>
+                <div class="esfera-c">&#10003;</div>
+
+            </div>
+        </div>
+                
+        <div class="container m-5">
+            <div class="text-center">
+                <p style="font-size: 38px;">Fale Conosco</p>
+                <p>Estamos quase lá, agora coloque seu comentário.</p>
+            </div>
+        </div>
+
+        <div class="container caixa-formulario">
+            <div class="form-group">
+                <label>Faça seu comentário</label>
+                <textarea class="form-control formulario" rows="4"></textarea>
+            </div>
+            <div class="d-flex justify-content-around m-5">
+                <button type="submit" class="btn botaoCinza" (click)=botao1()>Voltar</button>
+                <button type="submit" class="btn botao"(click)=botao2()>Enviar</button>
+            </div>
+        </div>
+            
+    </div>
+
+<!--Início do bloco 3-->
+<div class="bloco3"[hidden]="bloco3">
+    <div class="container">
+        <div class="fila">
+            
+            <div class="esfera-v">1</div>
+            <div id="linha-v-esquerda"></div>
+            
+            <div class="esfera-v">2</div>
+            
+            <div id="linha-v-direita"></div>
+            <div class="esfera-v">&#10003;</div>
+
+        </div>
+    </div>
+            
+    <div class="container m-5">
+        <div class="text-center">
+            <p style="font-size: 38px;">Enviado</p>
+            <p>Muito obrigado, entraremos em contato em breve com você.</p>
+        </div>
+    </div>
+
+    <div class="imagemEnviado">
+        <img src="../../assets/img/contato/pronto.svg" class="rounded mx-auto d-block m-5" alt="" style="width: 50%;">
+    </div>
+        
+</div>
+
+</div>

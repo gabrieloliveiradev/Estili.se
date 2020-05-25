@@ -1,0 +1,135 @@
+.nuvem {
+    width: 70%;
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+}
+
+.mulher {
+    position: relative;
+    float: right;
+    width: 31%;
+    margin: 6%;
+    z-index: 1;
+}
+
+.topo::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.texto {
+    position: absolute;
+    width: 50%;
+    left: 7%;
+    top: 30%;
+    font-size: 25px;
+    font-family: Roboto;
+    line-height: 29px;
+    color: black;
+}
+
+.caixa1 {
+    display: contents;
+}
+
+#linha-c-esquerda {
+    background-color: #aaa;
+    width: 30%;
+    height: 2px;
+    float: right;
+    text-align: center;
+}
+
+#linha-c-direita {
+    background-color: #aaa;
+    width: 30%;
+    height: 2px;
+    float: left;
+    text-align: center;  
+}
+
+#linha-v-esquerda {
+    background-color: #66F4DB;
+    width: 30%;
+    height: 2px;
+    float: right;
+    text-align: center;  
+}
+
+#linha-v-direita {
+    background-color:#66F4DB;
+    width: 30%;
+    height: 2px;
+    float: left;
+    text-align: center; 
+}
+
+.esfera-v{
+    background: #66F4DB;
+    color: white;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.esfera-c{
+    background: #aaa;
+    color: #686363;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.fila {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.caixa-formulario {
+    width: 60% !important;
+    margin: 0 auto;
+}
+
+.formulario {
+    background-color: #fcfcfc;
+    border: 1px;
+    border-style: none;
+    resize: none;
+}
+
+.formulario:focus {
+    border: 3px;
+    border-style: none none solid none;
+    border-radius: 0;
+    border-color: #66F4DB;
+}
+
+.botao {
+    background-color: #66F4DB;
+    color: #ffffff;
+}
+
+.botaoCinza {
+    background-color: #E5E5E5;
+    color: #ffffff;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
