@@ -3,31 +3,80 @@ footer {
     background: rgb(0,232,211);
     background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
 }
+
+#logoLinksIcon
+{
+    margin: 0 auto;
+}
+
 #font {
+    
     color:#158591;
-    margin-right: 30px;
-    /* padding: 40px; */
+
+    /* Espaçamento horizontal entre os componentes */
+    margin-right:10%;
+
+    /* Espaçamento vertical entre os componentes  */
+    padding:10%;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+#fontAll
+{
+    margin: 0 auto;
 }
 
 #footer2 {
+    margin: 0 auto;    
+      
     background: #158591;
-    color: white;
+
+    color: white;    
+
+    font-family: 'Roboto', sans-serif; 
+
+    /* Espaçamento entre os links da segunda barra e a margem */
+    padding:1%
+
+
 }
-#barfooter2
+/* #barfooter2
 {
-   margin-left: 10%;
-   width: 700px;    
-}
+    margin: 0 auto;
+   margin-left: 10%; 
+    width: 700px; 
+   font-family: 'Roboto', sans-serif;   
+} */
 
 #sociAll
 {
-    width:350px;
+
+    /* Direcionamento da caixa de icones de rede social */
+    margin-right: 40%;
+    
 }
 
+#socialItem
+{
+    /* Espaçamento entre os Icones de rede social */
+    margin-left: 5%;
+}
+
+/* Links da segunda barra do Footer */
+#sublinks {
+    font-size: small;
+    margin-top: auto;
+    margin-left: 40%;
+}
+
+/* Apenas o Copyright */
 #copyright {
     font-size: small;
     margin-top: auto;
+    margin-left: 40%;
 }
+
 h5 > a {
     color: white;
 }
