@@ -91,6 +91,18 @@ main > h1 {
     font-size: 15px;
 }
 
+.card-beneficio > svg {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: svganimation 7s ease-in-out forwards infinite;
+}
+@keyframes svganimation {
+    0% {stroke-dashoffset: 1000;}
+    50% {stroke-dashoffset: 300;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
 h5{
     color: #168591;
 }
