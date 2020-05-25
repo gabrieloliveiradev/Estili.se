@@ -15,9 +15,9 @@
 
 <!--Início do bloco 1-->
 
-    <div class="bloco1"[hidden]="bloco1">
-        <div class="container">
-            <div class="fila">
+    <div class="bloco1 container" [hidden]="bloco1">
+
+            <div class="fila mt-5">
                 
                 <div class="esfera-v">1</div>
                 <div id="linha-c-esquerda"></div>
@@ -28,16 +28,16 @@
                 <div class="esfera-c">&#10003;</div>
                 
             </div>
-        </div>
 
-        <div class="container m-5">
-            <div class="text-center">
-                <p style="font-size: 38px;">Quem é você?</p>
-                <p>Nos diga o seu nome, email e telefone. Não se preocupe essas informações estarão seguras, apenas facilitará para falarmos com você.</p>
+
+
+            <div class="text-center mb-5 mt-5">
+                <p style="font-size: 30px;">Quem é você?</p>
+                <p style="font-size: 20px;">Nos diga o seu nome, email e telefone. Não se preocupe essas informações estarão seguras, apenas facilitará para falarmos com você.</p>
             </div>
-        </div>
 
-        <div class="container caixa-formulario">
+
+        <div class="caixa-formulario">
             <div class="form-group">
             <label>Nome</label>
             <input class="form-control formulario" placeholder="Nome">
@@ -56,7 +56,7 @@
                 <label>Assunto</label>
                 <input class="form-control formulario" placeholder="Assunto">
             </div>
-            <div class="d-flex justify-content-center m-5">
+            <div class="d-flex justify-content-center mb-5 mt-5">
                 <button type="submit" class="btn botao" (click)=botao1()>Próximo passo &rarr;</button>
             </div>
         </div>
@@ -65,7 +65,7 @@
 <!--Início do bloco 2-->
     <div class="bloco2"[hidden]="bloco2">
         <div class="container">
-            <div class="fila">
+            <div class="fila mt-5">
                 
                 <div class="esfera-v">1</div>
                 <div id="linha-v-esquerda"></div>
@@ -78,19 +78,19 @@
             </div>
         </div>
                 
-        <div class="container m-5">
-            <div class="text-center">
-                <p style="font-size: 38px;">Fale Conosco</p>
-                <p>Estamos quase lá, agora coloque seu comentário.</p>
+        <div class="container mb-5 mt-5">
+            <div class="text-center mb-5 mt-5">
+                <p style="font-size: 30px;">Fale Conosco</p>
+                <p style="font-size: 20px;">Estamos quase lá, agora coloque seu comentário.</p>
             </div>
         </div>
 
         <div class="container caixa-formulario">
             <div class="form-group">
-                <label>Faça seu comentário</label>
+                <label style="color: #66F4DB; font-size: 25px;">Faça seu comentário</label>
                 <textarea class="form-control formulario" rows="4"></textarea>
             </div>
-            <div class="d-flex justify-content-around m-5">
+            <div class="d-flex justify-content-around mb-5 mt-5">
                 <button type="submit" class="btn botaoCinza" (click)=botao1()>Voltar</button>
                 <button type="submit" class="btn botao"(click)=botao2()>Enviar</button>
             </div>
@@ -101,7 +101,7 @@
 <!--Início do bloco 3-->
 <div class="bloco3"[hidden]="bloco3">
     <div class="container">
-        <div class="fila">
+        <div class="fila mt-5">
             
             <div class="esfera-v">1</div>
             <div id="linha-v-esquerda"></div>
@@ -114,10 +114,10 @@
         </div>
     </div>
             
-    <div class="container m-5">
-        <div class="text-center">
-            <p style="font-size: 38px;">Enviado</p>
-            <p>Muito obrigado, entraremos em contato em breve com você.</p>
+    <div class="container mb-5 mt-5">
+        <div class="text-center mb-5 mt-5">
+            <p style="font-size: 30px;">Enviado</p>
+            <p style="font-size: 25px;">Muito obrigado, entraremos em contato em breve com você.</p>
         </div>
     </div>
 

@@ -25,4 +25,5 @@ export class ContatoComponent implements OnInit {
     this.bloco2 = !this.bloco2;
     this.bloco3 = !this.bloco3;
   }
+
 }
