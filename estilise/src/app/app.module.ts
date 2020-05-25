@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-// import { NossosModulosModule } from './nossos-modulos/nossos-modulos.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    // NossosModulosModule
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
