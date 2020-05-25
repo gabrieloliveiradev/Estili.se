@@ -91,6 +91,18 @@ main > h1 {
     font-size: 15px;
 }
 
+.card-beneficio > svg {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: svganimation 7s ease-in-out forwards infinite;
+}
+@keyframes svganimation {
+    0% {stroke-dashoffset: 1000;}
+    50% {stroke-dashoffset: 300;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
 h5{
     color: #168591;
 }
@@ -98,6 +110,10 @@ h5{
     width: auto;
     height: 130px;
 }
+.img-beneficio > svg, svg > path {
+    max-width: 40px;
+}
+
 article {
     background: rgb(135,255,238);
     background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgba(123,232,186,1) 25%, rgba(149,255,180,1) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%);
