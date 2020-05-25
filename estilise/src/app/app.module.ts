@@ -14,7 +14,8 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
