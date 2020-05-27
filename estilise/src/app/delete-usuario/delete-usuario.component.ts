@@ -13,12 +13,8 @@ export class DeleteUsuarioComponent implements OnInit {
   usuario: Usuario = new Usuario;
   deletarOk:boolean =false;
 
-<<<<<<< HEAD
   constructor(private usuarioService: UsuariosService, private router: Router, private route: ActivatedRoute) { }
  
-=======
-  constructor(private) { }
->>>>>>> 444a60ff7c8bd293feb39cf61cb30ff2e90ee10a
 
   ngOnInit(){
     let id : number = this.route.snapshot.params['id']
