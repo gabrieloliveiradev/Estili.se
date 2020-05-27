@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-delete-usuario',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteUsuarioComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario = new Usuario;
+
+  constructor(private ) { }
 
   ngOnInit(): void {
   }
