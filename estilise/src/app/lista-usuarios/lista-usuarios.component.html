@@ -6,6 +6,8 @@
                 <th scope="col">Nome</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Senha</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Deletar</th>
             </tr>
         </thead>
         <tbody *ngFor="let usuario of listaUsuario">
@@ -14,6 +16,8 @@
                 <td>{{usuario.nome}}</td>
                 <td>{{usuario.email}}</td>
                 <td>{{usuario.senha}}</td>
+                <td><a class="btn btn-info" [routerLink]="['/editar',usuario.id]">Editar</a></td>
+                <td><a class="btn btn-outline-danger">Deletar</a></td>
             </tr>
         </tbody>
     </table>

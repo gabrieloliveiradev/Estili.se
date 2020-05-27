@@ -3,31 +3,80 @@ footer {
     background: rgb(0,232,211);
     background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
 }
-#font {
-    color:#158591;
-    margin-right: 30px;
-    /* padding: 40px; */
+
+#logoLinksIcon
+{
+    margin: 0 auto;
 }
 
-#footer2 {
-    background: #158591;
-    color: white;
+#font {
+    
+    color:#158591;
+   
+     margin: 2%;   
+    
+    font-family: 'Roboto', sans-serif;
 }
-#barfooter2
+
+/* #fontAll
 {
-   margin-left: 10%;
-   width: 700px;    
+    margin: 0 auto;
+    
+} */
+
+#footer2 {
+    margin: 0 auto;    
+      
+    background: #158591;
+
+    color: white;    
+
+    font-family: 'Roboto', sans-serif; 
+
+    /* Espaçamento entre os links da segunda barra e a margem */
+    padding:1%
+
+
 }
+/* #barfooter2
+{
+    margin: 0 auto;
+   margin-left: 10%; 
+    width: 700px; 
+   font-family: 'Roboto', sans-serif;   
+} */
 
 #sociAll
 {
-    width:350px;
+
+    /* Direcionamento da caixa de icones de rede social */
+  
+    
 }
 
+#socialItem
+{
+    /* Espaçamento entre os Icones de rede social */
+  
+}
+
+/* Links da segunda barra do Footer */
+#sublinks {
+    
+    
+    margin-right: 2%;
+    color: white;
+    
+}
+
+/* Apenas o Copyright */
 #copyright {
     font-size: small;
-    margin-top: auto;
+    
+    
+   
 }
+
 h5 > a {
     color: white;
 }
@@ -40,3 +89,46 @@ h6 > a:hover {
     color: white;
 }
 
+@media(max-width:526px)
+{
+
+#fontAll
+{
+flex-direction: column;
+
+}
+
+/* Imagens social */
+img
+{
+    width: 80%;
+}
+
+.invisivel
+{
+display: none;
+visibility: hidden;
+
+}
+
+#colunaLink
+{
+    align-items: center;
+    flex-direction: column; 
+    
+}
+
+#sublinks
+{
+    margin-bottom: 5px;
+}
+
+.visivel
+{
+display: flex !important;
+visibility: visible !important ;
+
+}
+
+
+}
