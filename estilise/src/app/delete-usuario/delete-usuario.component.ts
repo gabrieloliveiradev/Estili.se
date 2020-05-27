@@ -10,7 +10,7 @@ export class DeleteUsuarioComponent implements OnInit {
 
   usuario: Usuario = new Usuario;
 
-  constructor(private ) { }
+  constructor(private) { }
 
   ngOnInit(): void {
   }

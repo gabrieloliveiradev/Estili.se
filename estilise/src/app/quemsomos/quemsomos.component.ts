@@ -20,9 +20,13 @@ export class QuemsomosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const element = document.querySelector('h1');
+    const element2 = document.querySelector('p');
+    digitaTexto(element)
+    digitaTexto(element2)
   }
 }
-const element = document.querySelector('h1');
+
 
 function digitaTexto(elemento) {
     const textoArray = elemento.innerHTML.split('');
