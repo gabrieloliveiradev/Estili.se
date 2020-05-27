@@ -16,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditarComponent } from './editar/editar.component';
+import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     ProdutoComponent,
     ListaUsuariosComponent,
     CadClienteComponent,
-    LoginClienteComponent
+    LoginClienteComponent,
+    EditarComponent,
+    DeleteUsuarioComponent
   ],
   imports: [
     BrowserModule,

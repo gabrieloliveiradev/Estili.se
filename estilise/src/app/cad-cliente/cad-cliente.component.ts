@@ -42,7 +42,7 @@ export class CadClienteComponent implements OnInit {
     })
   }
   refresh(){
-    this.router.navigateByUrl("/home", {skipLocationChange:true}).then(()=>{
+    this.router.navigateByUrl("/cadastro-usuario", {skipLocationChange:true}).then(()=>{
      this.router.navigate([this.locationPage.path()])
     })
   }

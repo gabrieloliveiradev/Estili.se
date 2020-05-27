@@ -42,12 +42,12 @@
                           <label for="Email" class="col-form-label">Email</label>
                       </div>
                       <div class="form-group d-flex justify-content-center">
-                          <input type="password" class="form-control input-estilo" name="senha" id="Password1" [(ngModel)]="senhas.senha" [(ngModel)]="usuario.senha" minlength="5" required>
+                          <input type="password" class="form-control input-estilo" name="senha" id="Password1" [(ngModel)]="senhas.senha" [(ngModel)]="usuario.senha" minlength="8" required>
                           <span class="linhaSpan"></span>
                           <label for="senha" class="col-form-label">Senha</label>
                       </div>
                       <div class="form-group d-flex justify-content-center mb-2">
-                          <input type="password" class="form-control input-estilo" name="confirmar_senha"  id="Password2" [(ngModel)]="senhas.confirma_senha" minlength="5" required>
+                          <input type="password" class="form-control input-estilo" name="confirmar_senha"  id="Password2" [(ngModel)]="senhas.confirma_senha" minlength="8" required>
                           <span class="linhaSpan"></span>
                           <label for="confirmarSenha" class="col-form-label">Confirmar senha</label>
                       </div>
@@ -77,7 +77,6 @@
       </div>
     </div>
   </div>
-
 
 <!-- Imagem para login
   <div class="col-md-6">
