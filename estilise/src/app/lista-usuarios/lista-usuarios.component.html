@@ -17,7 +17,7 @@
                 <td>{{usuario.email}}</td>
                 <td>{{usuario.senha}}</td>
                 <td><a class="btn btn-info" [routerLink]="['/editar',usuario.id]">Editar</a></td>
-                <td><a class="btn btn-outline-danger">Deletar</a></td>
+                <td><a class="btn btn-outline-danger" [routerLink]="['/deletar', usuario.id]">Deletar</a></td>
             </tr>
         </tbody>
     </table>
