@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { UsuariosService } from '../service/usuarios.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  mostrarPopupCadastro: boolean = false
+  mostrarPopupLogin: boolean = false
 
-  ngOnInit(): void {
+
+  constructor(private router: Router, private locationPage: Location) { }
+
+  ngOnInit():void{
+  }
+  popupCadastro(){
+    this.mostrarPopupCadastro = true
+  }
+  popupLogin(){
+    this.mostrarPopupLogin = true
   }
 
 }
