@@ -95,3 +95,10 @@
             </div>
         </section>
     </body>
+
+    <div class="content">
+        <div *ngIf="splash" class="loading">
+            Aguarde...
+        </div>
+        <router-outlet *ngIf="!splash"></router-outlet>
+    </div>

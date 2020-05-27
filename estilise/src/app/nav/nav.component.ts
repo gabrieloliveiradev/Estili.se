@@ -18,11 +18,17 @@ export class NavComponent implements OnInit {
 
   ngOnInit():void{
   }
+  // refresh(){
+  //   this.router.navigateByUrl("/login-cliente", {skipLocationChange:true}).then(()=>{
+  //    this.router.navigate([this.locationPage.path()])
+  //   })
+  // }
   popupCadastro(){
     this.mostrarPopupCadastro = true
   }
   popupLogin(){
     this.mostrarPopupLogin = true
+    // this.refresh()
   }
-
+ 
 }

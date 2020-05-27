@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../model/usuario';
 import { UsuariosService } from '../service/usuarios.service';
-import { Validators } from '@angular/forms';
-import { ActivatedRoute, Router, PreloadingStrategy } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-cad-cliente',
@@ -15,7 +15,10 @@ export class CadClienteComponent implements OnInit {
   usuario: Usuario = new Usuario()
   alerta: boolean = false;
   validado: boolean = false;
-  constructor(private usuarioService:UsuariosService, private router:Router, private route:ActivatedRoute, private locationPage:Location) { }
+  mostrarlogin: boolean = false
+  constructor(private usuarioService:UsuariosService, 
+    private router:Router, private route:ActivatedRoute, 
+    private locationPage:Location) { }
   
   ngOnInit() {
   let cadastro: string = localStorage.getItem('validado')
@@ -34,7 +37,7 @@ export class CadClienteComponent implements OnInit {
   cadastrar(){
     this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      // location.assign("/cadastro-usuario")
+      location.assign("/cadastro-usuario")
       this.validado = true
       this.router.navigate(["/cadastro-usuario"])
       localStorage.setItem("validado", this.validado.toString())
@@ -42,7 +45,7 @@ export class CadClienteComponent implements OnInit {
     })
   }
   refresh(){
-    this.router.navigateByUrl("/home", {skipLocationChange:true}).then(()=>{
+    this.router.navigateByUrl("/cadastro-usuario", {skipLocationChange:true}).then(()=>{
      this.router.navigate([this.locationPage.path()])
     })
   }
@@ -55,4 +58,7 @@ export class CadClienteComponent implements OnInit {
     }
   }
   
+  mudarPopupParaLogin(){
+    this.mostrarlogin = true
+  }
 }

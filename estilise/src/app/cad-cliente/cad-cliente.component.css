@@ -10,7 +10,7 @@ label{
     font-weight: 100;
     transition: .2s ease all;
 }  
-/* =========================== Tamanho do Popup */
+/* =========================== Tamanho do Popup*/
 .tamanhoPopupWidth{
     max-width: 933px!important;
 }
