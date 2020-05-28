@@ -1,99 +1,4 @@
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.titulo {
-    text-align: center;
-    font-size: 90px;
-    padding: 30px;
-    font-family: 'Cookie', cursive;
-}
-
-.textoQuemSomos {
-    margin: 2% 5% 8% 5%;    
-}
-
-#paragrafo {
-    text-align: left;
-    line-height: 195%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-}
-.bg-white{
-    background-color: white;
-} */
-
-/* h1, h2{
-    font-family: 'Roboto Slab', serif;
-    font-size: 40pt;
-    text-decoration: none;
-    color:rgba(87, 14, 182, 0.467);
-}
-h5{
-    font-family: 'Roboto Slab' serif;
-    font-size: 10pt;
-    text-decoration: none;
-    color: 87,14,182, rgba(87, 14, 182, 0.467);
-} */
-
-/* {
-    font-family: Arial, Helvetica, sans-serif;
-  } */
-  
-  /* .flip-card {
-    background-color: transparent;
-    width: 150px;
-    height: 150px;
-    perspective: 1000px;
-  }
-  
-  .flip-card-inner {
-    position: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }   
-  .flip-card-back {
-      font-size: 15pt;
-      text-decoration: none;
-    background-color: rgba(87, 14, 182, 0.467);
-    transform: rotateY(180deg);
-  }
-
-
-  .flip-container:hover .flipper, 
-.flip-container.hover .flipper, 
-.flip-container.flip .flipper {  	
-  transform: rotateY(180deg);  
-}
-flip-container:hover .flipper, 
-.flip-container.hover .flipper, 
-.flip-container.flip .flipper {  	
-  transform: rotateY(180deg);  
-} */
-h1{
+#tituloHeader{
   max-width: 500px;
   text-align:center;
   margin: 50px auto;
@@ -101,7 +6,7 @@ h1{
   color:#158591;
   font-size: 30px;
 }
-h1::after{
+#tituloHeader::after{
   content:'|' ;
   margin-left: 5px;
   opacity: 1;
@@ -124,16 +29,20 @@ h2 {
   color:#158591;
 }
 #cardSobre{
-  width: 65%;
-  height: 59%;
-	left: 18%; /* posiciona a 90px para a esquerda */ 
-	top: 18px; /* posiciona a 70px para baixo */
+  background-size: 100%;
+  background-image: url("../../assets/img/cartão@2x.png");
+  height: 80%;
+  width: 80%;
 }
-.textoSobre{
-/* font-size: 28px; */
-left: 15px;
-right: 15px;
+header{
+  height: 90vh;
+  width: 100%;
+}
+.textoSobre > p {
+font-size: 28px;
+max-width: 70%;
 text-align: center;
+
 }
 h5{
   color:#158591;
@@ -143,8 +52,12 @@ h5{
     list-style: none;
     margin: 10px,30px;
     display: inline-block;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 35px;
+    padding: 35px;
+  }
+  .social{
+    max-width: 30%;
+
   }
   ul.social-network {
     list-style: none;
@@ -165,8 +78,7 @@ h5{
 }
 
 .faLinkedin:hover{
-  color: #0072b1;
-}
-.foto1 {
   
+  color: #0072b1;
+
 }
