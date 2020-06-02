@@ -27,28 +27,29 @@
             </div>
         <div class="caixa-formulario">
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control formulario" required>
+                <input type="text" class="form-control formulario" id="nome" [(ngModel)]="nome" #nomeErro="ngModel"  required>
                 <span class="linhaSpan"></span>
+                <span class="linhaVermelhaSpan" [hidden]="nomeVermelho"></span>
                 <label class="col-form-label">Nome</label>
             </div>
             <div class="row mt-2">
                 <div class="col form-group d-flex justify-content-around">
-                    <input class="form-control formulario" email required>
+                    <input class="form-control formulario" [(ngModel)]="email" email required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Email</label>
                 </div>
                 <div class="col form-group d-flex justify-content-around">
-                    <input type="tel" class="form-control formulario" required>
+                    <input type="tel" class="form-control formulario" [(ngModel)]="telefone" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Telefone</label>
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control formulario" required>
+                <input type="text" class="form-control formulario" [(ngModel)]="assunto" required>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label">Assunto</label>
             </div>
-            <div class="d-flex justify-content-center mb-5 mt-5">
+            <div class="d-flex form-group justify-content-center mb-5 mt-5">
                 <button type="submit" class="btn botao aqua" (click)=botao1()>Próximo passo &rarr;</button>
             </div>
         </div>
@@ -73,7 +74,7 @@
         </div>
         <div class="container caixa-formulario">
             <div class="form-group d-flex justify-content-center">
-                <textarea class="form-control formulario" rows="4" style="resize: none;" required></textarea>
+                <textarea class="form-control formulario" rows="4" style="resize: none;" [(ngModel)]="comentario" required></textarea>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label">Faça seu comentário</label>
             </div>
