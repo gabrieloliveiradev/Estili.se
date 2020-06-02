@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
@@ -14,7 +15,7 @@ export class ContatoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+    }
   
   botao1 () {
     this.bloco1 = !this.bloco1;
@@ -25,5 +26,4 @@ export class ContatoComponent implements OnInit {
     this.bloco2 = !this.bloco2;
     this.bloco3 = !this.bloco3;
   }
-
 }
