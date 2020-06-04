@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* CSS da barra de loading*/
 .pace {
     -webkit-pointer-events: none;
     pointer-events: none;
@@ -20,4 +20,15 @@
     right: 100%;
     width: 100%;
     height: 5px;
+  }
+
+  /* CSS GERAL DO SITE  */
+  .font-cookie {
+    font-family: 'Cookie', 'Sans Serif';
+  }
+  .font-roboto {
+    font-family: 'Roboto', 'Sans Serfi';
+  }
+  .verde-logo {
+    color: #118899;
   }
