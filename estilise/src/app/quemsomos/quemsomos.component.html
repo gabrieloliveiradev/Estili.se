@@ -1,39 +1,40 @@
-<div class="container-luid rofw justify-content-around">
-    <div class="card text-white container-luid rofw justify-content-around" id="cardSobre">
-        <img src="../../assets/img/cartão@2x.png" class="img-fluid" alt="...">
-        <div class="card-img-overlay" id="caixa">
-            <h1 class="card-title">Estili.se</h1>
-            <div class="textoSobre"class="container-luid rofw justify-content-around">
-                <p class="card-text">A Estili.Se nasce da união de duas necessidades, o acesso à peças de vestuário
-                    únicos e a ligação entre
-                    profissionais da arte da costura com os clientes interessados em peças de alta qualidade que não
-                    podem ser encontrados em nenhum outro lugar.</p>
+<div class="container-fluid row justify-content-around">
+    <header class="d-flex align-items-center justify-content-center">
+        <div class="text-white container-fluid row justify-content-center align-items-center" id="cardSobre">
+            <div class="d-flex flex-column align-items-center justify-content-around" id="caixa">
+                <h1 class="font-cookie display-4 verde-logo text-center" id="tituloHeader">Estili.se</h1>
+                <div class="d-flex w-100 justify-content-around textoSobre">
+                    <p id="texto">A Estili.Se nasce da união de duas necessidades, o acesso à peças de vestuário
+                        únicos e a ligação entre
+                        profissionais da arte da costura com os clientes interessados em peças de alta qualidade que não
+                        podem ser encontrados em nenhum outro lugar.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="card mb-3 container" id="foto1">
+    </header>
+
+    <div class="mb-md-3 container my-md-5" id="foto1">
         <div class="row no-gutters">
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex flex-column align-items-center" id="vickdiv">
                 <img src="../../assets/img/vick_foto@2x.png" class="card-img" alt="Vitória Nogueira">
 
-                <ul class="social mb-0 list-inline mt-0">
-                    <li><a href="https://github.com/vicknogueira" class="icoGithub" title="Github">
+                <ul class="social mb-0 list-inline mt-0 y-100 d-flex justify-content-around">
+                    <li class=" px-3"><a href="https://github.com/vicknogueira" class="icoGithub" title="Github">
 
                             <fa-icon [icon]="faGithub" class="faGithub"></fa-icon>
                         </a></li>
-                    <li><a href="https://www.linkedin.com/in/vitoria-nogueira-vn/" class="icoLinkedin" title="Linkedin">
+                    <li class=" px-3"><a href="https://www.linkedin.com/in/vitoria-nogueira-vn/" class="icoLinkedin" title="Linkedin">
 
                             <fa-icon [icon]="faLinkedin" class="faLinkedin"></fa-icon>
                         </a></li>
                 </ul>
             </div>
-            <div class="col-md-8 ">
-                <div class="card-body">
-                    <h5 class="card-title">Vitória Nogueira</h5>
-                    <p class="card-text" id="vitoria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod obcaecati commodi
+
+            <div class="col-md-8 pb-5">
+                <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
+                    <h5 class="text-md-right ml-md-auto text-center">Vitória Nogueira</h5>
+                    <p class="text-md-right text-center" id="vitoria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                        obcaecati commodi
                         odio perspiciatis, laboriosam nemo suscipit quisquam nam, voluptatum consectetur natus? Ad, ut
                         voluptate at odio optio vitae corrupti itaque.
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure rem perferendis laudantium dolore
@@ -44,13 +45,12 @@
         </div>
     </div>
 
-    <div class="card mb-3 container" id="foto2">
-        <span class="border-left"></span>
+    <div class="mb-3 container my-5" id="foto2">
         <div class="row no-gutters">
-            <div class="col-md-8 ">
-                <div class="card-body">
-                    <h5 class="card-title">Gabriel Rodrigues de Oliveira</h5>
-                    <p class="card-text">Paulista,atualmente morando em itaquaquecetuba,decidi começar uma carreira como
+            <div class="col-md-8 pb-5">
+                <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
+                    <h5 class="text-md-left ml-md-auto text-center">Gabriel Rodrigues de Oliveira</h5>
+                    <p class="text-md-left text-center">Paulista,atualmente morando em itaquaquecetuba,decidi começar uma carreira como
                         desenvolvedor em 2019 e
                         desde
                         então participei de três bootcamps,a academia mastertech que foi ministrado na estação hack do
@@ -66,16 +66,17 @@
                         Scrum.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <div class="col-md-4 d-flex flex-column align-items-center order-first  order-md-2">
                 <img src="../../assets/img/gabs_foto@2x.png" class="card-img" alt="Gabriel Nogueira">
 
-                <ul class="social mb-0 list-inline mt-3">
-                    <li><a href="https://github.com/gabrieloliveiradev" class="icoGithub" title="Github">
+                <ul class="social mb-0 list-inline mt-0 y-100 d-flex justify-content-around">
+                    <li class="px-3"><a href="https://github.com/gabrieloliveiradev" class="icoGithub" title="Github">
 
                             <fa-icon [icon]="faGithub" class="faGithub"></fa-icon>
                         </a></li>
 
-                    <li><a href="https://www.linkedin.com/in/gabrielrodriguesoliveira/" class="icoLinkedin"
+                    <li class="px-3"><a href="https://www.linkedin.com/in/gabrielrodriguesoliveira/" class="icoLinkedin"
                             title="Linkedin">
 
                             <fa-icon [icon]="faLinkedin" class="faLinkedin"></fa-icon>
@@ -85,59 +86,64 @@
         </div>
     </div>
 
-    <div class="card mb-3 container" id="foto3">
-        <span class="border-left"></span>
+    <div class="mb-3 container my-5" id="foto3">
         <div class="row no-gutters">
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex flex-column align-items-center" id="jowdiv">
                 <img src="../../assets/img/jhow_foto@2x.png" class="card-img" alt="Jonatas Alves">
 
-                <ul class="social mb-0 list-inline mt-3">
-                    <li><a href="https://github.com/jonatasdamascenoalves" class="icoGithub" title="Github">
+                <ul class="social mb-0 list-inline mt-0 y-100 d-flex justify-content-around">
+                    <li class="px-3"><a href="https://github.com/jonatasdamascenoalves" class="icoGithub" title="Github">
 
                             <fa-icon [icon]="faGithub" class="faGithub"></fa-icon>
                         </a></li>
 
-                    <li><a href="https://www.linkedin.com/in/jonatasdamascenoalves/" class="icoLinkedin"
+                    <li class="px-3"><a href="https://www.linkedin.com/in/jonatasdamascenoalves/" class="icoLinkedin"
                             title="Linkedin">
 
                             <fa-icon [icon]="faLinkedin" class="faLinkedin"></fa-icon>
                         </a></li>
                 </ul>
             </div>
+
             <div class="col-md-8 ">
-                <div class="card-body">
-                    <h5 class="card-title" id="jonatas">Jonatas Damasceno Alves</h5>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem veniam facere
+                <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
+                    <h5 class="text-md-right ml-md-auto text-center" id="jonatas">Jonatas Damasceno Alves</h5>
+                    <p class="text-md-right text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem veniam facere
                         maiores, doloremque a culpa sit nulla excepturi quod? Nemo adipisci voluptates id quod
-                        voluptatum
-                        nulla. Consequuntur aut nesciunt quia.</p>
+                        voluptatum nulla. Consequuntur aut nesciunt quia. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Cum sit ullam nemo quasi culpa sapiente similique ratione laudantium,
+                        molestias, molestiae iure a tempore architecto eaque possimus sequi perferendis. Nihil, quaerat.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card mb-3 container" id="foto4">
-        <span class="border-left"></span>
+    <div class="mb-3 container my-5" id="foto4">
         <div class="row no-gutters">
-            <div class="col-md-8 ">
-                <div class="card-body">
-                    <h5 class="card-title">Guilherme Martins</h5>
-                    <p class="card-text" id="guilherme">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo natus
-                        magnam
+            <div class="col-md-8 pb-5">
+                <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
+                    <h5 class="text-md-left ml-md-auto text-center">Guilherme Martins</h5>
+                    <p class="text-md-left text-center" id="guilherme">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Explicabo natus magnam
                         totam dicta harum dignissimos vel blanditiis in laudantium minus, excepturi veniam! Dolorem,
                         nemo
-                        distinctio. Incidunt beatae in minima neque.</p>
+                        distinctio. Incidunt beatae in minima neque. Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Aut quidem provident porro soluta voluptatem molestias, maxime natus veritatis doloribus
+                        culpa repellendus sint hic laborum possimus rem! Possimus corporis molestias nostrum.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <div class="col-md-4 d-flex flex-column align-items-center order-first order-md-2">
                 <img src="../../assets/img/gui_foto@2x.png" class="card-img" alt="Guilherme Martins">
-                <ul class="social mb-0 list-inline mt-3">
-                    <li><a href="https://github.com/GuilhermeMAlves" class="icoGithub" title="Github">
+
+                <ul class="social mb-0 list-inline mt-0 y-100 d-flex justify-content-around">
+                    <li class="px-3"><a href="https://github.com/GuilhermeMAlves" class="icoGithub" title="Github">
 
                             <fa-icon [icon]="faGithub" class="faGithub"></fa-icon>
                         </a></li>
 
-                    <li><a href="https://www.linkedin.com/in/guilherme-martins-alves-a1533a187//" class="icoLinkedin"
+                    <li class="px-3"><a href="https://www.linkedin.com/in/guilherme-martins-alves-a1533a187//" class="icoLinkedin"
                             title="Linkedin">
 
                             <fa-icon [icon]="faLinkedin" class="faLinkedin"></fa-icon>
@@ -147,33 +153,35 @@
         </div>
     </div>
 
-    <div class="card mb-3 container" id="foto5">
-        <span class="border-left"></span>
+    <div class="mb-3 container my-5" id="foto5">
         <div class="row no-gutters">
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex flex-column align-items-center">
                 <img src="../../assets/img/otavio_foto@2x.png" class="card-img" alt="Otavio Mendes">
 
-                <ul class="social mb-0 list-inline mt-3">
-                    <li><a href="https://github.com/otaviogmendes" class="icoGithub" title="Github">
+                <ul class="social mb-0 list-inline mt-0 y-100 d-flex justify-content-around">
+                    <li class="px-3"><a href="https://github.com/otaviogmendes" class="icoGithub" title="Github">
 
                             <fa-icon [icon]="faGithub" class="faGithub"></fa-icon>
                         </a></li>
 
-                    <li><a href="https://www.linkedin.com/in/otavio-mendes-652432128/" class="icoLinkedin"
+                    <li class="px-3"><a href="https://www.linkedin.com/in/otavio-mendes-652432128/" class="icoLinkedin"
                             title="Linkedin">
 
                             <fa-icon [icon]="faLinkedin" class="faLinkedin"></fa-icon>
                         </a></li>
                 </ul>
             </div>
+
             <div class="col-md-8 ">
-                <div class="card-body">
-                    <h5 class="card-title" id="otavio">Otavio Mendes</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis corporis
+                <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
+                    <h5 class="text-md-right ml-md-auto text-center" id="otavio">Otavio Mendes</h5>
+                    <p class="text-md-right text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis corporis
                         eligendi
                         aperiam numquam incidunt. Facere inventore consequatur reprehenderit consequuntur adipisci
-                        culpa.
-                        Numquam maxime temporibus quidem quos error commodi, exercitationem sunt.</p>
+                        culpa. Numquam maxime temporibus quidem quos error commodi, exercitationem sunt. Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Corporis accusamus totam blanditiis aperiam in, at
+                        perspiciatis laboriosam quia est enim fugiat, ipsam voluptatem! Quo, quasi architecto aliquam
+                        eligendi autem atque.</p>
                 </div>
             </div>
         </div>

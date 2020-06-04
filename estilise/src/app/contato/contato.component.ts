@@ -10,10 +10,6 @@ export class ContatoComponent implements OnInit {
   bloco1 = false;
   bloco2 = true;
   bloco3 = true;
-  formulario1 = true;
-  formulario2 = true;
-  formulario3 = true;
-  formulario4 = true;
 
   constructor() { }
 
