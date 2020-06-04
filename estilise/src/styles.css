@@ -32,3 +32,25 @@
   .verde-logo {
     color: #118899;
   }
+
+/* css da barra de scroll */
+
+::-webkit-scrollbar-track {
+    background-color: rgb(224, 255, 251);
+    border: 1px rgb(50, 167, 155);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background: #8DF6EC;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #158591;
+    scrollbar-base-color:  rgb(224, 255, 251);
+    scrollbar-base-color:  rgb(224, 255, 251);
+    scrollbar-3dlight-color: #158591;
+    scrollbar-highlight-color: #158591;
+    scrollbar-track-color: #158591;
+    scrollbar-arrow-color: 158591;
+    scrollbar-shadow-color: #158591;
+}
