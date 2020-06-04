@@ -41,6 +41,12 @@
     float: right;
     text-align: center;
 }
+/* ----- Linha do span ----------- */
+.linhaSpan{
+    position: absolute;
+    width: 45%; 
+    left: 156px;
+}
 
 #linha-c-direita {
     background-color: #aaa;
@@ -61,7 +67,7 @@
 #linha-v-direita {
     background-color:#66F4DB;
     width: 45%;
-    height: 2px;
+    height: 1px;
     float: left;
     text-align: center; 
 }

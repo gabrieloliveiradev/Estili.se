@@ -32,12 +32,12 @@
                 </div>
                 <div class="mt-5">
                     <div class="form-group d-flex justify-content-center">
-                        <input type="text" class="form-control input-estilo" id="nome" [(ngModel)]="usuario.nome" required>
+                        <input type="text" id="nome" class="form-control input-estilo" id="nome" [(ngModel)]="usuario.nome" [(ngModel)]="senhas.nome" required>
                         <span class="linhaSpan"></span>
                         <label for="exampleInputNome" class="col-form-label">Nome</label>
                       </div>
                       <div class="form-group d-flex justify-content-center">
-                          <input type="email" class="form-control input-estilo" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email"  required>
+                          <input type="text" class="form-control input-estilo" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email"  required>
                           <span class="linhaSpan"></span>
                           <label for="exampleInputEmail1" class="col-form-label">Email</label>
                       </div>
