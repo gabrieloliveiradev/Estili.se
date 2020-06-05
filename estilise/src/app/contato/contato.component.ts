@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class ContatoComponent implements OnInit {
 
   nome = '';
-  nomeVermelho = true;
   email = '';
   telefone = '';
   assunto = '';
@@ -25,16 +24,16 @@ export class ContatoComponent implements OnInit {
   
   botao1 () {
     if (this.nome == '') {
-      this.nomeVermelho = false;
+      alert("Favor preenher todos os campos.");
     }
     else if (this.email == '') {
-
+      alert("Favor preenher todos os campos.");
     }
     else if (this.telefone == '') {
-
+      alert("Favor preenher todos os campos.");
     }
     else if (this.assunto == '') {
-
+      alert("Favor preenher todos os campos.");
     }
     else {
     this.bloco1 = !this.bloco1;
@@ -43,7 +42,7 @@ export class ContatoComponent implements OnInit {
 
   botao2 () {
     if (this.comentario == '') {
-
+      alert("Favor escrever a sua mensagem.");
     }
     else {
     this.bloco2 = !this.bloco2;

@@ -10,10 +10,10 @@
         <img src="../../assets/img/contato/mulher-fone.svg" class="img-fluid" style="width: 100%;">
     </div>
 </div>
+
 <div class="container">
     
-    <!--Início do bloco 1-->
-    
+    <!--Início do bloco 1-->   
     <div class="bloco1 container" [hidden]="bloco1">
             <div class="fila mt-5">
                 <div class="esfera-v">1</div>
@@ -28,25 +28,24 @@
             </div>
         <div class="caixa-formulario">
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control formulario" id="nome" [(ngModel)]="nome" #nomeErro="ngModel"  required>
+                <input type="text" class="form-control formulario" id="nome" required>
                 <span class="linhaSpan"></span>
-                <span class="linhaVermelhaSpan" [hidden]="nomeVermelho"></span>
                 <label class="col-form-label">Nome</label>
             </div>
             <div class="row mt-2">
                 <div class="col form-group d-flex justify-content-around">
-                    <input class="form-control formulario" [(ngModel)]="email" email required>
+                    <input class="form-control formulario" email required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Email</label>
                 </div>
                 <div class="col form-group d-flex justify-content-around">
-                    <input type="tel" class="form-control formulario" [(ngModel)]="telefone" required>
+                    <input type="tel" class="form-control formulario" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Telefone</label>
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control formulario" [(ngModel)]="assunto" required>
+                <input type="text" class="form-control formulario" required>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label">Assunto</label>
             </div>
@@ -86,7 +85,7 @@
         </div>           
     </div>
 
-<!--Início do bloco 3-->
+    <!--Início do bloco 3-->
     <div class="bloco3"[hidden]="bloco3">
         <div class="container">
             <div class="fila mt-5">           

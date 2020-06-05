@@ -162,27 +162,6 @@ label {
     background: #71f6a6;
 }
 
-.linhaVermelhaSpan{
-    position: absolute;
-    display: block;
-    width: 80%; 
-    bottom: 1px; 
-}
-
-.linhaVermelhaSpan:before, .linhaVermelhaSpan:after{
-    content: '';
-    height: 2px;
-    bottom: 0px;
-    width: 0;
-    position: absolute;
-    transition: .2s ease all;
-    background: red;
-}
-
-.formulario:focus ~ .linhaVermelhaSpan:after {
-    width:100%;
-}
-
 .formulario:focus ~ .linhaSpan:after {
     width:100%;
 }
