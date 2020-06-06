@@ -56,9 +56,9 @@
 }
 
 
-/*-------------Inicio do CSS do Splashscreen-----------------*/
+/* -------------Inicio do CSS do Splashscreen-----------------*/
 
-.kart-loader *, .kart-loader *:after, .kart-loader *:before {
+/* .kart-loader *, .kart-loader *:after, .kart-loader *:before {
 	box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-ms-box-sizing: border-box;
@@ -6167,6 +6167,6 @@
 	100% {
 		opacity: 0.26667;
 	}
-}
+} */
 
-/*-------------Fim do CSS do Splashscreen-----------------*/
+/*-------------Fim do CSS do Splashscreen----------------- */
