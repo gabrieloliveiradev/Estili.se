@@ -174,3 +174,8 @@
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.filtro-hover:hover{
+    fill: #545454;
+    filter: drop-shadow(4px 5px 1px gray);
+    transition: 0.2s;
+}
