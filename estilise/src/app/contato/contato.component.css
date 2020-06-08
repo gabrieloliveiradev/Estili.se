@@ -22,7 +22,7 @@
 label {
     position: absolute;
     top: -3px!important;
-    left: 60px;
+    left: 15px;
     padding: 10px 0;
     font-size: 16px!important;
     color: rgb(185, 185, 185)!important;
@@ -59,11 +59,6 @@ label {
     text-align: center;
 }
 /* ----- Linha do span ----------- */
-.linhaSpan{
-    position: absolute;
-    width: 45%; 
-    left: 156px;
-}
 
 #linha-c-direita {
     background-color: #aaa;
@@ -144,17 +139,21 @@ label {
 
 .formulario:focus ~ label, .formulario:valid ~ label{
     top: -30px!important;
-    left: 50px;
+    left: 4px;
     font-size: 15px!important;
     font-style: normal;
     font-weight: 500;
     color: #71f6a6!important;
 }
 
+.input-tel-nome{
+    width: 100%;
+}
+
 .linhaSpan{
     position: absolute;
     display: block;
-    width: 80%; 
+    width: 100%; 
     bottom: 1px; 
 }
 
