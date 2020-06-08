@@ -3,11 +3,11 @@
     <header class="container mt-5 mb-5">
         <!-- Imagem que compõe o header -->
         <div class="row">
-            <div class="col-md-6">
-                <img style="width: 87%;" src="../../assets/img/produtos/bannerimage.png" alt="">
+            <div class="col-md-6 animação-banner-img">
+                <img style="width: 100%;" src="../../assets/img/produtos/bannerimage.png" alt="">
             </div>
             <!-- Titulo e texto do header -->
-            <div class="col-md-6 d-flex-justify-content-center p-3">
+            <div class="col-md-6 d-flex-justify-content-center p-3 animação-banner-titulo">
                 <div class="d-block justify-content-left" style="margin: 80px 10px 10px 10px;">
                     <h1 class="font-inherit mb-3" style="font-weight: 100; font-size: 30px;">Compre os melhores produtos
                     </h1>
@@ -39,22 +39,68 @@
     <article class="container-fluid d-flex justify-content-center mt-5">
         <div class="row w-100">
             <div class="col-md-3">
-                <button routerLink="/Categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
+                <button type="button" routerLink="/Categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
                     style="background-color: #71F6A6;">Categorias</button>
             </div>
             <div class="col-md-6">
-                <h3 class="text-center">Produtos em alta</h3>
+                <h3 class="text-center font-roboto">Produtos em alta</h3>
             </div>
-            <div class="col-md-3 d-flex justify-content-end">
-                <img style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
+            <div class="col-md-3 d-flex justify-content-end dropleft">
+                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
                     alt="Icone de filtro da página">
+        <!-- Filtro com animação -->
+                    <div class="dropdown-menu">
+                        <div class="d-flex justify-content-around mt-3">
+                            <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z" fill="#4B4A4A"/>
+                            </svg>
+                            <h4>Filtro</h4>
+                            <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png" alt="">
+                        </div>
+                        
+                        <div class="p-3 mt-4" style="color: #686363;">
+                            <h6 class="mb-3">Filtrar por valor</h6>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                        </div>
+                        <div class="p-3 mt-1" style="color: #686363;">
+                            <h6 class="mb-3">Filtrar por cor</h6>
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Preto</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="background-color: rgb(146, 17, 140); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Roxo</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="background-color: rgb(204, 186, 20); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Amarelo</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Laranja</p>
+                            </div>                            
+                        </div>
+                        <div class="p-3 mt-4" style="color: #686363;">
+                            <h6 class="mb-3">Filtrar por data</h6>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">Recente</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
+                            <p ><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou  mais</p>
+                        </div>
+
+                        <div class="p-3 d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
+                        </div>
+
+                    </div>
+                <!-- Fim do filtro -->
             </div>
         </div>
     </article>
 
     <!-- Sessão Produtos -->
 
-    <section class="container-fluid" style="margin-top: 10px;">
+    <section class="container-fluid" style="margin-top: 40px;">
         <!-- Linha 1 - 4 produtos -->
         <div class="row">
             <div class="col-md-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
@@ -76,7 +122,7 @@
                 <div class="card-produto card-evento-hover">
                     <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Kamil Szumotalski on Unsplash.jpg" alt=""> 
                     <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
+                    <svg class="card-svg-coracao d-none" data-toggle="tooltip" data-placement="top" title="Adicionar aos favoritos" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
                 </div>
                 <div class="card-descricao p-3 card-evento-hover">
                     <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
@@ -169,7 +215,7 @@
             </div>
             <div class="col-md-3 card-div-elemento-pai">
                 <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img" src="../../assets/img/produtos/studio76-mckinsey-3114-pom_2.jpg" alt=""> 
+                    <img data class="w-100 card-img" src="../../assets/img/produtos/studio76-mckinsey-3114-pom_2.jpg" alt=""> 
                     <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
                     <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
                 </div>
@@ -254,8 +300,6 @@
       </div>
     </div>
 </main>
-
-
 
 
 

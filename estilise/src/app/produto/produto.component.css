@@ -17,7 +17,6 @@
     position: relative;
 }
 
-
 /* ======================== Eventos do <input> pesquisa*/
 .input-estilo:focus{
     box-shadow: 0 0 0 0 transparent;
@@ -125,4 +124,53 @@
 }
 .svg-seta-direita:hover{
     fill: #9b9791;
+}
+
+/* ========= Animações do banner ========== */
+
+@keyframes aparecendo-devagar{
+    from{
+        transform: translateX(-130px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.animação-banner-img{
+    animation-name: aparecendo-devagar;
+    animation-duration: 2s;      
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes aparecendo-devagar2{
+    from{
+        transform: translateX(200px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+.animação-banner-titulo{
+    animation-name: aparecendo-devagar2;
+    animation-duration: 2s;      
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+/* ========= Filtro com animações ============== */
+@keyframes aparece-filtro{
+    from{
+        transform: translateX(10px);
+    }
+    to{
+        transform: translateX(-103px);
+    }
+}
+.dropdown-menu{
+    box-shadow: -2px 16px 15px rgba(0, 0, 0, 0.315);
+    min-width: 22rem!important;
+    border: none;
+    top: 11px!important;
+    left: 105px!important;
+    z-index: 3!important;
+    animation-name: aparece-filtro;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
