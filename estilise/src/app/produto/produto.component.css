@@ -87,9 +87,9 @@
     top: 10px;
     position: absolute;
 }
-.card-descricao:hover, .card-produto:hover{
+.card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
     cursor: pointer;
-    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
 }
 .card-produto:hover .card-svg-coracao{
     display: flex!important;
