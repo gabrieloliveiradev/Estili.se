@@ -20,9 +20,11 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
+    RouterModule,
     AppComponent,
     HomeComponent,
     ContatoComponent,
