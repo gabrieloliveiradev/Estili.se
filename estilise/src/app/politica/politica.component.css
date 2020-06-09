@@ -16,7 +16,7 @@ aside{
 }
 
 /* -------------- animação ---------------------------*/
-@keyframes subirAbaixar{
+@keyframes flutuar{
     from{
         transform: translateY(0px);
     }
@@ -27,7 +27,7 @@ aside{
 .imgPoliticaPrivacidade{
     width: 21rem;
     margin-bottom: 68px;
-    animation-name: subirAbaixar;
+    animation-name: flutuar;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;

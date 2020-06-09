@@ -16,10 +16,10 @@ export class CadClienteComponent implements OnInit {
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
+
   constructor(private usuarioService:UsuariosService, 
     private router:Router, private route:ActivatedRoute, 
     private locationPage:Location) { }
-  
   ngOnInit() {
   let cadastro: string = localStorage.getItem('validado')
   if (cadastro == "true"){
@@ -32,7 +32,9 @@ export class CadClienteComponent implements OnInit {
   }
   senhas = {
     senha: "",
-    confirma_senha: ""
+    confirma_senha: "",
+    nome: "",
+    email: ""
   }
   cadastrar(){
     this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
@@ -61,4 +63,11 @@ export class CadClienteComponent implements OnInit {
   mudarPopupParaLogin(){
     this.mostrarlogin = true
   }
+  // mudarEstilo(){
+  //   var nome = (<HTMLSelectElement>document.getElementById('nome')).value
+
+  //   if(nome == "ola"){
+  //      alert("ta funfando")
+  //   }
+  // }
 }

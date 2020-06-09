@@ -19,12 +19,11 @@ import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditarComponent } from './editar/editar.component';
-import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component'
-import { RouterModule } from '@angular/router';
+import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
+import { CategoriasComponent } from './categorias/categorias.component'
 
 @NgModule({
   declarations: [
-    RouterModule,
     AppComponent,
     HomeComponent,
     ContatoComponent,
@@ -38,7 +37,8 @@ import { RouterModule } from '@angular/router';
     CadClienteComponent,
     LoginClienteComponent,
     EditarComponent,
-    DeleteUsuarioComponent
+    DeleteUsuarioComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
