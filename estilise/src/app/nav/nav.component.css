@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 .navbar {
     background: rgb(0,232,211);
     background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
@@ -22,10 +21,9 @@
     height: 100%;
     width: 100%;
 }
-.navbar-toggler {
-    margin-right: 10%!important;
+.nav-item {
+    
 }
-
 .nav-item > .btn-light {
     background-color: white;
     color: #6ff4e7;

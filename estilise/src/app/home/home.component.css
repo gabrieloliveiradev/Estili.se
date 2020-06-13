@@ -134,7 +134,7 @@ article > div {
 blockquote > p {
     font-family: 'Cookie', cursive;
     color: #158591;
-    font-size: 70px;
+    font-size: 80px;
 }
 blockquote > small {
     font-family: 'Roboto', sans-serif;
@@ -143,6 +143,7 @@ blockquote > small {
 }
 
 #categorias {
+    height: 500px;
     width: 100%;
     background: rgb(126,152,206);
 background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 50%, rgba(165,163,235,1) 100%);
@@ -154,5 +155,4 @@ background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 5
 #categorias-img > img {
     width: auto;
     height: 90%;
-    max-height: 450px;
 }

@@ -7,7 +7,7 @@
                 <img src="../../assets/img/logo.png" alt="">
             </div>
             <p class="header-texto text-white">COMPRE E ENCOMENDE ROUPAS COM OS MELHORES <span>COSTUREIROS  E ALFAIATES</span> PELO BRASIL.</p>
-            <a href="" routerLink="/produto" class="btn btn-estilise p-3 mt-1">VER PRODUTOS</a>
+            <a href="" class="btn btn-estilise p-3 mt-1">VER PRODUTOS</a>
         </div>
         <div class="col-lg-5 col-11 d-none d-lg-flex justify-content-center align-items-end">
             <div class="arara-header mt-auto">
@@ -79,20 +79,27 @@
             <a href="" class="btn btn-verde p-3 mt-3 d-flex justify-content-center justify-content-md-right" style="width: 150px;">PROFISSIONAIS</a>
         </div>
     </article>
-    <blockquote class="d-flex flex-column justify-content-center align-items-center p-5">
-        <p class="display-4 p-1 p-md-5 text-center">"A moda é incessantemente fascinante porque ela é uma 
+    <blockquote class="d-flex flex-column justify-content-center align-items-center py-5">
+        <p class="display-4 p-5 text-center">"A moda é incessantemente fascinante porque ela é uma 
             expressão de você mesmo"</p>
             <small class="mb-5">-Anna Wintour</small>
         </blockquote>
-        <section id="categorias" class="container-fluid row justify-content-around py-5 p-md-0">
+        <section id="categorias" class="container-fluid row justify-content-around">
             <div id="categorias-texto" class="col-10 col-lg-5 d-flex flex-column align-items-lg-start align-items-center justify-content-center">
                 <h1 class="text-lg-left text-center mb-3" style="color: #1B2F48; width: 80%;">EXPLORE DEZENAS DE CATEGORIAS</h1>
                 <span style="width: 300px; height: 1px; background-color: #1B2F48;"></span>
                 <p class="text-lg-left text-center mt-3" style="width: 60%; color:white; font-size: 20px;">No estili.se você tem a oportunidade de encontrar dezenas de categorias e achar as roupas que mais combinam com você</p>
                 <a href="" class="btn btn-roxo p-3 mt-3 d-flex justify-content-center" style="width: 30%;">CATEGORIAS</a>
             </div>
-            <div id="categorias-img" class="col-10 col-lg-5 d-none d-lg-flex align-items-end justify-content-center pt-md-5">
+            <div id="categorias-img" class="col-10 col-lg-5 d-none d-lg-flex align-items-end justify-content-center ">
                 <img src="../../assets/img/arara_azul.png" alt="">
             </div>
         </section>
     </body>
+
+    <div class="content">
+        <div *ngIf="splash" class="loading">
+            Aguarde...
+        </div>
+        <router-outlet *ngIf="!splash"></router-outlet>
+    </div>
