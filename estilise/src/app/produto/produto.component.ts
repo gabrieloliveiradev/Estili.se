@@ -13,4 +13,14 @@ export class ProdutoComponent implements OnInit {
     window.scroll(0,0);
   }
 
+  // Ancora
+ ancora(){
+  let ancora = document.querySelector("#ancoradoNoArticle")
+  if (ancora){
+      ancora.scrollIntoView({ behavior: 'smooth'})
+  }
+  
+ }
+
+
 }

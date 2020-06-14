@@ -64,8 +64,6 @@
     background-color: #FBF8F8;
     position: relative;
     top: 25px; 
-}
-.card-img, .card-img-adicionar{
     top: 0;
 }
 .card-descricao{
@@ -89,6 +87,9 @@
 .card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
     cursor: pointer;
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
+}
+.card-div-elemento-pai:hover .card-img{
+    filter: brightness(0.6);
 }
 .card-produto:hover .card-svg-coracao{
     display: flex!important;
@@ -179,3 +180,29 @@
     filter: drop-shadow(4px 5px 1px gray);
     transition: 0.2s;
 }
+
+/* ============== ancora com animação ============== */
+@keyframes flutuar{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+}
+
+.ancora{
+    background: url("../../assets/img/produtos/baixar.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+    visibility: visible!important;
+    animation-name: flutuar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: drop-shadow(0px 8px 1px #a8adb1);
+}
+
