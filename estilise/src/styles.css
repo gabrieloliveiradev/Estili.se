@@ -27,7 +27,10 @@
     font-family: 'Cookie', 'Sans Serif';
   }
   .font-roboto {
-    font-family: 'Roboto', 'Sans Serfi';
+    font-family: 'Roboto', 'Sans Serfif';
+  }
+  .font-roboto-light{
+	  font-family: 'Roboto Light', 'Sans Serif';
   }
   .verde-logo {
     color: #118899;
