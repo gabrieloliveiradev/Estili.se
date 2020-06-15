@@ -12,9 +12,9 @@ export class ContatoComponent implements OnInit {
   bloco3 = true;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(){
+    window.scroll(0,0)
+    }
   
   botao1 () {
     this.bloco1 = !this.bloco1;

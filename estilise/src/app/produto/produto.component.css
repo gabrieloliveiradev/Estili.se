@@ -1,0 +1,208 @@
+
+/* ============ Estilo do input de pesquisa ================ */
+.input-estilo{
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: transparent;
+    background-color: #FCFCFC;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(236, 235, 235);
+}   
+
+.form-group{
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* ======================== Eventos do <input> pesquisa*/
+.input-estilo:focus{
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom: 0.5px solid transparent!important;
+}
+
+
+/* ========================  Estilo do <span> que faz a animação no input*/
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 1px;
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #DCD7D0;
+}
+ .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+    width:100%;
+}
+
+/*============== Botão para categoria ================= */
+
+.botao-categoria{
+    background-image: url("../../assets/img/produtos/seta-direita 1.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 160px;
+    background-position-y: center;
+    background-position-x: 9px;
+}
+
+/* ========= card do produto =========== */
+.card-produto, .card-img, .card-img-adicionar{
+    width: 290px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #FBF8F8;
+    position: relative;
+    top: 25px; 
+    top: 0;
+}
+.card-descricao{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 290px;
+    height: 100px;
+    background-color: #FBF8F8; 
+}
+
+/* ======== Eventos para os cards produtos ========== */
+.card-produto:hover .card-img-adicionar{
+    display: flex!important;
+    width: 42px;
+    height: 40px;
+    border-radius: 3px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
+    cursor: pointer;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
+}
+.card-div-elemento-pai:hover .card-img{
+    filter: brightness(0.6);
+}
+.card-produto:hover .card-svg-coracao{
+    display: flex!important;
+    width: 35px;
+    height: 32px;
+    right: 70px;
+    top: 15px;
+    border-radius: 3px;
+    position: absolute;
+    fill: white;
+}
+.card-img-adicionar:hover{
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.16);
+}
+.card-svg-coracao:hover{
+    filter: drop-shadow(0px 0px 2px white);
+    transition: 0.10s;
+}
+
+/* ========== Estilo do Modal =============== */
+.tamanhoPopupWidth{
+    max-width: 1150px!important;
+}
+.tamanhoPopupHeight{
+    height: 800px!important;
+}
+.svg-seta-direita{
+    width: 9%;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    fill: #c3bdb5;
+    cursor:pointer;
+}
+.svg-seta-direita:hover{
+    fill: #9b9791;
+}
+
+/* ========= Animações do banner ========== */
+
+@keyframes aparecendo-devagar{
+    from{
+        transform: translateX(-130px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.animação-banner-img{
+    animation-name: aparecendo-devagar;
+    animation-duration: 2s;      
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes aparecendo-devagar2{
+    from{
+        transform: translateX(200px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+.animação-banner-titulo{
+    animation-name: aparecendo-devagar2;
+    animation-duration: 2s;      
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+/* ========= Filtro com animações ============== */
+@keyframes aparece-filtro{
+    from{
+        transform: translateX(10px);
+    }
+    to{
+        transform: translateX(-103px);
+    }
+}
+.dropdown-menu{
+    box-shadow: -2px 16px 15px rgba(0, 0, 0, 0.315);
+    min-width: 22rem!important;
+    border: none;
+    top: 11px!important;
+    left: 105px!important;
+    z-index: 3!important;
+    animation-name: aparece-filtro;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.filtro-hover:hover{
+    fill: #545454;
+    filter: drop-shadow(4px 5px 1px gray);
+    transition: 0.2s;
+}
+
+/* ============== ancora com animação ============== */
+@keyframes flutuar{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+}
+
+.ancora{
+    background: url("../../assets/img/produtos/baixar.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+    visibility: visible!important;
+    animation-name: flutuar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: drop-shadow(0px 8px 1px #a8adb1);
+}
+
