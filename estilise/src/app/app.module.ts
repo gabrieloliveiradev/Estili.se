@@ -20,7 +20,8 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
-import { CategoriasComponent } from './categorias/categorias.component'
+import { CategoriasComponent } from './categorias/categorias.component';
+import { ProfissionaisComponent } from './profissionais/profissionais.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CategoriasComponent } from './categorias/categorias.component'
     LoginClienteComponent,
     EditarComponent,
     DeleteUsuarioComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    ProfissionaisComponent
   ],
   imports: [
     BrowserModule,
