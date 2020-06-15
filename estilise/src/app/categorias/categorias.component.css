@@ -1,0 +1,25 @@
+#categoria-card{
+    max-height: 300px;
+    min-height: 100px;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+#categoria-card > img{
+    height: 100%;
+    width: 100%;
+    filter: brightness(75%);
+}
+
+#categoria-card > img:hover{
+    transition: 1s;
+    filter: brightness(40%);
+}
+
+#categoria-card > h1 {
+    color: rgb(236, 230, 230);
+    max-width: 60%;
+    font-family: inherit;
+    font-family: "Roboto Thin"
+}
+
