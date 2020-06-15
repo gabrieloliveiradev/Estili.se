@@ -1,14 +1,26 @@
+<<<<<<< HEAD
+<div class="container">
+
+    <h1 class="d-flex justify-content-center mb-5 mp-5">produto works!</h1>
+    
+    <div class="d-flex justify-content-center mb-5 mp-5">
+
+        <img src="https://fashionstamp.files.wordpress.com/2011/12/desenho-moda.jpg" alt="">
+
+    </div>
+</div>
+=======
 <main class="container-fluid">
     <!-- Sessão inicial, banner -->
     <header class="container mt-5 mb-5">
         <!-- Imagem que compõe o header -->
         <div class="row">
-            <div class="col-md-6 animação-banner-img">
+            <div class="col-md-6 animação-banner-img pr-5">
                 <img style="width: 100%;" src="../../assets/img/produtos/bannerimage.png" alt="">
             </div>
             <!-- Titulo e texto do header -->
             <div class="col-md-6 d-flex-justify-content-center p-3 animação-banner-titulo">
-                <div class="d-block justify-content-left" style="margin: 80px 10px 10px 10px;">
+                <div class="d-block justify-content-left pl-5" style="margin: 142px 10px 10px 10px;">
                     <h1 class="font-inherit mb-3" style="font-weight: 100; font-size: 30px;">Compre os melhores produtos
                     </h1>
                     <div style="width: 70%;">
@@ -18,10 +30,13 @@
                 </div>
             </div>
         </div>
+        <div class="d-flex justify-content-center w-100" style="height: 100px;margin-bottom: 150px;">
+                <a (click)="ancora()" class="ancora"></a>
+        </div>
     </header>
 
     <!-- Local de pesquisa do produto -->
-    <article class="d-flex justify-content-center" style="margin-top: 150px;">
+    <article class="d-flex justify-content-center" id="ancoradoNoArticle">
         <div class="form-group d-flex justify-content-center" style="width: 60%;">
             <input type="text" class="form-control input-estilo" placeholder="Pesquisar..." name="pesquisa"
                 minlength="4" required>
@@ -39,15 +54,31 @@
     <article class="container-fluid d-flex justify-content-center mt-5">
         <div class="row w-100">
             <div class="col-md-3">
-                <button type="button" routerLink="/Categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
+                <button type="button" routerLink="/categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
                     style="background-color: #71F6A6;">Categorias</button>
             </div>
             <div class="col-md-6">
                 <h3 class="text-center font-roboto">Produtos em alta</h3>
             </div>
             <div class="col-md-3 d-flex justify-content-end dropleft">
-                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
-                    alt="Icone de filtro da página">
+
+                <svg class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: 20%;" height="89" viewBox="0 0 73 89" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M12.7822 55.1621L12.7972 52.305L20.3318 52.3444L20.3169 55.2016L12.7822 55.1621Z"/>
+                    <path d="M12.8645 39.4482L12.8795 36.5911L35.4834 36.7095L35.4685 39.5666L12.8645 39.4482Z"/>
+                    <path d="M12.9468 23.7339L12.9617 20.8768L28.0311 20.9557L28.0161 23.8128L12.9468 23.7339Z"/>
+                    <path d="M31.8134 18.1186L31.7686 26.6899L35.5359 26.7097L35.5509 23.8525L58.1549 23.9709L58.1698 21.1138L35.5657 20.9954L35.5807 18.1383L31.8134 18.1185L31.8134 18.1186Z"/>
+                    <path d="M42.9883 42.4631L43.0033 39.606L58.0726 39.6849L58.0876 36.8277L43.0182 36.7488L43.0332 33.8917L39.2658 33.872L39.2209 42.4434L42.9883 42.4631Z"/>
+                    <path d="M27.8367 58.0983L27.8517 55.2412L57.9903 55.399L58.0052 52.5419L27.8666 52.3841L27.8816 49.5269L24.1142 49.5072L24.0693 58.0786L27.8367 58.0983Z"/>
+                    </g>
+                    <path d="M27.2217 70.0195H22.2485V75H21.3477V64.3359H27.9541V65.105H22.2485V69.2505H27.2217V70.0195ZM30.5615 75H29.6826V67.0752H30.5615V75ZM29.5288 64.7827C29.5288 64.6167 29.5825 64.4775 29.6899 64.3652C29.7974 64.248 29.9438 64.1895 30.1294 64.1895C30.3149 64.1895 30.4614 64.248 30.5688 64.3652C30.6812 64.4775 30.7373 64.6167 30.7373 64.7827C30.7373 64.9487 30.6812 65.0879 30.5688 65.2002C30.4614 65.3125 30.3149 65.3687 30.1294 65.3687C29.9438 65.3687 29.7974 65.3125 29.6899 65.2002C29.5825 65.0879 29.5288 64.9487 29.5288 64.7827ZM33.9307 75H33.0518V63.75H33.9307V75ZM37.6807 65.0464V67.0752H39.3213V67.793H37.6807V73.0737C37.6807 73.5132 37.7588 73.8403 37.915 74.0552C38.0762 74.27 38.3423 74.3774 38.7134 74.3774C38.8599 74.3774 39.0967 74.353 39.4238 74.3042L39.4604 75.022C39.231 75.105 38.9185 75.1465 38.5229 75.1465C37.9224 75.1465 37.4854 74.9731 37.2119 74.6265C36.9385 74.2749 36.8018 73.7598 36.8018 73.0811V67.793H35.3442V67.0752H36.8018V65.0464H37.6807ZM44.7998 67.8223C44.6143 67.7881 44.4165 67.771 44.2065 67.771C43.6597 67.771 43.1958 67.9248 42.8149 68.2324C42.439 68.5352 42.1704 68.9771 42.0093 69.5581V75H41.1377V67.0752H41.9946L42.0093 68.335C42.4731 67.3975 43.2178 66.9287 44.2432 66.9287C44.4873 66.9287 44.6802 66.9604 44.8218 67.0239L44.7998 67.8223ZM45.5615 70.9204C45.5615 70.1587 45.708 69.4727 46.001 68.8623C46.2988 68.252 46.7163 67.7783 47.2534 67.4414C47.7954 67.0996 48.4082 66.9287 49.0918 66.9287C50.1465 66.9287 51.001 67.2998 51.6553 68.042C52.3096 68.7793 52.6367 69.7583 52.6367 70.979V71.1621C52.6367 71.9287 52.4878 72.6196 52.1899 73.2349C51.897 73.8452 51.4819 74.3164 50.9448 74.6484C50.4077 74.9805 49.7949 75.1465 49.1064 75.1465C48.0566 75.1465 47.2021 74.7778 46.543 74.0405C45.8887 73.2983 45.5615 72.3169 45.5615 71.0962V70.9204ZM46.4404 71.1621C46.4404 72.1094 46.6846 72.8882 47.1729 73.4985C47.666 74.104 48.3105 74.4067 49.1064 74.4067C49.8975 74.4067 50.5371 74.104 51.0254 73.4985C51.5186 72.8882 51.7651 72.085 51.7651 71.0889V70.9204C51.7651 70.3149 51.6528 69.7607 51.4282 69.2578C51.2036 68.7549 50.8887 68.3667 50.4834 68.0933C50.0781 67.8149 49.6143 67.6758 49.0918 67.6758C48.3105 67.6758 47.6733 67.9834 47.1802 68.5986C46.687 69.209 46.4404 70.0098 46.4404 71.001V71.1621Z" fill="black"/>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="40" height="52.7433" fill="white" transform="translate(9 57.9995) rotate(-89.7)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
         <!-- Filtro com animação -->
                     <div class="dropdown-menu">
                         <div class="d-flex justify-content-around mt-3">
@@ -58,14 +89,14 @@
                             <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png" alt="">
                         </div>
                         
-                        <div class="p-3 mt-4" style="color: #686363;">
+                        <div class="p-3 pl-4 mt-4" style="color: #686363;">
                             <h6 class="mb-3">Filtrar por valor</h6>
                             <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
                             <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
                             <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
                             <p ><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
                         </div>
-                        <div class="p-3 mt-1" style="color: #686363;">
+                        <div class="p-3 pl-4 mt-1" style="color: #686363;">
                             <h6 class="mb-3">Filtrar por cor</h6>
                             <div class="d-flex align-items-center mb-3">
                                 <div style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Preto</p>
@@ -80,7 +111,7 @@
                                 <div style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;"></div><p class="m-0 ml-2">Laranja</p>
                             </div>                            
                         </div>
-                        <div class="p-3 mt-4" style="color: #686363;">
+                        <div class="p-3 pl-4 mt-4" style="color: #686363;">
                             <h6 class="mb-3">Filtrar por data</h6>
                             <p ><input class="mr-3" type="checkbox" name="" id="">Recente</p>
                             <p ><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
@@ -88,7 +119,7 @@
                             <p ><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou  mais</p>
                         </div>
 
-                        <div class="p-3 d-flex justify-content-center">
+                        <div class="p-3 pl-4 d-flex justify-content-center">
                             <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
                         </div>
 
@@ -99,10 +130,9 @@
     </article>
 
     <!-- Sessão Produtos -->
-
-    <section class="container-fluid" style="margin-top: 40px;">
+    <section class="container-fluid"style="margin-top: 40px;">
         <!-- Linha 1 - 4 produtos -->
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-md-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
                 <div class="card-produto card-evento-hover">
                     <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Eli DeFaria on Unsplash.jpg" alt=""> 
@@ -166,69 +196,6 @@
 
         </div>
 
-        <!-- Linha 2 - 4 produtos -->
-        <div class="row" style="margin: 15px 0px 15px 0px;">
-            <div class="col-md-3 card-div-elemento-pai">
-                <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img" src="../../assets/img/produtos/rocknwool-JgDbCod2gg4-unsplash.jpg" alt=""> 
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 card-div-elemento-pai">
-                <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Thái An on Unsplash.jpg" alt=""> 
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 card-div-elemento-pai">
-                <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Alicia Petresc on Unsplash.jpg" alt=""> 
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 card-div-elemento-pai">
-                <div class="card-produto card-evento-hover">
-                    <img data class="w-100 card-img" src="../../assets/img/produtos/studio76-mckinsey-3114-pom_2.jpg" alt=""> 
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 </main>
 
@@ -303,18 +270,5 @@
 
 
 
+>>>>>>> 3a695fbccd7eb7311189810215c9fc0a5124d44b
 
-
-
-
-
-<!-- <div class="container">
-
-    <h1 class="d-flex justify-content-center mb-5 mp-5">produto works!</h1>
-    
-    <div class="d-flex justify-content-center mb-5 mp-5">
-
-        <img src="https://fashionstamp.files.wordpress.com/2011/12/desenho-moda.jpg" alt="">
-
-    </div>
-</div> -->

@@ -1,0 +1,76 @@
+.input-estilo{
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: transparent;
+    background-color: #FCFCFC;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid hsl(145, 19%, 82%);
+}   
+
+.form-group{
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.input-estilo:focus{
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom: 0.5px solid transparent!important;
+}
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 1px;
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #71F6A6;
+}
+ .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+    width:100%;
+}
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 1px;
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #71F6A6;
+}
+ .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+    width:100%;
+}
+
+/* CSS da parte dos perfis */
+
+#div_img_profissional {
+    position: absolute;
+    height: 168px;
+    width: 168px;
+    border-radius: 100%;
+    background-image: url(../../assets/img/profissionais/foto_profissional.jpg);
+    background-size: cover;
+}
+#perfil_texto {
+    border-radius: 25px;
+    background-color: #F3F3F3;
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 100px;
+}
+

@@ -22,7 +22,7 @@
 label {
     position: absolute;
     top: -3px!important;
-    left: 15px;
+    left: 60px;
     padding: 10px 0;
     font-size: 16px!important;
     color: rgb(185, 185, 185)!important;
@@ -58,7 +58,6 @@ label {
     float: right;
     text-align: center;
 }
-/* ----- Linha do span ----------- */
 
 #linha-c-direita {
     background-color: #aaa;
@@ -79,7 +78,7 @@ label {
 #linha-v-direita {
     background-color:#66F4DB;
     width: 45%;
-    height: 1px;
+    height: 2px;
     float: left;
     text-align: center; 
 }
@@ -139,21 +138,17 @@ label {
 
 .formulario:focus ~ label, .formulario:valid ~ label{
     top: -30px!important;
-    left: 4px;
+    left: 50px;
     font-size: 15px!important;
     font-style: normal;
     font-weight: 500;
     color: #71f6a6!important;
 }
 
-.input-tel-nome{
-    width: 100%;
-}
-
 .linhaSpan{
     position: absolute;
     display: block;
-    width: 100%; 
+    width: 80%; 
     bottom: 1px; 
 }
 
@@ -171,36 +166,18 @@ label {
     width:100%;
 }
 
-.botao{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    margin: 10px;
-    padding: 10px 28px;
+.botao {
+    background-color: #66F4DB;
+    color: #ffffff;
 }
 
-.botao:hover{
-    background-color: #777;
-}
-
-.aqua{
-    background-color: #00FFFF;
-    color: #fff;
-}
-
-.aqua:hover{
-    background-color: #00FFCC;
-}
-
-.cinza {
+.botaoCinza {
     background-color: #E5E5E5;
-    color: #fff;
-}
-
-.cinza:hover{
-    background-color: #E5E8B8;
+    color: #ffffff;
 }
 
 textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
-}
+} 
