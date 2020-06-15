@@ -1,3 +1,8 @@
+/* Ancora */
+html{
+	behavior: 2s;
+}
+
 /* CSS da barra de loading*/
 .pace {
     -webkit-pointer-events: none;

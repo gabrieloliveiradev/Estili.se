@@ -9,7 +9,18 @@ export class ProdutoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    window.scroll(0,0);
   }
+
+  // Ancora
+ ancora(){
+  let ancora = document.querySelector("#ancoradoNoArticle")
+  if (ancora){
+      ancora.scrollIntoView({ behavior: 'smooth'})
+  }
+  
+ }
+
 
 }

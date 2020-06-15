@@ -16,19 +16,22 @@ export class CadClienteComponent implements OnInit {
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
+  paginaPolitica: boolean = false
 
   constructor(private usuarioService:UsuariosService, 
     private router:Router, private route:ActivatedRoute, 
     private locationPage:Location) { }
   ngOnInit() {
   let cadastro: string = localStorage.getItem('validado')
+  let sumiu: string = localStorage.getItem('validado')
+
   if (cadastro == "true"){
     this.alerta=true;
     localStorage.clear()
     setTimeout(() => {
       location.assign("/users")
     }, 10000);
-  }
+    }
   }
   senhas = {
     senha: "",
@@ -63,11 +66,12 @@ export class CadClienteComponent implements OnInit {
   mudarPopupParaLogin(){
     this.mostrarlogin = true
   }
-  // mudarEstilo(){
-  //   var nome = (<HTMLSelectElement>document.getElementById('nome')).value
 
-  //   if(nome == "ola"){
-  //      alert("ta funfando")
-  //   }
-  // }
+  
+  recarregar(){
+    setTimeout(() => {
+      location.assign("/politica")
+    }, 0);
+  }
+  
 }
