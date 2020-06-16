@@ -44,7 +44,8 @@ h2 {
 }
 #cardSobre{
   background-size: 100%;
-  background-image: url("../../assets/img/cartão@2x.png");
+  background: rgb(244,253,252);
+background: linear-gradient(90deg, rgba(244,253,252,1) 0%, rgba(248,255,254,1) 50%, rgba(248,255,254,1) 100%);
   height: 80%;
   width: 80%;
   box-shadow: 5px 5px 18px rgba(48, 46, 46, 0.288) ;
@@ -56,12 +57,14 @@ h2 {
   height: 80%;
   border: dashed  #118899;
 }
+
 header{
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
 }
+
 .textoSobre > p {
-font-size: 28px;
+font-size: 20px;
 max-width: 70%;
 text-align: center;
 
@@ -74,8 +77,8 @@ h5{
     list-style: none;
     margin: 10px,30px;
     display: inline-block;
-    font-size: 35px;
-    padding: 35px;
+    font-size: 40px;
+    /* padding: 29px; */
   }
   .social{
     max-width: 30%;
@@ -84,14 +87,13 @@ h5{
   ul.social-network {
     list-style: none;
     display: inline;
-  
     padding: 0;
   }
   
   ul.social-network li {
     display: inline;
     margin: 0;
-    padding: 50px;
+    /* padding: 50px; */
   }
 
 .faGithub:hover{

@@ -14,7 +14,7 @@ export class QuemsomosComponent implements OnInit {
   faGithub = faGithub
   constructor() { }
 
-  ngOnInit(){
+  ngOnInit(): void {
     const element = document.querySelector('h1');
     const element2 = document.querySelector('p');
     digitaTexto(element)
