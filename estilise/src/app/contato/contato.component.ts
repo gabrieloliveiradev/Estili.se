@@ -24,22 +24,23 @@ export class ContatoComponent implements OnInit {
     }
   
   botao1 () {
-    if (this.nome == '') {
-      alert("Favor preenher todos os campos.");
-    }
-    else if (this.email == '') {
-      alert("Favor preenher todos os campos.");
-    }
-    else if (this.telefone == '') {
-      alert("Favor preenher todos os campos.");
-    }
-    else if (this.assunto == '') {
-      alert("Favor preenher todos os campos.");
-    }
-    else {
+    // if (this.nome == '') {
+    //   alert("Favor preenher todos os campos.");
+    // }
+    // else if (this.email == '') {
+    //   alert("Favor preenher todos os campos.");
+    // }
+    // else if (this.telefone == '') {
+    //   alert("Favor preenher todos os campos.");
+    // }
+    // else if (this.assunto == '') {
+    //   alert("Favor preenher todos os campos.");
+    // }
+    // else {
     this.bloco1 = !this.bloco1;
     this.bloco2 = !this.bloco2;
-  }}
+    // }
+}
 
   botao2 () {
     if (this.comentario == '') {

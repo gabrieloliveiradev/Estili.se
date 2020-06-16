@@ -13,7 +13,7 @@ export class ProdutoComponent implements OnInit {
     window.scroll(0,0);
   }
 
-  // Ancora
+  // ---------------- Ancora
  ancora(){
   let ancora = document.querySelector("#ancoradoNoArticle")
   if (ancora){

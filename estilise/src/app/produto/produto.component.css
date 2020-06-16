@@ -66,6 +66,9 @@
     top: 25px; 
     top: 0;
 }
+.card-produto{
+    height: 377px;
+}
 .card-descricao{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -199,7 +202,7 @@
     cursor: pointer;
     visibility: visible!important;
     animation-name: flutuar;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
