@@ -20,11 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-<<<<<<< HEAD
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
-=======
 import { ProfissionaisComponent } from './profissionais/profissionais.component'
->>>>>>> 7ef55999100156c57bb051041524d35e6fa9d750
 
 @NgModule({
   declarations: [
