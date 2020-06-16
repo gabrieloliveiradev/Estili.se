@@ -166,7 +166,6 @@ label {
     width:100%;
 }
 
-<<<<<<< HEAD
 .botao{
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     margin: 10px;
@@ -184,11 +183,10 @@ label {
 
 .aqua:hover{
     background-color: #00FFCC;
-=======
+}
 .botao {
     background-color: #66F4DB;
     color: #ffffff;
->>>>>>> 7ef55999100156c57bb051041524d35e6fa9d750
 }
 
 .botaoCinza {
