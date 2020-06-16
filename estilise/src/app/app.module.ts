@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
 import { ProfissionaisComponent } from './profissionais/profissionais.component'
 
 @NgModule({
@@ -39,6 +39,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
     EditarComponent,
     DeleteUsuarioComponent,
     CategoriasComponent,
+    PerfilClienteComponent,
     ProfissionaisComponent
   ],
   imports: [
