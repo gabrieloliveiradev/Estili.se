@@ -12,6 +12,7 @@ import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
+import { ProfissionaisComponent } from './profissionais/profissionais.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent},
   { path: 'produto', component: ProdutoComponent},
   { path: 'categorias', component: CategoriasComponent },
+  { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarComponent},
   { path: 'editar/:id', component: EditarComponent},
@@ -32,7 +34,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
