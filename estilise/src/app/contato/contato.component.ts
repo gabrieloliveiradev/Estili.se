@@ -23,6 +23,10 @@ export class ContatoComponent implements OnInit {
     }
   
   botao1 () {
+    this.nome = document.getElementById('nome').innerText;
+    this.email = document.getElementById('email').innerText;
+    this.telefone = document.getElementById('telefone').innerText;
+    this.assunto = document.getElementById('assunto').innerText;
     if (this.nome == '') {
       alert("Favor preenher todos os campos.");
     }
@@ -48,5 +52,5 @@ export class ContatoComponent implements OnInit {
     this.bloco2 = !this.bloco2;
     this.bloco3 = !this.bloco3;
     }
-  }
+  }  
 }
