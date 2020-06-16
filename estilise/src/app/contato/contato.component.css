@@ -187,23 +187,6 @@ label {
 }
 
 .aqua{
-    background-color: #66F4DB;
-    color: #fff;
-}
-
-.aqua:hover{
-    background-color: #00FFCC;
-}
-.botao {
-    background-color: #66F4DB;
-    color: #ffffff;
-}
-
-.botao:hover{
-    background-color: #777;
-}
-
-.aqua{
     background-color: #00FFFF;
     color: #fff;
 }
