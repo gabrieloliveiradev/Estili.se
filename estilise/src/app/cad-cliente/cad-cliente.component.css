@@ -50,13 +50,15 @@ label{
 /* ========================  Estilo do <span> */
 .linhaSpan{ /* tamanho e posição do span que é uma linha */
     position: absolute;
+    display: block;
     width: 80%; 
     bottom: 1px; 
 }
 .linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
     content: '';
-    height: 2px;    
-    width: 0px;
+    height: 2px;
+    bottom: 0px;
+    width: 0;
     position: absolute;
     transition: .2s ease all;
     background: #71f6a6;

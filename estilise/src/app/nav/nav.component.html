@@ -1,24 +1,51 @@
 <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand ml-5" routerLink="/home"><img src="./assets/img/logo.svg" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="./assets/img/menu.svg" alt="" class="navbar-toggler-icon mr-5">
+    <a class="navbar-brand ml-3 mb-0 mt-0 mt-md-3 mb-md-3" routerLink="/home"><img src="./assets/img/logo.svg" alt=""></a>
+    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./assets/img/menu.svg" alt="" class="navbar-toggler-icon">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         
-        <ul class="navbar-nav ml-auto d-flex justify-content-center align-items-center mg-md-transparent">
-            <li class="nav-item " data-toggle="collapse" data-target="#navbarSupportedContent">
+        <ul class="navbar-nav ml-auto d-flex d-md-none justify-content-center align-items-center mg-md-transparent">
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <a class="nav-link" routerLink="/categorias">CATEGORIAS</a>
             </li>
-            <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <a class="nav-link" routerLink="/contato">PROFISSIONAIS</a>
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/profissionais">PROFISSIONAIS</a>
             </li>
-            <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <a class="nav-link" routerLink="/produto">PRODUTOS</a>
             </li>
-            <li class="nav-item d-flex" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item d-flex itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <a class="nav-link" routerLink="/quemsomos">SOBRE</a>
             </li>
-            <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/contato">CONTATO</a>
+            </li>
+            <li class="nav-item w-100 mx-lg-3 mt-3 mt-lg-0 d-flex justify-content-center">
+                <a class="btn btn-outline-light  text-center" (click)="popupCadastro()" data-toggle="modal" data-target="#popupdeCadastro" data-whatever="@mdo">CADASTRO</a>
+            </li>
+            <li class="nav-item w-100 mr-lg-5 my-3 my-lg-0 d-flex justify-content-center">
+                <a class="btn btn-light  text-center" (click)="popupLogin()" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo">LOGIN</a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        
+        <ul class="navbar-nav ml-auto d-md-flex d-none justify-content-center align-items-center mg-md-transparent">
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/categorias">CATEGORIAS</a>
+            </li>
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/profissionais">PROFISSIONAIS</a>
+            </li>
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/produto">PRODUTOS</a>
+            </li>
+            <li class="nav-item d-flex itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <a class="nav-link" routerLink="/quemsomos">SOBRE</a>
+            </li>
+            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <a class="nav-link" routerLink="/contato">CONTATO</a>
             </li>
             <li class="nav-item w-100 mx-lg-3 mt-3 mt-lg-0 d-flex justify-content-center">
