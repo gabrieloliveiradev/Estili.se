@@ -17,11 +17,11 @@ export class LoginClienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   Login(){
     this.loginService.logar(this.email_usuario).subscribe((resp: loginUsuario)=>{
       this.email_usuario = resp;
       localStorage.setItem("token", resp.token)
+      localStorage.setItem("senha", resp.senha)
       localStorage.setItem("usuario", resp.email_usuario)
       localStorage.setItem("logado", "true")
       this.router.navigate(['/home'])

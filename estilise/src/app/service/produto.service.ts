@@ -15,7 +15,7 @@ export class ProdutoService {
   findBynome(nome_produto: String){
     return this.http.get('http://localhost:8080/produtos/${nome_produto}')
   }
-  findByPreco(preco: string){
+  findByPreco(preco: number){
     return this.http.get('http://localhost:8080/produtos/${preco}');
   }
   postProduto(produto: Produto) {

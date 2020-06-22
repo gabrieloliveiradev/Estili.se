@@ -30,7 +30,7 @@ export class CadClienteComponent implements OnInit {
     this.alerta=true;
     localStorage.clear()
     setTimeout(() => {
-      location.assign("/users")
+      location.assign("/produto")
     }, 10000);
     }
   }
@@ -48,6 +48,7 @@ export class CadClienteComponent implements OnInit {
       this.refresh()
     })
   }
+
   refresh(){
     this.router.navigateByUrl("/cadastro-usuario", {skipLocationChange:true}).then(()=>{
      this.router.navigate([this.locationPage.path()])
