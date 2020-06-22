@@ -16,7 +16,7 @@ export class CategoriasComponent implements OnInit {
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(){
-    this.findAllCategorias(
+    this.findAllCategorias
     window.scroll(0,0)
   }
 
