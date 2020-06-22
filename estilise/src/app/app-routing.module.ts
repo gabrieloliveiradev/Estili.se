@@ -12,7 +12,7 @@ import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.componen
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
-import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { EditarPerfilUsuarioComponent } from './editar-perfil-usuario/editar-perfil-usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,8 +25,8 @@ const routes: Routes = [
   { path: 'categorias', component: CategoriasComponent },
   { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},
-  { path: 'editar', component: EditarUsuarioComponent},
-  { path: 'editar/:id', component: EditarUsuarioComponent},
+  { path: 'editar', component: EditarPerfilUsuarioComponent},
+  { path: 'editar/:id', component: EditarPerfilUsuarioComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path:' deletar', component: DeleteUsuarioComponent},

@@ -16,7 +16,6 @@ import { FormsModule } from '@angular/forms'
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
@@ -24,7 +23,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
-import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component'
+import { EditarPerfilUsuarioComponent } from './editar-perfil-usuario/editar-perfil-usuario.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +39,6 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     ListaUsuariosComponent,
     CadClienteComponent,
     LoginClienteComponent,
-    EditarComponent,
     DeleteUsuarioComponent,
     CategoriasComponent,
     PerfilClienteComponent,
@@ -48,7 +46,7 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     DeletarProdutoComponent,
     EditarProdutoComponent,
     EditarDeletarCategoriaComponent,
-    EditarUsuarioComponent
+    EditarPerfilUsuarioComponent
   ],
   imports: [
     BrowserModule,
