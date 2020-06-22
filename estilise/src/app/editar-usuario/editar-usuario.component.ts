@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './editar-usuario.component.html',
   styleUrls: ['./editar-usuario.component.css']
 })
+
 export class EditarUsuarioComponent implements OnInit {
   
   usuario: Usuario = new Usuario
@@ -18,12 +19,12 @@ export class EditarUsuarioComponent implements OnInit {
     var id = this.route.snapshot.params['id']
     this.findByIdUsuario(id)
   }
-  findByIdUsuario (id:number) {
-    this.usuarioService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
+  findByIdUsuario (id_usuario:number) {
+    this.usuarioService.getByIdUsuario(id_usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
     })
   }
-  salvar () {
+  salvar() {
     this.usuarioService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
       this.router.navigate(['/users'])
