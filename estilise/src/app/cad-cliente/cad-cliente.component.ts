@@ -24,7 +24,6 @@ export class CadClienteComponent implements OnInit {
   
   ngOnInit() {
   let cadastro: string = localStorage.getItem('validado')
-  let sumiu: string = localStorage.getItem('validado')
 
   if (cadastro == "true"){
     this.alerta=true;
