@@ -26,3 +26,72 @@ li {
 .gradiente {
     background: linear-gradient(270deg, rgba(186, 203, 248, 0) 0%, rgba(213, 186, 248, 0.538198) 49.53%, #BADAF8 96.25%)
 }
+
+
+/* -------------- Modal Cartão ----------------- */
+label{
+    position: absolute;
+    top: -3px!important;
+    left: 15px;
+    padding: 10px 0;
+    font-size: 16px!important;
+    color: rgb(185, 185, 185)!important;
+    pointer-events: none;
+    font-weight: 100;
+    transition: .2s ease all;
+}  
+
+/* ========================== Formulários dos <input> */
+.form-group{
+    margin-bottom: 2rem;
+    position: relative;
+}
+/* ======================== estilo dos <input> */
+.input-estilo{
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: transparent;
+    background-color: #FCFCFC;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid rgb(236, 235, 235);
+}   
+/* ======================== Eventos do <input> */
+.input-estilo:focus{
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom: 0.5px solid transparent!important;
+}
+.input-estilo:focus ~ label, .input-estilo:valid ~ label{
+    top: -30px!important;
+    left: 7px;
+    font-size: 13px!important;
+    font-style: normal;
+    font-weight: 500;
+    color: #71f6a6!important;
+}
+/* ========================  Estilo do <span> */
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+    position: absolute;
+    display: block;
+    width: 100%; 
+    bottom: 1px; 
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+    content: '';
+    height: 2px;
+    bottom: 0px;
+    width: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #71f6a6;
+}
+ .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+    width:100%;
+}
+.caixa-formulario {
+    width: 60% !important;
+    margin: 0 auto;
+    margin-top: 65px;
+}
