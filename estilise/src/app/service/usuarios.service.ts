@@ -10,18 +10,18 @@ export class UsuariosService {
   constructor(private http:HttpClient) { }
 
   getAllUsuarios(){
-    return this.http.get('http://93.188.161.223:9000/user');
+    return this.http.get('http://localhost:8080/usuarios');
   }
   postCadastro(usuario: Usuario) {
-    return this.http.post('http://93.188.161.223:9000/user', usuario);
+    return this.http.post('http://localhost:8080/usuarios', usuario);
   }
   putUsuario(usuario: Usuario) {
-    return this.http.put('http://93.188.161.223:9000/user', usuario);
+    return this.http.put('http://localhost:8080/usuarios', usuario);
   }
   getByIdUsuario(id:number) {
-    return this.http.get(`http://93.188.161.223:9000/user/${id}`)
+    return this.http.get(`http://localhost:8080/usuarios/${id}`)
   }
   deleteUsuario(id:number) {
-    return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
+    return this.http.delete(`http://localhost:8080/usuarios/${id}`)
   }
 }

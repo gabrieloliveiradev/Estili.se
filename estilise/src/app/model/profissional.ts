@@ -1,5 +1,5 @@
-export class Usuario {
-    public id_usuario:number
+export class Profissional {
+    public id_profissional:number
     public nome:string
     public senha:string
     public emailusuario:string

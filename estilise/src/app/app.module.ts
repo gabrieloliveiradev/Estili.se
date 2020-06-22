@@ -20,7 +20,10 @@ import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
-import { ProfissionaisComponent } from './profissionais/profissionais.component'
+import { ProfissionaisComponent } from './profissionais/profissionais.component';
+import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
     DeleteUsuarioComponent,
     CategoriasComponent,
     PerfilClienteComponent,
-    ProfissionaisComponent
+    ProfissionaisComponent,
+    DeletarProdutoComponent,
+    EditarProdutoComponent,
+    EditarDeletarCategoriaComponent
   ],
   imports: [
     BrowserModule,
