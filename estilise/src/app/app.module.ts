@@ -23,7 +23,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
-import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component'
+import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component'
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     DeletarProdutoComponent,
     EditarProdutoComponent,
     EditarDeletarCategoriaComponent,
-    EditarUsuarioComponent
+    EditarPerfilClienteComponent
   ],
   imports: [
     BrowserModule,
