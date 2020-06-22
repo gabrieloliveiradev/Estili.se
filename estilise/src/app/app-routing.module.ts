@@ -11,6 +11,7 @@ import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilVendedorComponent } from './perfil-vendedor/perfil-vendedor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'editar/:id', component: EditarComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path:'deletar', component: DeleteUsuarioComponent},
-  { path:'deletar/:id', component: DeleteUsuarioComponent}
+  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  {path: 'perfil-vendedor', component: PerfilVendedorComponent}
 ];
 
 @NgModule({
