@@ -64,9 +64,10 @@
     background-color: #FBF8F8;
     position: relative;
     top: 25px; 
-}
-.card-img, .card-img-adicionar{
     top: 0;
+}
+.card-produto{
+    height: 377px;
 }
 .card-descricao{
     border-bottom-left-radius: 20px;
@@ -89,6 +90,9 @@
 .card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
     cursor: pointer;
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
+}
+.card-div-elemento-pai:hover .card-img{
+    filter: brightness(0.6);
 }
 .card-produto:hover .card-svg-coracao{
     display: flex!important;
@@ -160,7 +164,7 @@
         transform: translateX(10px);
     }
     to{
-        transform: translateX(-103px);
+        transform: translateX(-118px);
     }
 }
 .dropdown-menu{
@@ -168,9 +172,40 @@
     min-width: 22rem!important;
     border: none;
     top: 11px!important;
-    left: 105px!important;
+    left: 120px!important;
     z-index: 3!important;
     animation-name: aparece-filtro;
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.filtro-hover:hover{
+    fill: #545454;
+    filter: drop-shadow(4px 5px 1px gray);
+    transition: 0.2s;
+}
+
+/* ============== ancora com animação ============== */
+@keyframes flutuar{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+}
+
+.ancora{
+    background: url("../../assets/img/produtos/baixar.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+    visibility: visible!important;
+    animation-name: flutuar;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: drop-shadow(0px 8px 1px #a8adb1);
+}
+

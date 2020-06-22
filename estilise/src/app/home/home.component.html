@@ -7,7 +7,7 @@
                 <img src="../../assets/img/logo.png" alt="">
             </div>
             <p class="header-texto text-white">COMPRE E ENCOMENDE ROUPAS COM OS MELHORES <span>COSTUREIROS  E ALFAIATES</span> PELO BRASIL.</p>
-            <a href="" routerLink="/produto" class="btn btn-estilise p-3 mt-1">VER PRODUTOS</a>
+            <a routerLink="/produto" class="btn btn-estilise p-3 mt-1">VER PRODUTOS</a>
         </div>
         <div class="col-lg-5 col-11 d-none d-lg-flex justify-content-center align-items-end">
             <div class="arara-header mt-auto">
@@ -19,7 +19,7 @@
         <h1 class="p-5 display-4">Uma Nova forma de Vestir</h1>
         <div class="row d-flex justify-content-center container-fluid" style="height: 100%;">
             <div class=" d-flex flex-column flex-md-row align-items-center justify-content-md-around justify-content-center w-100" style="height: 100%;">  
-                <div class="card-beneficio col-12 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 mb-5 m-md-0">           
+                <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 mb-5 m-md-0">           
                         <svg width="91" height="120" viewBox="0 0 91 128" stroke-width="2">
                             <g id="vestido1" transform="translate(-1071 -598)" >
                                 <g id="dress_1_" data-name="dress (1)" transform="translate(1052.5 598)">
@@ -33,7 +33,7 @@
                 </div>
                 
                 
-                <div class="card-beneficio col-12 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 m-md-0">
+                <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 m-md-0">
                         <svg  width="91" height="89" viewBox="0 0 91 89" stroke-width="2">
                             <g id="maquinacostura1" transform="translate(-1182 -617)">
                                 <g id="sewing-machine_1_" data-name="sewing-machine (1)" transform="translate(1182 616.5)">
@@ -47,7 +47,7 @@
                     <p class="card-text px-5">ENCONTRE OS MELHORES PROFISSIONAIS DO MUNDO DA COSTURA NA NOSSA PLATAFORMA</p>
                 </div>
                 
-                <div class="card-beneficio col-12 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 mt-5 m-md-0">
+                <div class="card-beneficio col-10 col-md-3 d-flex flex-column align-items-center justify-content-center mx-5 mt-5 m-md-0">
                     <svg width="95" height="68" viewBox="0 0 95 68" stroke-width="2">
                         <g transform="translate(-1293 -628)">
                             <g data-name="truck (1)" fill="none" stroke="#158591">
@@ -76,7 +76,7 @@
             <h1 class="text-md-right text-center mb-3" style="color: #147C4C; width: 100%;">ENCONTRE OS MELHORES PROFISSIONAIS</h1>
             <span style="width: 300px; height: 1px; background-color: #147C4C;"></span>
             <p class="text-md-right text-center mt-3" style="width: 60%; color:white; font-size: 20px;">Nós contamos com um catálogo de centenas de profissionais qualificados que estão esperando por você</p>
-            <a href="" class="btn btn-verde p-3 mt-3 d-flex justify-content-center justify-content-md-right" style="width: 150px;">PROFISSIONAIS</a>
+            <a routerLink="/profissionais" class="btn btn-verde p-3 mt-3 d-flex justify-content-center justify-content-md-right" style="width: 150px;">PROFISSIONAIS</a>
         </div>
     </article>
     <blockquote class="d-flex flex-column justify-content-center align-items-center p-5">
@@ -89,10 +89,17 @@
                 <h1 class="text-lg-left text-center mb-3" style="color: #1B2F48; width: 80%;">EXPLORE DEZENAS DE CATEGORIAS</h1>
                 <span style="width: 300px; height: 1px; background-color: #1B2F48;"></span>
                 <p class="text-lg-left text-center mt-3" style="width: 60%; color:white; font-size: 20px;">No estili.se você tem a oportunidade de encontrar dezenas de categorias e achar as roupas que mais combinam com você</p>
-                <a href="" class="btn btn-roxo p-3 mt-3 d-flex justify-content-center" style="width: 30%;">CATEGORIAS</a>
+                <a routerLink="/categorias" class="btn btn-roxo p-3 mt-3 d-flex justify-content-center" style="width: 30%;">CATEGORIAS</a>
             </div>
             <div id="categorias-img" class="col-10 col-lg-5 d-none d-lg-flex align-items-end justify-content-center pt-md-5">
                 <img src="../../assets/img/arara_azul.png" alt="">
             </div>
         </section>
     </body>
+
+    <div class="content">
+        <div *ngIf="splash" class="loading">
+            Aguarde...
+        </div>
+        <router-outlet *ngIf="!splash"></router-outlet>
+    </div>

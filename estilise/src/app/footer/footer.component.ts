@@ -7,7 +7,6 @@ import {faFacebookSquare, faTwitterSquare, faGithubSquare, faInstagramSquare} fr
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-
 export class FooterComponent implements OnInit {
   faFacebookSquare=faFacebookSquare
   faTwitterSquare=faTwitterSquare
@@ -17,5 +16,7 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

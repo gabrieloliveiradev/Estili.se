@@ -30,7 +30,5 @@ export class NavComponent implements OnInit {
     this.mostrarPopupLogin = true
     // this.refresh()
   }
-  teste() {
-    
-  }
+ 
 }

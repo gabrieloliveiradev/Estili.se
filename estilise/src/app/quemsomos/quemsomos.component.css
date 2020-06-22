@@ -5,12 +5,17 @@
   #texto{
     font-size: 15px;
   }
+  video{
+    height: 200px;
+    width: auto;
+  }
 }
 #tituloHeader::after{
   content:'|' ;
   margin-left: 5px;
   opacity: 1;
-   animation: pisca 10s infinite;
+   animation: pisca 2s infinite;
+   font-family: "Roboto";
 }
 @keyframes pisca{
   0%, 100% {
@@ -24,7 +29,8 @@
   content:'|' ;
   margin-left: 5px;
   opacity: 1;
-   animation: pisca 10s infinite;
+   animation: pisca 2s infinite;
+   font-weight: bolder;
 }
 p{
   text-align: center;
@@ -32,6 +38,8 @@ p{
   color:#158591;
 }
 h2 {
+  font-size: 30px;
+  text-align: center;
   color:#158591;
 }
 #cardSobre{
@@ -41,6 +49,7 @@ background: linear-gradient(90deg, rgba(244,253,252,1) 0%, rgba(248,255,254,1) 5
   height: 80%;
   width: 80%;
   box-shadow: 5px 5px 18px rgba(48, 46, 46, 0.288) ;
+  border: #118899 1px solid;
 }
 #caixa{
   background-color: none;
@@ -89,11 +98,24 @@ h5{
 
 .faGithub:hover{
    
-  color: black;
+  color: #064e58;
 }
 
 .faLinkedin:hover{
   
-  color: #0072b1;
+color: #064e58;
 
+}
+.faGithub,.faLinkedin{
+  color: #118899;
+}
+
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card-deck > div{
+flex: 1 1 200px;
 }

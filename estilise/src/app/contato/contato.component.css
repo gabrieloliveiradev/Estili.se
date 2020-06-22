@@ -94,6 +94,7 @@ label {
     font-size: 25px;
     border-radius: 50%;
     margin: 0;
+    cursor: pointer;
 }
 
 .esfera-c{
@@ -106,6 +107,8 @@ label {
     font-size: 25px;
     border-radius: 50%;
     margin: 0;
+    cursor: pointer;
+
 }
 
 .fila {
@@ -159,15 +162,17 @@ label {
 
 .linhaSpan:before, .linhaSpan:after{
     content: '';
-    height: 2px;
-    bottom: 0px;
-    width: 0;
+    height: 2px;    
+    width: 0px;
     position: absolute;
     transition: .2s ease all;
     background: #71f6a6;
 }
 
 .formulario:focus ~ .linhaSpan:after {
+    width:100%;
+}
+.esfera-c:hover ~ .linhaSpan:after {
     width:100%;
 }
 

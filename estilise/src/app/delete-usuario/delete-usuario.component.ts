@@ -30,7 +30,7 @@ export class DeleteUsuarioComponent implements OnInit {
   }
 
   btnSim(){
-    this.usuarioService.deleteUsuario(this.usuario.id).subscribe(()=>{
+    this.usuarioService.deleteUsuario(this.usuario.id_usuario).subscribe(()=>{
       this.deletarOk = true
       this.router.navigate(['/users'])
       localStorage.setItem("deletarOk", this.deletarOk.toString())

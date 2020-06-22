@@ -1,0 +1,28 @@
+li {
+   margin-bottom:10px;
+   list-style: none;
+}
+
+.imagemUsuario {
+    position: absolute;
+    width: inherit;
+    border-radius: 50%;
+    height: 85%;
+    margin-left: -65%;
+}
+
+.botaoEditar {
+    padding: 0.375rem 3rem;
+    background-color: #71F6A6;
+    color: white;
+}
+
+.botaoVender {
+    padding: 0.375rem 3rem;
+    background-color: #71F6A6;
+    color: black;
+}
+
+.gradiente {
+    background: linear-gradient(270deg, rgba(186, 203, 248, 0) 0%, rgba(213, 186, 248, 0.538198) 49.53%, #BADAF8 96.25%)
+}

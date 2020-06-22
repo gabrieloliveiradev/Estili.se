@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
     })
    }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
   }
 
   
