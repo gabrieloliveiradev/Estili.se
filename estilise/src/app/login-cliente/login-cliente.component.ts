@@ -27,7 +27,7 @@ export class LoginClienteComponent implements OnInit {
       this.router.navigate(['/home'])
       location.assign('/home')
     }, (erro) => {
-          alert("Email ou senha inválidos !")
+          alert(`Email ou senha inválidos ! \n ${erro}`)
        })
   } 
   

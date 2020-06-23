@@ -48,7 +48,7 @@ export class ProdutoComponent implements OnInit {
 publicar(){  
   this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp;
-    location.assign('/produto')
+    location.assign('/produtos')
   });
 }
  

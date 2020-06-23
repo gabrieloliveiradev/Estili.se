@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'quemsomos', component: QuemsomosComponent},
   { path: 'politica', component: PoliticaComponent},
   { path: 'contato', component: ContatoComponent},
-  { path: 'produto', component: ProdutoComponent},
+  { path: 'produtos', component: ProdutoComponent},
   { path: 'categorias', component: CategoriasComponent },
   { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},
