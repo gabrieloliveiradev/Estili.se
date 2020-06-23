@@ -1,5 +1,5 @@
 export class loginUsuario {
-    public email_usuario:string
+    public emailusuario:string
     public senha:string
     public token:string
 }

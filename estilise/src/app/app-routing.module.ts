@@ -13,6 +13,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
+import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -27,10 +28,11 @@ const routes: Routes = [
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
-  { path: 'cadastro-usuario', component: CadClienteComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path:' deletar', component: DeleteUsuarioComponent},
-  { path:' deletar/:id', component: DeleteUsuarioComponent}
+  { path:' deletar/:id', component: DeleteUsuarioComponent},
+  { path:' login', component: LoginClienteComponent},
+  { path: 'cadastrar', component: CadClienteComponent}
 ];
 
 @NgModule({

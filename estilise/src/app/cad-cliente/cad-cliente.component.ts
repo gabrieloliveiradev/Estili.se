@@ -3,6 +3,7 @@ import { Usuario } from '../model/usuario';
 import { UsuariosService } from '../service/usuarios.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -13,20 +14,23 @@ import { Location } from '@angular/common';
 
 export class CadClienteComponent implements OnInit {
   usuario: Usuario = new Usuario()
-  profissional = this.usuario.profissional
+
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
 
+  mostrarPopupLogin: boolean = false
+  senha: string;
+
   constructor(private usuarioService:UsuariosService, 
-    private router:Router, private route:ActivatedRoute, 
+    private router:Router, private authService: AuthService, 
     private locationPage:Location) { }
   
   ngOnInit():void {
   let cadastro: string = localStorage.getItem('validado')
-  const checkVendedor = document.getElementsByName("checkVendedor")
+  // const checkVendedor = document.getElementsByName("checkVendedor")
 
 
   if (cadastro == "true"){
@@ -37,30 +41,24 @@ export class CadClienteComponent implements OnInit {
     }, 10000);
     }
   }
-  senhas = {
-    senha: "",
-    confirma_senha: ""
+
+  conferirSenha(event: any){
+    this.senha = event.target.value;
   }
+
   cadastrar(){
-    if(this.profissional == true){
-      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
-        this.usuario = resp
-        location.assign("/categorias")
-        this.validado = true
-        this.router.navigate(["/categorias"])
-        localStorage.setItem("validado", this.validado.toString())
-        this.refresh()
-      })
-    }else{
-      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
-        this.usuario = resp
-        location.assign("/produtos")
-        this.validado = true
-        this.router.navigate(["/produtos"])
-        localStorage.setItem("validado", this.validado.toString())
-        this.refresh()
-      })
-    }
+      if(this.senha === this.usuario.senha){
+        this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+          this.usuario = resp
+  
+          alert("Usuário cadastrado com sucesso!!!")
+          // this.mostrarPopupLogin = true
+          location.assign('/categorias')
+  
+        })
+      }else{
+        alert("Senhas incompatíveis!")
+      }
   }
 
   refresh(){
@@ -69,13 +67,6 @@ export class CadClienteComponent implements OnInit {
     })
   }
 
-  validar() {
-    if (this.senhas.senha === this.senhas.confirma_senha) {
-      this.cadastrar();
-    } else {
-      alert("Senhas não correspondem")
-    }
-  }
   
   mudarPopupParaLogin(){
     this.mostrarlogin = true

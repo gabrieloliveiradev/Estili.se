@@ -42,12 +42,12 @@
                             <label for="exampleInputEmail1" class="col-form-label">Email</label>
                         </div>
                         <div class="form-group d-flex justify-content-center">
-                            <input type="password" class="form-control input-estilo" name="senha" id="Password1" [(ngModel)]="senhas.senha" [(ngModel)]="usuario.senha" minlength="8" required>
+                            <input type="password" class="form-control input-estilo" name="senha" id="Password1" (input)='conferirSenha($event)' value="{{senha}}"  minlength="8" required>
                             <span class="linhaSpan"></span>
                             <label for="Password1" class="col-form-label">Senha</label>
                         </div>
                         <div class="form-group d-flex justify-content-center mb-3">
-                            <input type="password" class="form-control input-estilo" name="confirmar_senha"  id="Password2" [(ngModel)]="senhas.confirma_senha" minlength="8" required>
+                            <input type="password" class="form-control input-estilo" name="confirmar_senha"  id="Password2" [(ngModel)]="usuario.senha" minlength="8" required>
                             <span class="linhaSpan"></span>
                             <label for="Password2" class="col-form-label">Confirmar senha</label>
                         </div>
@@ -57,12 +57,12 @@
 
                         </div>
                         <div class="form-group d-flex pl-5 mb-4">
-                            <input type="checkbox" [checked]="profissional" style="margin: 3px;" id="checkboxx">
+                            <input type="checkbox" style="margin: 3px;" id="checkboxx">
                             <a class="m-0" style="color: rgb(161, 156, 156); font-size: 12px;" name="checkVendedor">Quero vender</a>
 
                         </div>
                         <div class="form-group d-flex justify-content-center" style="margin-bottom: 6px;">
-                            <button class="btn w-50 text-light" style="background-color: #71F6A6; border-radius: 1px;" (click)="validar()">Cadastrar</button>
+                            <button class="btn w-50 text-light" style="background-color: #71F6A6; border-radius: 1px;" (click)="cadastrar()" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo">Cadastrar</button>
                         </div>
                         <li class="text-center mb-3" style="list-style: none; font-size: 13px;">
                         <a href="#"(click)="mudarPopupParaLogin()">Fazer login</a>
@@ -82,4 +82,8 @@
         </div>
         </div>
     </div>
+</div>
+
+<div *ngIf="mostrarPopupLogin">
+    <app-login-cliente></app-login-cliente>
 </div>
