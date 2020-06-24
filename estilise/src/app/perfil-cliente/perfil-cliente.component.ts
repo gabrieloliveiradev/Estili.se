@@ -8,24 +8,42 @@ import { Usuario } from '../model/usuario';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
-
+  
+  
   usuario: Usuario = new Usuario
-
+  
   nome: string = localStorage.getItem('nome')
   login: boolean = false
-
+  
+  // validadecartao = document.getElementById('validadecartao')
+  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
+  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
+  
   constructor(private router: Router) { }
-
+  
   ngOnInit(){
     let token = localStorage.getItem('token')
-
+    // this.numerocartao.innerText = "Olá"
+    // alert(this.numerocartao.innerText)
+    
     if(token == null){
       alert('Faça o login antes de acessar o perfil')
       this.login = true
       this.router.navigate(['/login'])
     }
   }
-
- 
-
+  
+  substituirnumero(){
+  let numerocartao = document.getElementById('numerocartao')
+  let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
+  // alert(inputnumero)
+  numerocartao.innerHTML = inputnumero;
+  }
+  substituirnome(){
+  let nomecartao= document.getElementById('nomecartao')
+  let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
+  nomecartao.innerHTML = inputnome;
+  }
+  
+  
 }
