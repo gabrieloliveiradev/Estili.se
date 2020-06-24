@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { literal } from '@angular/compiler/src/output/output_ast';
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faLinkedin, faAccessibleIcon} from '@fortawesome/free-brands-svg-icons';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-quemsomos',
@@ -12,6 +13,7 @@ export class QuemsomosComponent implements OnInit {
 
   faLinkedin = faLinkedin
   faGithub = faGithub
+  
   constructor() { }
 
   ngOnInit(): void {

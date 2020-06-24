@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginUsuarioService } from '../service/login-usuario.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
+import { AuthService } from '../service/auth.service';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-login-cliente',
@@ -10,24 +11,22 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 export class LoginClienteComponent implements OnInit {
 
-  email_usuario: loginUsuario = new loginUsuario;
+  loginUsuario: loginUsuario = new loginUsuario;
 
-  constructor(private loginService: LoginUsuarioService, private route:ActivatedRoute, private router: Router) { }
+  constructor(private router: Router, public authService: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
-  Login(){
-    this.loginService.logar(this.email_usuario).subscribe((resp: loginUsuario)=>{
-      this.email_usuario = resp;
-      localStorage.setItem("token", resp.token)
-      localStorage.setItem("senha", resp.senha)
-      localStorage.setItem("usuario", resp.email_usuario)
-      localStorage.setItem("logado", "true")
-      this.router.navigate(['/home'])
-      location.assign('/home')
-    }, (erro) => {
-          alert("Email ou senha inválidos !")
+  entrar(){
+    this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
+      this.loginUsuario = resp;
+      localStorage.setItem('token', this.loginUsuario.token)
+      localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+      location.assign('/perfil-cliente')
+      this.router.navigate(['/produtos'])
+    }, err => {
+          alert('Houve um erro ao entrar, verifique o email e a senha.')
        })
   } 
   

@@ -209,3 +209,8 @@ textarea:focus, input:focus, select:focus {
     border: 0 none;
     outline: 0;
 }
+@media(max-width: 992px){
+    #texto{
+      font-size: 25px;
+    }
+}
