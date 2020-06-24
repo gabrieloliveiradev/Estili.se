@@ -18,6 +18,7 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilVendedorComponent } from './perfil-vendedor/perfil-vendedor.component'
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
@@ -42,6 +43,7 @@ import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-per
     LoginClienteComponent,
     DeleteUsuarioComponent,
     CategoriasComponent,
+    PerfilVendedorComponent,
     PerfilClienteComponent,
     ProfissionaisComponent,
     DeletarProdutoComponent,
