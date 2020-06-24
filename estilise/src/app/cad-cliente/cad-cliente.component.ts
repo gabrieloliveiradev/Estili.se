@@ -23,6 +23,11 @@ export class CadClienteComponent implements OnInit {
   
   mostrarPopupLogin: boolean = false
   senha: string;
+
+  login: boolean = false
+
+  loginUsuario: loginUsuario = new loginUsuario;
+
   
   constructor(private usuarioService:UsuariosService, 
     private router:Router, private authService: AuthService, 
