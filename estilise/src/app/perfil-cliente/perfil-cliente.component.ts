@@ -12,11 +12,6 @@ export class PerfilClienteComponent implements OnInit {
   emailusuario: string = localStorage.getItem('emailusuario');
   loginUsuario : loginUsuario = new loginUsuario
 
-  
-  
-  usuario: Usuario = new Usuario
-  
-  nome: string = localStorage.getItem('nome')
   login: boolean = false
   
   // validadecartao = document.getElementById('validadecartao')
