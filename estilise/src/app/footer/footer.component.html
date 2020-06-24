@@ -7,9 +7,9 @@
                 <!-- LOGO -->
                 <div class="row justify-content-center mb-3"><img class="grow" src="./assets/img/logo.svg" alt=""></div>
 
-                <!-- LINHA ABAIXO DO LOGO -->               
+                <!-- LINHA ABAIXO DO LOGO -->
                 <hr class="mt-2 mb-6">
-               
+
             </div>
 
         </div>
@@ -21,16 +21,15 @@
             <a id="font" routerLink="/quemsomos">
                 Conheça </a>
 
-            <a id="font" routerLink="/login">
+            <a id="font" routerLink="/loginCliente">
                 Login</a>
 
-            <a id="font" routerLink="/cadastro">
-                Cadastro</a>
-
-            <a id="font" routerLink="/profissionais">
+            <a id="font" data-toggle="modal" href="#popupdeCadastro"> Cadastro</a>
+            
+            <a id="font" data-toggle="modal" href="#popupdeLogin">
                 Profissionais</a>
 
-            <a id="font" routerLink="/categoria">
+            <a id="font" routerLink="/categorias">
                 Categoria</a>
 
 
@@ -43,7 +42,8 @@
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href=" " class="faTwitterSquare" title="Twitter Estili-se">
+                <a href="https://twitter.com/login?lang=pt" target="_blank" class="faTwitterSquare"
+                    title="Twitter Estili-se">
 
                     <fa-icon [icon]="faTwitterSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151)">
                     </fa-icon>
@@ -53,7 +53,7 @@
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href=" " class="faFacebookSquare" title="Facebook Estili-se">
+                <a href="https://www.facebook.com/" target="_blank" class="faFacebookSquare" title="Facebook Estili-se">
 
                     <fa-icon [icon]="faFacebookSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151)">
                     </fa-icon>
@@ -63,7 +63,7 @@
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href=" " class="faGithubSquare" title="GitHub Estili-se">
+                <a href="https://github.com/login" target="_blank" class="faGithubSquare" title="GitHub Estili-se">
 
                     <fa-icon [icon]="faGithubSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151) ">
                     </fa-icon>
@@ -74,15 +74,17 @@
             <div class="justify-content-center p-0 m-3 mb-5 " id="socialItem">
 
 
-                <a href=" " class="faInstagramSquare" title="Instagram Estili-se">
+                <a href="https://instagram.com/?hl=pt-br" target="_blank" class="faInstagramSquare"
+                    title="Instagram Estili-se">
 
-                    <fa-icon [icon]="faInstagramSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151)"></fa-icon>
+                    <fa-icon [icon]="faInstagramSquare" class="fa-3x" aria-hidden="true"
+                        style="color:rgb(23, 141, 151)"></fa-icon>
                 </a>
-               
+
 
             </div>
 
-          
+
         </div>
 
         <!-- FOOTER 2 COM COPYRIGHT -->

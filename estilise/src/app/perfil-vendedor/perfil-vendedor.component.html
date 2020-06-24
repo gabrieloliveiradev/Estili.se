@@ -1,11 +1,84 @@
 <div class="container">
+    <!-- ============================================== Perfil ================================================ -->
     <main>
-        <!-- ============================================== Perfil ================================================ -->
+
         <article>
-            <h1 class="d-flex justify-content-center">Perfil</h1>
+            <h1 class="d-flex justify-content-center mt-5">Perfil</h1>
             <hr>
+            <!-- <div class="container"> -->
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
+                        <img src="../../assets/img/perfil-cliente/capaprofile.jpg" class="imagemUsuario">
+                    </div>
+                    <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
+                        <div class="container">
+                            <p style="font-size: large; font-weight: 200;">Jonatas Damasceno</p>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <ul class="col container">
+                                <li>
+                                    <p><span style="width:50px;"></span>Email: Jhow@damasceno.com</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>CPF: -</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>Endereço: -</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>Complemento: -</p>
+                                </li>
+                            </ul>
+                            <ul class="col container">
+                                <li>
+                                    <p><span style="width:50px;"></span>Senha: *********</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>Data de Nascimento: -</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>CEP: -</p>
+                                </li>
+                                <li>
+                                    <p><span style="width:50px;"></span>Telefone: -</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </article>
+        <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
+        <article>
+            <ul id="formataNav"
+                class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
+
+                <li class="nav-item ">
+                    <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;"> Pontuação</a>
+
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Reclamações <br>
+                        de vendas</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Prazo de entrega
+                        <br> nos correios</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link texto p-2  " routerLink='/#' style="color: #686363;">Vendas <br> canceladas</a>
+                </li>
+
+            </ul>
+        </article>
+
         <!-- ============================================== Card Saldo ================================================ -->
 
         <h1 class="d-flex justify-content-center mt-5">Meu Saldo</h1>
@@ -13,45 +86,56 @@
         <article>
 
             <div class="d-flex justify-content-center mb-3">
+               
+                <div class="card text-white  mb-10 m-3 " style="max-width: 18rem; background-color:#118899;">
 
-                <div class="card text-white bg-info mb-10 m-3" style="max-width: 18rem;">
-                    <div id="fontSaldo" class="card-header text-white bg-info"> <img class="imgIcon"
-                            src="../../assets/img/icon/iconbag.png" alt=""> Dinheiro em conta</div>
-                    <div class="card-body  text-white bg-info">
+                    <div id="fontSaldo" class="card-header text-white "> <img class="imgIcon"
+                            src="../../assets/img/icon/iconbag2.png" alt=""> Dinheiro em conta</div>
+                    <div class="card-body  text-white ">
                         <h5 class="card-title">R$ 0,00</h5>
                         <p class="card-text"> </p>
                     </div>
-                    <a id="fontSaldo" class="card-footer text-white bg-info">Ver históirco ></a>
+                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                        style="background-color: #037686;">Ver históirco
+                        ></a>
                 </div>
 
-                <div class="card text-white bg-info mb-3 m-3" style="max-width: 18rem;">
-                    <div id="fontSaldo" class="card-header text-white bg-info"><img class="imgIcon"
-                            src="../../assets/img/icon/Iconhand.png" alt="">Dinheiro disponivel</div>
-                    <div class="card-body  text-white bg-info">
+                <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                    <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
+                            src="../../assets/img/icon/Iconhand2.png" alt="">Dinheiro disponivel</div>
+                    <div class="card-body  text-white">
                         <h5 class="card-title">R$ 0,00</h5>
                         <p class="card-text"> </p>
                     </div>
-                    <a id="fontSaldo" class="card-footer text-white bg-info">Ver históirco ></a>
+                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                        style="background-color: #037686;">Ver históirco
+                        ></a>
                 </div>
 
-                <div class="card text-white bg-info mb-3 m-3" style="max-width: 18rem;">
-                    <div id="fontSaldo" class="card-header text-white bg-info"><img class="imgIcon"
-                            src="../../assets/img/icon/iconpig.png" alt="">Dinheiro a retirar</div>
-                    <div class="card-body  text-white bg-info">
+                <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                    <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
+                            src="../../assets/img/icon/iconpig2.png" alt="">Dinheiro a retirar</div>
+                    <div class="card-body  text-white">
                         <h5 class="card-title">R$ 0,00</h5>
                         <p class="card-text"> </p>
                     </div>
-                    <a id="fontSaldo" class="card-footer text-white bg-info">Ver históirco ></a>
+                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                        style="background-color: #037686;">Ver históirco
+                        ></a>
+
                 </div>
 
-                <div class="card text-white bg-info mb-3 m-3" style="max-width: 18rem;">
-                    <div class="card-header text-white bg-info"></div>
-                    <div class="card-body  text-white bg-info">
-                        <h5 class="card-title"><img class="imgIconRetirar" src="../../assets/img/icon/iconsaque.png"
+                <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                    <div class="card-header text-white"></div>
+                    <div class="card-body  text-white">
+                        <h5 class="card-title"><img class="imgIconRetirar" src="../../assets/img/icon/iconsaque2.png"
                                 alt=""></h5>
-                        <a id="fontSaldoRetirar" class="card-text">Retirar</a>
+                        <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
+                            class="card-text">Retirar</a>
                     </div>
-                    <a id="fontSaldo" class="card-footer text-white bg-info">Ver históirco ></a>
+                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                        style="background-color: #037686;">Ver históirco
+                        ></a>
                 </div>
 
             </div>
@@ -60,10 +144,11 @@
 
 
         </article>
+
         <!-- ============================================== Titulo Categoria Produtos ================================================ -->
         <h1 class="d-flex justify-content-center mt-5 mb-3 ">Produtos</h1>
         <hr>
-        <article></article>
+       
         <!--  =========================================== Pesquisar =============================================== -->
         <article class="d-flex justify-content-center" style="margin-top: 150px;">
             <div class="form-group d-flex justify-content-center" style="width: 60%;">
@@ -73,7 +158,7 @@
             </div>
             <div class="form-group d-flex justify-content-center">
                 <button class="btn btn-light ml-2 p-2 px-4"
-                    style="background-color: rgb(247, 243, 243); font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
+                    style="background-color:whitesmoke; font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
             </div>
             <!--================================================  filtro    =========================================================== -->
 
@@ -154,7 +239,7 @@
         <h6 class="d-flex justify-content-center">Mais recentes</h6>
 
         <article class="row mb-5">
-            <div class="col-md-4 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao"
+            <div class="col-md-4 card-div-elemento-pai" data-toggle="modal" data-target="#popupEditar"
                 data-whatever="@mdo">
                 <div class="card-produto card-evento-hover">
                     <img class="w-100 card-img" src="../../assets/img/icon/Adicionar produto v3.jpeg" alt="">
@@ -271,7 +356,7 @@
 
         </article>
 
-        <!-- ============================================= Botões ===================================== -->
+        <!-- ============================================= Botões Ver Todos e Itens por Página ===================================== -->
         <hr>
         <article class="botoesProduto, d-flex justify-content-center mt-5 mb-3">
             <div class="dropdown">
@@ -293,180 +378,157 @@
 
     </main>
 
-    <!-- Página de adicionar produtos-->
-    <main class="modal fade" id="popupDescricao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog tamanhoPopupWidth">
-            <div class="modal-content tamanhoPopupHeight" style="background-color: #FBF8F8;">
-                <div class="modal-body">
+    <!--============================================= Página de adicionar produtos =============================================-->
+    <main>
+        <div class="modal" id="popupEditar" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-scrollable modalScreen ">
 
-                    <!-- Área onde estarão as imagens do produto -->
-                    <div class="row">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Adicionar Produto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Área onde estarão as imagens do produto -->
+                        <div class="row">
 
-                        <div class="col-md-6 mr-4" style="padding:30px; padding-left: 40px;">
+                            <div class="col-md-6 mr-4" style="padding:30px; padding-left: 40px;">
 
-                            <!-- Imagem 1 -->
-                            <div class="d-flex justify-content-start">
-                                <div class="mr-2"
-                                    style="background-color:  #858382; width: 25%; height: 100px; border-radius: 5px;">
+                                <!-- Imagem 1 -->
+                                <div class="d-flex justify-content-start">
+                                    <div class="mr-2"
+                                        style="background-color:  #858382; width: 25%; height: 100px; border-radius: 5px;">
+                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                    </div>
+                                    <!-- Imagem 2 -->
+                                    <div
+                                        style="background-color: #858382; width: 25%; height: 100px; border-radius: 5px;">
+                                        <img src="url" height="200" class="card-img-top" alt="...">
+
+                                    </div>
+
+                                </div>
+                                <!-- Imagem 3 -->
+                                <div class="card mt-3"
+                                    style="  width: 290px; height: 400px; background-color: #858382; border-radius: 5px;">
                                     <img src="url" height="200" class="card-img-top" alt="...">
                                 </div>
-                                <!-- Imagem 2 -->
-                                <div style="background-color: #858382; width: 25%; height: 100px; border-radius: 5px;">
-                                    <img src="url" height="200" class="card-img-top" alt="...">
+                                <br>
+                                <!-- Buscar Imagem -->
+                                <div class="form-group">
 
-                                </div>                                                           
+                                    <input type="file" (change)="onselectFile($event)" class="form-control-file"
+                                        id="exampleFormControlFile1">
+                                </div>
+
+                                <!-- Tabela de Medidas -->
+                                <nav class="nav_tabs">
+                                    <ul class="container">
+                                        <li>
+                                            <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                                            <label for="tab1" class="tab_label">Tabela de Medidas</label>
+                                            <div class="tab-content">
+                                                <article>
+                                                    <img class="medida" src="../../assets/img/icon/tab num.PNG/" alt="">
+                                                </article>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                                            <label for="tab2" class="tab_label">Como Medir</label>
+                                            <div class="tab-content">
+                                                <article>
+                                                    <img class="medida" src="../../assets/img/icon/tab med.PNG" alt="">
+                                                </article>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+
 
                             </div>
-                             <!-- Imagem 3 -->
-                             <div class="card mt-3"
-                             style="  width: 290px; height: 400px; background-color: #858382; border-radius: 5px;">
-                             <img src="url" height="200" class="card-img-top" alt="...">
-                         </div>
-                         <br>
-                            <!-- Buscar Imagem -->
-                            <div class="form-group">
 
-                                <input type="file" (change)="onselectFile($event)" class="form-control-file"
-                                    id="exampleFormControlFile1">
+                            <!-- Área onde estão as informações do produto, nome, descrição, tamanho, pagamento e valor -->
+                            <div class="col-md-5 p-3 ml-4">
+                                <!--Campo Texto -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nome do Produto">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nome do Produto">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nome do Produto">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">R$</span>
+                                        </div>
+                                        <input placeholder="Preço..." type="text" class="form-control"
+                                            aria-label="Quantia">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Descrição</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+
+
+
+                                </form>
+                                <!--Fim Campo Texto -->
+
+                                <!-- CheckBox -->
+                                <form>
+                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                                            <button type="button" class="btn btn-secondary">PP</button>
+                                            <button type="button" class="btn btn-secondary">P</button>
+                                            <button type="button" class="btn btn-secondary">M</button>
+                                            <button type="button" class="btn btn-secondary">G</button>
+                                            <button type="button" class="btn btn-secondary">GG</button>
+                                        </div>
+
+                                        <!-- CheckBox -->
+                                    </div>
+                                </form>
+                                <!-- Fim CheckBox -->
+
+                                <!-- Botão Salvar -->
+                                <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
+
+                                </div>
+                                <!-- Fim Botão Salvar -->
                             </div>
-
-                            <!-- Tabela de Medidas -->
-                            <nav class="nav_tabs">
-                                <ul class="container">
-                                    <li>
-                                        <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-                                        <label for="tab1" class="tab_label">Tabela de Medidas</label>
-                                        <div class="tab-content">
-                                            <article>
-                                                <img class="medida" src="../../assets/img/icon/tab num.PNG/" alt="">
-                                            </article>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                                        <label for="tab2" class="tab_label">Como Medir</label>
-                                        <div class="tab-content">
-                                            <article>
-                                                <img class="medida" src="../../assets/img/icon/tab med.PNG" alt="">
-                                            </article>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </nav>
-
-
-
-                        </div>
-
-                        <!-- Área onde estão as informações do produto, nome, descrição, tamanho, pagamento e valor -->
-                        <div class="col-md-5 p-3 ml-4">
-                            <!--Campo Texto -->
-                            <form>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Nome do Produto">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Nome do Produto">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Nome do Produto">
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">R$</span>
-                                    </div>
-                                    <input placeholder="Preço..." type="text" class="form-control" aria-label="Quantia">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">.00</span>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Descrição</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-
-
-
-                            </form>
-                            <!--Fim Campo Texto -->
-
-                            <!-- CheckBox -->
-                            <form>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                </div>
-
-                                <div class="input-group mb-3">
-
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-
-                                    <!-- CheckBox -->
-                                </div>
-                            </form>
-                            <!-- Fim CheckBox -->
-
-                            <!-- Botão Salvar -->
-                            <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
-
-                                <button class="w-50 btn btn-light w-100 mb-2 font-roboto"
-                                    style="background-color: whitesmoke; height: 50px; ">Salvar</button>
-                            </div>
-                            <!-- Fim Botão Salvar -->
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="w-50 btn btn-light w-100 mb-2 font-roboto"
+                            style="background-color: whitesmoke; height: 50px; ">Salvar</button>
+                    </div>
                 </div>
+
             </div>
         </div>
-
     </main>
 
-    <!-- Fim container -->
+    <!--============================================= Fim container =============================================-->
 </div>
