@@ -7,6 +7,9 @@ import { Usuario } from '../model/usuario';
   providedIn: 'root'
 })
 export class AuthService {
+  
+  mostrarPopupCadastro: boolean = false
+  mostrarPopupLogin: boolean = false
 
   constructor(private http: HttpClient) { }
 
@@ -29,5 +32,24 @@ export class AuthService {
 
     return logado;
   }
+  btnLogineCadastro(){
+    let logado = false;
+    let token = localStorage.getItem('token')
 
+    if(token == null){
+      logado = true;
+    }
+
+    return logado;
+  }
+
+
+
+  popupCadastro(){
+    this.mostrarPopupCadastro = true
+  }
+  popupLogin(){
+    this.mostrarPopupLogin = true
+    // this.refresh()
+  }
 }

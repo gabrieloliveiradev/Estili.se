@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilClienteComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario = new Usuario
 
-  ngOnInit(): void {
+  nome: string = localStorage.getItem('nome')
+  login: boolean = false
+
+  constructor(private router: Router) { }
+
+  ngOnInit(){
+    let token = localStorage.getItem('token')
+
+    if(token == null){
+      alert('Faça o login antes de acessar o perfil')
+      this.login = true
+      this.router.navigate(['/login'])
+    }
   }
+
+ 
 
 }
