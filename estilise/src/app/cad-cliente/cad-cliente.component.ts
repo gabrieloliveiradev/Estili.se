@@ -3,6 +3,8 @@ import { Usuario } from '../model/usuario';
 import { UsuariosService } from '../service/usuarios.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../service/auth.service';
+import { loginUsuario } from '../model/loginUsuario';
 
 
 @Component({
@@ -12,80 +14,86 @@ import { Location } from '@angular/common';
 })
 
 export class CadClienteComponent implements OnInit {
-  usuario: Usuario = new Usuario()
-  profissional = this.usuario.profissional
+  usuario: Usuario = new Usuario
+
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
+  
+  mostrarPopupLogin: boolean = false
+  senha: string;
+  login: boolean = false
 
+  loginUsuario: loginUsuario = new loginUsuario;
+  
   constructor(private usuarioService:UsuariosService, 
-    private router:Router, private route:ActivatedRoute, 
+    private router:Router, private authService: AuthService, 
     private locationPage:Location) { }
-  
-  ngOnInit():void {
-  let cadastro: string = localStorage.getItem('validado')
-  const checkVendedor = document.getElementsByName("checkVendedor")
-
-
-  if (cadastro == "true"){
-    this.alerta=true;
-    localStorage.clear()
-    setTimeout(() => {
-      location.assign("/produtos")
-    }, 10000);
+    
+    ngOnInit():void {
+      let cadastro: string = localStorage.getItem('validado')
+      // const checkVendedor = document.getElementsByName("checkVendedor")
+      
+      
+      if (cadastro == "true"){
+        this.alerta=true;
+        localStorage.clear()
+        setTimeout(() => {
+          location.assign("/produtos")
+        }, 10000);
+      }
     }
-  }
-  senhas = {
-    senha: "",
-    confirma_senha: ""
-  }
-  cadastrar(){
-    if(this.profissional == true){
-      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
-        this.usuario = resp
-        location.assign("/categorias")
-        this.validado = true
-        this.router.navigate(["/categorias"])
-        localStorage.setItem("validado", this.validado.toString())
-        this.refresh()
+    
+    conferirSenha(event: any){
+      this.senha = event.target.value;
+    }
+    
+    cadastrar(){
+      let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
+      if(this.senha === this.usuario.senha){
+        if(checkVendedor.checked){
+          this.usuario.profissional = true;
+          this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+          this.usuario = resp
+          alert("Usuário cadastrado com sucesso!!!")
+          // this.mostrarPopupLogin = true
+          location.assign('/categorias')
+          
+          })
+        
+        } else{
+          this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+            this.usuario = resp
+            alert("Usuário cadastrado com sucesso!!!")
+            // this.mostrarPopupLogin = true
+            location.assign('/produtos')
+            
+            })
+        }
+      }else{
+        alert("Senhas incompatíveis!")
+      }
+    }
+    
+    refresh(){
+      this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
+        this.router.navigate([this.locationPage.path()])
       })
-    }else{
-      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
-        this.usuario = resp
-        location.assign("/produtos")
-        this.validado = true
-        this.router.navigate(["/produtos"])
-        localStorage.setItem("validado", this.validado.toString())
-        this.refresh()
-      })
     }
-  }
-
-  refresh(){
-    this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
-     this.router.navigate([this.locationPage.path()])
-    })
-  }
-
-  validar() {
-    if (this.senhas.senha === this.senhas.confirma_senha) {
-      this.cadastrar();
-    } else {
-      alert("Senhas não correspondem")
+    
+    
+    mudarPopupParaLogin(){
+      this.mostrarlogin = true
     }
+    
+    
+    recarregar(){
+      setTimeout(() => {
+        location.assign("/politica")
+      }, 0);
+    }
+    
   }
   
-  mudarPopupParaLogin(){
-    this.mostrarlogin = true
-  }
-
-  
-  recarregar(){
-    setTimeout(() => {
-      location.assign("/politica")
-    }, 0);
-  }
-  
-}
