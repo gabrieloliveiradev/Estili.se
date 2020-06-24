@@ -27,7 +27,7 @@ export class EditarProdutoComponent implements OnInit {
   salvar(){
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      this.router.navigate(['/produto'])
+      this.router.navigate(['/produtos'])
     })
   }
 

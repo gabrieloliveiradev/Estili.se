@@ -10,4 +10,6 @@ export class Usuario {
     public numero_casa:number
     public telefone:number
     public imagem_usuario:string
+    public data_nascimento:Date
+    public especialidade:String
 }
