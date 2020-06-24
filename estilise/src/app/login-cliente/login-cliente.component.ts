@@ -10,7 +10,6 @@ import { Usuario } from '../model/usuario';
   styleUrls: ['./login-cliente.component.css']
 })
 export class LoginClienteComponent implements OnInit {
-
   loginUsuario: loginUsuario = new loginUsuario;
 
   constructor(private router: Router, public authService: AuthService) { }
