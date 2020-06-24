@@ -14,13 +14,8 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 
 export class CadClienteComponent implements OnInit {
-<<<<<<< HEAD
   usuario: Usuario = new Usuario
 
-=======
-  usuario: Usuario = new Usuario()
-  
->>>>>>> a09b65673ba9df6d4e8b7ba9d7554ef0e916352f
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
@@ -29,37 +24,6 @@ export class CadClienteComponent implements OnInit {
   
   mostrarPopupLogin: boolean = false
   senha: string;
-<<<<<<< HEAD
-  login: boolean = false
-
-  loginUsuario: loginUsuario = new loginUsuario;
-
-  constructor(private router:Router, private authService: AuthService, 
-    private locationPage:Location) { }
-  
-  ngOnInit():void {
-  // let cadastro: string = localStorage.getItem('validado')
-  // // const checkVendedor = document.getElementsByName("checkVendedor")
-
-
-  // if (cadastro == "true"){
-  //   this.alerta=true;
-  //   localStorage.clear()
-  //   setTimeout(() => {
-  //     location.assign("/produtos")
-  //   }, 10000);
-  //   }
-  }
-
-  conferirSenha(event: any){
-    this.senha = event.target.value;
-  }
-
-  cadastrar(){
-      if(this.senha === this.usuario.senha){
-        this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
-          // localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
-=======
   
   constructor(private usuarioService:UsuariosService, 
     private router:Router, private authService: AuthService, 
@@ -89,7 +53,6 @@ export class CadClienteComponent implements OnInit {
         if(checkVendedor.checked){
           this.usuario.profissional = true;
           this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
->>>>>>> a09b65673ba9df6d4e8b7ba9d7554ef0e916352f
           this.usuario = resp
           alert("Usuário cadastrado com sucesso!!!")
           // this.mostrarPopupLogin = true
