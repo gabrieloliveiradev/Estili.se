@@ -10,29 +10,21 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 export class PerfilClienteComponent implements OnInit {
   emailusuario: string = localStorage.getItem('emailusuario');
+  
   loginUsuario : loginUsuario = new loginUsuario
+  // usuario: Usuario = new Usuario
 
-  
-  
-  usuario: Usuario = new Usuario
-  
-  nome: string = localStorage.getItem('nome')
-  login: boolean = false
-  
   // validadecartao = document.getElementById('validadecartao')
   // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
   // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-  
+  // emailusuario: string = localStorage.getItem('emailusuario')
   constructor(private router: Router) { }
   
   ngOnInit(){
     let token = localStorage.getItem('token')
-    // this.numerocartao.innerText = "Olá"
-    // alert(this.numerocartao.innerText)
     
     if(token == null){
       alert('Faça o login antes de acessar a página feed')
-      this.login = true
       this.router.navigate(['/login'])
     }
   }

@@ -16,21 +16,12 @@ export class NavComponent implements OnInit {
   mostrarPopupCadastro: boolean = false
   mostrarPopupLogin: boolean = false
 
+  constructor(private router: Router, public auth: AuthService ) { }
 
-
-  constructor(private router: Router, private locationPage: Location, public auth: AuthService ) { }
-
-  ngOnInit():void{
+  ngOnInit(){
    
   }
- teste(){
-  this.auth.popupCadastro()
- }
-  // refresh(){
-  //   this.router.navigateByUrl("/login-cliente", {skipLocationChange:true}).then(()=>{
-  //    this.router.navigate([this.locationPage.path()])
-  //   })
-  // }
+
   popupCadastro(){
     this.mostrarPopupCadastro = true
   }
@@ -40,8 +31,8 @@ export class NavComponent implements OnInit {
   }
 
   sair(){
-    this.router.navigate(['/login'])
-    localStorage.clear()
+    this.router.navigate(['/login'])  
+    localStorage.clear() 
   }
   
  
