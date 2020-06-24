@@ -12,5 +12,4 @@ export class Usuario {
     public imagem_usuario:string
     public data_nascimento:Date
     public especialidade:String
-    public profissional: boolean = false
 }

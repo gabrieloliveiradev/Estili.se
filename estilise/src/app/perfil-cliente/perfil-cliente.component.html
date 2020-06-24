@@ -1,4 +1,4 @@
-<h2 class="m-4">Meu perfil</h2>
+<h2 class="m-4">Meu perfil {{loginUsuario.emailusuario}}</h2>
 <hr class="mb-5" style="width: 97%;">
 
 <div class="container">
@@ -9,12 +9,12 @@
       </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
         <div class="container">
-          <p style="font-size: large; font-weight: 200;">{{nome}}</p>
+          <p style="font-size: large; font-weight: 200;"></p>
         </div>
         <hr>
         <div class="row">
           <ul class="col container">
-            <li><p><span style="width:50px;"></span>Email: Jhow@damasceno.com</p></li>
+            <li><p><span style="width:50px;"></span>E-mail: {{emailusuario}}</p></li>
             <li><p><span style="width:50px;"></span>CPF: -</p></li>
             <li><p><span style="width:50px;"></span>Endereço: -</p></li>
             <li><p><span style="width:50px;"></span>Complemento: -</p></li>

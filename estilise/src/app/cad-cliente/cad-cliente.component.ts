@@ -4,6 +4,7 @@ import { UsuariosService } from '../service/usuarios.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { AuthService } from '../service/auth.service';
+import { loginUsuario } from '../model/loginUsuario';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { AuthService } from '../service/auth.service';
 })
 
 export class CadClienteComponent implements OnInit {
-  usuario: Usuario = new Usuario()
+  usuario: Usuario = new Usuario
 
   alerta: boolean = false;
   validado: boolean = false;
@@ -23,23 +24,25 @@ export class CadClienteComponent implements OnInit {
 
   mostrarPopupLogin: boolean = false
   senha: string;
+  login: boolean = false
 
-  constructor(private usuarioService:UsuariosService, 
-    private router:Router, private authService: AuthService, 
+  loginUsuario: loginUsuario = new loginUsuario;
+
+  constructor(private router:Router, private authService: AuthService, 
     private locationPage:Location) { }
   
   ngOnInit():void {
-  let cadastro: string = localStorage.getItem('validado')
-  // const checkVendedor = document.getElementsByName("checkVendedor")
+  // let cadastro: string = localStorage.getItem('validado')
+  // // const checkVendedor = document.getElementsByName("checkVendedor")
 
 
-  if (cadastro == "true"){
-    this.alerta=true;
-    localStorage.clear()
-    setTimeout(() => {
-      location.assign("/produtos")
-    }, 10000);
-    }
+  // if (cadastro == "true"){
+  //   this.alerta=true;
+  //   localStorage.clear()
+  //   setTimeout(() => {
+  //     location.assign("/produtos")
+  //   }, 10000);
+  //   }
   }
 
   conferirSenha(event: any){
@@ -49,6 +52,7 @@ export class CadClienteComponent implements OnInit {
   cadastrar(){
       if(this.senha === this.usuario.senha){
         this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+          // localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
           this.usuario = resp
   
           alert("Usuário cadastrado com sucesso!!!")
