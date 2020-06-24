@@ -16,7 +16,7 @@ export class CategoriasComponent implements OnInit {
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(){
-    this.findAllCategorias
+    this.findAllCategorias()
     window.scroll(0,0)
   }
 
@@ -24,13 +24,6 @@ export class CategoriasComponent implements OnInit {
   findAllCategorias(){
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[])=>{
       this.listaCategorias = resp;
-    });
-  }
-  
-  publicar(){  
-    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
-      this.categoria = resp;
-      location.assign('/categorias')
     });
   }
 }

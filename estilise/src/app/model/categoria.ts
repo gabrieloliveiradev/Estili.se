@@ -3,5 +3,4 @@ export class Categoria {
     public descricao:string
     public imagem_categoria:string
     public nome_categoria:string
-    public id_produto:number
 }
