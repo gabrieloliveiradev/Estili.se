@@ -91,7 +91,20 @@ label{
     width:100%;
 }
 .caixa-formulario {
-    width: 60% !important;
+    width: 70% !important;
     margin: 0 auto;
-    margin-top: 65px;
+    margin-top: 130px;
+}
+
+/* ========== Animação cartão CVV ============= */
+
+#cartao::before{
+    box-shadow: 0px 0px 20px 2px rgba(14, 42, 90, 0.55);
+    transform: perspective(2000px) rotateY(0deg) rotateX(0deg) rotate(0deg);
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+}
+#cartao:has(> #animacaoCartaoCVV){
+    transform: rotateY(180deg);
+    transition: 2s;
 }
