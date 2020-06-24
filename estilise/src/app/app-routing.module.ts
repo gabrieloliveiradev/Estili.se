@@ -29,9 +29,9 @@ const routes: Routes = [
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
-  { path:' deletar', component: DeleteUsuarioComponent},
-  { path:' deletar/:id', component: DeleteUsuarioComponent},
-  { path:' login', component: LoginClienteComponent},
+  { path:'deletar', component: DeleteUsuarioComponent},
+  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  { path:'login', component: LoginClienteComponent},
   { path: 'cadastrar', component: CadClienteComponent}
 ];
 

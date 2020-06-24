@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginUsuarioService } from '../service/login-usuario.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { AuthService } from '../service/auth.service';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-login-cliente',
@@ -13,15 +13,17 @@ export class LoginClienteComponent implements OnInit {
 
   loginUsuario: loginUsuario = new loginUsuario;
 
-  constructor(private loginService: LoginUsuarioService, private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, public authService: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   entrar(){
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
+      localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+      location.assign('/perfil-cliente')
       this.router.navigate(['/produtos'])
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')

@@ -13,7 +13,7 @@ export class LoginUsuarioService {
 
   constructor(private http: HttpClient) { }
 
-  logar(usuario: loginUsuario) {
-    return this.http.post('http://localhost:8080/usuarios/logar', usuario)
+  logar(loginUsuario: loginUsuario) {
+    return this.http.post('http://localhost:8080/usuarios/logar', loginUsuario)
   }
 }
