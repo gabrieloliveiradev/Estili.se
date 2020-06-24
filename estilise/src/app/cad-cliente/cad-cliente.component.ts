@@ -14,16 +14,22 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 
 export class CadClienteComponent implements OnInit {
+<<<<<<< HEAD
   usuario: Usuario = new Usuario
 
+=======
+  usuario: Usuario = new Usuario()
+  
+>>>>>>> a09b65673ba9df6d4e8b7ba9d7554ef0e916352f
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
-
+  
   mostrarPopupLogin: boolean = false
   senha: string;
+<<<<<<< HEAD
   login: boolean = false
 
   loginUsuario: loginUsuario = new loginUsuario;
@@ -53,34 +59,75 @@ export class CadClienteComponent implements OnInit {
       if(this.senha === this.usuario.senha){
         this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
           // localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
-          this.usuario = resp
+=======
   
+  constructor(private usuarioService:UsuariosService, 
+    private router:Router, private authService: AuthService, 
+    private locationPage:Location) { }
+    
+    ngOnInit():void {
+      let cadastro: string = localStorage.getItem('validado')
+      // const checkVendedor = document.getElementsByName("checkVendedor")
+      
+      
+      if (cadastro == "true"){
+        this.alerta=true;
+        localStorage.clear()
+        setTimeout(() => {
+          location.assign("/produtos")
+        }, 10000);
+      }
+    }
+    
+    conferirSenha(event: any){
+      this.senha = event.target.value;
+    }
+    
+    cadastrar(){
+      let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
+      if(this.senha === this.usuario.senha){
+        if(checkVendedor.checked){
+          this.usuario.profissional = true;
+          this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+>>>>>>> a09b65673ba9df6d4e8b7ba9d7554ef0e916352f
+          this.usuario = resp
           alert("Usuário cadastrado com sucesso!!!")
           // this.mostrarPopupLogin = true
           location.assign('/categorias')
-  
-        })
+          
+          })
+        
+        } else{
+          this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
+            this.usuario = resp
+            alert("Usuário cadastrado com sucesso!!!")
+            // this.mostrarPopupLogin = true
+            location.assign('/produtos')
+            
+            })
+        }
       }else{
         alert("Senhas incompatíveis!")
       }
+    }
+    
+    refresh(){
+      this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
+        this.router.navigate([this.locationPage.path()])
+      })
+    }
+    
+    
+    mudarPopupParaLogin(){
+      this.mostrarlogin = true
+    }
+    
+    
+    recarregar(){
+      setTimeout(() => {
+        location.assign("/politica")
+      }, 0);
+    }
+    
   }
-
-  refresh(){
-    this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
-     this.router.navigate([this.locationPage.path()])
-    })
-  }
-
   
-  mudarPopupParaLogin(){
-    this.mostrarlogin = true
-  }
-
-  
-  recarregar(){
-    setTimeout(() => {
-      location.assign("/politica")
-    }, 0);
-  }
-  
-}
