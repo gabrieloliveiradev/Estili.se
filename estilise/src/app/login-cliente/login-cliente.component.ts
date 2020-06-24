@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { AuthService } from '../service/auth.service';
-import { loadavg } from 'os';
 import { Usuario } from '../model/usuario';
 
 @Component({
@@ -13,7 +12,6 @@ import { Usuario } from '../model/usuario';
 export class LoginClienteComponent implements OnInit {
 
   loginUsuario: loginUsuario = new loginUsuario;
-  usuario: Usuario = new Usuario
 
   constructor(private router: Router, public authService: AuthService) { }
 
