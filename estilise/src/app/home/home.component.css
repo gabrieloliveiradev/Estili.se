@@ -156,3 +156,12 @@ background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 5
     height: 90%;
     max-height: 450px;
 }
+#vendedor {
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgb(22, 136, 88) 25%, rgb(91, 92, 177) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%); */
+    width: 100%;
+}
+article > div {
+    height: 100%;
+    width: 100%;
+}
