@@ -13,6 +13,8 @@ import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.componen
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
+import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
+import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -30,7 +32,9 @@ const routes: Routes = [
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path:' deletar', component: DeleteUsuarioComponent},
-  { path:' deletar/:id', component: DeleteUsuarioComponent}
+  { path:' deletar/:id', component: DeleteUsuarioComponent},
+  { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
+  { path: 'postarcategoria', component: CategoriaPostComponent}
 ];
 
 @NgModule({
