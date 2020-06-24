@@ -13,24 +13,27 @@ import { Location } from '@angular/common';
 
 export class CadClienteComponent implements OnInit {
   usuario: Usuario = new Usuario()
+  profissional = this.usuario.profissional
   alerta: boolean = false;
   validado: boolean = false;
   mostrarlogin: boolean = false
   paginaPolitica: boolean = false
+  check: boolean = false
 
   constructor(private usuarioService:UsuariosService, 
     private router:Router, private route:ActivatedRoute, 
     private locationPage:Location) { }
   
-  ngOnInit() {
+  ngOnInit():void {
   let cadastro: string = localStorage.getItem('validado')
-  let sumiu: string = localStorage.getItem('validado')
+  const checkVendedor = document.getElementsByName("checkVendedor")
+
 
   if (cadastro == "true"){
     this.alerta=true;
     localStorage.clear()
     setTimeout(() => {
-      location.assign("/produto")
+      location.assign("/produtos")
     }, 10000);
     }
   }
@@ -39,18 +42,29 @@ export class CadClienteComponent implements OnInit {
     confirma_senha: ""
   }
   cadastrar(){
-    this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
-      this.usuario = resp
-      location.assign("/cadastro-usuario")
-      this.validado = true
-      this.router.navigate(["/cadastro-usuario"])
-      localStorage.setItem("validado", this.validado.toString())
-      this.refresh()
-    })
+    if(this.profissional == true){
+      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
+        this.usuario = resp
+        location.assign("/categorias")
+        this.validado = true
+        this.router.navigate(["/categorias"])
+        localStorage.setItem("validado", this.validado.toString())
+        this.refresh()
+      })
+    }else{
+      this.usuarioService.postCadastro(this.usuario).subscribe((resp:Usuario)=>{
+        this.usuario = resp
+        location.assign("/produtos")
+        this.validado = true
+        this.router.navigate(["/produtos"])
+        localStorage.setItem("validado", this.validado.toString())
+        this.refresh()
+      })
+    }
   }
 
   refresh(){
-    this.router.navigateByUrl("/cadastro-usuario", {skipLocationChange:true}).then(()=>{
+    this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
      this.router.navigate([this.locationPage.path()])
     })
   }

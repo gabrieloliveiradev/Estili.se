@@ -8,13 +8,13 @@ import { ContatoComponent } from './contato/contato.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
-import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
+import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -23,12 +23,12 @@ const routes: Routes = [
   { path: 'quemsomos', component: QuemsomosComponent},
   { path: 'politica', component: PoliticaComponent},
   { path: 'contato', component: ContatoComponent},
-  { path: 'produto', component: ProdutoComponent},
+  { path: 'produtos', component: ProdutoComponent},
   { path: 'categorias', component: CategoriasComponent },
   { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},
-  { path: 'editar', component: EditarComponent},
-  { path: 'editar/:id', component: EditarComponent},
+  { path: 'editar', component: EditarPerfilClienteComponent},
+  { path: 'editar/:id', component: EditarPerfilClienteComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path:' deletar', component: DeleteUsuarioComponent},

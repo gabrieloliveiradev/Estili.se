@@ -16,7 +16,6 @@ import { FormsModule } from '@angular/forms'
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EditarComponent } from './editar/editar.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
@@ -25,6 +24,7 @@ import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.compo
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component'
+import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import { CategoriaPostComponent } from './categoria-post/categoria-post.componen
     ListaUsuariosComponent,
     CadClienteComponent,
     LoginClienteComponent,
-    EditarComponent,
     DeleteUsuarioComponent,
     CategoriasComponent,
     PerfilClienteComponent,
@@ -48,7 +47,8 @@ import { CategoriaPostComponent } from './categoria-post/categoria-post.componen
     DeletarProdutoComponent,
     EditarProdutoComponent,
     EditarDeletarCategoriaComponent,
-    CategoriaPostComponent
+    CategoriaPostComponent,
+    EditarPerfilClienteComponent
   ],
   imports: [
     BrowserModule,

@@ -13,10 +13,10 @@ export class ProdutoService {
     return this.http.get('http://localhost:8080/produtos');
   }
   findBynome(nome_produto: String){
-    return this.http.get('http://localhost:8080/produtos/${nome_produto}')
+    return this.http.get(`http://localhost:8080/produtos/${nome_produto}`)
   }
   findByPreco(preco: number){
-    return this.http.get('http://localhost:8080/produtos/${preco}');
+    return this.http.get(`http://localhost:8080/produtos/${preco}`);
   }
   postProduto(produto: Produto) {
     return this.http.post('http://localhost:8080/produtos', produto , { headers: { 'authorization': localStorage.getItem ('token') }})
