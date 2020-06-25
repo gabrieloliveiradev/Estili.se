@@ -8,9 +8,19 @@ footer {
 {
     margin: 0 auto;
 }
-
+.img
+{
+    image-resolution: 500px;
+}
 #font {
-    
+    font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 42px;
+text-align: center;
+letter-spacing: 0.1em;  
+  
     color:#158591;
    
      margin: 2%;   
@@ -18,47 +28,19 @@ footer {
     font-family: 'Roboto', sans-serif;
 }
 
-/* #fontAll
-{
-    margin: 0 auto;
-    
-} */
+
 
 #footer2 {
-    margin: 0 auto;    
-      
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;         
     background: #158591;
-
-    color: white;    
-
-    font-family: 'Roboto', sans-serif; 
-
-    /* Espaçamento entre os links da segunda barra e a margem */
-    padding:1%
-
+    color: white; 
 
 }
-/* #barfooter2
-{
-    margin: 0 auto;
-   margin-left: 10%; 
-    width: 700px; 
-   font-family: 'Roboto', sans-serif;   
-} */
 
-#sociAll
-{
-
-    /* Direcionamento da caixa de icones de rede social */
-  
-    
-}
-
-#socialItem
-{
-    /* Espaçamento entre os Icones de rede social */
-  
-}
 
 /* Links da segunda barra do Footer */
 #sublinks {
@@ -71,10 +53,27 @@ footer {
 
 /* Apenas o Copyright */
 #copyright {
-    font-size: small;
+     font-size: small;    
+     font-size: 12px;  
+          
+}
+
+
+
+/* Logo cresce */
+/* .grow:hover
+{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+    color: white;
+} */
+
+/* Efeito Hover Icones */
+.fa-3x:hover
+{
+    color: white !important; 
     
-    
-   
 }
 
 h5 > a {
@@ -89,7 +88,8 @@ h6 > a:hover {
     color: white;
 }
 
-@media(max-width:526px)
+/* Mudar a posição da coluna quando diminuir a página */
+@media(max-width:776px)
 {
 
 #fontAll
@@ -130,5 +130,44 @@ visibility: visible !important ;
 
 }
 
+#copyright
+{
+    margin-top: 20px;
+    
+}
 
+
+}
+/* ================================================================================================ */
+/* CSS GERAL DO SITE  */
+.font-cookie {
+    font-family: 'Cookie', 'Sans Serif';
+  }
+  .font-roboto {
+    font-family: 'Roboto', 'Sans Serfi';
+  }
+  .verde-logo {
+    color: #118899;
+  }
+
+/* css da barra de scroll */
+
+::-webkit-scrollbar-track {
+    background-color: rgb(224, 255, 251);
+    border: 1px rgb(50, 167, 155);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background: #8DF6EC;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #158591;
+    scrollbar-base-color:  rgb(224, 255, 251);
+    scrollbar-base-color:  rgb(224, 255, 251);
+    scrollbar-3dlight-color: #158591;
+    scrollbar-highlight-color: #158591;
+    scrollbar-track-color: #158591;
+    scrollbar-arrow-color: #158591;
+    scrollbar-shadow-color: #158591;
 }

@@ -10,8 +10,11 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilVendedorComponent } from './perfil-vendedor/perfil-vendedor.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
+import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
+import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 
@@ -28,9 +31,14 @@ const routes: Routes = [
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
-  { path: 'perfil-cliente', component: PerfilClienteComponent},
+  { path: 'cadastro-usuario', component: CadClienteComponent},
   { path:'deletar', component: DeleteUsuarioComponent},
   { path:'deletar/:id', component: DeleteUsuarioComponent},
+  {path: 'perfil-vendedor', component: PerfilVendedorComponent},
+  { path: 'perfil-cliente', component: PerfilClienteComponent},
+ 
+  { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
+  { path: 'postarcategoria', component: CategoriaPostComponent},
   { path:'login', component: LoginClienteComponent},
   { path: 'cadastrar', component: CadClienteComponent}
 ];
