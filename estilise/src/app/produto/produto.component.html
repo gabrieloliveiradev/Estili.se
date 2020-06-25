@@ -52,7 +52,7 @@
                 <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: auto;" src="../../assets/img/produtos/icon-filtro.png"
                     alt="Icone de filtro da página">
         <!-- Filtro com animação -->
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu filtro">
                         <div class="d-flex justify-content-around mt-3">
                             <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z" fill="#4B4A4A"/>
@@ -227,8 +227,8 @@
 
                     <!-- Botões de adicionar ao carrinho e compra -->
                     <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
-                        <button class="w-50 btn w-100 mb-2" style="background-color: #DCD7D0; height: 50px;">Adicionar ao carrinho</button>
-                        <button class="w-50 btn w-100 text-light" style="background-color: #71F6A6; height: 50px;">Comprar</button>
+                        <button class="w-50 btn w-100 mb-2" (click)="acesso()" style="background-color: #DCD7D0; height: 50px;">Adicionar ao carrinho</button>
+                        <button class="w-50 btn w-100 text-light" (click)="acesso()" style="background-color: #71F6A6; height: 50px;">Comprar</button>
                     </div>
                 </div>
           </div>

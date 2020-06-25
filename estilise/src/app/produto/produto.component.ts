@@ -19,12 +19,15 @@ export class ProdutoComponent implements OnInit {
   constructor(private produtoService: ProdutoService, private router: Router) { }
 
   ngOnInit() {
+    }
+
+  acesso(){
     let token = localStorage.getItem('token')
     if(token == null){
       alert('Faça o login antes de acessar os produtos !!!')
       this.login = true
-      this.router.navigate(['/login'])
-    }
+      this.router.navigate(['/home'])
+  }
 
 
     this.findAllProdutos

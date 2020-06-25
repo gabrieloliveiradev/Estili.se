@@ -43,8 +43,6 @@ export class AuthService {
     return logado;
   }
 
-
-
   popupCadastro(){
     this.mostrarPopupCadastro = true
   }

@@ -23,8 +23,9 @@ export class LoginClienteComponent implements OnInit {
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+      
       location.assign('/perfil-cliente')
-      this.router.navigate(['/produtos'])
+      this.router.navigate(['/perfil-cliente'])
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')
        })
