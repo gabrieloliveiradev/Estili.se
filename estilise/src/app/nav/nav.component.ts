@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
-import { UsuariosService } from '../service/usuarios.service';
-import { AppComponent } from '../app.component';
 import { AuthService } from '../service/auth.service';
 
 
@@ -14,11 +11,11 @@ import { AuthService } from '../service/auth.service';
 export class NavComponent implements OnInit {
   
   mostrarPopupCadastro: boolean = false
-  mostrarPopupLogin: boolean = false
+  mostrarPopupLogin: boolean = true
 
-  constructor(private router: Router, private locationPage: Location, public auth: AuthService ) { }
+  constructor(private router: Router, public auth: AuthService ) { }
 
-  ngOnInit():void{}
+  ngOnInit(){}
 
   popupCadastro(){
     this.mostrarPopupCadastro = true
@@ -28,9 +25,8 @@ export class NavComponent implements OnInit {
   }
 
   sair(){
-    this.router.navigate(['/home'])
-    localStorage.clear()
+    this.router.navigate(['/home'])  
+    localStorage.clear() 
   }
   
- 
 }

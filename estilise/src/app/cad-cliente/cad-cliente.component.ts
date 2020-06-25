@@ -26,8 +26,6 @@ export class CadClienteComponent implements OnInit {
   login: boolean = false
 
   loginUsuario: loginUsuario = new loginUsuario;
-
-  mostrarPopupLogin: boolean = false
   
   constructor(private router:Router, public authService: AuthService, public nav: NavComponent) { }
     
@@ -44,10 +42,6 @@ ngOnInit():void {
     }, 10000);
   }
 }
-popupLogin(){
-  this.mostrarPopupLogin = true
-}
-
 conferirSenha(event: any){
   this.senha = event.target.value;
 }
@@ -63,15 +57,16 @@ cadastrar(){
   if(this.senha === this.usuario.senha){
     if(checkVendedor.checked){
       this.usuario.profissional = true;
+      this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
       alert("Usuário cadastrado com sucesso!!!")
 
       this.router.navigate(['/home'])
-      
       })
     
     }else{
+      this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
         this.usuario = resp
         alert("Usuário cadastrado com sucesso!!!")
