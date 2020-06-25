@@ -119,7 +119,7 @@ select {
     padding: 7px;
 }
 
-select:hover {
+select:focus, select:hover {
     border-color: #71F6A6;
     color: #71F6A6;
 }

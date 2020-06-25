@@ -58,4 +58,12 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
+  substituirvalidade(){
+    let validadeMes = document.getElementById("validadeMes")
+    let validadeAno = document.getElementById("validadeAno")
+    let selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
+    let selectAno = ((<HTMLSelectElement>document.getElementById("selectAno")).value)
+    validadeMes.innerHTML = selectMes;
+    validadeAno.innerHTML = selectAno;
+  }
 }

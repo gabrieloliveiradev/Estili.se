@@ -108,7 +108,11 @@
                 </div>
                 <div class="d-block">
                   <p class="m-0 text-light">Validade</p>
-                  <p class="text-light" id="validadecartao">00/00</p>
+                  <div class="d-flex">
+                  <p class="text-light" id="validadeMes">00</p>
+                  <p class="text-light" >/</p>
+                  <p class="text-light" id="validadeAno">00</p>
+                </div>
                 </div>
               </div>
             </div>
@@ -126,24 +130,24 @@
               <label class="col-form-label">Titular</label>
             </div>
             <div class="d-flex mt-2">
-              <select class="">
+              <select class="" id="selectMes" (click)="substituirvalidade()" required>
                   <option selected class="" disabled>Mês</option>
-                  <option class="">1</option>
-                  <option class="">2</option>
-                  <option class="">3</option>
-                  <option class="">4</option>
-                  <option class="">5</option>
-                  <option class="">6</option>
-                  <option class="">7</option>
-                  <option class="">8</option>
-                  <option class="">9</option>
+                  <option class="">01</option>
+                  <option class="">02</option>
+                  <option class="">03</option>
+                  <option class="">04</option>
+                  <option class="">05</option>
+                  <option class="">06</option>
+                  <option class="">07</option>
+                  <option class="">08</option>
+                  <option class="">09</option>
                   <option class="">10</option>
                   <option class="">11</option>
                   <option class="">12</option>
                 <!-- </select> -->
               </select>
               <div class="d-flex ml-2">
-                <select class="">
+                <select class="" id="selectAno" (click)="substituirvalidade()" required>
                     <option selected class="" disabled>Ano</option>
                     <option class="">2020</option>
                     <option class="">2021</option>
