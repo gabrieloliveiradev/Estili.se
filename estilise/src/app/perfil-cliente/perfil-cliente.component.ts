@@ -9,9 +9,9 @@ import { loginUsuario } from '../model/loginUsuario';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
-  emailusuario: string = localStorage.getItem('emailusuario');
+  emailusuario: string
   loginUsuario : loginUsuario = new loginUsuario
-
+  
   login: boolean = false
   
   // validadecartao = document.getElementById('validadecartao')
@@ -21,6 +21,7 @@ export class PerfilClienteComponent implements OnInit {
   constructor(private router: Router) { }
   
   ngOnInit(){
+    this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
     // this.numerocartao.innerText = "Olá"
     // alert(this.numerocartao.innerText)
