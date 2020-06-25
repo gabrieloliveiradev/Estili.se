@@ -29,8 +29,7 @@ export class CadClienteComponent implements OnInit {
 
   mostrarPopupLogin: boolean = false
   
-  constructor(private router:Router, public authService: AuthService, 
-    public nav: NavComponent) { }
+  constructor(private router:Router, public authService: AuthService, public nav: NavComponent) { }
     
 ngOnInit():void {
   let cadastro: string = localStorage.getItem('validado')
@@ -54,7 +53,7 @@ conferirSenha(event: any){
 }
 
 fecharPopup(){
-  this.nav.cadastro = false
+  this.nav.mostrarPopupCadastro = false
   let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
   teste.style.display = 'none'
 }
