@@ -26,7 +26,7 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
-import { NgxMaskModule } from 'ngx-mask'
+// import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import { NgxMaskModule } from 'ngx-mask'
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,
-    NgxMaskModule.forRoot()
+    // NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
