@@ -18,13 +18,15 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilVendedorComponent } from './perfil-vendedor/perfil-vendedor.component'
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { DeletarProdutoComponent } from './deletar-produto/deletar-produto.component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
-import { CategoriaPostComponent } from './categoria-post/categoria-post.component'
-import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component'
+import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
+import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
+import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-per
     LoginClienteComponent,
     DeleteUsuarioComponent,
     CategoriasComponent,
+    PerfilVendedorComponent,
     PerfilClienteComponent,
     ProfissionaisComponent,
     DeletarProdutoComponent,
@@ -55,7 +58,8 @@ import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-per
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

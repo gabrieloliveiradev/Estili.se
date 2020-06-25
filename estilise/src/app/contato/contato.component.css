@@ -130,7 +130,7 @@ label {
     border-bottom-right-radius: 0;
     border-color: transparent;
     background-color: #FCFCFC;
-    width: 80%;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgb(236, 235, 235);
 }
@@ -187,7 +187,7 @@ label {
 }
 
 .aqua{
-    background-color: #00FFFF;
+    background-color: #118899;
     color: #fff;
 }
 
@@ -208,4 +208,9 @@ textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+}
+@media(max-width: 992px){
+    #texto{
+      font-size: 25px;
+    }
 }
