@@ -3,6 +3,13 @@ import { Router } from '@angular/router';
 import { Usuario } from '../model/usuario';
 import { loginUsuario } from '../model/loginUsuario';
 
+
+
+ 
+// const maskConfig: Partial<IConfig> = {
+//   validation: false,
+// };
+
 @Component({
   selector: 'app-perfil-cliente',
   templateUrl: './perfil-cliente.component.html',
@@ -11,26 +18,22 @@ import { loginUsuario } from '../model/loginUsuario';
 export class PerfilClienteComponent implements OnInit {
   emailusuario: string
   loginUsuario : loginUsuario = new loginUsuario
-  
   login: boolean = false
-  
-  // validadecartao = document.getElementById('validadecartao')
-  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
-  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-  
+
   constructor(private router: Router) { }
   
   ngOnInit(){
     this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
-    // this.numerocartao.innerText = "Olá"
-    // alert(this.numerocartao.innerText)
     
     if(token == null){
       alert('Faça o login antes de acessar a página feed')
       this.login = true
       this.router.navigate(['/login'])
     }
+    // imports: [
+    //   NgxMaskModule.forRoot(maskConfig),
+    // ]
   }
   
   substituirnumero(){
@@ -44,6 +47,7 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
+  
   
   
 }
