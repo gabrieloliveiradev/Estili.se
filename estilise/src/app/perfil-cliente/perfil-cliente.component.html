@@ -5,7 +5,7 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-        <img src="" class="imagemUsuario">
+        <img src="{{imagem_usuario}}" class="imagemUsuario">
       </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
         <div class="container">
@@ -14,16 +14,16 @@
         <hr>
         <div class="row">
           <ul class="col container">
-            <li><p><span style="width:50px;"></span>E-mail: </p></li>
-            <li><p><span style="width:50px;"></span>CPF: </p></li>
+            <li><p><span style="width:50px;"></span>E-mail: {{emailusuario}}</p></li>
+            <li><p><span style="width:50px;"></span>CPF: {{cpf_usuario}}</p></li>
             <li><p><span style="width:50px;"></span>Endereço: </p></li>
-            <li><p><span style="width:50px;"></span>Complemento: </p></li>
+            <li><p><span style="width:50px;"></span>Complemento: {{complemento}}</p></li>
           </ul>
           <ul class="col container">
             <li><p><span style="width:50px;"></span>Senha: *********</p></li>
-            <li><p><span style="width:50px;"></span>Data de Nascimento: </p></li>
-            <li><p><span style="width:50px;"></span>CEP: </p></li>
-            <li><p><span style="width:50px;"></span>Telefone: </p></li>
+            <li><p><span style="width:50px;"></span>Data de Nascimento: {{data_nascimento}}</p></li>
+            <li><p><span style="width:50px;"></span>CEP: {{cep}}</p></li>
+            <li><p><span style="width:50px;"></span>Telefone: {{telefone}}</p></li>
           </ul>
         </div>
       </div>
@@ -86,8 +86,6 @@
   </div>
 </div>
 
-
-
 <!-- Modal Cartão -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered justify-content-center" style="max-width: 40em!important; margin: 5.75rem auto!important;">
@@ -148,19 +146,19 @@
               </select>
               <div class="d-flex ml-2">
                 <select class="" id="selectAno" (click)="substituirvalidade()" required>
-                    <option selected class="" disabled>Ano</option>
-                    <option class="">2020</option>
-                    <option class="">2021</option>
-                    <option class="">2022</option>
-                    <option class="">2023</option>
-                    <option class="">2024</option>
-                    <option class="">2025</option>
-                    <option class="">2026</option>
-                    <option class="">2027</option>
-                    <option class="">2028</option>
-                    <option class="">2029</option>
-                    <option class="">2030</option>
-                    <option class="">2031</option>
+                  <option selected class="" disabled>Ano</option>
+                  <option class="">2020</option>
+                  <option class="">2021</option>
+                  <option class="">2022</option>
+                  <option class="">2023</option>
+                  <option class="">2024</option>
+                  <option class="">2025</option>
+                  <option class="">2026</option>
+                  <option class="">2027</option>
+                  <option class="">2028</option>
+                  <option class="">2029</option>
+                  <option class="">2030</option>
+                  <option class="">2031</option>
                 </select>
               </div>
               <div class="m-3">

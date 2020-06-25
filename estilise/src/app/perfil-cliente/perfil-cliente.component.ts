@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
-
-
+import { Usuario } from '../model/usuario';
 
  
 // const maskConfig: Partial<IConfig> = {
@@ -29,6 +28,7 @@ export class PerfilClienteComponent implements OnInit {
   id_usuario: string = localStorage.getItem('id_usuario');
 
   loginUsuario : loginUsuario = new loginUsuario
+  usuario : Usuario = new Usuario
   login: boolean = false
 
   constructor(private router: Router) { }

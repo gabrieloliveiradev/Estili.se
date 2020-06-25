@@ -192,7 +192,7 @@ label {
 }
 
 .aqua:hover{
-    background-color: #66F4DB;
+    background-color: #006677;
 }
 
 .cinza {
@@ -201,7 +201,7 @@ label {
 }
 
 .cinza:hover{
-    background-color: #E5E8B8;
+    background-color: #afafaf;
 }
 
 textarea:focus, input:focus, select:focus {
