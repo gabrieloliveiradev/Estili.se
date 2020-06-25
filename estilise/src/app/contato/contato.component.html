@@ -14,12 +14,11 @@
 <div class="container">
     
     <!--Início do bloco 1--> 
-    <form method="post" action="mailto:gabriel11.r@hotmail.com">  
+    <form method="post" action="">  
         <div class="bloco1 container" [hidden]="bloco1">
                 <div class="fila" style="margin-top: 10em;">
                     <div class="esfera-v">1</div>
                     <div id="linha-c-esquerda" class="linha-estilo"></div>
-                    
                     
                     <div class="esfera-c">2</div>
                     <div id="linha-c-direita"></div>
@@ -33,7 +32,7 @@
             <div class="caixa-formulario">
                 
                 <div class="form-group d-flex justify-content-center">
-                    <input class="form-control w-100 formulario " required>
+                    <input class="form-control w-100 formulario" id="email" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">E-mail</label>
                 </div>
@@ -43,18 +42,17 @@
                         <span class="linhaSpan"></span>
                         <label class="col-form-label">Nome</label>
                     </div>
-                    <div class="m-3">
 
-                    </div>
+                    <div class="m-3"></div>
                 
                     <div class="form-group w-50 d-flex justify-content-end">
-                        <input type="text" class="form-control formulario input-tel-nome" mask="(00) 00000-0000" required>
+                        <input type="text" class="form-control formulario input-tel-nome" mask="(00) 00000-0000" id="telefone" required>
                         <span class="linhaSpan"></span>
                         <label class="col-form-label">Telefone</label>
                     </div>
                 </div>
                 <div class="form-group d-flex justify-content-center">
-                    <input type="text" class="form-control w-100 formulario" required>
+                    <input type="text" class="form-control w-100 formulario" id="assunto" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Assunto</label>
                 </div>
@@ -83,7 +81,7 @@
             </div>
             <div class="container caixa-formulario">
                 <div class="form-group d-flex justify-content-center">
-                    <textarea class="form-control formulario" rows="4" style="resize: none;" required></textarea>
+                    <textarea class="form-control formulario" rows="4" style="resize: none;" id="mensagem" required></textarea>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">Faça seu comentário</label>
                 </div>
