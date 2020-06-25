@@ -18,22 +18,18 @@ export class NavComponent implements OnInit {
 
   constructor(private router: Router, public auth: AuthService ) { }
 
-  ngOnInit(){
-   
-  }
+  ngOnInit(){}
 
   popupCadastro(){
     this.mostrarPopupCadastro = true
   }
   popupLogin(){
     this.mostrarPopupLogin = true
-    // this.refresh()
   }
 
   sair(){
-    this.router.navigate(['/login'])  
+    this.router.navigate(['/home'])  
     localStorage.clear() 
   }
   
- 
 }
