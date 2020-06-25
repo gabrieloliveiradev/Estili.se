@@ -104,7 +104,26 @@ label{
     transform-style: preserve-3d;
     transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
 }
-#cartao:has(> #animacaoCartaoCVV){
+/* #cartao:has(> #animacaoCartaoCVV){
     transform: rotateY(180deg);
     transition: 2s;
+} */
+
+select {
+    max-height: 38px;
+    border-radius: 3px;
+    border-color: #C9BBC3;
+    color: #C9BBC3;
+    background-color: #FCFCFC;
+    font-family: "Roboto thin";
+    padding: 7px;
+}
+
+select:focus, select:hover {
+    border-color: #71F6A6;
+    color: #71F6A6;
+}
+
+select {
+    box-shadow: 2px  rgb(236, 235, 235);
 }

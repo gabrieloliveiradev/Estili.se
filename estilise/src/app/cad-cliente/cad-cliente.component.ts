@@ -4,7 +4,6 @@ import { UsuariosService } from '../service/usuarios.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { AuthService } from '../service/auth.service';
-import { loginUsuario } from '../model/loginUsuario';
 
 @Component({
   selector: 'app-cad-cliente',
@@ -26,7 +25,6 @@ export class CadClienteComponent implements OnInit {
 
   login: boolean = false
 
-  loginUsuario: loginUsuario = new loginUsuario;
 
   
   constructor(private usuarioService:UsuariosService, 

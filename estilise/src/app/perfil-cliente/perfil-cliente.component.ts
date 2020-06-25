@@ -2,12 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 
+
+
+ 
+// const maskConfig: Partial<IConfig> = {
+//   validation: false,
+// };
+
 @Component({
   selector: 'app-perfil-cliente',
   templateUrl: './perfil-cliente.component.html',
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
+  // emailusuario: string
 
   nome: string = localStorage.getItem('nome');
   emailusuario: string = localStorage.getItem('emailusuario');
@@ -21,25 +29,22 @@ export class PerfilClienteComponent implements OnInit {
   id_usuario: string = localStorage.getItem('id_usuario');
 
   loginUsuario : loginUsuario = new loginUsuario
-
   login: boolean = false
-  
-  // validadecartao = document.getElementById('validadecartao')
-  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
-  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-  
+
   constructor(private router: Router) { }
   
   ngOnInit(){
+    this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
-    // this.numerocartao.innerText = "Olá"
-    // alert(this.numerocartao.innerText)
     
     if(token == null){
       alert('Faça o login antes de acessar a página feed')
       this.login = true
       this.router.navigate(['/login'])
     }
+    // imports: [
+    //   NgxMaskModule.forRoot(maskConfig),
+    // ]
   }
   
   substituirnumero(){
@@ -53,5 +58,12 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
-  
+  substituirvalidade(){
+    let validadeMes = document.getElementById("validadeMes")
+    let validadeAno = document.getElementById("validadeAno")
+    let selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
+    let selectAno = ((<HTMLSelectElement>document.getElementById("selectAno")).value)
+    validadeMes.innerHTML = selectMes;
+    validadeAno.innerHTML = selectAno;
+  }
 }
