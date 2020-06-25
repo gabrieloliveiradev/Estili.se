@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../model/usuario';
 import { loginUsuario } from '../model/loginUsuario';
 
 
@@ -16,7 +15,19 @@ import { loginUsuario } from '../model/loginUsuario';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
-  emailusuario: string
+  // emailusuario: string
+
+  nome: string = localStorage.getItem('nome');
+  emailusuario: string = localStorage.getItem('emailusuario');
+  cpf_usuario: string = localStorage.getItem('cpf_usuario');
+  complemento: string = localStorage.getItem('complemento');
+  data_nascimento: string = localStorage.getItem('data_nascimento');
+  cep: string = localStorage.getItem('cep');
+  telefone: string = localStorage.getItem('telefone');
+  imagem_usuario: string = localStorage.getItem('imagem_usuario');
+  cartao_credito: string = localStorage.getItem('cartao_credito');
+  id_usuario: string = localStorage.getItem('id_usuario');
+
   loginUsuario : loginUsuario = new loginUsuario
   login: boolean = false
 
@@ -47,7 +58,4 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
-  
-  
-  
 }

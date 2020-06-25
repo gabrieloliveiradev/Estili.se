@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { AuthService } from '../service/auth.service';
 
-
 @Component({
   selector: 'app-cad-cliente',
   templateUrl: './cad-cliente.component.html',
@@ -83,11 +82,9 @@ export class CadClienteComponent implements OnInit {
       })
     }
     
-    
     mudarPopupParaLogin(){
       this.mostrarlogin = true
     }
-    
     
     recarregar(){
       setTimeout(() => {

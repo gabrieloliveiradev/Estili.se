@@ -10,6 +10,7 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { DeleteUsuarioComponent } from './delete-usuario/delete-usuario.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PerfilVendedorComponent } from './perfil-vendedor/perfil-vendedor.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
@@ -30,9 +31,12 @@ const routes: Routes = [
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
+  { path: 'cadastro-usuario', component: CadClienteComponent},
+  { path:'deletar', component: DeleteUsuarioComponent},
+  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  {path: 'perfil-vendedor', component: PerfilVendedorComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
-  { path:' deletar', component: DeleteUsuarioComponent},
-  { path:' deletar/:id', component: DeleteUsuarioComponent},
+ 
   { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
   { path: 'postarcategoria', component: CategoriaPostComponent},
   { path:'login', component: LoginClienteComponent},
