@@ -7,6 +7,7 @@ import { Categoria } from '../model/categoria';
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })
+
 export class CategoriasComponent implements OnInit {
 
   id_categoria: string = localStorage.getItem('id_categoria');

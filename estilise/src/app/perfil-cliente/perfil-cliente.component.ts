@@ -9,6 +9,7 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 export class PerfilClienteComponent implements OnInit {
 
+  nome: string = localStorage.getItem('nome');
   emailusuario: string = localStorage.getItem('emailusuario');
   cpf_usuario: string = localStorage.getItem('cpf_usuario');
   complemento: string = localStorage.getItem('complemento');
