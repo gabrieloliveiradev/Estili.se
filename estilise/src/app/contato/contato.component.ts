@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-
   nome = "";
   email = "";
   telefone = "";
@@ -18,7 +17,7 @@ export class ContatoComponent implements OnInit {
   bloco3 = true;
 
   constructor() { }
-  ngOnInit(){
+  ngOnInit() {
     window.scroll(0,0)
     }
   
@@ -38,7 +37,8 @@ export class ContatoComponent implements OnInit {
     } else {
     this.bloco1 = !this.bloco1;
     this.bloco2 = !this.bloco2;
-  }}
+    }
+  }
 
   botao2 () {
     let mensagem = ((<HTMLInputElement>document.getElementById("mensagem")))
@@ -47,6 +47,6 @@ export class ContatoComponent implements OnInit {
     } else {
     this.bloco2 = !this.bloco2;
     this.bloco3 = !this.bloco3;
-  }}
-
+    }
+  }
 }
