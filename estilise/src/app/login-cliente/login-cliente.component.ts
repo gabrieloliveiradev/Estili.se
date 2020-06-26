@@ -23,6 +23,7 @@ export class LoginClienteComponent implements OnInit {
       localStorage.setItem('token', this.loginUsuario.token)
       localStorage.setItem('nome', this.usuario.nome)
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+      
       location.assign('/perfil-cliente')
       this.router.navigate(['/perfil-cliente'])
     }, err => {

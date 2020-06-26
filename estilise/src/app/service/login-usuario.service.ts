@@ -7,13 +7,13 @@ import { loginUsuario } from '../model/loginUsuario';
 })
 export class LoginUsuarioService {
 
-  email_usuario:String
-  senha:String
-  token:String
+  // emailusuario:String
+  // senha:String
+  // token:String
 
   constructor(private http: HttpClient) { }
 
-  logar(loginUsuario: loginUsuario) {
-    return this.http.post('http://localhost:8080/usuarios/logar', loginUsuario)
-  }
+  // logar(loginUsuario: loginUsuario) {
+  //   return this.http.post('http://localhost:8080/usuarios/logar', loginUsuario)
+  // }
 }

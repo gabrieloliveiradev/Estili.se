@@ -29,24 +29,38 @@ export class PerfilClienteComponent implements OnInit {
   id_usuario: string = localStorage.getItem('id_usuario');
 
   loginUsuario : loginUsuario = new loginUsuario
+  // usuario: Usuario = new Usuario
   login: boolean = false
+  mostrarPopupLogin: boolean = false
+  
+  // validadecartao = document.getElementById('validadecartao')
+  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
+  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
+  // emailusuario: string = localStorage.getItem('emailusuario')
 
   constructor(private router: Router) { }
+
+  fecharPopup(){
+    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+    teste.style.display = 'none'
+  }
   
   ngOnInit(){
     this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
     
     if(token == null){
-      alert('Faça o login antes de acessar a página feed')
       this.login = true
-      this.router.navigate(['/login'])
+      alert('Faça o login antes de acessar a página feed')
+      this.mostrarPopupLogin = true
+      // this.router.navigate(['/home'])
+      this.fecharPopup()     
     }
     // imports: [
     //   NgxMaskModule.forRoot(maskConfig),
     // ]
   }
-  
+
   substituirnumero(){
   let numerocartao = document.getElementById('numerocartao')
   let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
