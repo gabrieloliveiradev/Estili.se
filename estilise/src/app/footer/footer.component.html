@@ -1,111 +1,117 @@
 <footer>
-    <div class="container-fluid">
-        <div class="row py-3">
 
-            <div id="logoLinksIcon" class="col-md-6">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="logoLinksIcon" class="col-md-6 mt-5">
                 <!-- LOGO -->
-                <div class="row justify-content-center mb-3"><img src="./assets/img/logo.svg" alt=""></div>
+                <div class="row justify-content-center mb-3"><img class="grow" src="./assets/img/logo.svg" alt=""></div>
 
                 <!-- LINHA ABAIXO DO LOGO -->
                 <hr class="mt-2 mb-6">
+
             </div>
 
         </div>
 
         <!-- LINKS 1 -->
-        <div id="fontAll" class=" container align-items-center d-flex justify-content-center mt-4 mb-4">
+        <div id="fontAll" class=" container align-items-center d-flex justify-content-center mt-0 mb-0">
 
 
             <a id="font" routerLink="/quemsomos">
-                CONHEÇA </a>
+                Conheça </a>
 
-            <a id="font" routerLink="/login">
-                LOGIN</a>
+            <a id="font" routerLink="/loginCliente">
+                Login</a>
 
-            <a id="font" routerLink="/perfil-cliente">
-                CADASTRO</a>
+            <a id="font" data-toggle="modal" href="#popupdeCadastro"> Cadastro</a>
+            
+            <a id="font" data-toggle="modal" href="#popupdeLogin">
+                Profissionais</a>
 
-            <a id="font" routerLink="/profissionais">
-                PROFISSIONAIS</a>
-
-            <a id="font" routerLink="/categoria">
-                CATEGORIA</a>
+            <a id="font" routerLink="/categorias">
+                Categoria</a>
 
 
         </div>
 
         <!-- REDES SOCIAIS -->
-        <div class="mb-3 d-flex justify-content-center" id="sociAll">
+        <div class="bm-0 d-flex justify-content-center" id="sociAll">
+
+            <!-- Temos as classes fa-xs, fa-sm, fa-lg e também classes com números que vão de 2 a 10, como fa-2x e fa-5x. -->
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href="">
-                    <img src="./assets/img/twitter_verde.png" alt="">
+                <a href="https://twitter.com/login?lang=pt" target="_blank" class="faTwitterSquare"
+                    title="Twitter Estili-se">
+
+                    <fa-icon [icon]="faTwitterSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151)">
+                    </fa-icon>
                 </a>
 
             </div>
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href="">
-                    <img src="./assets/img/facebook_verde.png" alt="">
+                <a href="https://www.facebook.com/" target="_blank" class="faFacebookSquare" title="Facebook Estili-se">
+
+                    <fa-icon [icon]="faFacebookSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151)">
+                    </fa-icon>
                 </a>
 
             </div>
 
             <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
 
-                <a href="">
-                    <img src="./assets/img/github_verde.png" alt="">
+                <a href="https://github.com/login" target="_blank" class="faGithubSquare" title="GitHub Estili-se">
+
+                    <fa-icon [icon]="faGithubSquare" class="fa-3x" aria-hidden="true" style="color:rgb(23, 141, 151) ">
+                    </fa-icon>
                 </a>
 
             </div>
 
-            <div class="justify-content-center p-0 m-3 mb-5" id="socialItem">
-                <a href="">
-                    <img src="./assets/img/Instagram_verde.png" alt="">
+            <div class="justify-content-center p-0 m-3 mb-5 " id="socialItem">
+
+
+                <a href="https://instagram.com/?hl=pt-br" target="_blank" class="faInstagramSquare"
+                    title="Instagram Estili-se">
+
+                    <fa-icon [icon]="faInstagramSquare" class="fa-3x" aria-hidden="true"
+                        style="color:rgb(23, 141, 151)"></fa-icon>
                 </a>
+
+
             </div>
 
-            <!-- <div class="row justify-content-center p-0 mb-3" id="social">   
-                            <div class="col-6">
-                                <a href="">
-                                    <img src="./assets/img/youtube.png" alt="">
-                                </a> 
-                            </div>
-                        </div> -->
 
-            <!-- <div class="row justify-content-center p-0 mb-3" id="social">
-                            <div class="col-6">
-                                <a href="">
-                                    <img src="./assets/img/linkedin.png" alt="">
-                                </a> 
-                            </div>
-                        </div> -->
         </div>
 
         <!-- FOOTER 2 COM COPYRIGHT -->
+
+
+        <section class="row " id="footer2">
+
+
+            <div class=" invisivel col-md-2 d-flex py-2 justify-content-start ">
+                <h6 id="copyright" class="m-0 ml-2">&copy; 2020 - Estili-Se </h6>
+
+            </div>
+
+            <div id="colunaLink" class="col-md-9 justify-content-center d-flex py-1">
+                <a id="sublinks" routerLink="/politica">Politica de privacidade</a>
+                <a id="sublinks" routerLink="/faq">Perguntas frequentes</a>
+                <a id="sublinks" routerLink="/contato">Contato</a>
+                <h6 id="copyright" class="visivel d-flex" style="visibility: hidden; display: none ;">&copy; 2020 -
+                    Estili-Se </h6>
+            </div>
+
+            <div class="invisivel col-md-1">
+
+            </div>
+
+        </section>
+
     </div>
-
-    <section class="row" id="footer2">
-
-
-        <div class=" invisivel col-md-2 d-flex py-2 justify-content-start ">
-            <h6 id="copyright" class="m-0">&copy; 2020 - ESTILI-SE </h6>
-
-        </div>
-
-        <div id="colunaLink" class="col-md-8 justify-content-center d-flex py-1">
-             <a id="sublinks" routerLink="/politica">POLITICA DE PRIVACIDADE</a>
-             <a id="sublinks" routerLink="/faq">PERGUNTAS FREQUENTES</a>
-             <a id="sublinks" routerLink="/contato">CONTATO</a>
-             <h6 id="copyright" class="visivel d-flex" style="visibility: hidden; display: none ;">&copy; 2020 - ESTILI-SE </h6>
-        </div>    
-
-        <div  class="invisivel col-md-2">
-
-        </div>
-
-    </section>
 
 </footer>

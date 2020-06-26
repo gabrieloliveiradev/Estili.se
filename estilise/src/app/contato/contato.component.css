@@ -130,7 +130,7 @@ label {
     border-bottom-right-radius: 0;
     border-color: transparent;
     background-color: #FCFCFC;
-    width: 80%;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgb(236, 235, 235);
 }
@@ -187,12 +187,12 @@ label {
 }
 
 .aqua{
-    background-color: #00FFFF;
+    background-color: #118899;
     color: #fff;
 }
 
 .aqua:hover{
-    background-color: #00FFCC;
+    background-color: #006677;
 }
 
 .cinza {
@@ -201,7 +201,7 @@ label {
 }
 
 .cinza:hover{
-    background-color: #E5E8B8;
+    background-color: #afafaf;
 }
 
 textarea:focus, input:focus, select:focus {

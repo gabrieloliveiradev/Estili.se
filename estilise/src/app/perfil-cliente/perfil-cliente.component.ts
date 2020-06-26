@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../model/usuario';
 import { loginUsuario } from '../model/loginUsuario';
+import { Usuario } from '../model/usuario';
+
+ 
+// const maskConfig: Partial<IConfig> = {
+//   validation: false,
+// };
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -9,27 +14,37 @@ import { loginUsuario } from '../model/loginUsuario';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
-  emailusuario: string = localStorage.getItem('emailusuario');
-  loginUsuario : loginUsuario = new loginUsuario
+  // emailusuario: string
 
+  nome: string = localStorage.getItem('nome');
+  emailusuario: string = localStorage.getItem('emailusuario');
+  cpf_usuario: string = localStorage.getItem('cpf_usuario');
+  complemento: string = localStorage.getItem('complemento');
+  data_nascimento: string = localStorage.getItem('data_nascimento');
+  cep: string = localStorage.getItem('cep');
+  telefone: string = localStorage.getItem('telefone');
+  imagem_usuario: string = localStorage.getItem('imagem_usuario');
+  cartao_credito: string = localStorage.getItem('cartao_credito');
+  id_usuario: string = localStorage.getItem('id_usuario');
+
+  loginUsuario : loginUsuario = new loginUsuario
+  usuario : Usuario = new Usuario
   login: boolean = false
-  
-  // validadecartao = document.getElementById('validadecartao')
-  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
-  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-  
+
   constructor(private router: Router) { }
   
   ngOnInit(){
+    this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
-    // this.numerocartao.innerText = "Olá"
-    // alert(this.numerocartao.innerText)
     
     if(token == null){
       alert('Faça o login antes de acessar a página feed')
       this.login = true
       this.router.navigate(['/login'])
     }
+    // imports: [
+    //   NgxMaskModule.forRoot(maskConfig),
+    // ]
   }
   
   substituirnumero(){
@@ -43,6 +58,12 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
-  
-  
+  substituirvalidade(){
+    let validadeMes = document.getElementById("validadeMes")
+    let validadeAno = document.getElementById("validadeAno")
+    let selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
+    let selectAno = ((<HTMLSelectElement>document.getElementById("selectAno")).value)
+    validadeMes.innerHTML = selectMes;
+    validadeAno.innerHTML = selectAno;
+  }
 }
