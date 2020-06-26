@@ -21,6 +21,8 @@ export class LoginClienteComponent implements OnInit {
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
+      alert(this.loginUsuario.emailusuario)
+    
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
       
       location.assign('/perfil-cliente')

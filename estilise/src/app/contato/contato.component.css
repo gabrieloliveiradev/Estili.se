@@ -192,7 +192,7 @@ label {
 }
 
 .aqua:hover{
-    background-color: #00FFCC;
+    background-color: #006677;
 }
 
 .cinza {
@@ -201,7 +201,7 @@ label {
 }
 
 .cinza:hover{
-    background-color: #E5E8B8;
+    background-color: #afafaf;
 }
 
 textarea:focus, input:focus, select:focus {
@@ -210,7 +210,32 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 @media(max-width: 992px){
-    #texto{
-      font-size: 25px;
+    .texto{
+      font-size: 21px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 70vh;
+      left:0%;
+    }
+    #nuvem{
+        display: none;
+    }
+    .mulher{
+        display: none;
+    }
+    .topo{
+        background-image: url(../../assets/img/contato/nuvem1.png);
+        width: 100%;
+        height: 90vh;
+        background-size: cover;
+    }
+    .titulo{
+        font-size:15px;
+    }
+    .tex1{
+        font-size: 10px;
     }
 }

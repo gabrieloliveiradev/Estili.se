@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
+import { Usuario } from '../model/usuario';
+
+ 
+// const maskConfig: Partial<IConfig> = {
+//   validation: false,
+// };
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -8,6 +14,7 @@ import { loginUsuario } from '../model/loginUsuario';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
+  // emailusuario: string
 
   nome: string = localStorage.getItem('nome');
   emailusuario: string = localStorage.getItem('emailusuario');
@@ -29,6 +36,8 @@ export class PerfilClienteComponent implements OnInit {
   // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
   // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
   // emailusuario: string = localStorage.getItem('emailusuario')
+  usuario : Usuario = new Usuario
+
   constructor(private router: Router) { }
 
   fecharPopup(){
@@ -37,6 +46,7 @@ export class PerfilClienteComponent implements OnInit {
   }
   
   ngOnInit(){
+    this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token')
     
     if(token == null){
@@ -46,6 +56,9 @@ export class PerfilClienteComponent implements OnInit {
       // this.router.navigate(['/home'])
       this.fecharPopup()     
     }
+    // imports: [
+    //   NgxMaskModule.forRoot(maskConfig),
+    // ]
   }
 
   substituirnumero(){
@@ -59,5 +72,12 @@ export class PerfilClienteComponent implements OnInit {
   let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
   nomecartao.innerHTML = inputnome;
   }
-  
+  substituirvalidade(){
+    let validadeMes = document.getElementById("validadeMes")
+    let validadeAno = document.getElementById("validadeAno")
+    let selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
+    let selectAno = ((<HTMLSelectElement>document.getElementById("selectAno")).value)
+    validadeMes.innerHTML = selectMes;
+    validadeAno.innerHTML = selectAno;
+  }
 }
