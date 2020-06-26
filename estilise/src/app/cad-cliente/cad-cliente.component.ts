@@ -25,11 +25,7 @@ export class CadClienteComponent implements OnInit {
   senha: string;
   login: boolean = false
 
-<<<<<<< HEAD
   loginUsuario: loginUsuario = new loginUsuario;
-=======
-
->>>>>>> bbfba79d899fcd4cc913f67f1e82298e3e5ecd9d
   
   constructor(private router:Router, public authService: AuthService, public nav: NavComponent) { }
     
