@@ -66,3 +66,7 @@ label{
  .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
     width:100%;
 }
+
+.modal-backdrop.show{
+    display: flex;
+}

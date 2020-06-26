@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
 import { Router } from '@angular/router';
+import { NavComponent } from '../nav/nav.component';
 
 @Component({
   selector: 'app-produto',
@@ -22,20 +23,26 @@ export class ProdutoComponent implements OnInit {
   listaProdutos: Produto[]
   produto: Produto = new Produto
   alerta:boolean = false
-  login: boolean = false
-
+  login: boolean = true
+  mostrarPopupLogin: boolean = false
   constructor(private produtoService: ProdutoService, private router: Router) { }
 
   ngOnInit() {
     }
-
+  fecharPopup(){
+    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+    teste.style.display = 'none'
+  }
   acesso(){
     let token = localStorage.getItem('token')
     if(token == null){
       alert('Faça o login antes de acessar os produtos !!!')
       this.login = true
+      this.fecharPopup()
       this.router.navigate(['/home'])
+      this.mostrarPopupLogin = true
   }
+
 
 
     this.findAllProdutos

@@ -29,9 +29,8 @@ export class CadClienteComponent implements OnInit {
   
   constructor(private router:Router, public authService: AuthService, public nav: NavComponent) { }
     
-ngOnInit():void {
+ngOnInit(){
   let cadastro: string = localStorage.getItem('validado')
-  // const checkVendedor = document.getElementsByName("checkVendedor")
   
   
   if (cadastro == "true"){
