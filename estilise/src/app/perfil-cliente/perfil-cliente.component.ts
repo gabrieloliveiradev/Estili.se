@@ -15,8 +15,9 @@ import { Usuario } from '../model/usuario';
 })
 export class PerfilClienteComponent implements OnInit {
   // emailusuario: string
+  usuario : Usuario = new Usuario
 
-  nome: string = localStorage.getItem('nome');
+  nome1: string = this.usuario.nome;
   emailusuario: string = localStorage.getItem('emailusuario');
   cpf_usuario: string = localStorage.getItem('cpf_usuario');
   complemento: string = localStorage.getItem('complemento');
@@ -28,7 +29,6 @@ export class PerfilClienteComponent implements OnInit {
   id_usuario: string = localStorage.getItem('id_usuario');
 
   loginUsuario : loginUsuario = new loginUsuario
-  usuario : Usuario = new Usuario
   login: boolean = false
 
   constructor(private router: Router) { }

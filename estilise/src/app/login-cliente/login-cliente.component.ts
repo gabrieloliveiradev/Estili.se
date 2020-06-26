@@ -11,7 +11,7 @@ import { Usuario } from '../model/usuario';
 })
 export class LoginClienteComponent implements OnInit {
   loginUsuario: loginUsuario = new loginUsuario;
-
+  usuario: Usuario = new Usuario;
   constructor(private router: Router, public authService: AuthService) { }
 
   ngOnInit(){
@@ -21,8 +21,7 @@ export class LoginClienteComponent implements OnInit {
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
-      alert(this.loginUsuario.emailusuario)
-    
+      localStorage.setItem('nome', this.usuario.nome)
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
       location.assign('/perfil-cliente')
       this.router.navigate(['/perfil-cliente'])

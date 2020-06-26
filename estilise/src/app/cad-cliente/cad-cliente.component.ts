@@ -59,9 +59,9 @@ export class CadClienteComponent implements OnInit {
           alert("Usuário cadastrado com sucesso!!!")
           // this.mostrarPopupLogin = true
           location.assign('/categorias')
-          
+          localStorage.setItem('nome', this.usuario.nome)
+          localStorage.setItem('cpf', this.usuario.cpf_usuario)
           })
-        
         } else{
           this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
             this.usuario = resp
