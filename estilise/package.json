@@ -28,6 +28,7 @@
     "@fortawesome/pro-light-svg-icons": "^5.13.0",
     "@fortawesome/pro-regular-svg-icons": "^5.13.0",
     "@fortawesome/pro-solid-svg-icons": "^5.13.0",
+    "axios": "^0.19.2",
     "bootstrap": "^4.1.1",
     "jquery": "^3.5.1",
     "ngx-mask": "^9.1.2",
