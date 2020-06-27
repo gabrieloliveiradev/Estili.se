@@ -20,31 +20,19 @@ export class ProdutoComponent implements OnInit {
   id_categoria: string = localStorage.getItem('id_categoria');
   id_profissional: string = localStorage.getItem('id_profissional');
 
-  listaProdutos: Produto[]
-  produto: Produto = new Produto
-  alerta:boolean = false
-  login: boolean = true
-  mostrarPopupLogin: boolean = false
-  constructor(private produtoService: ProdutoService, private router: Router) { }
+listaProdutos: Produto[]
+produto: Produto = new Produto
+alerta:boolean = false
+login: boolean = false
+mostrarPopupLogin: boolean = false
+constructor(private produtoService: ProdutoService, private router: Router) { }
 
-  ngOnInit() {
-    }
-  fecharPopup(){
-    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
-    teste.style.display = 'none'
+  findAllProdutos(){
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+      this.listaProdutos = resp;
+    });
   }
-  acesso(){
-    let token = localStorage.getItem('token')
-    if(token == null){
-      alert('Faça o login antes de acessar os produtos !!!')
-      this.login = true
-      this.fecharPopup()
-      this.router.navigate(['/home'])
-      this.mostrarPopupLogin = true
-  }
-
-
-
+ngOnInit() {
     this.findAllProdutos
     let item:string = localStorage.getItem('deletarOk')
     window.scroll(0,0);
@@ -56,22 +44,32 @@ export class ProdutoComponent implements OnInit {
         location.assign('/produtos')
       }, 3000)
     }
+}
+  fecharPopup(){
+    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+    teste.style.display = 'none'
   }
+acesso(){
+  let token = localStorage.getItem('token')
+  if(token == null){
+    alert('Faça o login antes de acessar os produtos !!!')
+    this.login = true
+    this.fecharPopup()
+    this.router.navigate(['/home'])
+    this.mostrarPopupLogin = true
+  }else{
+    this.mostrarPopupLogin = false
+  }
+}
 
   // ---------------- Ancora
- ancora(){
+ancora(){
   let ancora = document.querySelector("#ancoradoNoArticle")
   if (ancora){
       ancora.scrollIntoView({ behavior: 'smooth'})
   }
 
- }
-
- findAllProdutos(){
-  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-    this.listaProdutos = resp;
-  });
-}
+  }
 
 publicar(){  
   this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
@@ -79,7 +77,5 @@ publicar(){
     location.assign('/produtos')
   });
 }
- 
-
 
 }

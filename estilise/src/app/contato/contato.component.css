@@ -177,7 +177,6 @@ label {
 }
 
 .botao{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     margin: 10px;
     padding: 10px 28px;
 }
@@ -187,12 +186,12 @@ label {
 }
 
 .aqua{
-    background-color: #118899;
+    background-color: #71f6ba;
     color: #fff;
 }
 
 .aqua:hover{
-    background-color: #006677;
+    background-color: #4ee4a0;
 }
 
 .cinza {
