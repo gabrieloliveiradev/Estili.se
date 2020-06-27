@@ -73,6 +73,10 @@ h5{
   color:#158591;
   font-size: 30px;
 }
+h3{
+  color:#158591;
+  font-size: 45px;
+}
   li {  
     list-style: none;
     margin: 10px,30px;
@@ -119,3 +123,14 @@ color: #064e58;
 .card-deck > div{
 flex: 1 1 200px;
 }
+#missäo{
+  height: 100%;
+  width: 100%;
+}
+#visao{
+  height: 100%;
+  width: 100%;
+}
+#valores{
+  height: 100%;
+  width: 100%;}
