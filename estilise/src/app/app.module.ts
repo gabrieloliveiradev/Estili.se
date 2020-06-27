@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -27,6 +27,7 @@ import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/edit
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
 import { NgxMaskModule } from 'ngx-mask'
+
 
 @NgModule({
   declarations: [
@@ -61,7 +62,6 @@ import { NgxMaskModule } from 'ngx-mask'
     FontAwesomeModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
