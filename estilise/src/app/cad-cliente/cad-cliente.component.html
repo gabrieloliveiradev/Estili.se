@@ -1,36 +1,36 @@
-    <div class="modal fade" id="popupdeCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog tamanhoPopupWidth">
-            <div class="modal-content tamanhoPopupHeight">
+<div class="modal fade" id="popupdeCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog tamanhoPopupWidth">
+        <div class="modal-content tamanhoPopupHeight">
             <div class="modal-body">
                 <div class="row">
-                <div class="d-none d-md-flex col-md-6">
-                    <div class="row">
-                        <div class="col-md-11 d-flex justify-content-center align-items-center" style="flex-direction: column;">
-                            <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg" style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
-                            <div class="text-left" style="width:75%">
-                                <p class="font-thin">Faça parte da estili.se, precisamos de algumas informações para realizar seu cadastro, não se preocupe
-                                    elas estarão seguras conforme o nosso termo de uso.
-                                </p>
-                                <!-- <div *ngIf="alerta">
-                                    <div class="alert alert-success mt-5" role="alert">
-                                        Cadastrado com sucesso
-                                    </div>
-                                </div> -->
-                            
+                    <div class="d-none d-md-flex col-md-6">
+                        <div class="row">
+                            <div class="col-md-11 d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg" style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
+                                <div class="text-left" style="width:75%">
+                                    <p class="font-thin">Faça parte da estili.se, precisamos de algumas informações para realizar seu cadastro, não se preocupe
+                                        elas estarão seguras conforme o nosso termo de uso.
+                                    </p>
+                                    <!-- <div *ngIf="alerta">
+                                        <div class="alert alert-success mt-5" role="alert">
+                                            Cadastrado com sucesso
+                                        </div>
+                                    </div> -->
+                                    
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                        <div class="col-md-1" style="height:545px">
-                            <div class="mt-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 4px;"></div>
+                            <div class="col-md-1" style="height:545px">
+                                <div class="mt-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 4px;"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-6 p-3">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <hr style="width: 20%;"><h1 class="font-roboto" style="font-weight: 100;">Cadastro</h1><hr style="width: 20%;">
-                    </div>
-                    <div class="mt-3">
+                    
+                    <div class="col-md-6 p-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <hr style="width: 20%;"><h1 class="font-roboto" style="font-weight: 100;">Cadastro</h1><hr style="width: 20%;">
+                        </div>
+                        <div class="mt-3">
                             <div class="form-group d-flex justify-content-center">
                                 <input type="text" class="form-control input-estilo" id="nome" [(ngModel)]='usuario.nome' required>
                                 <span class="linhaSpan"></span>
@@ -54,32 +54,32 @@
                             <div class="form-group d-flex pl-5 mb-2">
                                 <input type="checkbox" style="margin: 3px;" id="checkboxx1">
                                 <a class="m-0" routerLink="/politica" (click)="recarregar()" style="color: rgb(161, 156, 156); font-size: 12px;">Aceito os termos de politica e privacidade</a>
-
+                                
                             </div>
                             <div class="form-group d-flex pl-5 mb-4">
                                 <input type="checkbox" style="margin: 3px;" id="checkboxx">
                                 <a class="m-0" style="color: rgb(161, 156, 156); font-size: 12px;" name="checkVendedor">Quero vender</a>
-
+                                
                             </div>
                             <div class="form-group d-flex justify-content-center" style="margin-bottom: 6px;">
                                 <button class="btn w-50 text-light" style="background-color: #71F6A6; border-radius: 1px;" (click)="cadastrar()" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo">Cadastrar</button>
                             </div>
                             <li class="text-center mb-3" style="list-style: none; font-size: 13px;">
-                            <a href="#">Fazer login</a>
+                                <a href="#">Fazer login</a>
                             </li>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center" style="height: 37px;">
+                            <hr style="width: 39%; margin: 10px;"><p class="font-roboto pt-3" style="font-weight: 100;">ou</p><hr style="width: 39%; margin: 10px;">
+                        </div>
+                        <ul class="p-0">
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="mr-5 text-dark" style="text-decoration: none">Facebook</a>
+                                <a href="#" class="ml-5 text-dark"  style="text-decoration: none">Google</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center" style="height: 37px;">
-                        <hr style="width: 39%; margin: 10px;"><p class="font-roboto pt-3" style="font-weight: 100;">ou</p><hr style="width: 39%; margin: 10px;">
-                    </div>
-                    <ul class="p-0">
-                        <li class="d-flex justify-content-center align-items-center">
-                            <a href="#" class="mr-5 text-dark" style="text-decoration: none">Facebook</a>
-                            <a href="#" class="ml-5 text-dark"  style="text-decoration: none">Google</a>
-                        </li>
-                    </ul>
                 </div>
-                </div>
-            </div>
             </div>
         </div>
     </div>
+</div>
