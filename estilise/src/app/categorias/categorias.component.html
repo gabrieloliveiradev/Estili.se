@@ -4,8 +4,8 @@
         <section class=" mb-5" *ngFor="let categoria of listaCategorias">
             <a routerLink="#" class="text-decoration-none">
                 <div id="categoria-card" class="col-3 d-flex flex-column align-items-center justify-content-center mx-3">
-                    <img class="" src="{{imagem_categoria}}" alt="">
-                    <h1 class="position-absolute text-center">{{nome_categoria}}</h1>
+                    <img class="" src="{{categoria.imagem_categoria}}" alt="">
+                    <h1 class="position-absolute text-center">{{categoria.nome_categoria}}</h1>
                 </div>
             </a>
         </section>

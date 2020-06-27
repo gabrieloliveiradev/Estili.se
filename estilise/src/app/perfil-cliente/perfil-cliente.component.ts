@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
 
- 
+
 // const maskConfig: Partial<IConfig> = {
 //   validation: false,
 // };
@@ -16,7 +16,7 @@ import { Usuario } from '../model/usuario';
 export class PerfilClienteComponent implements OnInit {
   // emailusuario: string
   usuario : Usuario = new Usuario
-
+  
   nome1: string = this.usuario.nome;
   emailusuario: string = localStorage.getItem('emailusuario');
   cpf_usuario: string = localStorage.getItem('cpf_usuario');
@@ -27,7 +27,7 @@ export class PerfilClienteComponent implements OnInit {
   imagem_usuario: string = localStorage.getItem('imagem_usuario');
   cartao_credito: string = localStorage.getItem('cartao_credito');
   id_usuario: string = localStorage.getItem('id_usuario');
-
+  
   loginUsuario : loginUsuario = new loginUsuario
   // usuario: Usuario = new Usuario
   login: boolean = false
@@ -37,9 +37,9 @@ export class PerfilClienteComponent implements OnInit {
   // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
   // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
   // emailusuario: string = localStorage.getItem('emailusuario')
-
+  
   constructor(private router: Router) { }
-
+  
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
     teste.style.display = 'none'
@@ -60,17 +60,19 @@ export class PerfilClienteComponent implements OnInit {
     //   NgxMaskModule.forRoot(maskConfig),
     // ]
   }
+  
 
+  // typescript do cartão de crédito
   substituirnumero(){
-  let numerocartao = document.getElementById('numerocartao')
-  let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
-  // alert(inputnumero)
-  numerocartao.innerHTML = inputnumero;
+    let numerocartao = document.getElementById('numerocartao')
+    let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
+    // alert(inputnumero)
+    numerocartao.innerHTML = inputnumero;
   }
   substituirnome(){
-  let nomecartao= document.getElementById('nomecartao')
-  let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
-  nomecartao.innerHTML = inputnome;
+    let nomecartao= document.getElementById('nomecartao')
+    let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
+    nomecartao.innerHTML = inputnome;
   }
   substituirvalidade(){
     let validadeMes = document.getElementById("validadeMes")
