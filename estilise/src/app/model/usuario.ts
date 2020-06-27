@@ -11,6 +11,6 @@ export class Usuario {
     public telefone:number
     public imagem_usuario:string
     public data_nascimento:Date
-    public especialidade:String
+    public especialidade:string
     public profissional : boolean
 }
