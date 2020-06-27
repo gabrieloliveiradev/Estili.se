@@ -10,7 +10,6 @@ import { Usuario } from '../model/usuario';
   styleUrls: ['./login-cliente.component.css']
 })
 export class LoginClienteComponent implements OnInit {
-
   loginUsuario: loginUsuario = new loginUsuario;
 
   constructor(private router: Router, public authService: AuthService) { }
@@ -22,9 +21,12 @@ export class LoginClienteComponent implements OnInit {
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
+      alert(this.loginUsuario.emailusuario)
+    
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+      
       location.assign('/perfil-cliente')
-      this.router.navigate(['/produtos'])
+      this.router.navigate(['/perfil-cliente'])
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')
        })

@@ -1,97 +1,101 @@
-<div class="topo container">
-    <div class="nuvem container">
-        <img src="../../assets/img/contato/nuvem-verde.svg" class="img-fluid" alt="Uma imagem de uma moça fazendo atendimento">
-        <div class="texto text-left">
-            <p style="font-size: 38px;">Tem algo a nos dizer?</p>
-            <p>Precisamos de algumas informações para conseguirmos entrar em contato com você o mais rápido possível.</p>
+<div class="topo d-flex justify-content-center d-md-block">
+    <div class="nuvem">
+        <img id="nuvem" src="../../assets/img/contato/nuvem-verde.svg" class="img-fluid" alt="Uma imagem de uma moça fazendo atendimento">
+        <div class="texto text-left d-flex justify-content-center d-md-block">
+            <!-- <p class="titulo" style="font-size: 38px;">Tem algo a nos dizer?</p>
+            <p class="text1">Precisamos de algumas informações para conseguirmos entrar em contato com você o mais rápido possível.</p> -->
+            <h1 class="text-md-left text-center mb-3" style="color: #118899; width: 100%;">QUERO VENDER</h1>
+                <!-- <span style="width: 300px; height: 1px; background-color: #118899;"></span> -->
+                <p class="text-md-left text-center mt-3" style="width: 79%; color:#118899; font-size: 20px;">É um alfaiate ou costureira e quer vender seus produtos?
+                    Então venha mostrar sua criatividade pra gente, nunca foi tão fácil vender.</p>
         </div>
     </div>
     <div class="mulher">
-        <img src="../../assets/img/contato/mulher-fone.svg" class="img-fluid" style="width: 83%;">
+        <img id="mulher" src="../../assets/img/contato/mulher-fone.svg" class="img-fluid" style="width: 83%;">
     </div>
 </div>
 
 <div class="container">
     
-    <!--Início do bloco 1-->   
-    <div class="bloco1 container" [hidden]="bloco1">
+    <!--Início do bloco 1--> 
+    <form method="post" action="">  
+        <div class="bloco1 container" [hidden]="bloco1">
             <div class="fila" style="margin-top: 10em;">
                 <div class="esfera-v">1</div>
                 <div id="linha-c-esquerda" class="linha-estilo"></div>
-                
-                
-                <div class="esfera-c">2</div>
+                    
+                 <div class="esfera-c">2</div>
                 <div id="linha-c-direita"></div>
                 <div class="esfera-c">&#10003;</div>
             </div>
             <span class="linhaSpan"></span>
             <div class="text-center mb-5 mt-5">
                 <p style="font-size: 30px;">Quem é você?</p>
-                <p style="font-size: 20px; margin-left: 10%; width: 80%;">Nos diga o seu nome, email e telefone. Não se preocupe essas informações estarão seguras, apenas facilitará para falarmos com você.</p>
+                <p style="font-size: 20px; margin-left: 10%; width: 80%;">Nos diga o seu nome, email e telefone Não se preocupe essas informações estarão seguras, apenas facilitará para falarmos com você.</p>
             </div>
-        <div class="caixa-formulario">
-            
-            <div class="form-group d-flex justify-content-center">
-                <input class="form-control w-100 formulario " required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label">E-mail</label>
-            </div>
-            <div class="d-flex mt-2">
-                <div class="form-group w-50">
-                    <input type="text" class="form-control formulario input-tel-nome" id="nome" required>
+            <div class="caixa-formulario">
+                
+                <div class="form-group d-flex justify-content-center">
+                    <input class="form-control w-100 formulario" id="email" required>
                     <span class="linhaSpan"></span>
-                    <label class="col-form-label">Nome</label>
+                    <label class="col-form-label">E-mail</label>
                 </div>
-                <div class="m-3">
+                <div class="d-flex mt-2">
+                    <div class="form-group w-50">
+                        <input type="text" class="form-control formulario input-tel-nome" id="nome" required>
+                        <span class="linhaSpan"></span>
+                        <label class="col-form-label">Nome</label>
+                    </div>
 
+                    <div class="m-3"></div>
+                
+                    <div class="form-group w-50 d-flex justify-content-end">
+                        <input type="text" class="form-control formulario input-tel-nome" mask="(00) 00000-0000" id="telefone" required>
+                        <span class="linhaSpan"></span>
+                        <label class="col-form-label">Telefone</label>
+                    </div>
                 </div>
-             
-                <div class="form-group w-50 d-flex justify-content-end">
-                    <input type="tel" class="form-control formulario input-tel-nome" required>
+                <div class="form-group d-flex justify-content-center">
+                    <input type="text" class="form-control w-100 formulario" id="assunto" required>
                     <span class="linhaSpan"></span>
-                    <label class="col-form-label">Telefone</label>
+                    <label class="col-form-label">Assunto</label>
+                </div>
+                <div class="d-flex form-group justify-content-center mb-5 mt-5">
+                    <button type="submit" class="btn botao aqua" (click)=botao1()>Próximo passo &rarr;</button>
                 </div>
             </div>
-            <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control w-100 formulario" required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label">Assunto</label>
-            </div>
-            <div class="d-flex form-group justify-content-center mb-5 mt-5">
-                <button type="submit" class="btn botao aqua" (click)=botao1()>Próximo passo &rarr;</button>
-            </div>
         </div>
-    </div>
-    
-    <!--Início do bloco 2-->
-    <div class="bloco2"[hidden]="bloco2">
-        <div class="container">
-            <div class="fila mt-5">
-                <div class="esfera-v">1</div>
-                <div id="linha-v-esquerda"></div>               
-                <div class="esfera-v">2</div>               
-                <div id="linha-c-direita"></div>
-                <div class="esfera-c">&#10003;</div>
+        
+        <!--Início do bloco 2-->
+        <div class="bloco2"[hidden]="bloco2">
+            <div class="container">
+                <div class="fila mt-5">
+                    <div class="esfera-v">1</div>
+                    <div id="linha-v-esquerda"></div>               
+                    <div class="esfera-v">2</div>               
+                    <div id="linha-c-direita"></div>
+                    <div class="esfera-c">&#10003;</div>
+                </div>
+            </div>               
+            <div class="container mb-5 mt-5">
+                <div class="text-center mb-5 mt-5">
+                    <p style="font-size: 30px;">Fale Conosco</p>
+                    <p style="font-size: 20px;">Estamos quase lá, agora coloque seu comentário.</p>
+                </div>
             </div>
-        </div>               
-        <div class="container mb-5 mt-5">
-            <div class="text-center mb-5 mt-5">
-                <p style="font-size: 30px;">Fale Conosco</p>
-                <p style="font-size: 20px;">Estamos quase lá, agora coloque seu comentário.</p>
-            </div>
+            <div class="container caixa-formulario">
+                <div class="form-group d-flex justify-content-center">
+                    <textarea class="form-control formulario" rows="4" style="resize: none;" id="mensagem" required></textarea>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">Faça seu comentário</label>
+                </div>
+                <div class="d-flex justify-content-around mb-5 mt-5">
+                    <button class="btn botao cinza" (click)=botao1()>Voltar</button>
+                    <button type="submit" class="btn botao aqua"(click)=botao2()>Enviar</button>
+                </div>
+            </div>           
         </div>
-        <div class="container caixa-formulario">
-            <div class="form-group d-flex justify-content-center">
-                <textarea class="form-control formulario" rows="4" style="resize: none;" required></textarea>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label">Faça seu comentário</label>
-            </div>
-            <div class="d-flex justify-content-around mb-5 mt-5">
-                <button type="submit" class="btn botao cinza" (click)=botao1()>Voltar</button>
-                <button type="submit" class="btn botao aqua"(click)=botao2()>Enviar</button>
-            </div>
-        </div>           
-    </div>
+    </form>  
 
     <!--Início do bloco 3-->
     <div class="bloco3"[hidden]="bloco3">

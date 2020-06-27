@@ -167,7 +167,7 @@
         transform: translateX(-118px);
     }
 }
-.dropdown-menu{
+.filtro{
     box-shadow: -2px 16px 15px rgba(0, 0, 0, 0.315);
     min-width: 22rem!important;
     border: none;

@@ -130,7 +130,7 @@ label {
     border-bottom-right-radius: 0;
     border-color: transparent;
     background-color: #FCFCFC;
-    width: 80%;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgb(236, 235, 235);
 }
@@ -177,7 +177,6 @@ label {
 }
 
 .botao{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     margin: 10px;
     padding: 10px 28px;
 }
@@ -187,12 +186,12 @@ label {
 }
 
 .aqua{
-    background-color: #00FFFF;
+    background-color: #71f6ba;
     color: #fff;
 }
 
 .aqua:hover{
-    background-color: #00FFCC;
+    background-color: #4ee4a0;
 }
 
 .cinza {
@@ -201,7 +200,7 @@ label {
 }
 
 .cinza:hover{
-    background-color: #E5E8B8;
+    background-color: #afafaf;
 }
 
 textarea:focus, input:focus, select:focus {
@@ -210,7 +209,32 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 @media(max-width: 992px){
-    #texto{
-      font-size: 25px;
+    .texto{
+      font-size: 21px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 70vh;
+      left:0%;
+    }
+    #nuvem{
+        display: none;
+    }
+    .mulher{
+        display: none;
+    }
+    .topo{
+        background-image: url(../../assets/img/contato/nuvem1.png);
+        width: 100%;
+        height: 90vh;
+        background-size: cover;
+    }
+    .titulo{
+        font-size:15px;
+    }
+    .tex1{
+        font-size: 10px;
     }
 }

@@ -23,27 +23,24 @@ export class AuthService {
   }
 
   btnSair(){
-    let logado = false;
-    let token = localStorage.getItem('token')
+    let ok = false;
+    let token =localStorage.getItem('token');
 
     if(token != null){
-      logado = true;
+      ok = true;
     }
-
-    return logado;
+    return ok;
   }
+
   btnLogineCadastro(){
-    let logado = false;
-    let token = localStorage.getItem('token')
+    let ok = false;
+    let token =localStorage.getItem('token');
 
     if(token == null){
-      logado = true;
+      ok = true;
     }
-
-    return logado;
+    return ok;
   }
-
-
 
   popupCadastro(){
     this.mostrarPopupCadastro = true
