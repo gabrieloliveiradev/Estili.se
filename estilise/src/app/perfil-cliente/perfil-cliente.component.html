@@ -8,22 +8,23 @@
         <img src="{{imagem_usuario}}" class="imagemUsuario">
       </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
-        <div class="container">
-          <p style="font-size: large; font-weight: 200;">{{usuario.nome}}</p>
+        <div class="container d-flex justify-content-end align-items-center">
+          <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">{{nome}}</p>
+          <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 5%;">
         </div>
         <hr>
         <div class="row">
           <ul class="col container">
-            <li><p><span style="width:50px;"></span>E-mail: {{emailusuario}}</p></li>
-            <li><p><span style="width:50px;"></span>CPF: {{cpf_usuario}}</p></li>
-            <li><p><span style="width:50px;"></span>Endereço: </p></li>
-            <li><p><span style="width:50px;"></span>Complemento: {{complemento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/email.svg" style="width: 5%;"></span> E-mail: {{emailusuario}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg" style="width: 5%;"></span> CPF: {{cpf_usuario}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/endereço.svg" style="width: 5%;"></span> Endereço: </p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/complemento.svg" style="width: 5%;"></span> Complemento: {{complemento}}</p></li>
           </ul>
           <ul class="col container">
-            <li><p><span style="width:50px;"></span>Senha: *********</p></li>
-            <li><p><span style="width:50px;"></span>Data de Nascimento: {{data_nascimento}}</p></li>
-            <li><p><span style="width:50px;"></span>CEP: {{cep}}</p></li>
-            <li><p><span style="width:50px;"></span>Telefone: {{telefone}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/senha.svg" style="width: 5%; fill: #867E7E"></span> Senha: *********</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.svg" style="width: 5%;"></span> Data de Nascimento: {{data_nascimento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.svg" style="width: 5%;"></span> CEP: {{cep}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/telefone.svg" style="width: 5%; color: #867E7E;"></span> Telefone: {{telefone}}</p></li>
           </ul>
         </div>
       </div>
