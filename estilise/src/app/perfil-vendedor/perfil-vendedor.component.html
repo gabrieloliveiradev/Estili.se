@@ -7,6 +7,8 @@
             <hr>
             <!-- <div class="container"> -->
             <div class="jumbotron">
+                <span class="glyphicon glyphicon glyphicon-edit d-flex justify-content-end"
+                    style="color: #158591;"></span>
                 <div class="row">
                     <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
                         <img src="../../assets/img/perfil-cliente/capaprofile.jpg" class="imagemUsuario">
@@ -49,8 +51,7 @@
                     </div>
                 </div>
             </div>
-
-
+            
         </article>
         <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
         <article>
@@ -58,8 +59,13 @@
                 class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
 
                 <li class="nav-item ">
-                    <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;"> Pontuação</a>
-
+                    <a class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;"> Pontuação
+                        <br></a>
+                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                    <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
                 </li>
 
                 <li class="nav-item ">
@@ -77,6 +83,7 @@
                 </li>
 
             </ul>
+
         </article>
 
         <!-- ============================================== Card Saldo ================================================ -->
@@ -168,7 +175,7 @@
                     alt="Icone de filtro da página">
 
                 <!-- ====================================== Filtro com animação ================================================== -->
-                <div class="dropdown-menu">
+                <div id="dropdownFiltro" class="dropdown-menu">
                     <div class="d-flex justify-content-around mt-3">
                         <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -384,9 +391,11 @@
             <div class="modal-dialog modal-dialog-scrollable modalScreen ">
 
                 <div class="modal-content">
-                    <div class="modal-header  d-flex justify-content-end ">
-                        <h5 class="modal-title">Adicionar Produto</h5>
-                        <hr>
+                    <div class="modal-header d-flex justify-contant-end ">
+                        <div>
+                            <h5 class="modal-title">Adicionar Produto</h5>
+                            <hr style="width: 300px;">
+                        </div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -399,21 +408,22 @@
 
                                 <!-- Imagem 1 -->
                                 <div class="d-flex justify-content-stard">
-                                    <div class="mr-2"
+
+                                    <div class="card mr-2"
                                         style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
                                         <img src="url" height="200" class="card-img-top" alt="...">
                                     </div>
+
                                     <!-- Imagem 2 -->
-                                    <div
+                                    <div class="card"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
                                         <img src="url" height="200" class="card-img-top" alt="...">
-
                                     </div>
+
                                     <!-- Imagem 3 -->
-                                    <div
+                                    <div class="card"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
                                         <img src="url" height="200" class="card-img-top" alt="...">
-
                                     </div>
 
                                 </div>
@@ -422,8 +432,8 @@
                                     style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
                                     <img src="url" height="200" class="card-img-top" alt="...">
                                 </div>
-                                
-                               
+
+
                             </div>
 
                             <!--============================================== Formularios ================================================-->
@@ -438,13 +448,18 @@
                                     </div>
 
 
-                                    <div class="modalForm form-group d-flex justify-content-center">  
-                                        <label class="labelModal exampleFormControlTextarea1">Descrição</label>                                     
-                                        <textarea class="form-control formulario" id="exampleFormControlTextarea1"
-                                            rows="3"></textarea>     
-                                                                                 
-                                            
+                                    <div class="container caixa-formulario">
+                                        <div class="form-group d-flex justify-content-center">
+                                            <textarea class="form-control formulario" rows="4"
+                                                style="width: 100%; height: 100px; resize: none; border-bottom: 1px solid rgb(70, 70, 70);"
+                                                id="mensagem" required></textarea>
+                                            <span class="linhaSpanModal"></span>
+                                            <label class="labelModal col-form-label">Descrição do Produto</label>
+                                        </div>
                                     </div>
+
+
+
 
                                     <div class="modalForm form-group d-flex justify-content-center">
                                         <input class="form-control w-100 formulario " required>
@@ -457,27 +472,32 @@
                                             <span class="input-group-text formulario">R$</span>
                                         </div>
 
-                                        <input placeholder="Insira o Preço" type="text" class="form-control formulario"
-                                            aria-label="Quantia">
+                                        <input type="text" class="form-control formulario teste" aria-label="Quantia">
                                         <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">Preço</label>
+                                        <label class="col-form-label  precoModal ">Preço</label>
                                         <div class="input-group-append">
                                         </div>
                                     </div>
 
-                                    <div class="modalForm form-group d-flex justify-content-center mt-5">
-                                        <input class="form-control w-85 formulario " required>  
-                                        <span class="linhaSpanModal"></span>                                      
-                                        <label class="labelModal col-form-label">URL da imagem</label>                                        
-                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                                    <article class="modalForm d-flex justify-content-center mt-5">
+                                        <div class="modalForm form-group d-flex justify-content-center"
+                                            style="width: 90%;">
+                                            <input type="text" class="form-control formulario" name="pesquisa"
+                                                minlength="4" required>
+                                            <span class="linhaSpanModal"></span>
+                                            <label class="labelModal col-form-label">URL da imagem</label>
+                                        </div>
+                                        <div class="form-group d-flex justify-content-center">
+                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                                        </div>
 
-                                    </div>
+                                    </article>
 
 
                                 </form>
 
                                 <h6>Cores disponiveis</h6>
-                                <hr>
+                                <hr style="width: 300px;">
 
                                 <form>
                                     <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
@@ -508,7 +528,7 @@
                                 </form>
 
                                 <h6>Tamanos disponiveis</h6>
-                                <hr class="w-35">
+                                <hr style="width: 300px;">
 
                                 <form>
                                     <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
@@ -589,17 +609,18 @@
                                 </article>
 
                                 <!-- Botão Salvar -->
-                                <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
-
+                                <div>
+                                    <div class="modal-footer justify-content-center mt-5">
+                                        <button type="button" class="btn btn-outline-danger" style="width: 20%;"
+                                            data-dismiss="modal">Fechar</button>
+                                        <button class=" btn btn-outline-success" style="width: 30%;">Salvar</button>
+                                    </div>
                                 </div>
                                 <!-- Fim Botão Salvar -->
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-                        <button class=" btn btn-outline-success">Salvar</button>
-                    </div>
+
                 </div>
 
             </div>

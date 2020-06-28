@@ -322,12 +322,13 @@
   }
 
   .tamanhoPopupHeight {
-      height: 1000px!important;
+      height: 1000px!important;      
   }
 
   .modalScreen {
       max-width: 1360px!important;
       height: 768px!important;
+      
   }
 
   .svg-seta-direita {
@@ -353,7 +354,7 @@
       }
   }
 
-  .dropdown-menu {
+  #dropdownFiltro {
       box-shadow: -2px 16px 15px rgba(0, 0, 0, 0.315);
       min-width: 22rem!important;
       border: none;
@@ -500,7 +501,7 @@
     left: 15px;
     padding: 10px 0;
     font-size: 16px!important;
-    color: #71f6a6!important;
+    color: rgb(185, 185, 185)!important;
     pointer-events: none;
     font-weight: 100;
     transition: .2s ease all;
@@ -594,10 +595,12 @@
     margin-left: 10%;
 } */
 
-/* .caixa-formulario {
-    width: 60% !important;
+.caixa-formulario {
+    width: 100% !important;
     margin: 0 auto;
-} */
+}
+
+
 
 /* Design do Input sem bordas */
 .formulario {
@@ -619,7 +622,7 @@
 }
 
 /* Cor da letra do formulario */
-.formulario:focus ~ label, .formulario:valid ~ label{
+.formulario:focus ~ .labelModal, .formulario:valid ~ .labelModal{
     top: -30px!important;
     left: 4px;
     font-size: 15px!important;
@@ -627,6 +630,25 @@
     font-weight: 500;
     color:#71f6a6!important;
     
+}
+.precoModal{
+    position: absolute;
+    top: -4px!important;
+    left: 53px!important;
+    padding: 10px 0;
+    font-size: 16px!important;
+    color: rgb(185, 185, 185);
+    pointer-events: none;
+    font-weight: 100;
+    transition: .2s ease all;
+}
+.teste:focus ~ label, .teste:focus ~ label{
+    top: -30px!important;
+    left: 10px!important;
+    font-size: 15px!important;
+    font-style: normal;
+    font-weight: 500;
+    color:#71f6a6!important;
 }
 
 /*=============================================== Linha de Span Inicio ==================================== */
