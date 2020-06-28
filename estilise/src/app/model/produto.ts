@@ -10,6 +10,7 @@ export class Produto {
     public nome_produto:number
     public qtd_estoque:number
     public tamanho:string
+    public preco:number
     public id_compra:number
     public id_categoria:number
     public id_profissional:number

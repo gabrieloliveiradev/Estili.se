@@ -13,7 +13,6 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-
   logar(loginUsuario: loginUsuario){
     return this.http.post('http://localhost:8080/usuarios/logar', loginUsuario)
   }
@@ -48,5 +47,14 @@ export class AuthService {
   popupLogin(){
     this.mostrarPopupLogin = true
     // this.refresh()
+  }
+
+  // possível tentativa de ngif no profissionais
+  profissionalPreenchido(usuario:Usuario){
+    let preenchido = false;
+    if(usuario.especialidade != undefined && usuario.cep!=undefined){
+      preenchido =true;
+    }
+    return preenchido;
   }
 }

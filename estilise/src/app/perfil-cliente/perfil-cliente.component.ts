@@ -18,7 +18,7 @@ export class PerfilClienteComponent implements OnInit {
   // emailusuario: string
   usuario : Usuario = new Usuario
   
-  nome1: string = this.usuario.nome;
+  nome: string = localStorage.getItem('nome');
   emailusuario: string = localStorage.getItem('emailusuario');
   cpf_usuario: string = localStorage.getItem('cpf_usuario');
   complemento: string = localStorage.getItem('complemento');
@@ -29,7 +29,7 @@ export class PerfilClienteComponent implements OnInit {
   cartao_credito: string = localStorage.getItem('cartao_credito');
   id_usuario: string = localStorage.getItem('id_usuario');
   numero_casa: string = localStorage.getItem('numero_casa');
-
+  profissional:string = localStorage.getItem('profissional');
   especialidade: string = localStorage.getItem('especialidade');
 
   loginUsuario : loginUsuario = new loginUsuario

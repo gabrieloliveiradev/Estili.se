@@ -63,7 +63,8 @@
     height: 168px;
     width: 168px;
     border-radius: 100%;
-    background-image: url(../../assets/img/profissionais/foto_profissional.jpg);
+    /* background-image: url(../../assets/img/profissionais/foto_profissional.jpg); */
+    background: #118899;
     background-size: cover;
 }
 #perfil_texto {
