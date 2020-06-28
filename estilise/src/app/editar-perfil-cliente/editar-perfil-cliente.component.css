@@ -1,3 +1,6 @@
+/* ========= Foto de perfil ============ */
+
+
 /*  ================ Botão para editar foto perfil ================== */
 .btnEditarFoto{
     right: 0;
@@ -19,6 +22,7 @@
     fill: #5654549e;
     transition: 0.4s;
 }
+
 /* ============================ Estilo e posicionamento do label dentro do input */
 label{
     position: absolute;
