@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
+import { HttpClient } from '@angular/common/http';
 
- 
+
 // const maskConfig: Partial<IConfig> = {
 //   validation: false,
 // };
@@ -15,7 +16,8 @@ import { Usuario } from '../model/usuario';
 })
 export class PerfilClienteComponent implements OnInit {
   // emailusuario: string
-
+  usuario : Usuario = new Usuario
+  
   nome: string = localStorage.getItem('nome');
   emailusuario: string = localStorage.getItem('emailusuario');
   cpf_usuario: string = localStorage.getItem('cpf_usuario');
@@ -26,9 +28,11 @@ export class PerfilClienteComponent implements OnInit {
   imagem_usuario: string = localStorage.getItem('imagem_usuario');
   cartao_credito: string = localStorage.getItem('cartao_credito');
   id_usuario: string = localStorage.getItem('id_usuario');
+  numero_casa: string = localStorage.getItem('numero_casa');
+  profissional:string = localStorage.getItem('profissional');
+  especialidade: string = localStorage.getItem('especialidade');
 
   loginUsuario : loginUsuario = new loginUsuario
-  // usuario: Usuario = new Usuario
   login: boolean = false
   mostrarPopupLogin: boolean = false
   
@@ -36,9 +40,8 @@ export class PerfilClienteComponent implements OnInit {
   // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
   // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
   // emailusuario: string = localStorage.getItem('emailusuario')
-  usuario : Usuario = new Usuario
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -46,8 +49,18 @@ export class PerfilClienteComponent implements OnInit {
   }
   
   ngOnInit(){
+    //var objeto = new Object();
+    //objeto.emailusuario = "joao@joao.com";
+    //objeto.senha = "123456789";
+
+   
+
+
+    //this.http.post('http://localhost:8080/usuarios/logar', objeto);
+    //this.http.get('http://localhost:8080/usuarios');
     this.emailusuario = localStorage.getItem('emailusuario');
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token');
+    let cpf_usuario = localStorage.getItem('cpf_usuario');
     
     if(token == null){
       this.login = true
@@ -60,17 +73,19 @@ export class PerfilClienteComponent implements OnInit {
     //   NgxMaskModule.forRoot(maskConfig),
     // ]
   }
+  
 
+  // typescript do cartão de crédito
   substituirnumero(){
-  let numerocartao = document.getElementById('numerocartao')
-  let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
-  // alert(inputnumero)
-  numerocartao.innerHTML = inputnumero;
+    let numerocartao = document.getElementById('numerocartao')
+    let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
+    // alert(inputnumero)
+    numerocartao.innerHTML = inputnumero;
   }
   substituirnome(){
-  let nomecartao= document.getElementById('nomecartao')
-  let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
-  nomecartao.innerHTML = inputnome;
+    let nomecartao= document.getElementById('nomecartao')
+    let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
+    nomecartao.innerHTML = inputnome;
   }
   substituirvalidade(){
     let validadeMes = document.getElementById("validadeMes")
@@ -80,4 +95,5 @@ export class PerfilClienteComponent implements OnInit {
     validadeMes.innerHTML = selectMes;
     validadeAno.innerHTML = selectAno;
   }
+  
 }
