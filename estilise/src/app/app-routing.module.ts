@@ -32,13 +32,13 @@ const routes: Routes = [
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
-  { path:'deletar', component: DeleteUsuarioComponent},
-  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  { path: 'deletar', component: DeleteUsuarioComponent},
+  { path: 'deletar/:id', component: DeleteUsuarioComponent},
   { path: 'perfil-vendedor', component: PerfilVendedorComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
   { path: 'postarcategoria', component: CategoriaPostComponent},
-  { path:'login', component: LoginClienteComponent},
+  { path: 'login', component: LoginClienteComponent},
   { path: 'cadastrar', component: CadClienteComponent}
 ];
 
