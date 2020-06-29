@@ -1,6 +1,6 @@
 export class loginUsuario {
     public id_usuario:number
-    public nome:string
+    public nome: string
     public senha:string
     public emailusuario:string
     public cartao_credito:string
@@ -12,6 +12,6 @@ export class loginUsuario {
     public imagem_usuario:string
     public data_nascimento:Date
     public especialidade:string
-    public profissional : boolean
+    public profissional : string
     public token:string
 }

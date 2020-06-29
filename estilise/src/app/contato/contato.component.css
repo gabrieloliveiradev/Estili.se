@@ -188,6 +188,14 @@ label {
 .aqua{
     background-color: #71f6ba;
     color: #fff;
+    background-image: url("../../assets/img/contato/seta-direita.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 23px;
+    width: 183px;
+    background-position-y: center;
+    background-position-x: 145px;
+
 }
 
 .aqua:hover{

@@ -52,10 +52,6 @@ export class PerfilClienteComponent implements OnInit {
     //var objeto = new Object();
     //objeto.emailusuario = "joao@joao.com";
     //objeto.senha = "123456789";
-
-   
-
-
     //this.http.post('http://localhost:8080/usuarios/logar', objeto);
     //this.http.get('http://localhost:8080/usuarios');
     this.emailusuario = localStorage.getItem('emailusuario');
@@ -64,14 +60,11 @@ export class PerfilClienteComponent implements OnInit {
     
     if(token == null){
       this.login = true
-      alert('Faça o login antes de acessar a página feed')
+      alert('Faça o login antes de acessar a página de perfil')
       this.mostrarPopupLogin = true
       // this.router.navigate(['/home'])
       this.fecharPopup()     
     }
-    // imports: [
-    //   NgxMaskModule.forRoot(maskConfig),
-    // ]
   }
   
 
