@@ -17,6 +17,7 @@ import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/edit
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { EditarPerfilProfissionalComponent } from './editar-perfil-profissional/editar-perfil-profissional.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarPerfilClienteComponent},
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
+  { path: 'editar-profissional', component: EditarPerfilProfissionalComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path:'deletar', component: DeleteUsuarioComponent},
   { path:'deletar/:id', component: DeleteUsuarioComponent},
@@ -39,7 +41,7 @@ const routes: Routes = [
   { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
   { path: 'postarcategoria', component: CategoriaPostComponent},
   { path:'login', component: LoginClienteComponent},
-  { path: 'cadastrar', component: CadClienteComponent}
+  { path: 'cadastrar', component: CadClienteComponent},
 ];
 
 @NgModule({

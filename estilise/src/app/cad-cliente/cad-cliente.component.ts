@@ -55,16 +55,17 @@ cadastrar(){
   let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
   if(this.senha === this.usuario.senha){
     if(checkVendedor.checked){
-      this.usuario.profissional = true;
+      this.usuario.profissional = "true";
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      alert("Usuário cadastrado com sucesso!!!")
+      alert("Profissional cadastrado com sucesso!!!")
 
       this.router.navigate(['/home'])
       })
     
     }else{
+      this.usuario.profissional = "false"
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
         this.usuario = resp

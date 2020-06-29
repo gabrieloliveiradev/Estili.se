@@ -26,7 +26,8 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
 import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/editar-deletar-categoria.component';
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { EditarPerfilProfissionalComponent } from './editar-perfil-profissional/editar-perfil-profissional.component'
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { NgxMaskModule } from 'ngx-mask'
     EditarProdutoComponent,
     EditarDeletarCategoriaComponent,
     CategoriaPostComponent,
-    EditarPerfilClienteComponent
+    EditarPerfilClienteComponent,
+    EditarPerfilProfissionalComponent
   ],
   imports: [
     BrowserModule,
