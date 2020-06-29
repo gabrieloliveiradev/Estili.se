@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  nome = "";
-  email = "";
-  telefone = "";
-  assunto = "";
-  mensagem = "";
+  // nome = "";
+  // email = "";
+  // telefone = "";
+  // assunto = "";
+  // mensagem = "";
   bloco1 = false;
   bloco2 = true;
   bloco3 = true;
@@ -23,18 +23,12 @@ export class ContatoComponent implements OnInit {
   
   botao1 () {
     let nome = ((<HTMLInputElement>document.getElementById("nome")))
-    let email = ((<HTMLInputElement>document.getElementById("email")))
+    let email = ((<HTMLInputElement>document.getElementById("email_contato")))
     let telefone = ((<HTMLInputElement>document.getElementById("telefone")))
     let assunto = ((<HTMLInputElement>document.getElementById("assunto")))
-    if (nome.value == "") {
+    if (nome.value == "" || email.value == "" || telefone.value == "" || assunto.value == "") {
       alert("Favor preencher todos os campos.");
-    } else if (email.value == "") {
-      alert("Favor preencher todos os campos.");
-    } else if (telefone.value == "") {
-      alert("Favor preencher todos os campos.");
-    } else if (assunto.value == "") {
-      alert("Favor preencher todos os campos.");
-    } else {
+    }  else {
     this.bloco1 = !this.bloco1;
     this.bloco2 = !this.bloco2;
     }

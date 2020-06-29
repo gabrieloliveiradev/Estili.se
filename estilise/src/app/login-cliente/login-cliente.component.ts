@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { AuthService } from '../service/auth.service';
 import { Usuario } from '../model/usuario';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-login-cliente',
@@ -11,7 +12,7 @@ import { Usuario } from '../model/usuario';
 })
 export class LoginClienteComponent implements OnInit {
   loginUsuario: loginUsuario = new loginUsuario;
-
+  usuario: Usuario = new Usuario;
   constructor(private router: Router, public authService: AuthService) { }
 
   ngOnInit(){
@@ -32,7 +33,7 @@ export class LoginClienteComponent implements OnInit {
       localStorage.setItem('imagem_usuario', this.loginUsuario.imagem_usuario)
       //localStorage.setItem('data_nascimento', this.loginUsuario.data_nascimento)
       localStorage.setItem('especialidade', this.loginUsuario.especialidade)
-      //localStorage.setItem('profissional', this.loginUsuario.profissional)
+      // localStorage.setItem('profissional', this.loginUsuario.profissional)
       
       location.assign('/perfil-cliente')
       this.router.navigate(['/perfil-cliente'])

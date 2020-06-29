@@ -11,14 +11,14 @@ import { NavComponent } from '../nav/nav.component';
 })
 export class ProdutoComponent implements OnInit {
 
-  id_produto: string= localStorage.getItem('id_produto');
-  cor: string = localStorage.getItem('cor');
-  imagem1: string = localStorage.getItem('imagem1');
-  imagem2: string = localStorage.getItem('imagem2');
-  imagem3: string = localStorage.getItem('imagem3');
-  nome_produto: string = localStorage.getItem('nome_produto');
-  id_categoria: string = localStorage.getItem('id_categoria');
-  id_profissional: string = localStorage.getItem('id_profissional');
+  // id_produto: string= localStorage.getItem('id_produto');
+  // cor: string = localStorage.getItem('cor');
+  // imagem1: string = localStorage.getItem('imagem1');
+  // imagem2: string = localStorage.getItem('imagem2');
+  // imagem3: string = localStorage.getItem('imagem3');
+  // nome_produto: string = localStorage.getItem('nome_produto');
+  // id_categoria: string = localStorage.getItem('id_categoria');
+  // id_profissional: string = localStorage.getItem('id_profissional');
 
 listaProdutos: Produto[]
 produto: Produto = new Produto
@@ -77,5 +77,9 @@ publicar(){
     location.assign('/produtos')
   });
 }
-
+findAllProduto(){
+  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+    this.listaProdutos = resp;
+  });
+}
 }

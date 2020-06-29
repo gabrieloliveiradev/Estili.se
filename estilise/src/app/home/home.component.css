@@ -157,11 +157,67 @@ background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 5
     max-height: 450px;
 }
 #vendedor {
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     /* background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgb(22, 136, 88) 25%, rgb(91, 92, 177) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%); */
     width: 100%;
 }
 article > div {
     height: 100%;
     width: 100%;
+}
+/* ========= card do produto =========== */
+.card-produto, .card-img, .card-img-adicionar{
+    width: 290px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #FBF8F8;
+    position: relative;
+    top: 25px; 
+    top: 0;
+}
+.card-produto{
+    height: 377px;
+}
+.card-descricao{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 290px;
+    height: 100px;
+    background-color: #FBF8F8; 
+}
+
+/* ======== Eventos para os cards produtos ========== */
+.card-produto:hover .card-img-adicionar{
+    display: flex!important;
+    width: 42px;
+    height: 40px;
+    border-radius: 3px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
+    cursor: pointer;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
+}
+.card-div-elemento-pai:hover .card-img{
+    filter: brightness(0.6);
+}
+.card-produto:hover .card-svg-coracao{
+    display: flex!important;
+    width: 35px;
+    height: 32px;
+    right: 70px;
+    top: 15px;
+    border-radius: 3px;
+    position: absolute;
+    fill: white;
+}
+.card-img-adicionar:hover{
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.16);
+}
+.card-svg-coracao:hover{
+    filter: drop-shadow(0px 0px 2px white);
+    transition: 0.10s;
 }

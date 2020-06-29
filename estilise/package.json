@@ -31,6 +31,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.1.1",
     "jquery": "^3.5.1",
+    "jw-paginate": "^1.0.4",
     "ngx-mask": "^9.1.2",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
