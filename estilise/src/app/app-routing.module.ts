@@ -34,14 +34,14 @@ const routes: Routes = [
   { path: 'editar/:id', component: EditarPerfilClienteComponent},
   { path: 'editar-profissional', component: EditarPerfilProfissionalComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
-  { path:'deletar', component: DeleteUsuarioComponent},
-  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  { path: 'deletar', component: DeleteUsuarioComponent},
+  { path: 'deletar/:id', component: DeleteUsuarioComponent},
   { path: 'perfil-vendedor', component: PerfilVendedorComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
   { path: 'postarcategoria', component: CategoriaPostComponent},
-  { path:'login', component: LoginClienteComponent},
-  { path: 'cadastrar', component: CadClienteComponent},
+  { path: 'login', component: LoginClienteComponent},
+  { path: 'cadastrar', component: CadClienteComponent}
 ];
 
 @NgModule({
