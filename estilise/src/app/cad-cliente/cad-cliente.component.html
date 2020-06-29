@@ -4,26 +4,22 @@
         <div class="modal-content tamanhoPopupHeight">
             <div class="modal-body">
                 <div class="row">
-                        <div class="d-none d-md-flex col-md-6">
-                            <div class="row">
-                                <div class="col-md-11 d-flex justify-content-center align-items-center" style="flex-direction: column;">
-                                    <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg" style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
-                                    <div class="text-left" style="width:75%">
-                                        <p class="font-thin">Faça parte da estili.se, precisamos de algumas informações para realizar seu cadastro, não se preocupe
-                                            elas estarão seguras conforme o nosso termo de uso.
-                                        </p>
-                                        <!-- <div *ngIf="alerta">
-                                            <div class="alert alert-success mt-5" role="alert">
-                                                Cadastrado com sucesso
-                                            </div>
-                                        </div> -->
-                                        
-                                    </div>
+                    <div class="d-none d-md-flex col-md-6">
+                        <div class="row">
+                            <div class="col-md-11 d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg" style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
+                                <div class="text-left" style="width:75%">
+                                    <p class="font-thin">Faça parte da estili.se, precisamos de algumas informações para realizar seu cadastro, não se preocupe
+                                        elas estarão seguras conforme o nosso termo de uso.
+                                    </p>
+                                    <!-- <div *ngIf="alerta">
+                                        <div class="alert alert-success mt-5" role="alert">
+                                            Cadastrado com sucesso
+                                        </div>
+                                    </div> -->
                                     
                                 </div>
-                                <div class="col-md-1" style="height:545px">
-                                    <div class="mt-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 4px;"></div>
-                                </div>
+                                
                             </div>
                         </div>
                         
@@ -59,7 +55,7 @@
                                 </div>
                                 <div class="form-group d-flex pl-5 mb-4">
                                     <input type="checkbox" style="margin: 3px;" id="checkboxx">
-                                    <a class="m-0" style="color: rgb(161, 156, 156); font-size: 12px;" name="checkVendedor">Quero vender</a>
+                                    <a class="m-0" style="color: rgb(161, 156, 156); font-size: 12px;" [ngModel]="usuario.profissional" name="checkVendedor">Quero vender</a>
                                     
                                 </div>
                                 <div class="form-group d-flex justify-content-center" style="margin-bottom: 6px;">
