@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Usuario } from '../model/usuario';
 import { loginUsuario } from '../model/loginUsuario';
 
@@ -9,7 +9,11 @@ import { loginUsuario } from '../model/loginUsuario';
 export class UsuariosService {
 
   constructor(private http:HttpClient) { }
-
+  
+  // token = {
+  //   headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  // }
+  
   getAllUsuarios(){
     return this.http.get('http://localhost:8080/usuarios');
   }
@@ -25,6 +29,15 @@ export class UsuariosService {
   deleteUsuario(id:number) {
     return this.http.delete(`http://localhost:8080/usuarios/${id}`)
   }
-
+  getAllProfissional() {
+    return this.http.get(`http://localhost:8080/usuarios/profissional/1`)
+  }
+  // profissionalPreenchido(){
+  //   let preenchido = false;
+  //   if(this.usuario.especialidade=="undefined" && this.usuario.cep=="undefined"){
+  //     preenchido =true;
+  //   }
+  //   return preenchido;
+  // }
  
 }

@@ -32,71 +32,24 @@
     </article>
     
     <!-- local de perfis dos profissionais -->
-    <section class="container-fluid row justify-content-around mb-5 ml-0" id="section_perfil">
-        <div class="row justify-content-center col-12 col-md-3 mt-5">
-            <div  class="" id="div_img_profissional"></div>
-            
-            <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
-                <h2 class="font-roboto-light text-center" style="margin-top: 70px;">Claudia dos Santos</h2>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  Rua das videiras, 51, São Paulo - SP, Brasil.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> Vestidos de gala, fantasias, jeans, camisetas, camisas, ternos, shorts, jaquetas, coletes, vestidos, saias.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
+    <section class="container-fluid row justify-content-around mb-5 ml-0" id="section_perfil" >
+        <ng-container  *ngFor="let usuario of listaProfissional">
+            <div class="row justify-content-center col-12 col-md-3 mt-5"  *ngIf="authService.profissionalPreenchido(usuario)">
+                
+                <div  class="" id="div_img_profissional">
+                    <img src="{{usuario.imagem_usuario}}" alt="">
+                </div>
+                
+                <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
+                    <h2 class="font-roboto-light text-center" style="margin-top: 70px;">{{usuario.nome}}</h2>
+                    <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
+                    <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  {{usuario.cep}}</p>
+                    <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
+                    <p class="my-3 text-center" id="ParagrafoEspecialidade" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> {{usuario.especialidade}}</p>
+                    <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
+                    <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
+                </div>
             </div>
-        </div>
-        <div class="row justify-content-center col-12 col-md-3 mt-5">
-            <div  class="" id="div_img_profissional"></div>
-            
-            <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
-                <h2 class="font-roboto-light text-center" style="margin-top: 70px;">Claudia dos Santos</h2>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  Rua das videiras, 51, São Paulo - SP, Brasil.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> Vestidos de gala, fantasias, jeans, camisetas, camisas, ternos, shorts, jaquetas, coletes, vestidos, saias.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
-            </div>
-        </div>
-        <div class="row justify-content-center col-12 col-md-3 mt-5">
-            <div  class="" id="div_img_profissional"></div>
-            
-            <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
-                <h2 class="font-roboto-light text-center" style="margin-top: 70px;">Claudia dos Santos</h2>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  Rua das videiras, 51, São Paulo - SP, Brasil.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> Vestidos de gala, fantasias, jeans, camisetas, camisas, ternos, shorts, jaquetas, coletes, vestidos, saias.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
-            </div>
-        </div>
-        <div class="row justify-content-center col-12 col-md-3 mt-5">
-            <div  class="" id="div_img_profissional"></div>
-            
-            <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
-                <h2 class="font-roboto-light text-center" style="margin-top: 70px;">Claudia dos Santos</h2>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  Rua das videiras, 51, São Paulo - SP, Brasil.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> Vestidos de gala, fantasias, jeans, camisetas, camisas, ternos, shorts, jaquetas, coletes, vestidos, saias.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
-            </div>
-        </div>
-        <div class="row justify-content-center col-12 col-md-3 mt-5">
-            <div  class="" id="div_img_profissional"></div>
-            
-            <div id="perfil_texto" class="p-3 d-flex flex-column align-items-center align-content-around" style="margin-top: 94px;">
-                <h2 class="font-roboto-light text-center" style="margin-top: 70px;">Claudia dos Santos</h2>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Endereço:</span>  Rua das videiras, 51, São Paulo - SP, Brasil.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <p class="my-3 text-justify" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> Vestidos de gala, fantasias, jeans, camisetas, camisas, ternos, shorts, jaquetas, coletes, vestidos, saias.</p>
-                <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
-            </div>
-        </div>
+        </ng-container>
     </section>
 </main>
