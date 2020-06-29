@@ -135,7 +135,7 @@ flex: 1 1 200px;
   height: 100%;
   width: 100%;}
 
-/* ________________________________________________ */
+/* _______________________Equipe_________________________ */
 
 
   .container
@@ -163,13 +163,13 @@ flex: 1 1 200px;
 	width: 100%;
 	height: 100%;
 	background: white;
-	clip-path: circle(400px at center 100px);
+	clip-path: circle(600px at center 100px);
 	transition: 0.5s;
 	transition-delay: 0.5s;
 }
 .container .box:hover .imgBx
 {
-	clip-path: circle(80px at center 100px);
+	clip-path: circle(130px at center 180px);
 	transition-delay: 0s;
 }
 .container .box .imgBx img
@@ -200,8 +200,6 @@ flex: 1 1 200px;
 .container .box .content a
 {
 	text-decoration: none;
-	background: #000;
-	color: #fff;
 	padding: 5px;
 	display: inline-block;
 }
