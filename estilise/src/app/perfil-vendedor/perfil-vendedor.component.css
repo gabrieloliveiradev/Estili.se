@@ -127,7 +127,7 @@
       bottom: 0;
       position: absolute;
       transition: .2s ease all;
-      background: #118899;
+      background:#71f6a6;
   }
 
   /* ======================== Eventos do <input> */
@@ -522,13 +522,6 @@
     line-height: 29px;
     color: black;
 } */
-
-.caixa-formulario {
-    width: 100% !important;
-    margin: 0 auto;
-    
-}
-
 
 
 /* Design do Input sem bordas */
