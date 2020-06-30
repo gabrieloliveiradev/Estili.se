@@ -5,26 +5,26 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-        <img src="{{imagem_usuario}}" class="imagemUsuario">
+        <img src="{{usuario.imagemusuario}}" class="imagemUsuario" style="object-fit: cover;">
       </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
-        <div class="container d-flex justify-content-end align-items-center">
-          <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">{{loginUsuario.nome}}</p>
-          <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 5%;">
+        <div class="container d-flex justify-content-end align-items-center pl-0">
+          <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">{{usuario.nome}}</p>
+          <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 5%;" >
         </div>
         <hr>
         <div class="row">
           <ul class="col container">
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/email.svg" style="width: 5%;"></span> E-mail: {{emailusuario}}</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg" style="width: 5%;"></span> CPF: {{cpf_usuario}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/email.svg" style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg" style="width: 5%;"></span> CPF: {{usuario.cpfusuario}}</p></li>
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/endereço.svg" style="width: 5%;"></span> Endereço: </p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/complemento.svg" style="width: 5%;"></span> Complemento: {{complemento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/complemento.svg" style="width: 5%;"></span> Complemento: {{usuario.complemento}}</p></li>
           </ul>
           <ul class="col container">
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/senha.svg" style="width: 5%; fill: #867E7E"></span> Senha: *********</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.svg" style="width: 5%;"></span> Data de Nascimento: {{data_nascimento}}</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.svg" style="width: 5%;"></span> CEP: {{cep}}</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/telefone.svg" style="width: 5%; color: #867E7E;"></span> Telefone: {{telefone}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.svg" style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.svg" style="width: 5%;"></span> CEP: {{usuario.cep}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/telefone.svg" style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}</p></li>
           </ul>
         </div>
       </div>
@@ -34,7 +34,7 @@
   <div style="text-align: center;">
     <p style="font-size: 30px;">Seu perfil esta incompleto</p>
     <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
-    <button type="button" class="btn botaoEditar mb-5" routerLink="/editar">Editar Perfil</button>
+    <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', id_usuario]">Editar Perfil</button>
   </div>
   
   <div class="row">

@@ -1,17 +1,18 @@
 export class loginUsuario {
-    public id_usuario:number
+    public idusuario:number
     public nome:string
     public senha:string
     public emailusuario:string
-    public cartao_credito:string
+    public cartaocredito:string
     public cep:string
     public complemento:string
-    public cpf_usuario:string
-    public numero_casa:string
+    public cpfusuario:string
+    public numerocasa:number
     public telefone:string
-    public imagem_usuario:string
-    public data_nascimento:Date
+    public imagemusuario:string
+    public datanascimento:Date
     public especialidade:string
     public profissional : boolean
     public token:string
+    public descricaoUsuario:string
 }

@@ -16,6 +16,7 @@ export class LoginClienteComponent implements OnInit {
   constructor(private router: Router, public authService: AuthService) { }
 
   ngOnInit(){
+    window.scroll(0,0)
   }
 
   entrar(){
@@ -23,17 +24,18 @@ export class LoginClienteComponent implements OnInit {
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
       localStorage.setItem('token', this.loginUsuario.token)
-      localStorage.setItem('cpf_usuario', this.loginUsuario.cpf_usuario)
+      localStorage.setItem('cpf_usuario', this.loginUsuario.cpfusuario)
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
       localStorage.setItem('nome', this.loginUsuario.nome)
-      localStorage.setItem('cartao_credito', this.loginUsuario.cartao_credito)
+      localStorage.setItem('cartao_credito', this.loginUsuario.cartaocredito)
       localStorage.setItem('cep', this.loginUsuario.cep)
       localStorage.setItem('complemento', this.loginUsuario.complemento)
-      localStorage.setItem('numero_casa', this.loginUsuario.numero_casa)
-      localStorage.setItem('imagem_usuario', this.loginUsuario.imagem_usuario)
+      // localStorage.setItem('numero_casa', this.loginUsuario.numero_casa)
+      localStorage.setItem('imagem_usuario', this.loginUsuario.imagemusuario)
       //localStorage.setItem('data_nascimento', this.loginUsuario.data_nascimento)
       localStorage.setItem('especialidade', this.loginUsuario.especialidade)
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
+      localStorage.setItem('id_usuario', this.loginUsuario.idusuario.toString())
       
       location.assign('/perfil-cliente')
       this.router.navigate(['/perfil-cliente'])

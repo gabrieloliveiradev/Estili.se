@@ -2,10 +2,10 @@
     <h1 class="text-center my-5" style="font-family: Roboto Thin;">Categorias</h1>
     <div class="row justify-content-center">
         <section class=" mb-5" *ngFor="let categoria of listaCategorias">
-            <a [routerLink]="['/categorias', categoria.id_categoria]" class="text-decoration-none">
+            <a [routerLink]="['/categorias', categoria.idcategoria]" class="text-decoration-none">
                 <div id="categoria-card" class="col-3 d-flex flex-column align-items-center justify-content-center mx-3">
-                    <img class="" src="{{categoria.imagem_categoria}}" alt="">
-                    <h1 class="position-absolute text-center">{{categoria.nome_categoria}}</h1>
+                    <img class="" src="{{categoria.imagemcategoria}}" alt="">
+                    <h1 class="position-absolute text-center">{{categoria.nomecategoria}}</h1>
                 </div>
             </a>
         </section>

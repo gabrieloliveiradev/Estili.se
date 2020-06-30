@@ -11,26 +11,26 @@
                     style="color: #158591;"></span>
                 <div class="row">
                     <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-                        <img src="../../assets/img/perfil-cliente/capaprofile.jpg" class="imagemUsuario">
+                        <img src="{{usuario.imagemusuario}}" class="imagemUsuario">
                     </div>
                     <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
                         <div class="container">
-                            <p style="font-size: large; font-weight: 200;">Jonatas Damasceno</p>
+                            <p style="font-size: large; font-weight: 200;">{{usuario.nome}}</p>
                         </div>
                         <hr>
                         <div class="row">
                             <ul class="col container">
                                 <li>
-                                    <p><span style="width:50px;"></span>Email: Jhow@damasceno.com</p>
+                                    <p><span style="width:50px;"></span>Email: {{usuario.emailusuario}}</p>
                                 </li>
                                 <li>
-                                    <p><span style="width:50px;"></span>CPF: -</p>
+                                    <p><span style="width:50px;"></span>CPF: {{usuario.cpfusuario}}</p>
                                 </li>
                                 <li>
                                     <p><span style="width:50px;"></span>Endereço: -</p>
                                 </li>
                                 <li>
-                                    <p><span style="width:50px;"></span>Complemento: -</p>
+                                    <p><span style="width:50px;"></span>Complemento: {{usuario.complemento}}</p>
                                 </li>
                             </ul>
                             <ul class="col container">
@@ -38,13 +38,13 @@
                                     <p><span style="width:50px;"></span>Senha: *********</p>
                                 </li>
                                 <li>
-                                    <p><span style="width:50px;"></span>Data de Nascimento: -</p>
+                                    <p><span style="width:50px;"></span>Data de Nascimento: {{usuario.datanascimento}}</p>
                                 </li>
                                 <li>
-                                    <p><span style="width:50px;"></span>CEP: -</p>
+                                    <p><span style="width:50px;"></span>CEP: {{usuario.cep}}</p>
                                 </li>
                                 <li>
-                                    <p><span style="width:50px;"></span>Telefone: -</p>
+                                    <p><span style="width:50px;"></span>Telefone: {{usuario.telefone}}</p>
                                 </li>
                             </ul>
                         </div>
@@ -411,26 +411,25 @@
 
                                     <div class="card mr-2"
                                         style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
                                     </div>
 
                                     <!-- Imagem 2 -->
                                     <div class="card"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="produto.imagem2" height="200" class="card-img-top" alt="...">
                                     </div>
 
                                     <!-- Imagem 3 -->
                                     <div class="card"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="produto.imagem3" height="200" class="card-img-top" alt="...">
                                     </div>
-
                                 </div>
                                 <!-- Imagem Previa -->
                                 <div class="card mt-3"
                                     style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
-                                    <img src="url" height="200" class="card-img-top" alt="...">
+                                    <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
                                 </div>
 
 
@@ -441,7 +440,7 @@
                                 <!--Campo Texto -->
                                 <form>
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required>
+                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Nome do Produto</label>
 
@@ -452,7 +451,7 @@
                                         <div class="form-group d-flex justify-content-center">
                                             <textarea class="form-control formulario" rows="4"
                                                 style="width: 100%; height: 100px; resize: none; border-bottom: 1px solid rgb(70, 70, 70);"
-                                                id="mensagem" required></textarea>
+                                                id="mensagem" required [(ngModel)]="produto.descricao"></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
                                         </div>
@@ -462,7 +461,7 @@
 
 
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required>
+                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Tipo de tecido</label>
                                     </div>
@@ -472,7 +471,7 @@
                                             <span class="input-group-text formulario">R$</span>
                                         </div>
 
-                                        <input type="text" class="form-control formulario teste" aria-label="Quantia">
+                                        <input type="text" class="form-control formulario teste" aria-label="Quantia" [(ngModel)]="produto.preco">
                                         <span class="linhaSpanModal"></span>
                                         <label class="col-form-label  precoModal ">Preço</label>
                                         <div class="input-group-append">
@@ -483,7 +482,7 @@
                                         <div class="modalForm form-group d-flex justify-content-center"
                                             style="width: 90%;">
                                             <input type="text" class="form-control formulario" name="pesquisa"
-                                                minlength="4" required>
+                                                minlength="4" required [(ngModel)]="produto.imagem1">
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">URL da imagem</label>
                                         </div>
@@ -613,7 +612,7 @@
                                     <div class="modal-footer justify-content-center mt-5">
                                         <button type="button" class="btn btn-outline-danger" style="width: 20%;"
                                             data-dismiss="modal">Fechar</button>
-                                        <button class=" btn btn-outline-success" style="width: 30%;">Salvar</button>
+                                        <button class=" btn btn-outline-success" style="width: 30%;" (click)="publicar()">Salvar</button>
                                     </div>
                                 </div>
                                 <!-- Fim Botão Salvar -->
