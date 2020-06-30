@@ -4,54 +4,74 @@
 
         <article>
             <h1 class="d-flex justify-content-center mt-5">Perfil</h1>
-            <hr>
-            <!-- <div class="container"> -->
-            <div class="jumbotron">
-                <span class="glyphicon glyphicon glyphicon-edit d-flex justify-content-end"
-                    style="color: #158591;"></span>
-                <div class="row">
-                    <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-                        <img src="../../assets/img/perfil-cliente/capaprofile.jpg" class="imagemUsuario">
-                    </div>
-                    <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
-                        <div class="container">
-                            <p style="font-size: large; font-weight: 200;">Jonatas Damasceno</p>
+            <hr>         
+            <div class="container">
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
+                            <img src="{{imagem_usuario}}" class="imagemUsuario">
                         </div>
-                        <hr>
-                        <div class="row">
-                            <ul class="col container">
-                                <li>
-                                    <p><span style="width:50px;"></span>Email: Jhow@damasceno.com</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>CPF: -</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>Endereço: -</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>Complemento: -</p>
-                                </li>
-                            </ul>
-                            <ul class="col container">
-                                <li>
-                                    <p><span style="width:50px;"></span>Senha: *********</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>Data de Nascimento: -</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>CEP: -</p>
-                                </li>
-                                <li>
-                                    <p><span style="width:50px;"></span>Telefone: -</p>
-                                </li>
-                            </ul>
+                        <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
+                            <div class="container d-flex justify-content-end align-items-center">
+                                <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
+                                    {{loginUsuario.nome}}</p>
+                                    <button type="button" class="btn btn-link mb-5" routerLink="/editar"> <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;"></button>
+                                
+                            
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <ul class="col container">
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/email.svg"
+                                                    style="width: 5%;"></span> E-mail: {{emailusuario}}</p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
+                                                    style="width: 5%;"></span> CPF: {{cpf_usuario}}</p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/endereço.svg"
+                                                    style="width: 5%;"></span> Endereço: </p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/complemento.svg"
+                                                    style="width: 5%;"></span> Complemento: {{complemento}}</p>
+                                    </li>
+                                </ul>
+                                <ul class="col container">
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/senha.svg"
+                                                    style="width: 5%; fill: #867E7E"></span> Senha: *********</p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/nascimento.svg"
+                                                    style="width: 5%;"></span> Data de Nascimento: {{data_nascimento}}
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.svg"
+                                                    style="width: 5%;"></span> CEP: {{cep}}</p>
+                                    </li>
+                                    <li>
+                                        <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/telefone.svg"
+                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{telefone}}
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            
+
         </article>
         <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
         <article>
@@ -59,13 +79,14 @@
                 class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
 
                 <li class="nav-item ">
-                    <a class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;"> Pontuação
-                        <br></a>
+                    <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;"> Pontuação
+                        <br>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
+                </a>
                 </li>
 
                 <li class="nav-item ">
@@ -391,11 +412,12 @@
             <div class="modal-dialog modal-dialog-scrollable modalScreen ">
 
                 <div class="modal-content">
-                    <div class="modal-header d-flex justify-contant-end ">
-                        <div>
-                            <h5 class="modal-title">Adicionar Produto</h5>
-                            <hr style="width: 300px;">
-                        </div>
+                   
+                    <div class="modal-header d-flex justify-content-end">
+                        <h5 class="modal-title">Adicionar Produto</h5>
+                        <br>
+                        <hr style="width: 300px;">                        
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -437,7 +459,9 @@
                             </div>
 
                             <!--============================================== Formularios ================================================-->
+                            
                             <div class="caixa-formulario col-md-5 p-3 ml-4">
+                            
                                 <!--Campo Texto -->
                                 <form>
                                     <div class="modalForm form-group d-flex justify-content-center">
@@ -448,11 +472,10 @@
                                     </div>
 
 
-                                    <div class="container caixa-formulario">
+                                    <div class="caixa-formulario">
                                         <div class="form-group d-flex justify-content-center">
-                                            <textarea class="form-control formulario" rows="4"
-                                                style="width: 100%; height: 100px; resize: none; border-bottom: 1px solid rgb(70, 70, 70);"
-                                                id="mensagem" required></textarea>
+                                            <textarea class="form-control formulario w-100" rows="6"  style="width: 100pxg; height: 100px; resize: none;"                                              
+                                                required></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
                                         </div>
@@ -560,6 +583,23 @@
                                 </div>
 
                                 <!-- Modal da Tabela de Medida -->
+                                <!-- Collapse Tabela de Medidas -->
+
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                        data-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        Botão com data-target
+                                    </button>
+                                </div>
+
+
+                                <!-- Fim Collapse -->
                                 <article>
                                     <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">
