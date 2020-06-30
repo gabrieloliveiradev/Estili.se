@@ -58,15 +58,14 @@
           <input type="date" class="form-control input-estilo" required [(ngModel)]="usuario.datanascimento">
           <span class="linhaSpan"></span>
           <!-- <label for="" class="col-form-label">Data de nascimento</label> -->
-        </div>
+        <!-- </div> -->
         <div class="form-group d-flex justify-content-center">
           <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8" required >
           <span class="linhaSpan"></span>
           <label for="" class="col-form-label">Senha</label>
         </div>
         <div class="form-group d-flex justify-content-center mb-3">
-          <input type="password" class="form-control input-estilo" name="confirmar_senha" id="Password2" minlength="8"
-            required>
+          <input type="password" class="form-control input-estilo" [ngModel]="loginUsuario.senha" name="confirmar_senha" id="Password2" minlength="8">
           <span class="linhaSpan"></span>
           <label for="" class="col-form-label">Confirmar senha</label>
         </div>
@@ -87,7 +86,7 @@
             <div>
               <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
             </div>
-            <h2 class="ml-3" style="font-size: 28px; font-weight: 400; ">Endereço</h2>
+            <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Endereço</h2>
           </div>
           <hr class="mb-5 float-left" style="width: 80%; margin-left: 25px;">
         </div>
@@ -106,7 +105,7 @@
           </div>
         </div>
         <div class="form-group d-flex justify-content-center">
-          <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8" required>
+          <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8">
           <span class="linhaSpan"></span>
           <label for="" class="col-form-label">Endereço</label>
         </div>
@@ -158,7 +157,7 @@
           <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
             <input type="text" class="form-control input-estilo" id="urlImagem" [(ngModel)]='usuario.imagemusuario' required>
             <span class="linhaSpan"></span>
-            <label for="exampleInputNome" class="col-form-label">Url</label>
+            <label class="col-form-label">Url</label>
           </div>
         </div>
   

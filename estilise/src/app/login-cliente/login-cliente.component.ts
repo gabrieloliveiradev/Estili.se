@@ -13,6 +13,7 @@ import { stringify } from 'querystring';
 export class LoginClienteComponent implements OnInit {
   loginUsuario: loginUsuario = new loginUsuario;
   usuario: Usuario = new Usuario;
+  profissional: string
   constructor(private router: Router, public authService: AuthService) { }
 
   ngOnInit(){
@@ -36,9 +37,16 @@ export class LoginClienteComponent implements OnInit {
       localStorage.setItem('especialidade', this.loginUsuario.especialidade)
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
       localStorage.setItem('id_usuario', this.loginUsuario.idusuario.toString())
+      localStorage.setItem('profissional', this.loginUsuario.profissional)
       
-      location.assign('/perfil-cliente')
-      this.router.navigate(['/perfil-cliente'])
+
+      if(this.loginUsuario.profissional == "true"){
+        location.assign('/editar-profissional')
+        this.router.navigate(['/perfil-profissional'])
+      }else{
+        location.assign('/perfil-cliente')
+        this.router.navigate(['/perfil-cliente'])
+      }
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')
        })

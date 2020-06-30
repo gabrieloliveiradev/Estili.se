@@ -50,8 +50,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            
+
         </article>
         <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
         <article>
@@ -59,13 +60,14 @@
                 class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
 
                 <li class="nav-item ">
-                    <a class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;"> Pontuação
-                        <br></a>
+                    <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;"> Pontuação
+                        <br>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
                     <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
+                </a>
                 </li>
 
                 <li class="nav-item ">
@@ -391,11 +393,12 @@
             <div class="modal-dialog modal-dialog-scrollable modalScreen ">
 
                 <div class="modal-content">
-                    <div class="modal-header d-flex justify-contant-end ">
-                        <div>
-                            <h5 class="modal-title">Adicionar Produto</h5>
-                            <hr style="width: 300px;">
-                        </div>
+                   
+                    <div class="modal-header d-flex justify-content-end">
+                        <h5 class="modal-title">Adicionar Produto</h5>
+                        <br>
+                        <hr style="width: 300px;">                        
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -436,7 +439,9 @@
                             </div>
 
                             <!--============================================== Formularios ================================================-->
+                            
                             <div class="caixa-formulario col-md-5 p-3 ml-4">
+                            
                                 <!--Campo Texto -->
                                 <form>
                                     <div class="modalForm form-group d-flex justify-content-center">
@@ -447,10 +452,10 @@
                                     </div>
 
 
-                                    <div class="container caixa-formulario">
+                                    <div class="caixa-formulario">
                                         <div class="form-group d-flex justify-content-center">
                                             <textarea class="form-control formulario" rows="4"
-                                                style="width: 100%; height: 100px; resize: none; border-bottom: 1px solid rgb(70, 70, 70);"
+                                            style="width: 100pxg; height: 100px; resize: none;" 
                                                 id="mensagem" required [(ngModel)]="produto.descricao"></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
@@ -559,6 +564,23 @@
                                 </div>
 
                                 <!-- Modal da Tabela de Medida -->
+                                <!-- Collapse Tabela de Medidas -->
+
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                        data-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        Botão com data-target
+                                    </button>
+                                </div>
+
+
+                                <!-- Fim Collapse -->
                                 <article>
                                     <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">

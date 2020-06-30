@@ -14,6 +14,9 @@ export class EditarPerfilClienteComponent implements OnInit {
   usuario: Usuario = new Usuario
   imagem_usuario: string = localStorage.getItem('imagem_usuario');
   loginUsuario: loginUsuario = new loginUsuario
+  senha:String
+
+  
   constructor(private usuariosService: UsuariosService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(){
@@ -30,6 +33,12 @@ export class EditarPerfilClienteComponent implements OnInit {
       this.usuario=resp
     })
   }
+
+  conferirSenha(event: any){
+    this.senha = event.target.value;
+  }
+  
+
   salvar() {
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp

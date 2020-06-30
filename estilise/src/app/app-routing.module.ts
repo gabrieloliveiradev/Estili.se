@@ -17,6 +17,7 @@ import { EditarDeletarCategoriaComponent } from './editar-deletar-categoria/edit
 import { CategoriaPostComponent } from './categoria-post/categoria-post.component';
 import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-perfil-cliente.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { EditarPerfilProfissionalComponent } from './editar-perfil-profissional/editar-perfil-profissional.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -38,7 +39,7 @@ const routes: Routes = [
   { path: 'perfil-cliente/:id', component: PerfilClienteComponent},
   { path: 'categorias/:id', component: EditarDeletarCategoriaComponent },
   { path: 'postarcategoria', component: CategoriaPostComponent},
-  { path:'login', component: LoginClienteComponent},
+  { path: 'login', component: LoginClienteComponent},
   { path: 'cadastrar', component: CadClienteComponent}
 ];
 

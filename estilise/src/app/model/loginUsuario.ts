@@ -12,7 +12,7 @@ export class loginUsuario {
     public imagemusuario:string
     public datanascimento:Date
     public especialidade:string
-    public profissional : boolean
+    public profissional : string
     public token:string
     public descricaoUsuario:string
 }

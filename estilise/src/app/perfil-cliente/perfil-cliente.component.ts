@@ -49,7 +49,7 @@ export class PerfilClienteComponent implements OnInit {
     this.findByIdUsuario(id)
     if(token == null){
       this.login = true
-      alert('Faça o login antes de acessar a página feed')
+      alert('Faça o login antes de acessar a página de perfil')
       this.mostrarPopupLogin = true
       this.router.navigate(['/home'])
       this.fecharPopup()  
