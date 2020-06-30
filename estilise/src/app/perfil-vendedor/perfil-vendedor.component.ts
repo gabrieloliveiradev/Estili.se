@@ -20,19 +20,19 @@ export class PerfilVendedorComponent implements OnInit {
   // emailusuario: string
   produto: Produto = new Produto;
   usuario : Usuario = new Usuario;
-  nome: string = localStorage.getItem('nome');
-  emailusuario: string = localStorage.getItem('emailusuario');
-  cpf_usuario: string = localStorage.getItem('cpf_usuario');
-  complemento: string = localStorage.getItem('complemento');
-  data_nascimento: string = localStorage.getItem('data_nascimento');
-  cep: string = localStorage.getItem('cep');
-  telefone: string = localStorage.getItem('telefone');
-  imagem_usuario: string = localStorage.getItem('imagem_usuario');
-  cartao_credito: string = localStorage.getItem('cartao_credito');
-  id_usuario: string = localStorage.getItem('id_usuario');
-  numero_casa: string = localStorage.getItem('numero_casa');
-  profissional:string = localStorage.getItem('profissional');
-  especialidade: string = localStorage.getItem('especialidade');
+  // nome: string = localStorage.getItem('nome');
+  // emailusuario: string = localStorage.getItem('emailusuario');
+  // cpf_usuario: string = localStorage.getItem('cpf_usuario');
+  // complemento: string = localStorage.getItem('complemento');
+  // data_nascimento: string = localStorage.getItem('data_nascimento');
+  // cep: string = localStorage.getItem('cep');
+  // telefone: string = localStorage.getItem('telefone');
+  // imagem_usuario: string = localStorage.getItem('imagem_usuario');
+  // cartao_credito: string = localStorage.getItem('cartao_credito');
+  // id_usuario: string = localStorage.getItem('id_usuario');
+  // numero_casa: string = localStorage.getItem('numero_casa');
+  // profissional:string = localStorage.getItem('profissional');
+  // especialidade: string = localStorage.getItem('especialidade');
   loginUsuario : loginUsuario = new loginUsuario
   login: boolean = false
   mostrarPopupLogin: boolean = false
@@ -46,9 +46,9 @@ export class PerfilVendedorComponent implements OnInit {
     var id = this.route.snapshot.params['id']
     this.findByIdUsuario(id)
     
-    this.emailusuario = localStorage.getItem('emailusuario');
+    // this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token');
-    let cpf_usuario = localStorage.getItem('cpf_usuario');
+    // let cpf_usuario = localStorage.getItem('cpf_usuario');
     
     if(token == null){
       this.login = true

@@ -38,14 +38,14 @@ export class LoginClienteComponent implements OnInit {
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
       localStorage.setItem('id_usuario', this.loginUsuario.idusuario.toString())
       localStorage.setItem('profissional', this.loginUsuario.profissional)
-      
+      let idusuario = this.loginUsuario.idusuario
 
       if(this.loginUsuario.profissional == "true"){
-        location.assign('/editar-profissional')
-        this.router.navigate(['/perfil-profissional'])
+        // location.assign('/editar-profissional')
+        this.router.navigate(['/perfil-vendedor', idusuario])
       }else{
-        location.assign('/perfil-cliente')
-        this.router.navigate(['/perfil-cliente'])
+        // location.assign('/perfil-cliente')
+        this.router.navigate(['/perfil-cliente', idusuario])
       }
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')

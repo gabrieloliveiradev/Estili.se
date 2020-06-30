@@ -49,12 +49,29 @@ export class AuthService {
     // this.refresh()
   }
 
-  // possível tentativa de ngif no profissionais
+  //  ngif pra saber se perfil do profissional ta preenchido
   profissionalPreenchido(usuario:Usuario){
     let preenchido = false;
     if(usuario.especialidade != undefined && usuario.cep!=undefined){
       preenchido =true;
     }
     return preenchido;
+  }
+
+
+  // ngIf pra saber se é ou não profissional pra mostrar o botão que redireciona pro perfil certo
+  btnProfissional(usuario:Usuario){
+    let ok = false;
+    if(usuario.profissional == 'true'){
+      ok = true;
+    }
+    return ok;
+  }
+  btnProfissional2(usuario:Usuario){
+    let ok = true;
+    if(usuario.profissional == 'true'){
+      ok = false;
+    }
+    return ok;
   }
 }
