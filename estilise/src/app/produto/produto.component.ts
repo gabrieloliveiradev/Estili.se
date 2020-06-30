@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
 import { Router } from '@angular/router';
-import { NavComponent } from '../nav/nav.component';
 import { Usuario } from '../model/usuario';
 
 @Component({

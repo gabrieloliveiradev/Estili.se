@@ -4,6 +4,7 @@ import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
 import { UsuariosService } from '../service/usuarios.service';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -32,7 +33,7 @@ export class PerfilClienteComponent implements OnInit {
   login: boolean = false
   mostrarPopupLogin: boolean = false
 
-  constructor(private router: Router, private http: HttpClient,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private http: HttpClient, public auth: AuthService,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
 
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
