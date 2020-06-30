@@ -41,6 +41,26 @@ export class AuthService {
     return ok;
   }
 
+verificarCampos(){
+    let camposVaziosOUPreechidos = false
+    let nome = localStorage.getItem('nome');
+    let emailusuario = localStorage.getItem('emailusuario');
+    let cpf_usuario= localStorage.getItem('cpf_usuario');
+    let complemento = localStorage.getItem('complemento');
+    let data_nascimento  = localStorage.getItem('data_nascimento');
+    let cep = localStorage.getItem('cep');
+    let telefone = localStorage.getItem('telefone');
+    let imagem_usuario = localStorage.getItem('imagem_usuario');
+    let cartao_credito = localStorage.getItem('cartao_credito');
+    let id_usuario = localStorage.getItem('id_usuario');
+    let numero_casa = localStorage.getItem('numero_casa');
+    let profissional = localStorage.getItem('profissional');
+    let especialidade = localStorage.getItem('especialidade');
+    if(nome == undefined || telefone == undefined || complemento == undefined || cpf_usuario == undefined || numero_casa == undefined || cep == undefined || emailusuario == undefined){
+       camposVaziosOUPreechidos = true;
+    }
+    return camposVaziosOUPreechidos
+}
   popupCadastro(){
     this.mostrarPopupCadastro = true
   }
@@ -57,4 +77,6 @@ export class AuthService {
     }
     return preenchido;
   }
+
+  
 }

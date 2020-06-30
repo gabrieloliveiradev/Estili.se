@@ -33,10 +33,12 @@
     </div>
   </div>
   
-  <div style="text-align: center;">
-    <p style="font-size: 30px;">Seu perfil esta incompleto</p>
-    <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
-    <button type="button" class="btn botaoEditar mb-5">Editar Perfil</button>
+  <div *ngIf="auth.verificarCampos()">
+    <div style="text-align: center;">
+      <p style="font-size: 30px;">Seu perfil esta incompleto</p>
+      <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
+      <button type="button" class="btn botaoEditar mb-5">Editar Perfil</button>
+    </div>
   </div>
   
   <div class="row">

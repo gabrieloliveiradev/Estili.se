@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../service/auth.service';
 
 
 // const maskConfig: Partial<IConfig> = {
@@ -35,13 +36,13 @@ export class PerfilClienteComponent implements OnInit {
   loginUsuario : loginUsuario = new loginUsuario
   login: boolean = false
   mostrarPopupLogin: boolean = false
-  
+  camposVaziosOUPreechidos = false
   // validadecartao = document.getElementById('validadecartao')
   // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
   // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
   // emailusuario: string = localStorage.getItem('emailusuario')
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient, auth: AuthService) { }
 
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -67,6 +68,7 @@ export class PerfilClienteComponent implements OnInit {
     }
   }
   
+
 
   // typescript do cartão de crédito
   substituirnumero(){
