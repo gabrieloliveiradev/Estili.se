@@ -24,8 +24,9 @@ export class LoginClienteComponent implements OnInit {
 
     this.authService.logar(this.loginUsuario).subscribe((resp: loginUsuario)=>{
       this.loginUsuario = resp;
+      let profissional  = false
       localStorage.setItem('token', this.loginUsuario.token)
-      localStorage.setItem('cpf_usuario', this.loginUsuario.cpfusuario)
+      localStorage.setItem('cpfusuario', this.loginUsuario.cpfusuario)
       localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
       localStorage.setItem('nome', this.loginUsuario.nome)
       localStorage.setItem('cartao_credito', this.loginUsuario.cartaocredito)
@@ -36,7 +37,7 @@ export class LoginClienteComponent implements OnInit {
       //localStorage.setItem('data_nascimento', this.loginUsuario.data_nascimento)
       localStorage.setItem('especialidade', this.loginUsuario.especialidade)
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
-      localStorage.setItem('id_usuario', this.loginUsuario.idusuario.toString())
+      localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
       localStorage.setItem('profissional', this.loginUsuario.profissional)
       let idusuario = this.loginUsuario.idusuario
 

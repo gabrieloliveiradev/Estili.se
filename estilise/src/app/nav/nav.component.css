@@ -114,5 +114,7 @@ a{
     animation-duration: 2s;      
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
-
-
+/* ========== Carrinho hover ============== */
+.carrinho:hover{
+    fill: #259c87;
+}  
