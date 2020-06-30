@@ -12,24 +12,17 @@ import { loginUsuario } from '../model/loginUsuario';
 export class EditarPerfilClienteComponent implements OnInit {
 
   usuario: Usuario = new Usuario
+  imagem_usuario: string = localStorage.getItem('imagem_usuario');
   loginUsuario: loginUsuario = new loginUsuario
-
   senha:String
 
   
   constructor(private usuariosService: UsuariosService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(){
-    var id = this.route.snapshot.params['id']
+    var id = this.route.snapshot.params['id_usuario']
     this.findByIdUsuario(id)
-    // localStorage.setItem('token', this.loginUsuario.token)
-    // localStorage.setItem('cpf_usuario', this.loginUsuario.cpf_usuario)
-    // localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
-    // localStorage.setItem('nome', this.loginUsuario.nome)
-    // localStorage.setItem('cartao_credito', this.loginUsuario.cartao_credito)
-    // localStorage.setItem('cep', this.loginUsuario.cep)
-    // localStorage.setItem('complemento', this.loginUsuario.complemento)
-    // localStorage.setItem('numero_casa', this.loginUsuario.numero_casa)
+    window.scroll(0,0)
   }
   fecharPopup(){
     location.assign('/editar')
@@ -49,9 +42,30 @@ export class EditarPerfilClienteComponent implements OnInit {
   salvar() {
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
-      this.router.navigate(['/perfil-cliente'])
-      location.assign('/perfil-cliente')
+      // this.router.navigate(['/perfil-cliente'])
+      // location.assign('/perfil-cliente')
+      alert("salvo")
     })
   }
+  // salvarImagem(){
+    
+  //   this.usuariosService.putUsuario(this.loginUsuario).subscribe((resp:loginUsuario)=>{
+  //     // this.loginUsuario.imagem_usuario=resp.imagem_usuario
+  //     localStorage.setItem('imagem_usuario', this.loginUsuario.imagem_usuario)
+  //     this.usuario.imagem_usuario=localStorage.getItem('imagem_usuario')
+  //     this.router.navigate(['/perfil-cliente'])
+  //     location.assign('/perfil-cliente')
+  //   })
+  // }
+  // salvarImagem(){
+    
+  //   this.usuariosService.putUsuario(this.loginUsuario).subscribe(()=>{
+  //     localStorage.setItem('imagem_usuario', this.loginUsuario.imagem_usuario)
+  //     // alert(this.loginUsuario.imagem_usuario)
+  //     this.loginUsuario.imagem_usuario=localStorage.getItem('imagem_usuario')
+  //     this.router.navigate(['/perfil-cliente'])
+  //     location.assign('/perfil-cliente')
+  //   })
+  // }
 
 }

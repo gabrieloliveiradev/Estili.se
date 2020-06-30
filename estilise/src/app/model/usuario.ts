@@ -1,16 +1,17 @@
 export class Usuario {
-    public id_usuario:number
+    public idusuario:number
     public nome:string
     public senha:string
     public emailusuario:string
-    public cartao_credito:string
+    public cartaocredito:string
     public cep:string
     public complemento:string
-    public cpf_usuario:string
-    public numero_casa:number
-    public telefone:number
-    public imagem_usuario:string
-    public data_nascimento:Date
+    public cpfusuario:string
+    public numerocasa:number
+    public telefone:string
+    public imagemusuario:string
+    public datanascimento:Date
     public especialidade:string
     public profissional : string
+    public descricaoUsuario:string
 }

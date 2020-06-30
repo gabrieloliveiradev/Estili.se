@@ -1,5 +1,5 @@
 export class Produto {
-    public id_produto:number;
+    public idproduto:number;
     public cor:string
     public data:Date
     public imagem1:string
@@ -7,11 +7,12 @@ export class Produto {
     public imagem3:string
     public keytag:string
     public material:string
-    public nome_produto:number
-    public qtd_estoque:number
+    public nomeProduto:number
+    public qtdestoque:number
     public tamanho:string
     public preco:number
-    public id_compra:number
-    public id_categoria:number
-    public id_profissional:number
+    public idcompra:number
+    public idcategoria:number
+    public idusuario:number
+    public descricao:string
 }
