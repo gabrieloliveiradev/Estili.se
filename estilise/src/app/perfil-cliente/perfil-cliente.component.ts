@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../service/auth.service';
-
-
-// const maskConfig: Partial<IConfig> = {
-//   validation: false,
-// };
+import { UsuariosService } from '../service/usuarios.service';
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -36,13 +32,9 @@ export class PerfilClienteComponent implements OnInit {
   loginUsuario : loginUsuario = new loginUsuario
   login: boolean = false
   mostrarPopupLogin: boolean = false
-  camposVaziosOUPreechidos = false
-  // validadecartao = document.getElementById('validadecartao')
-  // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
-  // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-  // emailusuario: string = localStorage.getItem('emailusuario')
 
-  constructor(private router: Router, private http: HttpClient, auth: AuthService) { }
+  constructor(private router: Router, private http: HttpClient, public auth: AuthService,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
+  
 
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -50,22 +42,25 @@ export class PerfilClienteComponent implements OnInit {
   }
   
   ngOnInit(){
-    //var objeto = new Object();
-    //objeto.emailusuario = "joao@joao.com";
-    //objeto.senha = "123456789";
-    //this.http.post('http://localhost:8080/usuarios/logar', objeto);
-    //this.http.get('http://localhost:8080/usuarios');
+    window.scroll(0,0)
     this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token');
     let cpf_usuario = localStorage.getItem('cpf_usuario');
-    
+
+    var id = this.route.snapshot.params['id']
+    this.findByIdUsuario(id)
     if(token == null){
       this.login = true
       alert('Faça o login antes de acessar a página de perfil')
       this.mostrarPopupLogin = true
-      // this.router.navigate(['/home'])
-      this.fecharPopup()     
+      this.router.navigate(['/home'])
+      this.fecharPopup()  
     }
+  }
+  findByIdUsuario (id:number) {
+    this.usuarioService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
+      this.usuario=resp
+    })
   }
   
 
@@ -74,7 +69,6 @@ export class PerfilClienteComponent implements OnInit {
   substituirnumero(){
     let numerocartao = document.getElementById('numerocartao')
     let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
-    // alert(inputnumero)
     numerocartao.innerHTML = inputnumero;
   }
   substituirnome(){

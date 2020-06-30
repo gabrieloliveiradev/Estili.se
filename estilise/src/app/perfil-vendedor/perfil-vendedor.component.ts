@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../service/usuarios.service';
+import { Route } from '@angular/compiler/src/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { Usuario } from '../model/usuario';
+import { Produto } from '../model/produto';
+import { ProdutoService } from '../service/produto.service';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
-import { Usuario } from '../model/usuario';
-import { HttpClient } from '@angular/common/http';
 
 
 
@@ -12,50 +17,35 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./perfil-vendedor.component.css']
 })
 export class PerfilVendedorComponent implements OnInit {  
-    // emailusuario: string
-    usuario : Usuario = new Usuario
+  // emailusuario: string
+  produto: Produto = new Produto;
+  usuario : Usuario = new Usuario;
+  nome: string = localStorage.getItem('nome');
+  emailusuario: string = localStorage.getItem('emailusuario');
+  cpf_usuario: string = localStorage.getItem('cpf_usuario');
+  complemento: string = localStorage.getItem('complemento');
+  data_nascimento: string = localStorage.getItem('data_nascimento');
+  cep: string = localStorage.getItem('cep');
+  telefone: string = localStorage.getItem('telefone');
+  imagem_usuario: string = localStorage.getItem('imagem_usuario');
+  cartao_credito: string = localStorage.getItem('cartao_credito');
+  id_usuario: string = localStorage.getItem('id_usuario');
+  numero_casa: string = localStorage.getItem('numero_casa');
+  profissional:string = localStorage.getItem('profissional');
+  especialidade: string = localStorage.getItem('especialidade');
+  loginUsuario : loginUsuario = new loginUsuario
+  login: boolean = false
+  mostrarPopupLogin: boolean = false
   
-    nome: string = localStorage.getItem('nome');
-    emailusuario: string = localStorage.getItem('emailusuario');
-    cpf_usuario: string = localStorage.getItem('cpf_usuario');
-    complemento: string = localStorage.getItem('complemento');
-    data_nascimento: string = localStorage.getItem('data_nascimento');
-    cep: string = localStorage.getItem('cep');
-    telefone: string = localStorage.getItem('telefone');
-    imagem_usuario: string = localStorage.getItem('imagem_usuario');
-    cartao_credito: string = localStorage.getItem('cartao_credito');
-    id_usuario: string = localStorage.getItem('id_usuario');
-    numero_casa: string = localStorage.getItem('numero_casa');
-    profissional:string = localStorage.getItem('profissional');
-    especialidade: string = localStorage.getItem('especialidade');
-  
-    loginUsuario : loginUsuario = new loginUsuario
-    login: boolean = false
-    mostrarPopupLogin: boolean = false
-    
-    // validadecartao = document.getElementById('validadecartao')
-    // numerocartao = <HTMLParagraphElement>document.getElementById('numerocartao')
-    // inputnumero = <HTMLInputElement>document.getElementById("inputnumero")
-    // emailusuario: string = localStorage.getItem('emailusuario')
-
-  constructor(private router: Router, private http: HttpClient) {  }
-
-  
+  constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router) {  }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
     teste.style.display = 'none'
   }
-
   ngOnInit(): void {
-     //var objeto = new Object();
-    //objeto.emailusuario = "joao@joao.com";
-    //objeto.senha = "123456789";
-
-   
-
-
-    //this.http.post('http://localhost:8080/usuarios/logar', objeto);
-    //this.http.get('http://localhost:8080/usuarios');
+    var id = this.route.snapshot.params['id']
+    this.findByIdUsuario(id)
+    
     this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token');
     let cpf_usuario = localStorage.getItem('cpf_usuario');
@@ -65,16 +55,23 @@ export class PerfilVendedorComponent implements OnInit {
       alert('Faça o login antes de acessar a página feed')
       this.mostrarPopupLogin = true
       // this.router.navigate(['/home'])
-      this.fecharPopup()     
+      this.fecharPopup() 
     }
-    // imports: [
-    //   NgxMaskModule.forRoot(maskConfig),
-    // ]
-   
   }
-
-   // typescript do cartão de crédito
-   substituirnumero(){
+  
+  findByIdUsuario (id:number) {
+    this.usuarioService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
+      this.usuario=resp
+    })
+  }
+  publicar(){  
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+      this.produto = resp;
+      alert("Produto cadastrado")
+    });
+  }
+  // typescript do cartão de crédito
+  substituirnumero(){
     let numerocartao = document.getElementById('numerocartao')
     let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
     // alert(inputnumero)
@@ -96,6 +93,5 @@ export class PerfilVendedorComponent implements OnInit {
   
 }
 
-  
 
 

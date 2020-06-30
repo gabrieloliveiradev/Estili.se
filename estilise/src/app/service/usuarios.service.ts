@@ -10,27 +10,27 @@ export class UsuariosService {
 
   constructor(private http:HttpClient) { }
   
-  // token = {
-  //   headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
-  // }
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  }
   
   getAllUsuarios(){
-    return this.http.get('http://localhost:8080/usuarios');
+    return this.http.get('http://localhost:8080/usuarios', this.token);
   }
   postUsuario(usuario: Usuario) {
-    return this.http.post('http://localhost:8080/usuarios', usuario);
+    return this.http.post('http://localhost:8080/usuarios', usuario, this.token);
   }
   putUsuario(usuario: Usuario) {
-    return this.http.put('http://localhost:8080/usuarios', usuario);
+    return this.http.put('http://localhost:8080/usuarios', usuario, this.token);
   }
-  getByIdUsuario(id:number) {
-    return this.http.get(`http://localhost:8080/usuarios/${id}`)
+  getByIdUsuario(id_usuario:number) {
+    return this.http.get(`http://localhost:8080/usuarios/${id_usuario}`, this.token)
   }
-  deleteUsuario(id:number) {
-    return this.http.delete(`http://localhost:8080/usuarios/${id}`)
+  deleteUsuario(id_usuario:number) {
+    return this.http.delete(`http://localhost:8080/usuarios/${id_usuario}`, this.token)
   }
   getAllProfissional() {
-    return this.http.get(`http://localhost:8080/usuarios/profissional/1`)
+    return this.http.get(`http://localhost:8080/usuarios/profissional/1`, this.token)
   }
   // profissionalPreenchido(){
   //   let preenchido = false;

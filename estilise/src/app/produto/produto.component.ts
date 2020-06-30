@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
 import { Router } from '@angular/router';
-import { NavComponent } from '../nav/nav.component';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-produto',
@@ -22,6 +22,7 @@ export class ProdutoComponent implements OnInit {
 
 listaProdutos: Produto[]
 produto: Produto = new Produto
+listaUsuarios: Usuario[]
 alerta:boolean = false
 login: boolean = false
 mostrarPopupLogin: boolean = false
@@ -33,7 +34,7 @@ constructor(private produtoService: ProdutoService, private router: Router) { }
     });
   }
 ngOnInit() {
-    this.findAllProdutos
+    this.findAllProdutos()
     let item:string = localStorage.getItem('deletarOk')
     window.scroll(0,0);
 
@@ -44,6 +45,9 @@ ngOnInit() {
         location.assign('/produtos')
       }, 3000)
     }
+    // for(let i =0; i < this.listaProdutos.length; i++){
+    //   for(let i = 0 <){}
+    // }
 }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -82,4 +86,6 @@ findAllProduto(){
     this.listaProdutos = resp;
   });
 }
+
+
 }
