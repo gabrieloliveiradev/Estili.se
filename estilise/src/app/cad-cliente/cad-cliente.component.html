@@ -3,10 +3,20 @@
         Cadastrado com sucesso
     </div>
 </div>
-<div class="d-flex justify-content-center alertadeErro">
+<!-- <div class="d-flex justify-content-center ">
     <div *ngIf="alertaErro" class="position-absolute alertadeErro" style="z-index: 3001;">
         <div class="alert alert-danger mt-5" role="alert">
             Senhas incompatíveis!
+        </div>
+    </div>
+</div> -->
+<div class="d-flex justify-content-center ">
+    <div *ngIf="alertaErro" class="position-absolute alertadeErro" style="z-index: 3001; top: 11px;">
+        <div class="alert alertadeErro alert-danger alert-dismissible fade show" role="alert">
+            <strong>Senhas incompatíveis!</strong> cheque novamente suas informações.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     </div>
 </div>
@@ -21,7 +31,7 @@
                             <div class="col-md-11 d-flex justify-content-center align-items-center"
                                 style="flex-direction: column;">
                                 <img src="../../assets/img/jovem-mulher-usa-computador-ilustracao-vetorial-plana_82574-7867.jpg"
-                                    style="width: 85%; height: 60%;" alt="Jovem mulher usando um computador">
+                                    style="width: 85%; height: 60%;" alt="Garota usando um computador">
                                 <div class="text-left" style="width:75%">
                                     <p class="font-thin">Faça parte da estili.se, precisamos de algumas informações para
                                         realizar seu cadastro, não se preocupe
@@ -83,7 +93,7 @@
 
                             </div>
                             <div class="form-group d-flex justify-content-center" style="margin-bottom: 6px;">
-                                <button class="btn w-50 text-light"
+                                <button class="btn w-50 text-light" id="btnCadastrar"
                                     style="background-color: #71F6A6; border-radius: 1px;" (click)="cadastrar()"
                                     aria-labelledby="exampleModalCenterTitle" data-toggle="modal"
                                     data-target="#popupdeLogin" data-whatever="@mdo">Cadastrar</button>

@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { AuthService } from '../service/auth.service';
 import { loginUsuario } from '../model/loginUsuario';
 import { NavComponent } from '../nav/nav.component';
+import { listeners } from 'process';
 
 
 @Component({
@@ -33,24 +34,16 @@ export class CadClienteComponent implements OnInit {
     
 ngOnInit(){
   let cadastro: string = localStorage.getItem('validado')
-  let cadastroErrado: string = localStorage.getItem('erro')
-  
-  
+ 
   if (cadastro == "true"){
     this.alerta=true;
     localStorage.clear()
-  }
-  if (cadastroErrado == "true"){
-    this.alertaErro=true;
-    localStorage.clear()
-    window.setTimeout(() => {
-      this.fecharErro()
-     }, 1000)
   }
 }
 conferirSenha(event: any){
   this.senha = event.target.value;
 }
+
 
 fecharPopup(){
   this.nav.mostrarPopupCadastro = false
@@ -60,9 +53,9 @@ fecharPopup(){
 
 cadastrar(){
   let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
+  let fecharPopupLogin = ((<HTMLInputElement>document.querySelector("#btnCadastrar")))
   if(this.senha === this.usuario.senha){
-      this.erro = true
-      localStorage.setItem("erro", this.erro.toString())
+      fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
     if(checkVendedor.checked){
       this.usuario.profissional = "true";
       this.alerta = true
@@ -73,6 +66,7 @@ cadastrar(){
       })
     
     }else{
+      fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
       this.usuario.profissional = "false"
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
@@ -80,7 +74,16 @@ cadastrar(){
         })
     }
   }else{
+    fecharPopupLogin.removeAttribute('data-target')
+    this.erro = true
+    localStorage.setItem("erro", this.erro.toString())
     this.alertaErro = true
+
+    let cadastroErrado: string = localStorage.getItem('erro')
+    if (cadastroErrado == "true"){
+      this.alertaErro=true;
+      localStorage.clear()
+    }
   }
 }
 
@@ -89,12 +92,6 @@ recarregar(){
   setTimeout(() => {
     location.assign("/politica")
   }, 0);
-}
-
-fecharErro(){
-    this.alertaErro = false
-    let fecharErro = ((<HTMLInputElement>document.querySelector(".alertadeErro")))
-    fecharErro.style.display = 'none'
 }
 
 }
