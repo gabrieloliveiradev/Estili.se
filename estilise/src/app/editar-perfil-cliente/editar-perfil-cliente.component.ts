@@ -22,7 +22,6 @@ export class EditarPerfilClienteComponent implements OnInit {
   ngOnInit(){
     var id = this.route.snapshot.params['idusuario']
     this.findByIdUsuario(id)
-    window.scroll(0,0)
   }
   fecharPopup(){
     location.assign('/editar')

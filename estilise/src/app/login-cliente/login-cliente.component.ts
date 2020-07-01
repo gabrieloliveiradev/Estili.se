@@ -17,7 +17,6 @@ export class LoginClienteComponent implements OnInit {
   constructor(private router: Router, public authService: AuthService) { }
 
   ngOnInit(){
-    window.scroll(0,0)
   }
 
   entrar(){
