@@ -13,13 +13,13 @@ import { UsuariosService } from '../service/usuarios.service';
 export class NavComponent implements OnInit {
   usuario: Usuario = new Usuario
   imagem_usuario: string = localStorage.getItem('imagem_usuario');
-  id_usuario: string = localStorage.getItem('id_usuario');
+  id_usuario: string = localStorage.getItem('idusuario');
   mostrarPopupCadastro: boolean = false
   mostrarPopupLogin: boolean = true
   constructor(private router: Router, public auth: AuthService, public usuarioService: UsuariosService, private route: ActivatedRoute ) { }
 
   ngOnInit(){
-    var id = Number(localStorage.getItem('id_usuario'))
+    var id = Number(localStorage.getItem('idusuario'))
     this.findByIdUsuario(id)
   }
 
