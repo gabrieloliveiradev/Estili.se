@@ -28,7 +28,7 @@ export class ContatoComponent implements OnInit {
     let assunto = ((<HTMLInputElement>document.getElementById("assunto")))
     if ( nome.value == "" || email.value == "" || telefone.value == "" || assunto.value == "") {
       alert("Favor preencher todos os campos.");
-    }  else {
+    } else {
     this.bloco1 = !this.bloco1;
     this.bloco2 = !this.bloco2;
     }
