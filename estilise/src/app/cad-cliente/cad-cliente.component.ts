@@ -18,7 +18,9 @@ export class CadClienteComponent implements OnInit {
   usuario: Usuario = new Usuario
 
   alerta: boolean = false;
+  alertaErro: boolean = false
   validado: boolean = false;
+  erro: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
   
@@ -31,14 +33,19 @@ export class CadClienteComponent implements OnInit {
     
 ngOnInit(){
   let cadastro: string = localStorage.getItem('validado')
+  let cadastroErrado: string = localStorage.getItem('erro')
   
   
   if (cadastro == "true"){
     this.alerta=true;
     localStorage.clear()
-    setTimeout(() => {
-      location.assign("/produtos")
-    }, 10000);
+  }
+  if (cadastroErrado == "true"){
+    this.alertaErro=true;
+    localStorage.clear()
+    window.setTimeout(() => {
+      this.fecharErro()
+     }, 1000)
   }
 }
 conferirSenha(event: any){
@@ -47,20 +54,21 @@ conferirSenha(event: any){
 
 fecharPopup(){
   this.nav.mostrarPopupCadastro = false
-  let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
-  teste.style.display = 'none'
+  let fechar = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+  fechar.style.display = 'none'
 }
 
 cadastrar(){
   let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
   if(this.senha === this.usuario.senha){
+      this.erro = true
+      localStorage.setItem("erro", this.erro.toString())
     if(checkVendedor.checked){
       this.usuario.profissional = "true";
+      this.alerta = true
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      alert("Profissional cadastrado com sucesso!!!")
-
       this.router.navigate(['/home'])
       })
     
@@ -69,12 +77,10 @@ cadastrar(){
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
         this.usuario = resp
-        alert("Usuário cadastrado com sucesso!!!")
-        // this.mostrarPopupLogin = true
         })
     }
   }else{
-    alert("Senhas incompatíveis!")
+    this.alertaErro = true
   }
 }
 
@@ -85,10 +91,10 @@ recarregar(){
   }, 0);
 }
 
+fecharErro(){
+    this.alertaErro = false
+    let fecharErro = ((<HTMLInputElement>document.querySelector(".alertadeErro")))
+    fecharErro.style.display = 'none'
 }
-  
-// refresh(){
-//   this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
-//     this.router.navigate([this.locationPage.path()])
-//   })
-// }
+
+}

@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
 import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../service/auth.service';
 import { UsuariosService } from '../service/usuarios.service';
 
 @Component({
@@ -32,7 +33,8 @@ export class PerfilClienteComponent implements OnInit {
   login: boolean = false
   mostrarPopupLogin: boolean = false
 
-  constructor(private router: Router, private http: HttpClient,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private http: HttpClient, public auth: AuthService,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
+  
 
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -61,6 +63,7 @@ export class PerfilClienteComponent implements OnInit {
     })
   }
   
+
 
   // typescript do cartão de crédito
   substituirnumero(){
