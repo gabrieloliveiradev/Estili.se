@@ -118,3 +118,17 @@ a{
 .carrinho:hover{
     fill: #259c87;
 }  
+.excluirProdutoCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    transition: 0.2s;
+}
+.vermaisProdutosCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 17px;
+    transition: 0.2s;
+}
