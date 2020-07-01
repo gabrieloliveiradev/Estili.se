@@ -45,7 +45,7 @@ h2 {
 #cardSobre{
   background-size: 100%;
   background: rgb(244,253,252);
-background: linear-gradient(90deg, rgba(244,253,252,1) 0%, rgba(248,255,254,1) 50%, rgba(248,255,254,1) 100%);
+  background: linear-gradient(90deg, rgba(244,253,252,1) 0%, rgba(248,255,254,1) 50%, rgba(248,255,254,1) 100%);
   height: 80%;
   width: 80%;
   box-shadow: 5px 5px 18px rgba(48, 46, 46, 0.288) ;
@@ -77,6 +77,11 @@ h3{
   color:#158591;
   font-size: 45px;
 }
+h4{
+  color: #158591;
+  font-size: 28px;
+  text-align: center;
+}
 li {  
   list-style: none;
   margin: 10px,30px;
@@ -85,7 +90,7 @@ li {
   /* padding: 29px; */
 }
 .social{
-  max-width: 30%;
+  max-width: 35%;
 
 }
 ul.social-network {
@@ -152,7 +157,8 @@ width: 100%;}
 	height: 400px;
 	margin: 20px 0;
 	box-sizing: border-box;
-	overflow: hidden;
+  overflow: hidden;
+  
 }
 .container .box .imgBx
 {
@@ -168,8 +174,8 @@ width: 100%;}
 }
 .container .box:hover .imgBx
 {
-	clip-path: circle(130px at center 180px);
-	transition-delay: 0s;
+	clip-path: circle( 0px at center 180px);
+  transition-delay: 0s;
 }
 .container .box .imgBx img
 {
@@ -178,7 +184,11 @@ width: 100%;}
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+  object-fit: cover;
+  border: 5px transparent #1097ac;
+  overflow: hidden;
+  float: left;
+  border-radius: 20px;
 }
 .container .box .content
 {
@@ -186,10 +196,10 @@ width: 100%;}
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 92%;
-	padding: 20px;
+	height: 100%;
+	padding: 25px;
 	box-sizing: border-box;
-	text-align: center;
+  text-align: center;
 }
 .container .box .content h2
 {
@@ -228,3 +238,19 @@ width: 100%;}
 	transform: translateY(0);
 	transition-delay: 0.9s
 }
+
+@keyframes neon{
+  from{
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to{
+    filter: drop-shadow(0 0 5px var(--cor-neon));
+  }
+}
+h2{
+  animation: neon 1s alternate infinite ;
+}
+h2{
+  --cor-neon: #118192;
+}
+/* social mb-0 list-inline mt-0 y-100 d-flex justify-content:center */
