@@ -1,0 +1,93 @@
+/* ============================ Estilo e posicionamento do label dentro do input */
+label{
+    position: absolute;
+    top: -3px!important;
+    left: 60px;
+    padding: 10px 0;
+    font-size: 16px!important;
+    color: rgb(185, 185, 185)!important;
+    pointer-events: none;
+    font-weight: 100;
+    transition: .2s ease all;
+}  
+/* =========================== Tamanho do Popup*/
+.tamanhoPopupWidth{
+    max-width: 1250px!important;
+}
+.tamanhoPopupHeight{
+    height: 900px!important;
+}
+/* ========================== Formulários dos <input> */
+.form-group{
+    margin-bottom: 2rem;
+    position: relative;
+}
+/* ======================== estilo dos <input> */
+.input-estilo{
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: transparent;
+    background-color: #FCFCFC;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid rgb(236, 235, 235);
+}   
+/* ======================== Eventos do <input> */
+.input-estilo:focus{
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom: 0.5px solid transparent!important;
+}
+.input-estilo:focus ~ label, .input-estilo:valid ~ label{ /* posicionamento do label em cima do input */
+    top: -30px!important;
+    left: 50px;
+    font-size: 13px!important;
+    font-style: normal;
+    font-weight: 500;
+    color: #71f6a6!important;
+}
+.precoLabel {
+    position: absolute;
+    top: -4px!important;
+    left: 53px!important;
+    padding: 10px 0;
+    font-size: 16px!important;
+    color: rgb(185, 185, 185);
+    pointer-events: none;
+    font-weight: 100;
+    transition: .2s ease all;
+}
+
+
+.precoFormulario:focus~.precoLabel, .precoFormulario:valid~.precoLabel{
+    top: -30px!important;
+    left: 10px!important;
+    font-size: 15px!important;
+    font-style: normal;
+    font-weight: 500;
+    color: #71f6a6!important;
+}
+/* ========================  Estilo do <span> */
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+    position: absolute;
+    display: block;
+    width: 80%; 
+    bottom: 1px; 
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+    content: '';
+    height: 2px;
+    bottom: 0px;
+    width: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #71f6a6;
+}
+ .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+    width:100%;
+}
+
+.modal-backdrop.show{
+    display: flex;
+}
