@@ -2,7 +2,7 @@
 
     <!-- ============================================== Perfil ================================================ -->
     <main>
-        
+
         <article>
             <h1 class="d-flex justify-content-center mt-5">Perfil</h1>
             <hr>
@@ -16,7 +16,8 @@
                             <div class="container d-flex justify-content-end align-items-center">
                                 <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
                                     {{usuario.nome}}</p>
-                                <button type="button" class="btn btn-link mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
+                                <button type="button" class="btn btn-link mb-5"
+                                    [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
                                         src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;"></button>
 
                             </div>
@@ -52,7 +53,8 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/nascimento.png"
-                                                    style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
+                                                    style="width: 5%;"></span> Data de Nascimento:
+                                            {{usuario.datanascimento}}
                                         </p>
                                     </li>
                                     <li>
@@ -62,14 +64,15 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/telefone.png"
-                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
+                                                    style="width: 5%; color: #867E7E;"></span> Telefone:
+                                            {{usuario.telefone}}
                                         </p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -79,17 +82,20 @@
         <div>
             <div style="text-align: center;">
                 <p style="font-size: 30px;">Seu perfil esta incompleto</p>
-                <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
+                <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para
+                    que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
                 <div>
-                  <button type="button" class="btn botaoEditar mb-5" (click)="popupdeEditarProduto()" data-toggle="modal" data-target="#popupdeEditarProduto" data-whatever="@mdo">Editar Perfil</button>
+                    <button type="button" class="btn botaoEditar mb-5"
+                        data-toggle="modal" data-target="#popupdeEditarProduto" data-whatever="@mdo">Editar
+                        Perfil</button>
                 </div>
-              </div>
+            </div>
         </div>
         <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
         <article>
             <ul id="formataNav"
                 class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
-                
+
                 <li class="nav-item ">
                     <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;">
                         Pontuação
@@ -101,7 +107,7 @@
                         <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
                     </a>
                 </li>
-                
+
                 <li class="nav-item ">
                     <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Reclamações <br>
                         de vendas</a>
@@ -232,268 +238,267 @@
                             <div
                                 style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
                             </div>
-                            
+
                             <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
                                 <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
-                                    src="../../assets/img/icon/Iconhand2.png" alt="">Dinheiro disponivel</div>
-                                    <div class="card-body  text-white">
-                                        <h5 class="card-title">R$ 0,00</h5>
-                                        <p class="card-text"> </p>
-                                    </div>
-                                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                                    style="background-color: #037686;">Ver históirco
+                                        src="../../assets/img/icon/Iconhand2.png" alt="">Dinheiro disponivel
+                                </div>
+                                <div class="card-body  text-white">
+                                    <h5 class="card-title">R$ 0,00</h5>
+                                    <p class="card-text"> </p>
+                                </div>
+                                <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor"
+                                    class="card-footer text-white" style="background-color: #037686;">Ver históirco
                                     ></a>
-                                </div>
-                                
-                                <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
-                                    <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
-                                        src="../../assets/img/icon/iconpig2.png" alt="">Dinheiro a retirar</div>
-                                        <div class="card-body  text-white">
-                                            <h5 class="card-title">R$ 0,00</h5>
-                                            <p class="card-text"> </p>
-                                        </div>
-                                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                                        style="background-color: #037686;">Ver históirco
-                                        ></a>
-                                        
-                                    </div>
-                                    
-                                    <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
-                                        <div class="card-header text-white"></div>
-                                        <div class="card-body  text-white">
-                                            <h5 class="card-title"><img class="imgIconRetirar" src="../../assets/img/icon/iconsaque2.png"
-                                                alt=""></h5>
-                                                <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
-                                                class="card-text">Retirar</a>
-                                            </div>
-                                            <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                                            style="background-color: #037686;">Ver históirco
-                                            ></a>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    
-                                    
-                                    
-                                </article>
-                                
-                                <!-- ============================================== Titulo Categoria Produtos ================================================ -->
-                                <h1 class="d-flex justify-content-center mt-5 mb-3 ">Produtos</h1>
-                                <hr>
-                                
-                                <!--  =========================================== Pesquisar =============================================== -->
-                                <article class="d-flex justify-content-center" style="margin-top: 150px;">
-                                    <div class="form-group d-flex justify-content-center" style="width: 60%;">
-                                        <input type="text" class="form-control input-estilo" placeholder="Pesquisar..." name="pesquisa"
-                                        minlength="4" required>
-                                        <span class="linhaSpan"></span>
-                                    </div>
-                                    <div class="form-group d-flex justify-content-center">
-                                        <button class="btn btn-light ml-2 p-2 px-4"
-                                        style="background-color:whitesmoke; font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
-                                    </div>
-                                    <!--================================================  filtro    =========================================================== -->
-                                    
-                                    <div class="col-md-3 d-flex justify-content-end dropleft">
-                                        <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                        style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
-                                        alt="Icone de filtro da página">
-                                        
-                                        <!-- ====================================== Filtro com animação ================================================== -->
-                                        <div id="dropdownFiltro" class="dropdown-menu">
-                                            <div class="d-flex justify-content-around mt-3">
-                                                <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z"
-                                                fill="#4B4A4A" />
-                                            </svg>
-                                            <h4>Filtro</h4>
-                                            <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png"
-                                            alt="">
-                                        </div>
-                                        
-                                        <div class="p-3 mt-4" style="color: #686363;">
-                                            <h6 class="mb-3">Filtrar por valor</h6>
-                                            <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                                            <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                                            <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                                            <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                                        </div>
-                                        <div class="p-3 mt-1" style="color: #686363;">
-                                            <h6 class="mb-3">Filtrar por cor</h6>
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div
-                                                style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                                            </div>
-                                            <p class="m-0 ml-2">Preto</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <div
-                                            style="background-color: rgb(146, 17, 140); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                                        </div>
-                                        <p class="m-0 ml-2">Roxo</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div
-                                        style="background-color: rgb(204, 186, 20); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                                    </div>
-                                    <p class="m-0 ml-2">Amarelo</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <div
-                                    style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                                </div>
-                                <p class="m-0 ml-2">Laranja</p>
                             </div>
+
+                            <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                                <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
+                                        src="../../assets/img/icon/iconpig2.png" alt="">Dinheiro a retirar</div>
+                                <div class="card-body  text-white">
+                                    <h5 class="card-title">R$ 0,00</h5>
+                                    <p class="card-text"> </p>
+                                </div>
+                                <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor"
+                                    class="card-footer text-white" style="background-color: #037686;">Ver históirco
+                                    ></a>
+
+                            </div>
+
+                            <div class="card text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                                <div class="card-header text-white"></div>
+                                <div class="card-body  text-white">
+                                    <h5 class="card-title"><img class="imgIconRetirar"
+                                            src="../../assets/img/icon/iconsaque2.png" alt=""></h5>
+                                    <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
+                                        class="card-text">Retirar</a>
+                                </div>
+                                <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor"
+                                    class="card-footer text-white" style="background-color: #037686;">Ver históirco
+                                    ></a>
+                            </div>
+
                         </div>
-                        <div class="p-3 mt-4" style="color: #686363;">
-                            <h6 class="mb-3">Filtrar por data</h6>
-                            <p><input class="mr-3" type="checkbox" name="" id="">Recente</p>
-                            <p><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
-                            <p><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
-                            <p><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou mais</p>
-                        </div>
-                        
-                        <div class="p-3 d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
-                        </div>
-                        
+
                     </div>
-                    
-                    <!-- ================================================ Fim do filtro ============================================== -->
-                    
                 </div>
-
-                <!-- ================================================ Fim do filtro ============================================== -->
-
             </div>
 
         </article>
 
-        <!-- ============================================= Produtos =========================================== -->
-        <h6 class="d-flex justify-content-center maisRecente">Mais recentes</h6>
+        <!-- ============================================== Titulo Categoria Produtos ================================================ -->
+        <h1 class="d-flex justify-content-center mt-5 mb-3 ">Produtos</h1>
+        <hr>
 
-        <article class="row mb-5">
+        <!--  =========================================== Pesquisar =============================================== -->
+        <article class="d-flex justify-content-center" style="margin-top: 150px;">
+            <div class="form-group d-flex justify-content-center" style="width: 60%;">
+                <input type="text" class="form-control input-estilo" placeholder="Pesquisar..." name="pesquisa"
+                    minlength="4" required>
+                <span class="linhaSpan"></span>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <button class="btn btn-light ml-2 p-2 px-4"
+                    style="background-color:whitesmoke; font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
+            </div>
+            <!--================================================  filtro    =========================================================== -->
 
-            <div class="col-md-4 card-div-elemento-pai" data-toggle="modal" data-target="#popupEditar"
-                data-whatever="@mdo">
-                <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img" src="../../assets/img/icon/Adicionar produto v3.jpeg" alt="">
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
+            <div class="col-md-3 d-flex justify-content-end dropleft">
+                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
+                    alt="Icone de filtro da página">
+
+                <!-- ====================================== Filtro com animação ================================================== -->
+                <div id="dropdownFiltro" class="dropdown-menu">
+                    <div class="d-flex justify-content-around mt-3">
+                        <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z"
+                                fill="#4B4A4A" />
+                        </svg>
+                        <h4>Filtro</h4>
+                        <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png"
+                            alt="">
+                    </div>
+
+                    <div class="p-3 mt-4" style="color: #686363;">
+                        <h6 class="mb-3">Filtrar por valor</h6>
+                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                    </div>
+                    <div class="p-3 mt-1" style="color: #686363;">
+                        <h6 class="mb-3">Filtrar por cor</h6>
+                        <div class="d-flex align-items-center mb-3">
+                            <div
+                                style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                            </div>
+                            <p class="m-0 ml-2">Preto</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div
+                                style="background-color: rgb(146, 17, 140); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                            </div>
+                            <p class="m-0 ml-2">Roxo</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div
+                                style="background-color: rgb(204, 186, 20); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                            </div>
+                            <p class="m-0 ml-2">Amarelo</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <div
+                                style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                            </div>
+                            <p class="m-0 ml-2">Laranja</p>
+                        </div>
+                    </div>
+                    <div class="p-3 mt-4" style="color: #686363;">
+                        <h6 class="mb-3">Filtrar por data</h6>
+                        <p><input class="mr-3" type="checkbox" name="" id="">Recente</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
+                        <p><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou mais</p>
+                    </div>
+
+                    <div class="p-3 d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
+                    </div>
+
                 </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0 ml-4" style="font-family: Roboto;            
+
+                <!-- ================================================ Fim do filtro ============================================== -->
+            </div>
+
+
+
+<!-- ================================================ Fim do filtro ============================================== -->
+
+</article>
+
+<!-- ============================================= Produtos =========================================== -->
+<h6 class="d-flex justify-content-center maisRecente">Mais recentes</h6>
+
+<article class="row mb-5">
+
+    <div class="col-md-4 card-div-elemento-pai" data-toggle="modal" data-target="#popupEditar" data-whatever="@mdo">
+        <div class="card-produto card-evento-hover">
+            <img class="w-100 card-img" src="../../assets/img/icon/Adicionar produto v3.jpeg" alt="">
+            <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
+        </div>
+        <div class="card-descricao p-3 card-evento-hover">
+            <h5 class="mt-4 font-roboto mb-0 ml-4" style="font-family: Roboto;            
                     letter-spacing: 0.1em; color: gray;">Adicionar Produto</h5>
-                    <div class="d-flex justify-content-between">
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 card-div-elemento-pai">
-                <div class="card-produto card-evento-hover">
-                    <img class="w-100 card-img"
-                    src="../../assets/img/produtos/Photo by Kamil Szumotalski on Unsplash.jpg" alt="">
-                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                    <svg class="card-svg-coracao d-none" data-toggle="tooltip" data-placement="top"
-                    title="Adicionar aos favoritos" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                    d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0" />
-                </svg>
-            </div>
-            <div class="card-descricao p-3 card-evento-hover">
-                <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
-                <div class="d-flex justify-content-between">
-                    <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                    <p>R$ 20,00</p>
-                    <!-- <p>R{{ produto.preco | currency }}</p> -->
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Casaco de lã</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
-                </div>
+            <div class="d-flex justify-content-between">
+
+
             </div>
         </div>
-        
-        <div class="col-md-4 card-div-elemento-pai">
-            <div class="card-produto card-evento-hover">
-                <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Toshi Kuji on Unsplash.jpg"
+    </div>
+
+    <div class="col-md-4 card-div-elemento-pai">
+        <div class="card-produto card-evento-hover">
+            <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Kamil Szumotalski on Unsplash.jpg"
                 alt="">
-                <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
-                    <path
+            <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
+            <svg class="card-svg-coracao d-none" data-toggle="tooltip" data-placement="top"
+                title="Adicionar aos favoritos" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
+                <path
                     d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0" />
-                </svg>
+            </svg>
+        </div>
+        <div class="card-descricao p-3 card-evento-hover">
+            <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
+            <div class="d-flex justify-content-between">
+                <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
+                <p>R$ 20,00</p>
+                <!-- <p>R{{ produto.preco | currency }}</p> -->
             </div>
             <div class="card-descricao p-3 card-evento-hover">
-                <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
+                <h5 class="mt-4 font-roboto mb-0">Casaco de lã</h5>
                 <div class="d-flex justify-content-between">
                     <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
                     <p>R$ 20,00</p>
                     <!-- <p>R{{ produto.preco | currency }}</p> -->
-                </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Vestido vermelho</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-4 card-div-elemento-pai">
-            <div class="card-produto card-evento-hover">
-                <img class="w-100 card-img" src="../../assets/img/produtos/modelo02.jpg" alt="">
-                <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
-                <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
-                    <path
+    </div>
+
+    <div class="col-md-4 card-div-elemento-pai">
+        <div class="card-produto card-evento-hover">
+            <img class="w-100 card-img" src="../../assets/img/produtos/Photo by Toshi Kuji on Unsplash.jpg" alt="">
+            <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
+            <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
+                <path
                     d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0" />
-                </svg>
+            </svg>
+        </div>
+        <div class="card-descricao p-3 card-evento-hover">
+            <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
+            <div class="d-flex justify-content-between">
+                <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
+                <p>R$ 20,00</p>
+                <!-- <p>R{{ produto.preco | currency }}</p> -->
             </div>
             <div class="card-descricao p-3 card-evento-hover">
-                <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
+                <h5 class="mt-4 font-roboto mb-0">Vestido vermelho</h5>
                 <div class="d-flex justify-content-between">
                     <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
                     <p>R$ 20,00</p>
                     <!-- <p>R{{ produto.preco | currency }}</p> -->
                 </div>
-                <div class="card-descricao p-3 card-evento-hover">
-                    <h5 class="mt-4 font-roboto mb-0">Roupas</h5>
-                    <div class="d-flex justify-content-between">
-                        <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
-                        <p>R$ 20,00</p>
-                        <!-- <p>R{{ produto.preco | currency }}</p> -->
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 card-div-elemento-pai">
+        <div class="card-produto card-evento-hover">
+            <img class="w-100 card-img" src="../../assets/img/produtos/modelo02.jpg" alt="">
+            <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="">
+            <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0" />
+            </svg>
+        </div>
+        <div class="card-descricao p-3 card-evento-hover">
+            <h5 class="mt-4 font-roboto mb-0">Casaco de lã azul</h5>
+            <div class="d-flex justify-content-between">
+                <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
+                <p>R$ 20,00</p>
+                <!-- <p>R{{ produto.preco | currency }}</p> -->
+            </div>
+            <div class="card-descricao p-3 card-evento-hover">
+                <h5 class="mt-4 font-roboto mb-0">Roupas</h5>
+                <div class="d-flex justify-content-between">
+                    <p style="font-size: 10px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>
+                    <p>R$ 20,00</p>
+                    <!-- <p>R{{ produto.preco | currency }}</p> -->
                 </div>
-                <!-- Imagem Previa -->
-                <div class="card mt-3"
+            </div>
+            <!-- Imagem Previa -->
+            <div class="card mt-3"
                 style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
                 <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
             </div>
-            
-            
+
+
         </div>
-        
+
         <!--============================================== Formularios ================================================-->
-        
+
         <div class="caixa-formulario col-md-5 p-3 ml-4">
-            
+
             <!--Campo Texto -->
             <form>
                 <div class="modalForm form-group d-flex justify-content-center">
                     <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
                     <span class="linhaSpanModal"></span>
                     <label class="labelModal col-form-label">Nome do Produto</label>
-                    
+
                 </div>
                 <div class="card-descricao p-3 card-evento-hover">
                     <h5 class="mt-4 font-roboto mb-0">Vestido branco e rosa</h5>
@@ -503,10 +508,10 @@
                         <!-- <p>R{{ produto.preco | currency }}</p> -->
                     </div>
                 </div>
-                
-                
-                
-                
+
+
+
+
                 <div class="modalForm form-group d-flex justify-content-center">
                     <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
                     <span class="linhaSpanModal"></span>
@@ -520,91 +525,94 @@
                         <!-- <p>R{{ produto.preco | currency }}</p> -->
                     </div>
                 </div>
-                
+
                 <article class="modalForm d-flex justify-content-center mt-5">
-                    <div class="modalForm form-group d-flex justify-content-center"
-                    style="width: 90%;">
-                    <input type="text" class="form-control formulario" name="pesquisa"
-                    minlength="4" required [(ngModel)]="produto.imagem1">
-                    <span class="linhaSpanModal"></span>
-                    <label class="labelModal col-form-label">URL da imagem</label>
-                </div>
-                <div class="form-group d-flex justify-content-center">
-                    <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                </div>
-                
-            </article>
-            
-            
-        </form>
-        
-        <h6>Cores disponiveis</h6>
-        <hr style="width: 300px;">
-        
-        <form>
-            <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
-            aria-label="Toolbar with button groups">
-            
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="corRoupa btn btn-outline-dark"
-                style="background-color: black;"></button>
-            </div>
-            <button type="button" class="btn btn-light">Ver todos</button>
-        </article>
-
-    </main>
-
-    <!--============================================= Página de adicionar produtos =============================================-->
-    <main>
-        <div class="modal" id="popupEditar" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-scrollable modalScreen">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h6 class="modal-title d-flex align-justify-center">Adicionar Produto</h6>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="modalForm form-group d-flex justify-content-center" style="width: 90%;">
+                        <input type="text" class="form-control formulario" name="pesquisa" minlength="4" required
+                            [(ngModel)]="produto.imagem1">
+                        <span class="linhaSpanModal"></span>
+                        <label class="labelModal col-form-label">URL da imagem</label>
                     </div>
-                    <div class="modal-body">
+                    <div class="form-group d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                    </div>
 
-                        <!-- Área onde estarão as imagens do produto e o Formulario -->
-                        <div class="row">
+                </article>
 
-                            <div class="col-md-6 mr-5 " style="padding:30px; padding-left: 150px;">
 
-                                <!-- Imagem 1 -->
-                                <div class="d-flex justify-content-stard">
+            </form>
 
-                                    <div class="card mr-2 efeito-grow"
-                                        style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
-                                    </div>
+            <h6>Cores disponiveis</h6>
+            <hr style="width: 300px;">
 
-                                    <!-- Imagem 2 -->
-                                    <div class="card efeito-grow"
-                                        style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="produto.imagem2" height="200" class="card-img-top" alt="...">
-                                    </div>
+            <form>
+                <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
+                    aria-label="Toolbar with button groups">
 
-                                    <!-- Imagem 3 -->
-                                    <div class="card efeito-grow"
-                                        style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
-                                        <img src="produto.imagem3" height="200" class="card-img-top" alt="...">
-                                    </div>
-                                </div>
-                                <!-- Imagem Previa -->
-                                <div class="card mt-3"
-                                    style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="corRoupa btn btn-outline-dark"
+                            style="background-color: black;"></button>
+                    </div>
+                    <button type="button" class="btn btn-light">Ver todos</button>
+                </div>
+            </form>
+        </div>
+    </div>     
+</article>
+
+</main>
+
+<!--============================================= Página de adicionar produtos =============================================-->
+<main>
+    <div class="modal" id="popupEditar" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modalScreen">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h6 class="modal-title d-flex align-justify-center">Adicionar Produto</h6>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Área onde estarão as imagens do produto e o Formulario -->
+                    <div class="row">
+
+                        <div class="col-md-6 mr-5 " style="padding:30px; padding-left: 150px;">
+
+                            <!-- Imagem 1 -->
+                            <div class="d-flex justify-content-stard">
+
+                                <div class="card mr-2 efeito-grow"
+                                    style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
                                     <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
                                 </div>
 
+                                <!-- Imagem 2 -->
+                                <div class="card efeito-grow"
+                                    style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
+                                    <img src="produto.imagem2" height="200" class="card-img-top" alt="...">
+                                </div>
 
-                                <!-- Tabela de Medidas -->
-                                <!-- <article>
+                                <!-- Imagem 3 -->
+                                <div class="card efeito-grow"
+                                    style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
+                                    <img src="produto.imagem3" height="200" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <!-- Imagem Previa -->
+                            <div class="card mt-3"
+                                style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
+                                <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
+                            </div>
+
+
+                            <!-- Tabela de Medidas -->
+                            <!-- <article>
                                     <nav class="nav_tabs">
                                         <ul class="container">
                                             <li>
@@ -632,322 +640,330 @@
                                     </nav>
                                 </article> -->
 
-                                <article class=" collapseModal mt-5">
-                                    <div id="accordion">
-                                        <div class="card">
-                                            <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link btnCollapse" data-toggle="collapse"
-                                                        data-target="#collapseOne" aria-expanded="false"
-                                                        aria-controls="collapseOne">
-                                                        Ver tabela de medidas
-                                                    </button>
-                                                </h5>
-                                            </div>
+                            <article class=" collapseModal mt-5">
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link btnCollapse" data-toggle="collapse"
+                                                    data-target="#collapseOne" aria-expanded="false"
+                                                    aria-controls="collapseOne">
+                                                    Ver tabela de medidas
+                                                </button>
+                                            </h5>
+                                        </div>
 
-                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <nav class="nav_tabs">
-                                                        <ul class="container">
-                                                            <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-                                                                <label for="tab1" class="tab_label">Tabela de
-                                                                    Medidas</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab num.PNG/"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                                                                <label for="tab2" class="tab_label">Como Medir</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab med.PNG"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                            data-parent="#accordion">
+                                            <div class="card-body">
+                                                <nav class="nav_tabs">
+                                                    <ul class="container">
+                                                        <li>
+                                                            <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                                                                checked>
+                                                            <label for="tab1" class="tab_label">Tabela de
+                                                                Medidas</label>
+                                                            <div class="tab-content">
+                                                                <article>
+                                                                    <img class="medida"
+                                                                        src="../../assets/img/icon/tab num.PNG/" alt="">
+                                                                </article>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                                                            <label for="tab2" class="tab_label">Como Medir</label>
+                                                            <div class="tab-content">
+                                                                <article>
+                                                                    <img class="medida"
+                                                                        src="../../assets/img/icon/tab med.PNG" alt="">
+                                                                </article>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </article>
+
+
+                        </div>
+
+                        <!--============================================== Formularios ================================================-->
+
+                        <div class="caixa-formulario col-md-5 p-3 ml-4">
+
+                            <!--Campo Texto -->
+                            <div>
+
+                                <!-- Nome do Produto -->
+                                <div class="modalForm form-group d-flex justify-content-center">
+                                    <input class="form-control w-100 formulario " required
+                                        [(ngModel)]="produto.nomeProduto">
+                                    <span class="linhaSpanModal"></span>
+                                    <label class="labelModal col-form-label">Nome do Produto</label>
+                                </div>
+
+                                <!-- Descrição do Produto -->
+                                <div class="caixa-formulario">
+                                    <div class="form-group d-flex justify-content-center">
+                                        <textarea class="form-control formulario w-100" rows="6"
+                                            style="width: 100pxg; height: 100px; resize: none;" required
+                                            [(ngModel)]="produto.descricao"></textarea>
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal col-form-label">Descrição do Produto</label>
+                                    </div>
+                                </div>
+
+                                <!-- Tipo de Tecido do Produto -->
+                                <div class="modalForm form-group d-flex justify-content-center">
+                                    <input class="form-control w-100 formulario " required
+                                        [(ngModel)]="produto.material">
+                                    <span class="linhaSpanModal"></span>
+                                    <label class="labelModal col-form-label">Tipo de tecido</label>
+                                </div>
+
+                                <!-- Preço do produto -->
+                                <div class="modalForm input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text formulario">R$</span>
+                                    </div>
+
+                                    <input type="text" class="form-control formulario precoFormulario" required
+                                        aria-label="Quantia" [(ngModel)]="produto.preco">
+                                    <span class="linhaSpanModal"></span>
+                                    <label class="col-form-label precoLabel ">Preço</label>
+                                    <div class="input-group-append">
+                                    </div>
+                                </div>
+
+                                <!-- Quantidade e Categoria -->
+                                <article class="modalForm d-flex justify-content-start mt-5">
+                                    <!-- Quantidade -->
+                                    <div class="modalForm form-group  w-60">
+                                        <input type="text" class="form-control formulario" minlength="4" required>
+                                        <span class="linhaSpanModal qtLinha"></span>
+                                        <label class="labelModal col-form-label">Quantidade</label>
+                                    </div>
+                                    <!-- Categoria  -->
+                                    <select class="custom-select custom-select-sm btn btn-outline-dark">
+                                        <option selected>Categoria</option>
+                                        <option value="1">Camisa</option>
+                                        <option value="2">Camiseta</option>
+                                        <option value="3">Jeans</option>
+                                    </select>
+
                                 </article>
 
+                                <!-- Imagem 01 Produto -->
+                                <article class="modalForm d-flex justify-content-center mt-5">
+
+
+                                    <div class="modalForm form-group d-flex justify-content-center w-100">
+                                        <input type="text" class="form-control formulario w-100" name="pesquisa"
+                                            minlength="4" required [(ngModel)]="produto.imagem1">
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal col-form-label">URL da primeira imagem</label>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                                    </div>
+
+
+                                </article>
+
+                                <!-- Imagem 02 Produto-->
+                                <article class="modalForm d-flex justify-content-center">
+
+                                    <div class="modalForm form-group d-flex justify-content-center w-100">
+                                        <input type="text" class="form-control formulario w-100" name="pesquisa"
+                                            minlength="4" required>
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal col-form-label">URL da segunda imagem</label>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                                    </div>
+
+                                </article>
+
+                                <!-- Imagem 03 Produto -->
+                                <article class="modalForm d-flex justify-content-center mt-5">
+
+                                    <div class="modalForm form-group d-flex justify-content-center w-100">
+                                        <input type="text" class="form-control formulario w-100" name="pesquisa"
+                                            minlength="4" required>
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal col-form-label">URL da terceira imagem</label>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+                                    </div>
+
+                                </article>
 
                             </div>
 
-                            <!--============================================== Formularios ================================================-->
+                            <!-- Cores de roupas-->
+                            <article>
+                                <h6>Cores disponiveis</h6>
+                                <hr style="width: 300px;">
 
-                            <div class="caixa-formulario col-md-5 p-3 ml-4">
-
-                                <!--Campo Texto -->
                                 <div>
+                                    <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
+                                        aria-label="Toolbar with button groups">
 
-                                    <!-- Nome do Produto -->
-                                    <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">Nome do Produto</label>
-                                    </div>
-
-                                    <!-- Descrição do Produto -->
-                                    <div class="caixa-formulario">
-                                        <div class="form-group d-flex justify-content-center">
-                                            <textarea class="form-control formulario w-100" rows="6"
-                                                style="width: 100pxg; height: 100px; resize: none;" required [(ngModel)]="produto.descricao"></textarea>
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">Descrição do Produto</label>
+                                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                                            <button type="button" class="corRoupa btn btn-outline-info"
+                                                style="background-color: black;"></button>
                                         </div>
-                                    </div>
-
-                                    <!-- Tipo de Tecido do Produto -->
-                                    <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">Tipo de tecido</label>
-                                    </div>
-
-                                    <!-- Preço do produto -->
-                                    <div class="modalForm input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text formulario">R$</span>
+                                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                            <button type="button" class="corRoupa btn btn-outline-info"
+                                                style="background-color: white;"></button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Third group">
+                                            <button type="button" class="corRoupa btn btn-outline-info"
+                                                style="background-color:red ;"></button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                                            <button type="button" class="corRoupa btn btn-outline-info"
+                                                style="background-color:blue ;"></button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+                                            <button type="button" class="corRoupa btn btn-outline-info"
+                                                style="background-color:yellow ;"></button>
                                         </div>
 
-                                        <input type="text" class="form-control formulario precoFormulario" required aria-label="Quantia" [(ngModel)]="produto.preco">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="col-form-label precoLabel ">Preço</label>
-                                        <div class="input-group-append">
-                                        </div>
-                                    </div>
-
-                                    <!-- Quantidade e Categoria -->
-                                    <article class="modalForm d-flex justify-content-start mt-5">
-                                        <!-- Quantidade -->
-                                        <div class="modalForm form-group  w-60">
-                                            <input type="text" class="form-control formulario" minlength="4" required>
-                                            <span class="linhaSpanModal qtLinha"></span>
-                                            <label class="labelModal col-form-label">Quantidade</label>
-                                        </div>
-                                        <!-- Categoria  -->
-                                        <select class="custom-select custom-select-sm btn btn-outline-dark">
-                                            <option selected>Categoria</option>
-                                            <option value="1">Camisa</option>
-                                            <option value="2">Camiseta</option>
-                                            <option value="3">Jeans</option>
-                                        </select>
-
-                                    </article>
-
-                                    <!-- Imagem 01 Produto -->
-                                    <article class="modalForm d-flex justify-content-center mt-5">
-
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required [(ngModel)]="produto.imagem1">
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da primeira imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-
-                                    </article>
-
-                                    <!-- Imagem 02 Produto-->
-                                    <article class="modalForm d-flex justify-content-center">
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required>
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da segunda imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-                                    </article>
-
-                                    <!-- Imagem 03 Produto -->
-                                    <article class="modalForm d-flex justify-content-center mt-5">
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required>
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da terceira imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-                                    </article>
-
-                                </div>
-
-                                <!-- Cores de roupas-->
-                                <article>
-                                    <h6>Cores disponiveis</h6>
-                                    <hr style="width: 300px;">
-
-                                    <div>
-                                        <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
-                                            aria-label="Toolbar with button groups">
-
-                                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color: black;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color: white;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:red ;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:blue ;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:yellow ;"></button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!-- Tamanhos de roupas -->
-                                <article>
-                                    <h6>Tamanos disponiveis</h6>
-                                    <hr style="width: 300px;">
-
-                                    <div>
-                                        <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
-                                            aria-label="Toolbar with button groups">
-
-                                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">PP</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">P</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">M</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">G</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">GG</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!--Modal Tabela de Medidas -->
-                                <article>
-                                    <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Tabela de Medidas</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Fechar">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <!-- Tabela de Medidas -->
-                                                    <nav class="nav_tabs">
-                                                        <ul class="container">
-                                                            <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
-                                                                    checked>
-                                                                <label for="tab1" class="tab_label">Tabela de
-                                                                    Medidas</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab num.PNG/"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <input type="radio" name="tabs" class="rd_tab"
-                                                                    id="tab2">
-                                                                <label for="tab2" class="tab_label">Como Medir</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab med.PNG"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!-- Botão Salvar e Fechar -->
-                                <div>
-                                    <div class="modal-footer justify-content-center mt-5">
-                                        <button type="button" class="btn btn-outline-danger" style="width: 20%;"
-                                            data-dismiss="modal">Fechar</button>
-                                        <button class=" btn btn-outline-dark"
-                                            style="width: 30%; border-color: #71f6a6;" (click)="publicar()">Salvar</button>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </nav>
+                            </article>
+
+                            <!-- Tamanhos de roupas -->
+                            <article>
+                                <h6>Tamanos disponiveis</h6>
+                                <hr style="width: 300px;">
+
+                                <div>
+                                    <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
+                                        aria-label="Toolbar with button groups">
+
+                                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                                            <button type="button" class="numRoupa btn btn-outline-dark">PP</button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                            <button type="button" class="numRoupa btn btn-outline-dark">P</button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Third group">
+                                            <button type="button" class="numRoupa btn btn-outline-dark">M</button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                                            <button type="button" class="numRoupa btn btn-outline-dark">G</button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+                                            <button type="button" class="numRoupa btn btn-outline-dark">GG</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!--Modal Tabela de Medidas -->
+                            <article>
+                                <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Tabela de Medidas</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Fechar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Tabela de Medidas -->
+                                                <nav class="nav_tabs">
+                                                    <ul class="container">
+                                                        <li>
+                                                            <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                                                                checked>
+                                                            <label for="tab1" class="tab_label">Tabela de
+                                                                Medidas</label>
+                                                            <div class="tab-content">
+                                                                <article>
+                                                                    <img class="medida"
+                                                                        src="../../assets/img/icon/tab num.PNG/" alt="">
+                                                                </article>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                                                            <label for="tab2" class="tab_label">Como Medir</label>
+                                                            <div class="tab-content">
+                                                                <article>
+                                                                    <img class="medida"
+                                                                        src="../../assets/img/icon/tab med.PNG" alt="">
+                                                                </article>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Botão Salvar e Fechar -->
+                            <div>
+                                <div class="modal-footer justify-content-center mt-5">
+                                    <button type="button" class="btn btn-outline-danger" style="width: 20%;"
+                                        data-dismiss="modal">Fechar</button>
+                                    <button class=" btn btn-outline-dark" style="width: 30%; border-color: #71f6a6;"
+                                        (click)="publicar()">Salvar</button>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-
-    <!--============================================= Fim container =============================================-->
-</div>
-
-<!-- Botão Salvar -->
-<div>
-    <div class="modal-footer justify-content-center mt-5">
-        <button type="button" class="btn btn-outline-danger" style="width: 20%;"
-        data-dismiss="modal">Fechar</button>
-        <button class=" btn btn-outline-success" style="width: 30%;" (click)="publicar()">Salvar</button>
-    </div>
-</div>
-<!-- Fim Botão Salvar -->
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
+    </div>   
 </main>
 
 <!--============================================= Fim container =============================================-->
 </div>
 
-<div *ngIf="mostrarEditarProduto">
+<!-- <div *ngIf="mostrarEditarProduto">
+    <app-editar-produto></app-editar-produto>
+    </div> -->
+<!-- </article> -->
+
+<!-- Botão Salvar -->
+<div>
+    <div class="modal-footer justify-content-center mt-5">
+        <button type="button" class="btn btn-outline-danger" style="width: 20%;" data-dismiss="modal">Fechar</button>
+        <button class=" btn btn-outline-success" style="width: 30%;" (click)="publicar()">Salvar</button>
+    </div>
+</div>
+<!-- Fim Botão Salvar -->
+<!-- </div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</main> -->
+
+<!--============================================= Fim container =============================================-->
+<!-- </div> -->
+<!-- <div *ngIf="mostrarEditarProduto">
     <app-editar-produto></app-editar-produto>
     </div>
-</article>
+</article> -->
