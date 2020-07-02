@@ -1,34 +1,56 @@
   /*=========================================== Formatação =========================================== */
-
- 
-  .corRoupa
-  {
+.collapseModal
+{
+    text-align: justify;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
     
-    width: 46px;
-    height: 42px;
+}
 
+
+/* Efeito Collapse do Modal Cadastro Produto */
+  .btnCollapse
+ {
+    display: inline-block;
+    font-weight: btn-font-weight;
+    text-align: left;
+    white-space: normal;
+    vertical-align: middle;
+    user-select: none;
+    border: btn-border-width solid transparent;
+    color: black;
+    text-decoration: none;
+}
+
+
+  .maisRecente {
+      font-size: 24px;
   }
 
+  /*Tabela de cores da roupa  */
+
+  .corRoupa, corroupa:hover {
+      width: 46px;
+      height: 42px;
+  }
 
   /* Botão de numeração de roupas */
-  .numRoupa
-  {
-    
-    width: 46px;
-    height: 42px;
-  }
-  
-  #formataNav
-  {
-    text-align:justify;
-    font-family: Roboto;
-    font-style: normal;   
-    font-size: 18px;   
-    text-align: center;   
 
+  .numRoupa {
+      width: 46px;
+      height: 42px;
   }
 
-  
+  #formataNav {
+      text-align: justify;
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 18px;
+      text-align: center;
+  }
+
   /* .img
   {
     position: absolute;
@@ -70,7 +92,6 @@
       list-style: none;
   }
 
-
   .imagemUsuario {
       position: absolute;
       width: inherit;
@@ -106,16 +127,15 @@
   /* ============ Estilo do input de pesquisa ================ */
 
   .input-estilo {
-    border-top-right-radius: 2.5px;
-    border-top-left-radius: 2.5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-color: transparent;
-    background-color: #FCFCFC;
-    width: 90%;
-    border: none;
-    border-bottom: 1px solid rgb(202, 200, 200);
-    
+      border-top-right-radius: 2.5px;
+      border-top-left-radius: 2.5px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: transparent;
+      background-color: #FCFCFC;
+      width: 90%;
+      border: none;
+      border-bottom: 1px solid rgb(202, 200, 200);
   }
 
   /* =============================================== Cor da linha Pesquisar ao clickar =============================================== */
@@ -127,7 +147,7 @@
       bottom: 0;
       position: absolute;
       transition: .2s ease all;
-      background:#71f6a6;
+      background: #71f6a6;
   }
 
   /* ======================== Eventos do <input> */
@@ -167,20 +187,19 @@
   }
 
   .card:hover {
-    /* fill: white; */
-    /* opacity: 0.9; */
-    filter: drop-shadow(0px 0px 2px black);
-    transition: 0.10s;
-
+      /* fill: white; */
+      /* opacity: 0.9; */
+      filter: drop-shadow(0px 0px 2px black);
+      transition: 0.10s;
   }
 
-  .card {
+  .cardSaldo {
       background: #FFFFFF;
       box-sizing: border-box;
       box-shadow: 6px 6px 18px #00000057;
       border-radius: 10px;
-      width: 300px;
-      height: 250px;
+      width: 300px !important;
+      height: 250px !important;
       opacity: 1;
       border-radius: 30px;
   }
@@ -321,13 +340,14 @@
   }
 
   .tamanhoPopupHeight {
-      height: 1000px!important;      
+      height: 1000px!important;
   }
+
+  /* Tamanho do Moda */
 
   .modalScreen {
       max-width: 1360px!important;
-      height: 768px!important;
-      
+      max-height: 768px!important;
   }
 
   .svg-seta-direita {
@@ -488,145 +508,189 @@
 
   /* ==================================== Modal Form ======================================== */
 
-  .topo::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-/* Label dentro do input */
-.labelModal {
-    position: absolute;
-    top: -3px!important;
-    left: 15px;
-    padding: 10px 0;
-    font-size: 16px!important;
-    color: rgb(185, 185, 185)!important;
-    pointer-events: none;
-    font-weight: 100;
-    transition: .2s ease all;
-}  
+  /* Efeito GROW da imagem do cadastro de produtos */
 
-/* Efeito do Input */
-.modalForm {
-    margin-bottom: 2rem;
-    position: relative;
-}
+  .efeito-grow {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+  }
 
-/* .texto {
-    position: absolute;
-    width: 50%;
-    left: 7%;
-    top: 30%;
-    font-size: 25px;
-    font-family: Roboto;
-    line-height: 29px;
-    color: black;
-} */
+  /* Efeito GROW da imagem do cadastro de produtos */
+
+  .efeito-grow:hover, .efeito-grow:focus, .efeito-grow:active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+
+  .topo:after {
+      content: "";
+      clear: both;
+      display: table;
+  }
 
 
-/* Design do Input sem bordas */
-.formulario {
-  
-    border-top-right-radius: 2.5px;
-    border-top-left-radius: 2.5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-color: transparent;
-    background-color: #FCFCFC;
-    width: 90%;
-    border: none;
-    border-bottom: 1px solid rgb(202, 200, 200);
-    
-}
+  /* Efeito do Input */
 
-.formulario:focus {
-    box-shadow: 0 0 0 0 transparent;
-    border-bottom: 0.5px solid transparent!important;
-}
+  .modalForm {
+      margin-bottom: 2rem;
+      position: relative;
+  }
 
-/* Cor da letra do formulario */
-.formulario:focus ~ .labelModal, .formulario:valid ~ .labelModal{
-    top: -30px!important;
-    left: 4px;
-    font-size: 15px!important;
-    font-style: normal;
-    font-weight: 500;
-    color:#71f6a6!important;
-    
-}
-.precoModal{
-    position: absolute;
-    top: -4px!important;
-    left: 53px!important;
-    padding: 10px 0;
-    font-size: 16px!important;
-    color: rgb(185, 185, 185);
-    pointer-events: none;
-    font-weight: 100;
-    transition: .2s ease all;
-}
-.teste:focus ~ label, .teste:focus ~ label{
-    top: -30px!important;
-    left: 10px!important;
-    font-size: 15px!important;
-    font-style: normal;
-    font-weight: 500;
-    color:#71f6a6!important;
-}
+  /* Linha verde Quantidade */
 
-/*=============================================== Linha de Span Inicio ==================================== */
-.linhaSpanModal{
-    position: absolute;
-    display: block;
-    width: 100%; 
-    bottom: 1px; 
-}
+  .qtLinha {
+      width: 90% !important;
+  }
 
-/* Cor da linha Span */
-.linhaSpanModal:before, .linhaSpanModal:after{
-    content: '';
-    height: 2px;    
-    width: 0px;
-    position: absolute;
-    transition: .2s ease all;
-    background:#71f6a6;
-}
+  /* Titulo Adicionar Modal*/
 
-.formulario:focus ~ .linhaSpanModal:after {
-    width:100%;
-}
-.esfera-c:hover ~ .linhaSpanModal:after {
-    width:100%;
-}
+  .modal-header {
+      width: 100% !important;
+      padding-left: 55% !important;
+  }
 
-/*=============================================== Linha de Span FIM ==================================== */
+  /* Botões verdes */
 
+  .btn-outline-dark:hover, .btn-light:hover {
+      background-color: #71f6a6 !important;
+  }
 
-.aqua{
-    background-color: #00FFFF;
-    color: #fff;
-}
+  .custom-select {
+      width: 150px;
+      height: 40px;
+  }
 
-.aqua:hover{
-    background-color: #00FFCC;
-}
+  /* Design do Input sem bordas */
 
-.cinza {
-    background-color: #E5E5E5;
-    color: #fff;
-}
+  .formulario {
+      border-top-right-radius: 2.5px;
+      border-top-left-radius: 2.5px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: transparent;
+      background-color: #FCFCFC;
+      width: 90%;
+      border: none;
+      border-bottom: 1px solid rgb(202, 200, 200);
+  }
 
-.cinza:hover{
-    background-color: #E5E8B8;
-}
+  .formulario:focus {
+      box-shadow: 0 0 0 0 transparent;
+      border-bottom: 0.5px solid transparent!important;
+  }
 
-textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-}
-@media(max-width: 992px){
-    #texto{
-      font-size: 25px;
+    /* Label dentro do input */
+
+    .labelModal {
+        position: absolute;
+        top: -3px!important;
+        left: 15px;
+        padding: 10px 0;
+        font-size: 16px!important;
+        color: rgb(185, 185, 185)!important;
+        pointer-events: none;
+        font-weight: 100;
+        transition: .2s ease all;
     }
-}
+  
+
+  /* Cor da letra do formulario */
+
+  .formulario:focus~.labelModal, .formulario:valid~.labelModal {
+      top: -30px!important;
+      left: 4px;
+      font-size: 15px!important;
+      font-style: normal;
+      font-weight: 500;
+      color: #71f6a6!important;
+  }
+/* ==================================================================== */
+  .precoLabel {
+      position: absolute;
+      top: -4px!important;
+      left: 53px!important;
+      padding: 10px 0;
+      font-size: 16px!important;
+      color: rgb(185, 185, 185);
+      pointer-events: none;
+      font-weight: 100;
+      transition: .2s ease all;
+  }
+  
+
+  .precoFormulario:focus~.precoLabel, .precoFormulario:valid~.precoLabel{
+      top: -30px!important;
+      left: 10px!important;
+      font-size: 15px!important;
+      font-style: normal;
+      font-weight: 500;
+      color: #71f6a6!important;
+  }
+
+
+  /*=============================================== Linha de Span Inicio ==================================== */
+
+  .linhaSpanModal {
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 1px;
+  }
+
+  /* Cor da linha Span */
+
+  .linhaSpanModal:before, .linhaSpanModal:after {
+      content: '';
+      height: 2px;
+      width: 0px;
+      position: absolute;
+      transition: .2s ease all;
+      background: #71f6a6;
+  }
+
+  .formulario:focus~.linhaSpanModal:after {
+      width: 100%;
+  }
+
+  .esfera-c:hover~.linhaSpanModal:after {
+      width: 100%;
+  }
+
+  /*=============================================== Linha de Span FIM ==================================== */
+
+  .aqua {
+      background-color: #00FFFF;
+      color: #fff;
+  }
+
+  .aqua:hover {
+      background-color: #00FFCC;
+  }
+
+  .cinza {
+      background-color: #E5E5E5;
+      color: #fff;
+  }
+
+  .cinza:hover {
+      background-color: #E5E8B8;
+  }
+
+  textarea:focus, input:focus, select:focus {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+  }
+
+  @media(max-width: 992px) {
+      #texto {
+          font-size: 25px;
+      }
+  }
