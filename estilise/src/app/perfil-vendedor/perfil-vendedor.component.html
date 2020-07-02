@@ -16,7 +16,8 @@
                             <div class="container d-flex justify-content-end align-items-center">
                                 <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
                                     {{usuario.nome}}</p>
-                                <button type="button" class="btn btn-link mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
+                                <button type="button" class="btn btn-link mb-5"
+                                    [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
                                         src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;"></button>
 
                             </div>
@@ -52,7 +53,8 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/nascimento.svg"
-                                                    style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
+                                                    style="width: 5%;"></span> Data de Nascimento:
+                                            {{usuario.datanascimento}}
                                         </p>
                                     </li>
                                     <li>
@@ -62,7 +64,8 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/telefone.svg"
-                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
+                                                    style="width: 5%; color: #867E7E;"></span> Telefone:
+                                            {{usuario.telefone}}
                                         </p>
                                     </li>
                                 </ul>
@@ -127,7 +130,7 @@
                     </div>
                     <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
                         style="background-color: #037686;">Ver históirco
-                        ></a>
+                    </a>
                 </div>
 
                 <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
@@ -139,7 +142,7 @@
                     </div>
                     <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
                         style="background-color: #037686;">Ver históirco
-                        ></a>
+                    </a>
                 </div>
 
                 <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
@@ -151,7 +154,7 @@
                     </div>
                     <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
                         style="background-color: #037686;">Ver históirco
-                        ></a>
+                    </a>
 
                 </div>
 
@@ -165,7 +168,7 @@
                     </div>
                     <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
                         style="background-color: #037686;">Ver históirco
-                        ></a>
+                    </a>
                 </div>
 
             </div>
@@ -503,22 +506,26 @@
                                                     <nav class="nav_tabs">
                                                         <ul class="container">
                                                             <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                                                                    checked>
                                                                 <label for="tab1" class="tab_label">Tabela de
                                                                     Medidas</label>
                                                                 <div class="tab-content">
                                                                     <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab num.PNG/"
+                                                                        <img class="medida"
+                                                                            src="../../assets/img/icon/tab num.PNG/"
                                                                             alt="">
                                                                     </article>
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                                                                <input type="radio" name="tabs" class="rd_tab"
+                                                                    id="tab2">
                                                                 <label for="tab2" class="tab_label">Como Medir</label>
                                                                 <div class="tab-content">
                                                                     <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab med.PNG"
+                                                                        <img class="medida"
+                                                                            src="../../assets/img/icon/tab med.PNG"
                                                                             alt="">
                                                                     </article>
                                                                 </div>
@@ -543,7 +550,8 @@
 
                                     <!-- Nome do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
+                                        <input class="form-control w-100 formulario " required
+                                            [(ngModel)]="produto.nomeProduto">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Nome do Produto</label>
                                     </div>
@@ -552,7 +560,8 @@
                                     <div class="caixa-formulario">
                                         <div class="form-group d-flex justify-content-center">
                                             <textarea class="form-control formulario w-100" rows="6"
-                                                style="width: 100pxg; height: 100px; resize: none;" required [(ngModel)]="produto.descricao"></textarea>
+                                                style="width: 100pxg; height: 100px; resize: none;" required
+                                                [(ngModel)]="produto.descricao"></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
                                         </div>
@@ -560,7 +569,8 @@
 
                                     <!-- Tipo de Tecido do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
+                                        <input class="form-control w-100 formulario " required
+                                            [(ngModel)]="produto.material">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Tipo de tecido</label>
                                     </div>
@@ -571,7 +581,8 @@
                                             <span class="input-group-text formulario">R$</span>
                                         </div>
 
-                                        <input type="text" class="form-control formulario precoFormulario" required aria-label="Quantia" [(ngModel)]="produto.preco">
+                                        <input type="text" class="form-control formulario precoFormulario" required
+                                            aria-label="Quantia" [(ngModel)]="produto.preco">
                                         <span class="linhaSpanModal"></span>
                                         <label class="col-form-label precoLabel ">Preço</label>
                                         <div class="input-group-append">
@@ -762,8 +773,8 @@
                                     <div class="modal-footer justify-content-center mt-5">
                                         <button type="button" class="btn btn-outline-danger" style="width: 20%;"
                                             data-dismiss="modal">Fechar</button>
-                                        <button class=" btn btn-outline-dark"
-                                            style="width: 30%; border-color: #71f6a6;" (click)="publicar()">Salvar</button>
+                                        <button class=" btn btn-outline-dark" style="width: 30%; border-color: #71f6a6;"
+                                            (click)="publicar()">Salvar</button>
                                     </div>
                                 </div>
                                 <!-- Fim Botão Salvar -->
