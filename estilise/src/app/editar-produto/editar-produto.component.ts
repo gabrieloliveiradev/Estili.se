@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-editar-produto',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditarProdutoComponent implements OnInit {
 
   produto: Produto = new Produto
-
+  usuario: Usuario = new Usuario
   constructor(private produtoService: ProdutoService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
