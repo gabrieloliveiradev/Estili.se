@@ -36,7 +36,6 @@ constructor(private produtoService: ProdutoService, private router: Router) { }
 ngOnInit() {
     this.findAllProdutos()
     let item:string = localStorage.getItem('deletarOk')
-    window.scroll(0,0);
 
     if(item == "true"){
       this.alerta = true

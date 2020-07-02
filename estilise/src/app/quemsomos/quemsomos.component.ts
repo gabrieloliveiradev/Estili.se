@@ -24,7 +24,6 @@ export class QuemsomosComponent implements OnInit {
   }
 }
 
-
 function digitaTexto(elemento) {
     const textoArray = elemento.innerHTML.split('');
   elemento.innerHTML='';

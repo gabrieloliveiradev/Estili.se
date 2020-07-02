@@ -22,7 +22,6 @@ export class CategoriasComponent implements OnInit {
 
   ngOnInit(){
     this.findAllCategorias()
-    window.scroll(0,0)
   }
 
   findAllCategorias(){

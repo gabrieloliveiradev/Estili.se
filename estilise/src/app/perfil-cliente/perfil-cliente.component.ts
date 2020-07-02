@@ -42,7 +42,6 @@ export class PerfilClienteComponent implements OnInit {
   }
   
   ngOnInit(){
-    window.scroll(0,0)
     this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token');
     let cpf_usuario = localStorage.getItem('cpf_usuario');
