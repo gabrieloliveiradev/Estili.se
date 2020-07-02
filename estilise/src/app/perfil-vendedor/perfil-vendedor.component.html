@@ -7,11 +7,12 @@
             <hr>
             <!-- <div class="container"> -->
                 <div class="jumbotron">
+                    <a [routerLink]="['/editar-perfil-profissional', usuario.idusuario]">
                     <span class="glyphicon glyphicon glyphicon-edit d-flex justify-content-end"
-                    style="color: #158591;"></span>
+                    style="color: #158591;"></span></a>
                     <div class="row">
                         <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-                            <img src="{{usuario.imagemusuario}}" class="imagemUsuario">
+                            <img src="{{usuario.imagemusuario}}" class="imagemUsuario" style="object-fit: cover;">
                         </div>
                         <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
                             <div class="container">
@@ -38,7 +39,7 @@
                                         <p><span style="width:50px;"></span>Senha: *********</p>
                                     </li>
                                     <li>
-                                        <p><span style="width:50px;"></span>Data de Nascimento: {{usuario.datanascimento}}</p>
+                                        <p><span style="width:50px;"></span>Data de Nascimento: {{usuario.datanascimento | date: 'dd/MM/yyyy'}}</p>
                                     </li>
                                     <li>
                                         <p><span style="width:50px;"></span>CEP: {{usuario.cep}}</p>
@@ -104,7 +105,7 @@
                                     <h5 class="card-title">R$ 0,00</h5>
                                     <p class="card-text"> </p>
                                 </div>
-                                <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                <a id="fontSaldo"  class="card-footer text-white"
                                 style="background-color: #037686;">Ver históirco
                                 ></a>
                             </div>
@@ -116,7 +117,7 @@
                                         <h5 class="card-title">R$ 0,00</h5>
                                         <p class="card-text"> </p>
                                     </div>
-                                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                    <a id="fontSaldo"  class="card-footer text-white"
                                     style="background-color: #037686;">Ver históirco
                                     ></a>
                                 </div>
@@ -128,7 +129,7 @@
                                             <h5 class="card-title">R$ 0,00</h5>
                                             <p class="card-text"> </p>
                                         </div>
-                                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                        <a id="fontSaldo"  class="card-footer text-white"
                                         style="background-color: #037686;">Ver históirco
                                         ></a>
                                         
@@ -139,10 +140,10 @@
                                         <div class="card-body  text-white">
                                             <h5 class="card-title"><img class="imgIconRetirar" src="../../assets/img/icon/iconsaque2.png"
                                                 alt=""></h5>
-                                                <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
+                                                <a id="fontSaldoRetirar" 
                                                 class="card-text">Retirar</a>
                                             </div>
-                                            <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                            <a id="fontSaldo"  class="card-footer text-white"
                                             style="background-color: #037686;">Ver históirco
                                             ></a>
                                         </div>
@@ -414,25 +415,25 @@
                                 
                                 <div class="card mr-2"
                                 style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
+                                <img src="{{produto.imagem1}}" style="object-fit: cover;" class="card-img-top h-100 w-100" alt="...">
                             </div>
                             
                             <!-- Imagem 2 -->
                             <div class="card"
                             style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
-                            <img src="produto.imagem2" height="200" class="card-img-top" alt="...">
+                            <img src="produto.imagem2" style="object-fit: cover;" class="card-img-top h-100 w-100" alt="...">
                         </div>
                         
                         <!-- Imagem 3 -->
                         <div class="card"
                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
-                        <img src="produto.imagem3" height="200" class="card-img-top" alt="...">
+                        <img src="produto.imagem3" style="object-fit: cover;" class="card-img-top h-100 w-100" alt="...">
                     </div>
                 </div>
                 <!-- Imagem Previa -->
                 <div class="card mt-3"
                 style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
-                <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
+                <img src="{{produto.imagem1}}" style="object-fit: cover;" class="card-img-top h-100 w-100" alt="...">
             </div>
             
             

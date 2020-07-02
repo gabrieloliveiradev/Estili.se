@@ -72,7 +72,7 @@ export class AuthService {
   //  ngif pra saber se perfil do profissional ta preenchido
   profissionalPreenchido(usuario:Usuario){
     let preenchido = false;
-    if(usuario.especialidade != undefined && usuario.cep!=undefined){
+    if(usuario.especialidade != undefined && usuario.descricaoUsuario!=undefined){
       preenchido =true;
     }
     return preenchido;
@@ -94,4 +94,14 @@ export class AuthService {
     }
     return ok;
   }
+  verificarProfissional(){
+    let ok = false
+
+    let profissional = localStorage.getItem('profissional')
+    if(profissional != "false"){
+      ok = true
+    }
+    return ok;
+  }
+  
 }

@@ -108,18 +108,18 @@
                                         </div>
                                     </div>
                                     <hr class="mx-3" style="border-color: #E5E5E5;">
-                                    <div class="d-flex justify-content-between align-items-center p-3 list-group-item-action dropMenu " id="list-profile-list" style="height: 72px;">
+                                    <div *ngFor="let produto of listaCarrinho" class="d-flex justify-content-between align-items-center p-3 list-group-item-action dropMenu " id="list-profile-list" style="height: 72px;">
                                         <div class="rounded-circle bg-light align-items-center" style="width: 55px; height: 40px;">
-                                            <img src="../../assets/img/produtos/Photo by Alicia Petresc on Unsplash.jpg" alt="" class="w-100 h-100 rounded" style="object-fit: cover;">
+                                            <img src="{{produto.imagem1}}" alt="" class="w-100 h-100 rounded" style="object-fit: cover;">
                                         </div>
                                         <div class="d-flex justify-content-start py-4 pl-3 w-100">
                                             <div class="d-block slist-group-item">
-                                                <p class="text-left w-100 pl-1 font-weight-bold " style="font-size: small;">Casaco de lã azul</p>
-                                                <p class="text-left w-100 pl-1 pb-1" style="font-size: small;">R$ 20,00</p>
+                                                <p class="text-left w-100 pl-1 font-weight-bold " style="font-size: small;">{{produto.nomeProduto}}</p>
+                                                <p class="text-left w-100 pl-1 pb-1" style="font-size: small;">R$ {{produto.preco}}</p>
                                             </div>
                                         </div>
-                                        <div class="pr-2 py-2">
-                                            <svg class="excluirProdutoCarrinho" id="Capa_1" style="fill: gray;" enable-background="new 0 0 386.667 386.667" height="10" viewBox="0 0 386.667 386.667" width="10" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg>
+                                        <div class="pr-2 py-2" (click)="tirarCarrinho(produto)">
+                                            <svg  class="excluirProdutoCarrinho" id="Capa_1" style="fill: gray;" enable-background="new 0 0 386.667 386.667" height="10" viewBox="0 0 386.667 386.667" width="10" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg>
                                         </div>
                                     
                                     </div>

@@ -1,14 +1,16 @@
 #categoria-card{
     max-height: 300px;
-    min-height: 100px;
+    min-height: 300px;
     max-width: 300px;
-    min-width: 100px;
+    min-width: 300px;
 }
 
 #categoria-card > img{
     height: 100%;
     width: 100%;
     filter: brightness(75%);
+    min-height: 300px;
+    min-width: 300px;
 }
 
 #categoria-card > img:hover{

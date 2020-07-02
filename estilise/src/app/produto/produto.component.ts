@@ -21,13 +21,14 @@ export class ProdutoComponent implements OnInit {
   // id_profissional: string = localStorage.getItem('id_profissional');
   
   listaProdutos: Produto[]
+  listaCarrinho: Produto[]
   produto: Produto = new Produto
   listaUsuarios: Usuario[]
   alerta:boolean = false
   login: boolean = false
   mostrarPopupLogin: boolean = false
   constructor(private produtoService: ProdutoService, private router: Router) { }
-  
+
   findAllProdutos(){
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
       this.listaProdutos = resp;
@@ -45,6 +46,11 @@ export class ProdutoComponent implements OnInit {
         location.assign('/produtos')
       }, 3000)
     }
+  }
+  findAllCarrinho(){
+    this.produtoService.getAllCarrinho().subscribe((resp: Produto[])=>{
+      this.listaCarrinho = resp;
+    });
   }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -71,9 +77,17 @@ export class ProdutoComponent implements OnInit {
     }
     
   }
-  
+  publicarCarrinho(produto: Produto){
+    produto.carrinho = localStorage.getItem("carrinho")
+    this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
+      alert(this.produto.idproduto)
+      this.produto = resp
+      alert("Produto adicionado ao carrinho")
+    });
+  }
   publicar(){  
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+      // resp.nomeUsuario = localStorage.getItem('nome')
       this.produto = resp;
       location.assign('/produtos')
     });

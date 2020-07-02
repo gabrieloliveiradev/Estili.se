@@ -13,14 +13,22 @@ export class EditarPerfilProfissionalComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   loginUsuario: loginUsuario = new loginUsuario
-
   senha:String
 
-  
+  idusuario =Number(localStorage.getItem('idusuario'))
   constructor(private usuariosService: UsuariosService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(){
+    var id = this.route.snapshot.params['id_usuario']
+    this.findByIdUsuario(id)
+    window.scroll(0,0)
   }
+  findByIdUsuario (id:number) {
+    this.usuariosService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
+      this.usuario=resp
+    })
+  }
+
   fecharPopup(){
     location.assign('/editar-profissional')
   }
@@ -29,12 +37,11 @@ export class EditarPerfilProfissionalComponent implements OnInit {
     this.senha = event.target.value;
   }
   
-
   salvar() {
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
-      this.router.navigate(['/perfil-cliente'])
-      location.assign('/perfil-cliente')
+      this.router.navigate(['/perfil-vendedor', this.idusuario])
+      // location.assign('/perfil-vendedor')
     })
   }
 }

@@ -39,6 +39,7 @@ export class LoginClienteComponent implements OnInit {
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
       localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
       localStorage.setItem('profissional', this.loginUsuario.profissional)
+      localStorage.setItem('carrinho', "true")
       let idusuario = this.loginUsuario.idusuario
 
       if(this.loginUsuario.profissional == "true"){

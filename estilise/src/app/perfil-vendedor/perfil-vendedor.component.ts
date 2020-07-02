@@ -36,7 +36,7 @@ export class PerfilVendedorComponent implements OnInit {
   loginUsuario : loginUsuario = new loginUsuario
   login: boolean = false
   mostrarPopupLogin: boolean = false
-  
+
   constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router) {  }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -65,8 +65,14 @@ export class PerfilVendedorComponent implements OnInit {
     })
   }
   publicar(){  
+    
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+      // resp.idusuarios = this.usuario.idusuario
+      alert(localStorage.getItem('nome'))
+      resp.nomeUsuario = localStorage.getItem('nome')
+      alert(resp.nomeUsuario)
       this.produto = resp;
+      alert(this.produto.nomeUsuario)
       alert("Produto cadastrado")
     });
   }

@@ -45,7 +45,7 @@
 
 /*============== Botão para categoria ================= */
 
-.botao-categoria{
+/* .botao-categoria{
     background-image: url("../../assets/img/produtos/seta-direita 1.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
     width: 160px;
     background-position-y: center;
     background-position-x: 9px;
-}
+} */
 
 /* ========= card do produto =========== */
 .card-produto, .card-img, .card-img-adicionar{
