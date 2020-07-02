@@ -452,91 +452,7 @@
                                 <div class="card mt-3"
                                     style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
                                     <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
-                                </div>
-
-
-                                <!-- Tabela de Medidas -->
-                                <!-- <article>
-                                    <nav class="nav_tabs">
-                                        <ul class="container">
-                                            <li>
-                                                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-                                                <label for="tab1" class="tab_label">Tabela de
-                                                    Medidas</label>
-                                                <div class="tab-content">
-                                                    <article>
-                                                        <img class="medida" src="../../assets/img/icon/tab num.PNG/"
-                                                            alt="">
-                                                    </article>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <p><span style="width:50px;"><img
-                                                    src="../../assets/img/perfil-cliente/email.png"
-                                                    style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p>
-                                                </li>
-                                                <li>
-                                                    <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.png"
-                                                        style="width: 5%;"></span> CPF: {{usuario.cpfusuario}}</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><span style="width:50px;"><img
-                                                            src="../../assets/img/perfil-cliente/endereço.png"
-                                                            style="width: 5%;"></span> Endereço: </p>
-                                                        </li>
-                                                        <li>
-                                                            <p><span style="width:50px;"><img
-                                                                src="../../assets/img/perfil-cliente/complemento.png"
-                                                                style="width: 5%;"></span> Complemento: {{usuario.complemento}}</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="col container">
-                                                            <li>
-                                                                <p><span style="width:50px;"><img
-                                                                    src="../../assets/img/perfil-cliente/senha.png"
-                                                                    style="width: 5%; fill: #867E7E"></span> Senha: *********</p>
-                                                                </li>
-                                                                <li>
-                                                                    <p><span style="width:50px;"><img
-                                                                        src="../../assets/img/perfil-cliente/nascimento.png"
-                                                                        style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
-                                                                    </p>
-                                                                </li>
-                                                                <li>
-                                                                    <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.png"
-                                                                        style="width: 5%;"></span> CEP: {{usuario.cep}}</p>
-                                                                    </li>
-                                                                    <li>
-                                                                        <p><span style="width:50px;"><img
-                                                                            src="../../assets/img/perfil-cliente/telefone.png"
-                                                                            style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
-                                                                        </p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>    
-                                        </article>
-                                        <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
-                                        <article>
-                                            <ul id="formataNav" class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
-                                            
-                                                <li class="nav-item ">
-                                                    <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#' style="color: #686363;">
-                                                    Pontuação
-                                                        <br>
-                                                        <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                                                        <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                                                        <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                                                        <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                                                        <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </article> -->
+                                </div>                    
 
                                 <article class=" collapseModal mt-5">
                                     <div id="accordion">
@@ -655,7 +571,7 @@
 
 
                                         <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
+                                            <input type="text" class="form-control formulario w-100" 
                                                 minlength="4" required [(ngModel)]="produto.imagem1">
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">URL da primeira imagem</label>
@@ -671,8 +587,8 @@
                                     <article class="modalForm d-flex justify-content-center">
 
                                         <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required>
+                                            <input type="text" class="form-control formulario w-100" 
+                                                minlength="4" required [(ngModel)]="produto.imagem2">
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">URL da segunda imagem</label>
                                         </div>
@@ -686,8 +602,8 @@
                                     <article class="modalForm d-flex justify-content-center mt-5">
 
                                         <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required>
+                                            <input type="text" class="form-control formulario w-100"
+                                                minlength="4" required [(ngModel)]="produto.imagem3">
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">URL da terceira imagem</label>
                                         </div>
