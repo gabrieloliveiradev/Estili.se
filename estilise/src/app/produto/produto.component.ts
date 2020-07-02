@@ -26,13 +26,12 @@ listaUsuarios: Usuario[]
 alerta:boolean = false
 login: boolean = false
 mostrarPopupLogin: boolean = false
+nomeProduto: string
+pesquisa: boolean = false
+lista:boolean = false
 constructor(private produtoService: ProdutoService, private router: Router) { }
 
-  findAllProdutos(){
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-      this.listaProdutos = resp;
-    });
-  }
+
 ngOnInit() {
     this.findAllProdutos()
     let item:string = localStorage.getItem('deletarOk')
@@ -47,6 +46,11 @@ ngOnInit() {
     // for(let i =0; i < this.listaProdutos.length; i++){
     //   for(let i = 0 <){}
     // }
+}
+findAllProdutos(){
+  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+    this.listaProdutos = resp;
+  });
 }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -80,10 +84,16 @@ publicar(){
     location.assign('/produtos')
   });
 }
-findAllProduto(){
-  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-    this.listaProdutos = resp;
-  });
+
+pesquisarProduto(){
+  let nomeproduto = ((<HTMLInputElement>document.getElementById("pesquisar")).value)
+  this.produtoService.findBynome(nomeproduto).subscribe((resp: Produto[]) => {
+    this.listaProdutos = resp
+    this.pesquisa = true
+  }, err =>{
+    console.log(err)
+  }
+  )
 }
 
 
