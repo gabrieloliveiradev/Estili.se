@@ -34,8 +34,8 @@ const routes: Routes = [
   { path: 'editar/:id_usuario', component: EditarPerfilClienteComponent},
   { path: 'editar-perfil-profissional/:id_usuario', component: EditarPerfilProfissionalComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
-  { path:'deletar', component: DeleteUsuarioComponent},
-  { path:'deletar/:id', component: DeleteUsuarioComponent},
+  { path: 'deletar', component: DeleteUsuarioComponent},
+  { path: 'deletar/:id', component: DeleteUsuarioComponent},
   { path: 'perfil-vendedor/:id', component: PerfilVendedorComponent},
   { path: 'perfil-cliente', component: PerfilClienteComponent},
   { path: 'perfil-cliente/:id', component: PerfilClienteComponent},
@@ -46,7 +46,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { initialNavigation: 'enabled', scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

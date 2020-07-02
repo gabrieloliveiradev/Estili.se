@@ -1,5 +1,9 @@
-/* ========= Foto de perfil ============ */
-
+/* ========= Foto de perfil original ============ */
+.imgPerfil{
+    background-image: url(../../assets/img/nav/perfil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*  ================ Botão para editar foto perfil ================== */
 .btnEditarFoto{

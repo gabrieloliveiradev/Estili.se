@@ -37,8 +37,6 @@ export class ProdutoComponent implements OnInit {
   ngOnInit() {
     this.findAllProdutos()
     let item:string = localStorage.getItem('deletarOk')
-    window.scroll(0,0);
-    
     if(item == "true"){
       this.alerta = true
       localStorage.clear()

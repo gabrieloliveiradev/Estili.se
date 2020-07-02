@@ -55,7 +55,7 @@ export class AuthService {
     let numero_casa = localStorage.getItem('numerocasa');
     let profissional = localStorage.getItem('profissional');
     let especialidade = localStorage.getItem('especialidade');
-    if(nome == null || nome == undefined || complemento == null || complemento == undefined || cpfusuario == null || cpfusuario == undefined || cep == null || cep == undefined || emailusuario == null || emailusuario == undefined){
+    if(nome != null || nome != undefined || complemento != null || complemento != undefined || cpfusuario != null || cpfusuario != undefined || cep != null || cep != undefined || emailusuario != null || emailusuario != undefined){
        camposVazios = true;
     }
     return camposVazios

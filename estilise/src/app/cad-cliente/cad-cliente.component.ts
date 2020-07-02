@@ -21,10 +21,12 @@ export class CadClienteComponent implements OnInit {
   alerta: boolean = false;
   alertaErro: boolean = false
   validado: boolean = false;
-  erro: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
-  
+  textoSmallNomeInvalid: boolean = false
+  textoSmallEmailInvalid: boolean = false
+  textoSmallSenhaInvalid: boolean = false
+  textoSmallConfirmarsenhaInvalid: boolean = false
   senha: string;
   login: boolean = false
 
@@ -51,11 +53,63 @@ fecharPopup(){
   fechar.style.display = 'none'
 }
 
+
+validarCampos(){
+  let fecharPopupLogin = ((<HTMLInputElement>document.querySelector("#btnCadastrar")))
+  fecharPopupLogin.removeAttribute('data-target')
+  let email =  ((<HTMLInputElement>document.querySelector("#emailCadastro"))).value
+  let inputNome =  ((<HTMLInputElement>document.querySelector(".inputNome")))
+  let inputEmail =  ((<HTMLInputElement>document.querySelector(".inputEmail")))
+  let nome =  ((<HTMLInputElement>document.querySelector("#nome"))).value
+  let checkboxPoliticaePrivacidade = ((<HTMLInputElement>document.getElementById("checkboxPoliticaePrivacidade")))
+  let textoPoliticaEPrivacidade = ((<HTMLInputElement>document.querySelector(".textoPoliticaEPrivacidade")))
+  let confirmasenhas = ((<HTMLInputElement>document.querySelector(".confirmarSenha")))
+  let senhas = ((<HTMLInputElement>document.querySelector(".senha")))
+
+  if(nome.length <= 2 || nome == "" ){
+    inputNome.style.borderBottom = "2px solid red"
+    this.textoSmallNomeInvalid = true
+  }
+  else if(email.length <= 11 || email == null || email == undefined){
+    inputEmail.style.borderBottom = "2px solid red"
+    this.textoSmallEmailInvalid = true
+    inputNome.style.borderBottom = ""
+    this.textoSmallNomeInvalid = false
+  }
+  else if(this.senha !== this.usuario.senha || this.senha == null || this.usuario.senha == null || this.senha == undefined || this.usuario.senha == undefined || this.senha == "" || this.usuario.senha == ""){
+    this.alertaErro = true
+    senhas.style.borderBottom = "2px solid red"
+    confirmasenhas.style.borderBottom = "2px solid red"
+    this.textoSmallSenhaInvalid = true
+    this.textoSmallConfirmarsenhaInvalid = true
+    this.textoSmallEmailInvalid = false
+    inputEmail.style.borderBottom = ""
+    inputNome.style.borderBottom = ""
+    this.textoSmallNomeInvalid = false
+  }
+  else if(checkboxPoliticaePrivacidade.checked == false){
+    textoPoliticaEPrivacidade.style.color = "red"
+    senhas.style.borderBottom = ""
+    confirmasenhas.style.borderBottom = ""
+    this.textoSmallSenhaInvalid = false
+    this.textoSmallConfirmarsenhaInvalid = false
+    
+  }
+  else{ 
+    textoPoliticaEPrivacidade.style.color = ""
+    fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
+    this.cadastrar()
+  }
+  return true
+}
+
 cadastrar(){
   let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
   let fecharPopupLogin = ((<HTMLInputElement>document.querySelector("#btnCadastrar")))
-  if(this.senha === this.usuario.senha){
-      fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
+
+
+  this.alertaErro = false
+
     if(checkVendedor.checked){
       this.usuario.profissional = "true";
       this.alerta = true
@@ -72,18 +126,7 @@ cadastrar(){
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
         this.usuario = resp
         })
-    }
-  }else{
-    fecharPopupLogin.removeAttribute('data-target')
-    this.erro = true
-    localStorage.setItem("erro", this.erro.toString())
-    this.alertaErro = true
 
-    let cadastroErrado: string = localStorage.getItem('erro')
-    if (cadastroErrado == "true"){
-      this.alertaErro=true;
-      localStorage.clear()
-    }
   }
 }
 
