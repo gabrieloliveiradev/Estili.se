@@ -132,3 +132,10 @@ a{
     height: 17px;
     transition: 0.2s;
 }
+
+/* =========== Img de perfi original ============ */
+.imgPerfil{
+    background-image: url(../../assets/img/nav/perfil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
