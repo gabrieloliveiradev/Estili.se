@@ -15,8 +15,8 @@
                         <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
                             <div class="container d-flex justify-content-end align-items-center">
                                 <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
-                                    {{loginUsuario.nome}}</p>
-                                <button type="button" class="btn btn-link mb-5" routerLink="/editar"> <img
+                                    {{usuario.nome}}</p>
+                                <button type="button" class="btn btn-link mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
                                         src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;"></button>
 
                             </div>
@@ -26,11 +26,11 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/email.svg"
-                                                    style="width: 5%;"></span> E-mail: {{emailusuario}}</p>
+                                                    style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p>
                                     </li>
                                     <li>
                                         <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
-                                                    style="width: 5%;"></span> CPF: {{cpf_usuario}}</p>
+                                                    style="width: 5%;"></span> CPF: {{usuario.cpfusuario}}</p>
                                     </li>
                                     <li>
                                         <p><span style="width:50px;"><img
@@ -40,7 +40,7 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/complemento.svg"
-                                                    style="width: 5%;"></span> Complemento: {{complemento}}</p>
+                                                    style="width: 5%;"></span> Complemento: {{usuario.complemento}}</p>
                                     </li>
                                 </ul>
                                 <ul class="col container">
@@ -52,17 +52,17 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/nascimento.svg"
-                                                    style="width: 5%;"></span> Data de Nascimento: {{data_nascimento}}
+                                                    style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
                                         </p>
                                     </li>
                                     <li>
                                         <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.svg"
-                                                    style="width: 5%;"></span> CEP: {{cep}}</p>
+                                                    style="width: 5%;"></span> CEP: {{usuario.cep}}</p>
                                     </li>
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/telefone.svg"
-                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{telefone}}
+                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
                                         </p>
                                     </li>
                                 </ul>
@@ -433,26 +433,25 @@
 
                                     <div class="card mr-2 efeito-grow"
                                         style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
                                     </div>
 
                                     <!-- Imagem 2 -->
                                     <div class="card efeito-grow"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="produto.imagem2" height="200" class="card-img-top" alt="...">
                                     </div>
 
                                     <!-- Imagem 3 -->
                                     <div class="card efeito-grow"
                                         style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
-                                        <img src="url" height="200" class="card-img-top" alt="...">
+                                        <img src="produto.imagem3" height="200" class="card-img-top" alt="...">
                                     </div>
-
                                 </div>
                                 <!-- Imagem Previa -->
                                 <div class="card mt-3"
                                     style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
-                                    <img src="url" height="200" class="card-img-top" alt="...">
+                                    <img src="{{produto.imagem1}}" height="200" class="card-img-top" alt="...">
                                 </div>
 
 
@@ -544,7 +543,7 @@
 
                                     <!-- Nome do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required>
+                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Nome do Produto</label>
                                     </div>
@@ -553,7 +552,7 @@
                                     <div class="caixa-formulario">
                                         <div class="form-group d-flex justify-content-center">
                                             <textarea class="form-control formulario w-100" rows="6"
-                                                style="width: 100pxg; height: 100px; resize: none;" required></textarea>
+                                                style="width: 100pxg; height: 100px; resize: none;" required [(ngModel)]="produto.descricao"></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
                                         </div>
@@ -561,7 +560,7 @@
 
                                     <!-- Tipo de Tecido do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required>
+                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Tipo de tecido</label>
                                     </div>
@@ -572,7 +571,7 @@
                                             <span class="input-group-text formulario">R$</span>
                                         </div>
 
-                                        <input type="text" class="form-control formulario precoFormulario" required aria-label="Quantia">
+                                        <input type="text" class="form-control formulario precoFormulario" required aria-label="Quantia" [(ngModel)]="produto.preco">
                                         <span class="linhaSpanModal"></span>
                                         <label class="col-form-label precoLabel ">Preço</label>
                                         <div class="input-group-append">
@@ -603,7 +602,7 @@
 
                                         <div class="modalForm form-group d-flex justify-content-center w-100">
                                             <input type="text" class="form-control formulario w-100" name="pesquisa"
-                                                minlength="4" required>
+                                                minlength="4" required [(ngModel)]="produto.imagem1">
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">URL da primeira imagem</label>
                                         </div>
@@ -764,7 +763,7 @@
                                         <button type="button" class="btn btn-outline-danger" style="width: 20%;"
                                             data-dismiss="modal">Fechar</button>
                                         <button class=" btn btn-outline-dark"
-                                            style="width: 30%; border-color: #71f6a6;">Salvar</button>
+                                            style="width: 30%; border-color: #71f6a6;" (click)="publicar()">Salvar</button>
                                     </div>
                                 </div>
                                 <!-- Fim Botão Salvar -->

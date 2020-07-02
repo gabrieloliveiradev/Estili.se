@@ -114,5 +114,21 @@ a{
     animation-duration: 2s;      
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
-
-
+/* ========== Carrinho hover ============== */
+.carrinho:hover{
+    fill: #259c87;
+}  
+.excluirProdutoCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    transition: 0.2s;
+}
+.vermaisProdutosCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 17px;
+    transition: 0.2s;
+}

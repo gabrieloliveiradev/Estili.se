@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { AuthService } from '../service/auth.service';
 import { loginUsuario } from '../model/loginUsuario';
 import { NavComponent } from '../nav/nav.component';
+import { listeners } from 'process';
 
 
 @Component({
@@ -18,7 +19,9 @@ export class CadClienteComponent implements OnInit {
   usuario: Usuario = new Usuario
 
   alerta: boolean = false;
+  alertaErro: boolean = false
   validado: boolean = false;
+  erro: boolean = false
   paginaPolitica: boolean = false
   check: boolean = false
   
@@ -31,50 +34,56 @@ export class CadClienteComponent implements OnInit {
     
 ngOnInit(){
   let cadastro: string = localStorage.getItem('validado')
-  
-  
+ 
   if (cadastro == "true"){
     this.alerta=true;
     localStorage.clear()
-    setTimeout(() => {
-      location.assign("/produtos")
-    }, 10000);
   }
 }
 conferirSenha(event: any){
   this.senha = event.target.value;
 }
 
+
 fecharPopup(){
   this.nav.mostrarPopupCadastro = false
-  let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
-  teste.style.display = 'none'
+  let fechar = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+  fechar.style.display = 'none'
 }
 
 cadastrar(){
   let checkVendedor = ((<HTMLInputElement>document.getElementById("checkboxx")))
+  let fecharPopupLogin = ((<HTMLInputElement>document.querySelector("#btnCadastrar")))
   if(this.senha === this.usuario.senha){
+      fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
     if(checkVendedor.checked){
       this.usuario.profissional = "true";
+      this.alerta = true
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      alert("Profissional cadastrado com sucesso!!!")
-
       this.router.navigate(['/home'])
       })
     
     }else{
+      fecharPopupLogin.setAttribute('data-target', '#popupdeLogin')
       this.usuario.profissional = "false"
       this.fecharPopup();
       this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
         this.usuario = resp
-        alert("Usuário cadastrado com sucesso!!!")
-        // this.mostrarPopupLogin = true
         })
     }
   }else{
-    alert("Senhas incompatíveis!")
+    fecharPopupLogin.removeAttribute('data-target')
+    this.erro = true
+    localStorage.setItem("erro", this.erro.toString())
+    this.alertaErro = true
+
+    let cadastroErrado: string = localStorage.getItem('erro')
+    if (cadastroErrado == "true"){
+      this.alertaErro=true;
+      localStorage.clear()
+    }
   }
 }
 
@@ -86,9 +95,3 @@ recarregar(){
 }
 
 }
-  
-// refresh(){
-//   this.router.navigateByUrl("/produtos", {skipLocationChange:true}).then(()=>{
-//     this.router.navigate([this.locationPage.path()])
-//   })
-// }

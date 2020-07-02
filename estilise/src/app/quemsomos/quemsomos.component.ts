@@ -14,7 +14,7 @@ export class QuemsomosComponent implements OnInit {
   faLinkedin = faLinkedin
   faGithub = faGithub
   
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     const element = document.querySelector('h1');

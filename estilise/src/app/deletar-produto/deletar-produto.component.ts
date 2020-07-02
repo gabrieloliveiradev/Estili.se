@@ -28,7 +28,7 @@ export class DeletarProdutoComponent implements OnInit {
     })
   }
   btnSim(){
-    this.produtoService.deleteProduto(this.produto.id_produto).subscribe(()=>{
+    this.produtoService.deleteProduto(this.produto.idproduto).subscribe(()=>{
       this.deletado = true
       this.router.navigate(['/produtos'])
       localStorage.setItem("deletado", this.deletado.toString())

@@ -1,6 +1,6 @@
 export class Categoria {
-    public id_categoria:number
+    public idcategoria:number
     public descricao:string
-    public imagem_categoria:string
-    public nome_categoria:string
+    public imagemcategoria:string
+    public nomecategoria:string
 }

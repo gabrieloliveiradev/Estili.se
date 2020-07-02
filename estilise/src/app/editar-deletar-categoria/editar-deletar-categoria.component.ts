@@ -35,7 +35,7 @@ export class EditarDeletarCategoriaComponent implements OnInit {
   }
 
   btnSim(){
-    this.categoriaService.deleteCategoria(this.categoria.id_categoria).subscribe(()=>{
+    this.categoriaService.deleteCategoria(this.categoria.idcategoria).subscribe(()=>{
       this.deletarOk = true
       this.router.navigate(['/categorias'])
       localStorage.setItem("deletarOk", this.deletarOk.toString())
