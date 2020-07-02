@@ -19,6 +19,7 @@ import { EditarPerfilClienteComponent } from './editar-perfil-cliente/editar-per
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { EditarPerfilProfissionalComponent } from './editar-perfil-profissional/editar-perfil-profissional.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
