@@ -10,13 +10,14 @@
                 <div class="jumbotron">
                     <div class="row">
                         <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-                            <img src="{{imagem_usuario}}" class="imagemUsuario">
+                            <img src="{{imagem_usuario}}" class="imagemUsuario w-100 h-100 rounded-circle">
                         </div>
                         <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
                             <div class="container d-flex justify-content-end align-items-center">
                                 <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
                                     {{usuario.nome}}</p>
-                                <button type="button" class="btn btn-link mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
+                                <button type="button" class="btn btn-link mb-5"
+                                    [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
                                         src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;"></button>
 
                             </div>
@@ -52,7 +53,8 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/nascimento.svg"
-                                                    style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
+                                                    style="width: 5%;"></span> Data de Nascimento:
+                                            {{usuario.datanascimento}}
                                         </p>
                                     </li>
                                     <li>
@@ -62,7 +64,8 @@
                                     <li>
                                         <p><span style="width:50px;"><img
                                                     src="../../assets/img/perfil-cliente/telefone.svg"
-                                                    style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
+                                                    style="width: 5%; color: #867E7E;"></span> Telefone:
+                                            {{usuario.telefone}}
                                         </p>
                                     </li>
                                 </ul>
@@ -471,17 +474,78 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                                                <label for="tab2" class="tab_label">Como Medir</label>
-                                                <div class="tab-content">
-                                                    <article>
-                                                        <img class="medida" src="../../assets/img/icon/tab med.PNG"
-                                                            alt="">
-                                                    </article>
+                                                <p><span style="width:50px;"><img
+                                                    src="../../assets/img/perfil-cliente/email.png"
+                                                    style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p>
+                                                </li>
+                                                <li>
+                                                    <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.png"
+                                                        style="width: 5%;"></span> CPF: {{usuario.cpfusuario}}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><span style="width:50px;"><img
+                                                            src="../../assets/img/perfil-cliente/endereço.png"
+                                                            style="width: 5%;"></span> Endereço: </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span style="width:50px;"><img
+                                                                src="../../assets/img/perfil-cliente/complemento.png"
+                                                                style="width: 5%;"></span> Complemento: {{usuario.complemento}}</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="col container">
+                                                            <li>
+                                                                <p><span style="width:50px;"><img
+                                                                    src="../../assets/img/perfil-cliente/senha.png"
+                                                                    style="width: 5%; fill: #867E7E"></span> Senha: *********</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span style="width:50px;"><img
+                                                                        src="../../assets/img/perfil-cliente/nascimento.png"
+                                                                        style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.png"
+                                                                        style="width: 5%;"></span> CEP: {{usuario.cep}}</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><span style="width:50px;"><img
+                                                                            src="../../assets/img/perfil-cliente/telefone.png"
+                                                                            style="width: 5%; color: #867E7E;"></span> Telefone: {{usuario.telefone}}
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
+                                            </div>    
+                                        </article>
+                                        <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
+                                <article>
+                                    <ul id="formataNav"
+                                        class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
+
+                                        <li class="nav-item ">
+                                            <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#'
+                                                style="color: #686363;">
+                                                Pontuação
+                                                <br>
+                                                <span class="glyphicon glyphicon glyphicon-star"
+                                                    style="color: yellow;"></span>
+                                                <span class="glyphicon glyphicon glyphicon-star"
+                                                    style="color: yellow;"></span>
+                                                <span class="glyphicon glyphicon glyphicon-star"
+                                                    style="color: yellow;"></span>
+                                                <span class="glyphicon glyphicon glyphicon-star"
+                                                    style="color: yellow;"></span>
+                                                <span class="glyphicon glyphicon glyphicon-star"
+                                                    style="color: gray;"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </article> -->
 
                                 <article class=" collapseModal mt-5">
@@ -503,22 +567,26 @@
                                                     <nav class="nav_tabs">
                                                         <ul class="container">
                                                             <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                                                                    checked>
                                                                 <label for="tab1" class="tab_label">Tabela de
                                                                     Medidas</label>
                                                                 <div class="tab-content">
                                                                     <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab num.PNG/"
+                                                                        <img class="medida"
+                                                                            src="../../assets/img/icon/tab num.PNG/"
                                                                             alt="">
                                                                     </article>
                                                                 </div>
                                                             </li>
                                                             <li>
-                                                                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                                                                <input type="radio" name="tabs" class="rd_tab"
+                                                                    id="tab2">
                                                                 <label for="tab2" class="tab_label">Como Medir</label>
                                                                 <div class="tab-content">
                                                                     <article>
-                                                                        <img class="medida" src="../../assets/img/icon/tab med.PNG"
+                                                                        <img class="medida"
+                                                                            src="../../assets/img/icon/tab med.PNG"
                                                                             alt="">
                                                                     </article>
                                                                 </div>
@@ -543,7 +611,8 @@
 
                                     <!-- Nome do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.nomeProduto">
+                                        <input class="form-control w-100 formulario " required
+                                            [(ngModel)]="produto.nomeProduto">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Nome do Produto</label>
                                     </div>
@@ -552,7 +621,8 @@
                                     <div class="caixa-formulario">
                                         <div class="form-group d-flex justify-content-center">
                                             <textarea class="form-control formulario w-100" rows="6"
-                                                style="width: 100pxg; height: 100px; resize: none;" required [(ngModel)]="produto.descricao"></textarea>
+                                                style="width: 100pxg; height: 100px; resize: none;" required
+                                                [(ngModel)]="produto.descricao"></textarea>
                                             <span class="linhaSpanModal"></span>
                                             <label class="labelModal col-form-label">Descrição do Produto</label>
                                         </div>
@@ -560,7 +630,8 @@
 
                                     <!-- Tipo de Tecido do Produto -->
                                     <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required [(ngModel)]="produto.material">
+                                        <input class="form-control w-100 formulario " required
+                                            [(ngModel)]="produto.material">
                                         <span class="linhaSpanModal"></span>
                                         <label class="labelModal col-form-label">Tipo de tecido</label>
                                     </div>
@@ -571,7 +642,8 @@
                                             <span class="input-group-text formulario">R$</span>
                                         </div>
 
-                                        <input type="text" class="form-control formulario precoFormulario" required aria-label="Quantia" [(ngModel)]="produto.preco">
+                                        <input type="text" class="form-control formulario precoFormulario" required
+                                            aria-label="Quantia" [(ngModel)]="produto.preco">
                                         <span class="linhaSpanModal"></span>
                                         <label class="col-form-label precoLabel ">Preço</label>
                                         <div class="input-group-append">
@@ -762,8 +834,8 @@
                                     <div class="modal-footer justify-content-center mt-5">
                                         <button type="button" class="btn btn-outline-danger" style="width: 20%;"
                                             data-dismiss="modal">Fechar</button>
-                                        <button class=" btn btn-outline-dark"
-                                            style="width: 30%; border-color: #71f6a6;" (click)="publicar()">Salvar</button>
+                                        <button class=" btn btn-outline-dark" style="width: 30%; border-color: #71f6a6;"
+                                            (click)="publicar()">Salvar</button>
                                     </div>
                                 </div>
                                 <!-- Fim Botão Salvar -->
@@ -772,10 +844,44 @@
                     </div>
 
                 </div>
-
+                <!-- Fim Botão Salvar -->
             </div>
         </div>
     </main>
-
-    <!--============================================= Fim container =============================================-->
+    
+    <div>
+        <div class="modal-footer justify-content-center mt-5">
+            <button type="button" class="btn btn-outline-danger" style="width: 20%;" data-dismiss="modal">Fechar</button>
+            <button class=" btn btn-outline-success" style="width: 30%;" (click)="publicar()">Salvar</button>
+        </div>
+    </div>
 </div>
+
+
+<!--============================================= Fim container =============================================-->
+
+
+<!-- <div *ngIf="mostrarEditarProduto">
+    <app-editar-produto></app-editar-produto>
+    </div> -->
+<!-- </article> -->
+
+<!-- Botão Salvar -->
+
+<!-- Fim Botão Salvar -->
+<!-- </div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</main> -->
+
+<!--============================================= Fim container =============================================-->
+<!-- </div> -->
+<!-- <div *ngIf="mostrarEditarProduto">
+    <app-editar-produto></app-editar-produto>
+    </div>
+</article> -->
