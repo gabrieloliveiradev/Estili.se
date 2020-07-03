@@ -16,8 +16,8 @@ export class ProdutoService {
   getAllProdutos (){
     return this.http.get('http://localhost:8080/produtos', this.token);
   }
-  findBynome(nome_produto: String){
-    return this.http.get(`http://localhost:8080/produtos/${nome_produto}`, this.token)
+  findBynome(nomeProduto: String){
+    return this.http.get(`http://localhost:8080/produtos/nomeProduto/${nomeProduto}`, this.token)
   }
   findByPreco(preco: number){
     return this.http.get(`http://localhost:8080/produtos/${preco}`, this.token);

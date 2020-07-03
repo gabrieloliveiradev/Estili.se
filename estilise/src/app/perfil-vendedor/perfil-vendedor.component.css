@@ -281,12 +281,12 @@
 
   .card-produto .card-img-adicionar {
       display: flex!important;
-      width: 42px;
-      height: 40px;
-      right: 10px;
-      top: 10px;
+      width: 52px;
+      height: 50px;
+      right: 120px;
+      top: 160px;
       position: absolute;
-      border-radius: 50%;
+      border-radius: 0%;
       opacity: 0.5;
   }
 

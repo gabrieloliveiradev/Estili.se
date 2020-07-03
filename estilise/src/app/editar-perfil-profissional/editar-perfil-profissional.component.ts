@@ -13,6 +13,8 @@ export class EditarPerfilProfissionalComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   loginUsuario: loginUsuario = new loginUsuario
+  imagem_usuario: string = localStorage.getItem('imagemusuario');
+
   senha:String
 
   idusuario =Number(localStorage.getItem('idusuario'))
@@ -38,6 +40,12 @@ export class EditarPerfilProfissionalComponent implements OnInit {
   }
   
   salvar() {
+    localStorage.setItem('cpfusuario', this.loginUsuario.cpfusuario)
+    localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
+    localStorage.setItem('nome', this.loginUsuario.nome)
+    localStorage.setItem('cep', this.loginUsuario.cep)
+    localStorage.setItem('complemento', this.loginUsuario.complemento)
+    localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
       this.router.navigate(['/perfil-vendedor', this.idusuario])

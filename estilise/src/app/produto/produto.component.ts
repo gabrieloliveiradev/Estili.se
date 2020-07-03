@@ -28,14 +28,11 @@ export class ProdutoComponent implements OnInit {
   alerta:boolean = false
   login: boolean = false
   mostrarPopupLogin: boolean = false
-
+  nomeProduto: string
+  pesquisa: boolean = false
+  lista:boolean = false
   constructor(private produtoService: ProdutoService, private router: Router,public authService: AuthService) { }
-
-  findAllProdutos(){
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-      this.listaProdutos = resp;
-    });
-  }
+  
   ngOnInit() {
     this.findAllProdutos()
     let item:string = localStorage.getItem('deletarOk')
@@ -47,67 +44,85 @@ export class ProdutoComponent implements OnInit {
       }, 3000)
     }
   }
+
   findAllCarrinho(){
     this.produtoService.getAllCarrinho().subscribe((resp: Produto[])=>{
       this.listaCarrinho = resp;
     });
   }
-  fecharPopup(){
-    let fechar = document.getElementById('popupDescricao')
-    fechar.removeAttribute('data-target')
-    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
-    teste.style.display = 'none'
+
+
+findAllProdutos(){
+  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+    this.listaProdutos = resp;
+  });
+}
+fecharPopup(){
+  let fechar = document.getElementById('popupDescricao')
+  fechar.removeAttribute('data-target')
+  let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+  teste.style.display = 'none'
+}
+acesso(){
+  let token = localStorage.getItem('token')
+  if(token == null){
+    alert('Faça o login antes de acessar os produtos !!!')
+    this.login = true
+    this.fecharPopup()
+    this.router.navigate(['/home'])
+    this.mostrarPopupLogin = true
+  }else{
+    let popupLoginFechar = document.getElementById('popupdeLogin')
+    popupLoginFechar.removeAttribute('data-target')
+    this.mostrarPopupLogin = false
   }
-  acesso(){
-    let token = localStorage.getItem('token')
-    if(token == null){
-      alert('Faça o login antes de acessar os produtos !!!')
-      this.login = true
-      this.fecharPopup()
-      this.router.navigate(['/home'])
-      this.mostrarPopupLogin = true
-    }else{
-      let popupLoginFechar = document.getElementById('popupdeLogin')
-      popupLoginFechar.removeAttribute('data-target')
-      this.mostrarPopupLogin = false
-    }
-  }
-  
-  // ---------------- Ancora
-  ancora(){
-    let ancora = document.querySelector("#ancoradoNoArticle")
-    if (ancora){
-      ancora.scrollIntoView({ behavior: 'smooth'})
-    }
-    
-  }
-  publicarCarrinho(produto: Produto){
-    produto.carrinho = localStorage.getItem("carrinho")
-    this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
-      this.produto = resp
-      alert("Produto adicionado ao carrinho")
-    });
-  }
-  publicar(){  
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
-      // resp.nomeUsuario = localStorage.getItem('nome')
-      this.produto = resp;
-      location.assign('/produtos')
-    });
-    this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
-      this.produto.nomeUsuario = localStorage.getItem('nome')
-      alert("Produto adicionado ao carrinho")
-    });
-  }
-  findAllProduto(){
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-      this.listaProdutos = resp;
-    });
-  }
-  findByIdProduto(idProduto: number){
-    this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
-      this.produto = resp;
-    });
+}
+
+// ---------------- Ancora
+ancora(){
+  let ancora = document.querySelector("#ancoradoNoArticle")
+  if (ancora){
+    ancora.scrollIntoView({ behavior: 'smooth'})
   }
   
+}
+publicarCarrinho(produto: Produto){
+  produto.carrinho = localStorage.getItem("carrinho")
+  this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
+    this.produto = resp
+    alert("Produto adicionado ao carrinho")
+  });
+}
+publicar(){  
+  this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+    // resp.nomeUsuario = localStorage.getItem('nome')
+    this.produto = resp;
+    location.assign('/produtos')
+  });
+  this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
+    this.produto.nomeUsuario = localStorage.getItem('nome')
+    alert("Produto adicionado ao carrinho")
+  });
+}
+findAllProduto(){
+  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+    this.listaProdutos = resp;
+  });
+}
+findByIdProduto(idProduto: number){
+  this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
+    this.produto = resp;
+  });
+}
+
+pesquisarProduto(){
+  let nomeproduto = ((<HTMLInputElement>document.getElementById("pesquisar")).value)
+  this.produtoService.findBynome(nomeproduto).subscribe((resp: Produto[]) => {
+    this.listaProdutos = resp
+    this.pesquisa = true
+  }, err =>{
+    console.log(err)
+  }
+  )
+}
 }
