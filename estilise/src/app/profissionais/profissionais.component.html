@@ -47,7 +47,7 @@
                     <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
                     <p class="my-3 text-center" id="ParagrafoEspecialidade" style="max-width: 80%;"> <span style="font-weight: bolder;">Especialidades:</span> {{usuario.especialidade}}</p>
                     <hr style="width: 80%; margin-top: 0; margin-bottom: 0;border-color: lightgray;">
-                    <a href="" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
+                    <a [routerLink]="['/perfil-vendedor', usuario.idusuario]" style="text-decoration: none; color: #118899;"><p class="my-3" >Ver perfil -></p></a>
                 </div>
             </div>
         </ng-container>

@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},
   { path: 'editar', component: EditarPerfilClienteComponent},
-  { path: 'editar/:id_usuario', component: EditarPerfilClienteComponent},
+  { path: 'editar/:idusuario', component: EditarPerfilClienteComponent},
   { path: 'editar-perfil-profissional/:id_usuario', component: EditarPerfilProfissionalComponent},
   { path: 'cadastro-usuario', component: CadClienteComponent},
   { path: 'deletar', component: DeleteUsuarioComponent},

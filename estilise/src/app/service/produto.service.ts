@@ -37,4 +37,7 @@ export class ProdutoService {
   getAllCarrinho() {
     return this.http.get(`http://localhost:8080/produtos/carrinho/true`, this.token)
   }
+  getByIdUsuario(idUsuario:number) {
+    return this.http.get(`http://localhost:8080/produtos/idusuario/${idUsuario}`, this.token)
+  }
 }

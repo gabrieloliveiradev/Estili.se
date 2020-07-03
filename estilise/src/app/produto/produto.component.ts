@@ -3,6 +3,7 @@ import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-produto',
@@ -27,7 +28,8 @@ export class ProdutoComponent implements OnInit {
   alerta:boolean = false
   login: boolean = false
   mostrarPopupLogin: boolean = false
-  constructor(private produtoService: ProdutoService, private router: Router) { }
+
+  constructor(private produtoService: ProdutoService, private router: Router,public authService: AuthService) { }
 
   findAllProdutos(){
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
@@ -51,6 +53,8 @@ export class ProdutoComponent implements OnInit {
     });
   }
   fecharPopup(){
+    let fechar = document.getElementById('popupDescricao')
+    fechar.removeAttribute('data-target')
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
     teste.style.display = 'none'
   }
@@ -63,6 +67,8 @@ export class ProdutoComponent implements OnInit {
       this.router.navigate(['/home'])
       this.mostrarPopupLogin = true
     }else{
+      let popupLoginFechar = document.getElementById('popupdeLogin')
+      popupLoginFechar.removeAttribute('data-target')
       this.mostrarPopupLogin = false
     }
   }
@@ -78,7 +84,6 @@ export class ProdutoComponent implements OnInit {
   publicarCarrinho(produto: Produto){
     produto.carrinho = localStorage.getItem("carrinho")
     this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
-      alert(this.produto.idproduto)
       this.produto = resp
       alert("Produto adicionado ao carrinho")
     });
@@ -88,6 +93,10 @@ export class ProdutoComponent implements OnInit {
       // resp.nomeUsuario = localStorage.getItem('nome')
       this.produto = resp;
       location.assign('/produtos')
+    });
+    this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
+      this.produto.nomeUsuario = localStorage.getItem('nome')
+      alert("Produto adicionado ao carrinho")
     });
   }
   findAllProduto(){

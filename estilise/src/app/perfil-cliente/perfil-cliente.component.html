@@ -4,9 +4,9 @@
 <div class="container">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" style="object-fit: cover;">
-      </div>
+      <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2" style="width: 160px; height: 160px; margin-top: 3rem; max-width: 160px; max-height: 160px;">
+        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
+    </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
         <div class="container d-flex justify-content-end align-items-center pl-0">
           <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">{{usuario.nome}}</p>
@@ -22,7 +22,7 @@
           </ul>
           <ul class="col container">
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/senha.png" style="width: 5%;"></span> Senha: *********</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.png" style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.png" style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento | date: 'dd/MM/yyyy'}}</p></li>
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.png" style="width: 5%;"></span> CEP: {{usuario.cep}}</p></li>
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/telefone.png" style="width: 5%;"></span> Telefone: {{usuario.telefone}}</p></li>
           </ul>
@@ -39,7 +39,7 @@
       <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', usuario.idusuario]">Editar Perfil</button>
     </div>
     <div #profissionais>
-      <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]">Editar Perfil</button>
+      <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', usuario.idusuario]">Editar Perfil</button>
     </div>
   </div>
  </div>

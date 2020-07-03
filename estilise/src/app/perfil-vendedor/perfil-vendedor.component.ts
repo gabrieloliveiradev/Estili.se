@@ -8,6 +8,9 @@ import { Produto } from '../model/produto';
 import { ProdutoService } from '../service/produto.service';
 import { Router } from '@angular/router';
 import { loginUsuario } from '../model/loginUsuario';
+import { AuthService } from '../service/auth.service';
+import { Categoria } from '../model/categoria';
+import { CategoriaService } from '../service/categoria.service';
 
 
 
@@ -20,6 +23,7 @@ export class PerfilVendedorComponent implements OnInit {
   // emailusuario: string
   produto: Produto = new Produto;
   usuario : Usuario = new Usuario;
+  listaVendedor: Produto[]
   // nome: string = localStorage.getItem('nome');
   // emailusuario: string = localStorage.getItem('emailusuario');
   // cpf_usuario: string = localStorage.getItem('cpf_usuario');
@@ -37,16 +41,20 @@ export class PerfilVendedorComponent implements OnInit {
   login: boolean = false
   mostrarPopupLogin: boolean = false
   mostrarEditarProduto: boolean = false
-  
-  constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router) {  }
+  listaCategorias: Categoria[]
+  categoria: Categoria = new Categoria
+  constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router, public authService: AuthService, private categoriaService: CategoriaService) {  }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
     teste.style.display = 'none'
   }
+
   ngOnInit(): void {
+    this.findAllCategorias()
     var id = this.route.snapshot.params['id']
     this.findByIdUsuario(id)
-    
+    let idusuario = id
+    this.findByIdusuarioProduto(idusuario)
     // this.emailusuario = localStorage.getItem('emailusuario');
     let token = localStorage.getItem('token');
     // let cpf_usuario = localStorage.getItem('cpf_usuario');
@@ -59,23 +67,52 @@ export class PerfilVendedorComponent implements OnInit {
       this.fecharPopup() 
     }
   }
-  
+  findAllCategorias(){
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[])=>{
+      this.listaCategorias = resp;
+    });
+  }
+  donoPagina(){
+    let ok = false
+    let idAtual = Number(localStorage.getItem("idusuario"))
+    let idPagina = this.route.snapshot.params['id']
+    if(idAtual == idPagina){
+      ok = true
+    }
+    return ok
+  }
+  findByIdusuarioProduto (idusuario:number) {
+    this.produtoService.getByIdUsuario(idusuario).subscribe((resp:Produto[])=>{
+      this.listaVendedor=resp
+    })
+  }
   findByIdUsuario (id:number) {
     this.usuarioService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
       this.usuario=resp
     })
   }
-  publicar(){  
-    
+  publicar(produto: Produto){  
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       // resp.idusuarios = this.usuario.idusuario
-      alert(localStorage.getItem('nome'))
-      resp.nomeUsuario = localStorage.getItem('nome')
-      alert(resp.nomeUsuario)
       this.produto = resp;
-      alert(this.produto.nomeUsuario)
-      alert("Produto cadastrado")
+      let selectCategoria = ((<HTMLSelectElement>document.getElementById("selectCategoria")).value)
+      produto.categoria = String(selectCategoria)
+      produto.nomeUsuario = localStorage.getItem("nome")
+      produto.idUsuario = localStorage.getItem("idusuario")
+      this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
+        this.produto = resp
+      });
+      let idusuario = this.loginUsuario.idusuario
+      location.assign('/perfil-vendedor')
+      this.router.navigate(['/perfil-vendedor', idusuario])
     });
+  }
+  publicarNomeUsuario(produto: Produto){
+      produto.nomeUsuario = localStorage.getItem("nome")
+      produto.idUsuario = localStorage.getItem("idusuario")
+      this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
+        this.produto = resp
+      });
   }
   // typescript do cartão de crédito
   substituirnumero(){
