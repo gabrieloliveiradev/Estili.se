@@ -16,7 +16,7 @@ export class EditarProdutoComponent implements OnInit {
   constructor(private produtoService: ProdutoService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
-    let id =this.route.snapshot.params['id']
+    let id =this.route.snapshot.params['id_produto']
     this.findById(id)
   }
 

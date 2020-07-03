@@ -23,9 +23,6 @@ export class EditarPerfilClienteComponent implements OnInit {
     var id = this.route.snapshot.params['idusuario']
     this.findByIdUsuario(id)
   }
-  fecharPopup(){
-    location.assign('/editar')
-  }
 
   findByIdUsuario (id:number) {
     this.usuariosService.getByIdUsuario(id).subscribe((resp:Usuario)=>{

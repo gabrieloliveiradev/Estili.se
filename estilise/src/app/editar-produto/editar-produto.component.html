@@ -3,7 +3,7 @@
         Cadastrado com sucesso
     </div>
 </div> -->
-<div class="modal fade" id="popupdeEditarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog tamanhoPopupWidth">
         <div class="modal-content tamanhoPopupHeight">
@@ -11,124 +11,171 @@
                 <div class="row">
                     <div class="d-none d-md-flex col-md-6">
 
-                        <div class="d-flex justify-content-start">
-                            <div class="mr-2"
-                                style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;"></div>
-                            <div style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;">
-                            </div>
-                        </div>
+                       
                         <div class="mt-3 d-flex justify-content-center align-items-center"
-                            style="flex-direction: column;">
-                            <img style="height: 580px; width: 80%;"
-                                src="../../assets/img/produtos/Photo by Annisa Ica on Unsplash.jpg"
-                                alt="Imagem do produto ampliada">
+                            style="flex-direction: column; margin-bottom: 103px;">
+                            <div class="d-flex justify-content-center w-100 pb-4">
+                                <!-- imagem 1 -->
+                                    <div class="card mr-2 efeito-grow"
+                                        style="background-color: #f7f7f7; width: 152px; height: 150px; border-radius: 5px;">
+                                        <img src="{{produto.imagem1}}" height="100%" style="object-fit: cover;" class="card-img-top" alt="">
+                                    </div>
+    
+                                    <!-- Imagem 2 -->
+                                    <div class="card efeito-grow"
+                                        style="background-color: #f7f7f7; width: 152px; height: 150px; border-radius: 5px;">
+                                        <img src="produto.imagem2" style="object-fit: cover;" height="100%" class="card-img-top" alt="">
+                                    </div>
+    
+                                    <!-- Imagem 3 -->
+                                    <div class="card efeito-grow"
+                                        style="background-color: #f7f7f7; width: 152px; height: 150px; border-radius: 5px; margin-left: 10px;">
+                                        <img src="produto.imagem3" style="object-fit: cover;" height="100%" class="card-img-top" alt="">
+                                    </div>
+                            
+                            </div>
+                            <img style="height: 580px; width: 80%; background-color: #f7f7f7; object-fit: cover;" src="{{produto.imagem1}}" alt="">
+                                <article style="width: 79%" class="mt-4">
+                                    <h6>Tamanhos disponiveis</h6>
+                                    <hr>
+
+                                    <div>
+                                        <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
+                                            aria-label="Toolbar with button groups">
+
+                                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                <button type="button" class="numRoupa btn btn-outline-dark">PP</button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                                <button type="button" class="numRoupa btn btn-outline-dark">P</button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
+                                                <button type="button" class="numRoupa btn btn-outline-dark">M</button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                                                <button type="button" class="numRoupa btn btn-outline-dark">G</button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+                                                <button type="button" class="numRoupa btn btn-outline-dark">GG</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </article>
                         </div>
                     </div>
 
                     <div class="col-md-6 p-3">
-                        <h1 class="font-roboto">nome do produto</h1>
+                        <h1 class="font-roboto" style="padding-left: 55px; font-weight: 300;">Editar produto</h1>
                         <div>
-                            <div class="mt-3">
-                                <!-- Nome do produto  -->
+                            <div class="mt-5">
                                 <div class="form-group d-flex justify-content-center">
                                     <input type="text" class="form-control input-estilo inputNome" id="nome"
-                                        [(ngModel)]='usuario.nome' required>
+                                        [(ngModel)]='produto.nomeProduto' required>
                                     <span class="linhaSpan"></span>
                                     <label for="exampleInputNome" class="col-form-label">Nome do produto</label>
                                 </div>
-                                <!-- Descrição do produto -->
+                                    <div class="form-group d-flex justify-content-center">
+                                        <textarea class="form-control input-estilo" rows="6"
+                                            style="width: 100pxg; height: 100px; resize: none;" required [(ngModel)]="produto.descricao"></textarea>
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal col-form-label">Descrição do Produto</label>
+                                    </div>
                                 <div class="form-group d-flex justify-content-center">
-                                    <textarea class="form-control input-estilo" rows="6"
-                                        style="width: 100pxg; height: 100px; resize: none;" required
-                                        [(ngModel)]="produto.descricao"></textarea>
-                                    <span class="linhaSpanModal"></span>
-                                    <label class="labelModal col-form-label">Descrição do Produto</label>
+                                    <input type="text" class="form-control input-estilo inputNome" id="nome"
+                                        [(ngModel)]='produto.preco' required>
+                                    <span class="linhaSpan"></span>
+                                    <label for="exampleInputNome" class="col-form-label">Preço</label>
                                 </div>
-    
-                                <!-- Tipo de tecido -->
-                                <div class="modalForm form-group d-flex justify-content-center">
-                                    <input class="form-control input-estilo " required [(ngModel)]="produto.material">
-                                    <span class="linhaSpanModal"></span>
-                                    <label class="labelModal col-form-label">Tipo de tecido</label>
-                                </div>
-                                <!-- Preço do produto -->
-                                <div class="modalForm input-group mb-3 form-group d-flex justify-content-center">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text formulario">R$</span>
+                                <div class="d-flex mt-2">
+                                    <div class="form-group d-flex justify-content-end w-50">
+                                        <input type="text" class="form-control input-estilo inputNome" id="nome"
+                                            [(ngModel)]='produto.qtdestoque' required>
+                                        <span class="linhaSpan"></span>
+                                        <label for="exampleInputNome" class="col-form-label">Quantidade</label>
                                     </div>
-    
-                                    <input type="text" class="form-control input-estilo precoFormulario" required
-                                        aria-label="Quantia" [(ngModel)]="produto.preco">
-                                    <span class="linhaSpanModal"></span>
-                                    <label class="col-form-label precoLabel ">Preço</label>
-                                    <div class="input-group-append">
+                                    <div class="m-3"></div>
+                                    <div class="form-group d-flex justify-content-start" style="width: 204px;">
+                                        <select class="custom-select btn btn-outline-dark">
+                                            <option selected>Categoria</option>
+                                            <option value="1">Camisa</option>
+                                            <option value="2">Camiseta</option>
+                                            <option value="3">Jeans</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <!-- Quantidade e Categoria -->
-                                <article class="modalForm d-flex justify-content-start mt-5 px-5">
-                                    <!-- Quantidade -->
-                                    <div class="modalForm form-group w-50">
-                                        <input type="text" class="form-control input-estilo" minlength="4" required>
-                                        <span class="linhaSpanModal qtLinha"></span>
-                                        <label class="labelModal col-form-label">Quantidade</label>
-                                    </div>
-                                    <!-- Categoria  -->
-                                    <select class=" w-50 custom-select custom-select-sm btn btn-outline-dark">
-                                        <option selected>Categoria</option>
-                                        <option value="1">Camisa</option>
-                                        <option value="2">Camiseta</option>
-                                        <option value="3">Jeans</option>
-                                    </select>
-    
-                                </article>
-                                <!-- Imagem 01 Produto -->
-                                <article class="modalForm d-flex justify-content-center mt-5">
-    
-    
+                                  </div>
+                                  <!-- Imagem 01 Produto -->
+                                  <article class="modalForm d-flex justify-content-center mt-1"  style="margin: 0px 58px;">
+
+
                                     <div class="modalForm form-group d-flex justify-content-center w-100">
-                                        <input type="text" class="form-control input-estilo w-100" name="pesquisa"
+                                        <input type="text" class="w-100 form-control input-estilo" 
                                             minlength="4" required [(ngModel)]="produto.imagem1">
                                         <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">URL da primeira imagem</label>
+                                        <label class="labelModal labelInputURL col-form-label" style="left: 18px;">URL da primeira imagem</label>
                                     </div>
-                                    <div class="form-group d-flex justify-content-center">
-                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                    </div>
-    
-    
                                 </article>
-    
+
                                 <!-- Imagem 02 Produto-->
-                                <article class="modalForm d-flex justify-content-center">
-    
-                                    <div class="modalForm form-group d-flex justify-content-center">
-                                        <input type="text" class="form-control input-estilo" name="pesquisa"
-                                            minlength="4" required>
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">URL da segunda imagem</label>
-                                    </div>
-                                    <div class="form-group d-flex justify-content-center">
-                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                    </div>
-    
-                                </article>
-    
-                                <!-- Imagem 03 Produto -->
-                                <article class="modalForm d-flex justify-content-center">
-    
+                                <article class="modalForm d-flex justify-content-center" style="margin: 0px 58px;">
+
                                     <div class="modalForm form-group d-flex justify-content-center w-100">
-                                        <input type="text" class="form-control input-estilo w-100" name="pesquisa"
-                                            minlength="4" required>
+                                        <input type="text" class="w-100 form-control input-estilo" 
+                                            minlength="4" required [(ngModel)]="produto.imagem2">
                                         <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">URL da terceira imagem</label>
+                                        <label class="labelModal labelInputURL col-form-label" style="left: 18px;">URL da segunda imagem</label>
                                     </div>
-                                    <div class="form-group d-flex justify-content-center">
-                                        <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                    </div>
-    
                                 </article>
-    
+
+                                <!-- Imagem 03 Produto -->
+                                <article class="modalForm d-flex justify-content-center" style="margin: 0px 58px;">
+
+                                    <div class="modalForm form-group d-flex justify-content-center w-100">
+                                        <input type="text" class="w-100 form-control input-estilo"
+                                            minlength="4" required [(ngModel)]="produto.imagem3">
+                                        <span class="linhaSpanModal"></span>
+                                        <label class="labelModal labelInputURL col-form-label" style="left: 18px;">URL da terceira imagem</label>
+                                    </div>
+                                </article>
+                                <article style="margin: 0 61px;">
+                                    <h6>Cores disponiveis</h6>
+                                    <hr>
+
+                                    <div>
+                                        <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
+                                            aria-label="Toolbar with button groups">
+
+                                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                <button type="button" class="corRoupa btn btn-outline-info"
+                                                    style="background-color: black;"></button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                                <button type="button" class="corRoupa btn btn-outline-info"
+                                                    style="background-color: white;"></button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
+                                                <button type="button" class="corRoupa btn btn-outline-info"
+                                                    style="background-color:red ;"></button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                                                <button type="button" class="corRoupa btn btn-outline-info"
+                                                    style="background-color:blue ;"></button>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+                                                <button type="button" class="corRoupa btn btn-outline-info"
+                                                    style="background-color:yellow ;"></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </article>
+                                
                             </div>
+                        </div>
+                        <div class="d-block justify-content-center align-items-center" style="margin: 80px 59px;">
+                            <button class="btn w-100 mb-2" data-dismiss="modal" style="background-color: #DCD7D0; height: 50px;">Cancelar</button>
+                            <button class="btn w-100 text-light" style="background-color: #71F6A6; height: 50px;">Salvar</button>
+                        </div>
                         </div>
                     </div>
                 </div>

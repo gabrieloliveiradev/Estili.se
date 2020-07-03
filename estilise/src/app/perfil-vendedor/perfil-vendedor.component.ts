@@ -37,6 +37,7 @@ export class PerfilVendedorComponent implements OnInit {
   login: boolean = false
   mostrarPopupLogin: boolean = false
   mostrarEditarProduto: boolean = false
+  mostrarExcluirProduto: boolean = false
   
   constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router) {  }
   fecharPopup(){
@@ -92,8 +93,12 @@ export class PerfilVendedorComponent implements OnInit {
     validadeAno.innerHTML = selectAno;
   }
 
-  popupdeEditarProduto(){
+  editarProduto(){
     this.mostrarEditarProduto = true
+  }
+
+  excluirProduto(){
+    this.mostrarExcluirProduto = true
   }
   
 }
