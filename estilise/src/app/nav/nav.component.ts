@@ -20,16 +20,35 @@ export class NavComponent implements OnInit {
   mostrarPopupLogin: boolean = true
   produto: Produto = new Produto
   listaCarrinho: Produto[]
+  
   constructor(private router: Router, public auth: AuthService, public usuarioService: UsuariosService, private route: ActivatedRoute, public produtoService: ProdutoService ) { }
 
   ngOnInit(){
     var id = Number(localStorage.getItem('idusuario'))
     this.findByIdUsuario(id)
     this.findAllCarrinho()
+    // this.numeroCarrinho()
+    // let tamanho = this.listaCarrinho.length
+    // alert(tamanho)
   }
+  // numeroCarrinho(){
+  //   alert("oi")
+  //   let tamanhoLista = (this.listaCarrinho).length
+  //   alert(tamanhoLista)
+  //   let carrinhoNumero = document.getElementById("carrinhoNumero")
+  //   carrinhoNumero.innerText = String(tamanhoLista)
+  // }
   findAllCarrinho(){
+    
     this.produtoService.getAllCarrinho().subscribe((resp: Produto[])=>{
       this.listaCarrinho = resp;
+      let tamanhoLista = this.listaCarrinho.length
+      let carrinhoNumero = document.getElementById("carrinhoNumero")
+      carrinhoNumero.innerText = String(tamanhoLista)
+      if(this.listaCarrinho.length > 0){
+        let carrinhoStatus = document.getElementById("carrinhoStatus")
+        carrinhoStatus.innerText = "Número de itens: "
+      }
     });
   }
   findByIdUsuario (id:number) {
