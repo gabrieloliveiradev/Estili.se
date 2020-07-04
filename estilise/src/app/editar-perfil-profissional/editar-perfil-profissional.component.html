@@ -1,165 +1,165 @@
 
 <main class="container-fluid" style="background-color: #FCFCFC;">
-    <h2 class="m-4">Editar perfil</h2>
-    <hr class="mb-5" style="width: 97%;">
+  <h2 class="m-4">Editar perfil</h2>
+  <hr class="mb-5" style="width: 97%;">
   
-    <!-- ============ Foto de perfil ============= -->
-    <section class="w-100 d-flex justify-content-center">
-      <article class="mt-4 rounded-circle imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
-        <img src="" class="imagemUsuario w-100 rounded-circle" alt="">
-        <div class="position-relative btnEditarFoto">
-          <!-- ======== Botão para editar a foto de perfil ======== -->
-          <div class="rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
-            <svg class="svg-btn-editar-foto" alt="botão para editar a foto do perfil" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0)">
-                <path d="M17.4997 26.25C21.5268 26.25 24.7914 22.9854 24.7914 18.9583C24.7914 14.9312 21.5268 11.6666 17.4997 11.6666C13.4726 11.6666 10.208 14.9312 10.208 18.9583C10.208 22.9854 13.4726 26.25 17.4997 26.25Z"/>
-                <path d="M32.0833 7.29169H27.4584C26.8738 7.29169 26.3248 7.06384 25.9111 6.65082L23.2451 3.9848C22.5565 3.29622 21.6407 2.91669 20.6666 2.91669H14.3334C13.3593 2.91669 12.4435 3.29622 11.7549 3.9848L9.08893 6.65082C8.67521 7.06384 8.12622 7.29169 7.54161 7.29169H2.91669C1.30806 7.29169 0 8.59974 0 10.2083V29.1666C0 30.7752 1.30806 32.0833 2.91669 32.0833H32.0834C33.6919 32.0833 35.0001 30.7752 35.0001 29.1666V10.2083C35 8.59974 33.6919 7.29169 32.0833 7.29169ZM17.5 27.7083C12.675 27.7083 8.75 23.7833 8.75 18.9583C8.75 14.1333 12.675 10.2083 17.5 10.2083C22.325 10.2083 26.25 14.1333 26.25 18.9583C26.25 23.7833 22.325 27.7083 17.5 27.7083ZM29.1667 14.5833C28.3628 14.5833 27.7084 13.9289 27.7084 13.125C27.7084 12.3211 28.3628 11.6667 29.1667 11.6667C29.9706 11.6667 30.625 12.3211 30.625 13.125C30.625 13.9289 29.9706 14.5833 29.1667 14.5833Z"/>
-                </g>
-                <defs>
-                <clipPath id="clip0">
+  <!-- ============ Foto de perfil ============= -->
+  <section class="w-100 d-flex justify-content-center">
+    <article class="mt-4 rounded-circle imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
+      <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="Foto de perfil" style="object-fit: cover;">
+      <div class="position-relative btnEditarFoto">
+        <!-- ======== Botão para editar a foto de perfil ======== -->
+        <div class="rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
+          <svg class="svg-btn-editar-foto" alt="botão para editar a foto do perfil" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path d="M17.4997 26.25C21.5268 26.25 24.7914 22.9854 24.7914 18.9583C24.7914 14.9312 21.5268 11.6666 17.4997 11.6666C13.4726 11.6666 10.208 14.9312 10.208 18.9583C10.208 22.9854 13.4726 26.25 17.4997 26.25Z"/>
+              <path d="M32.0833 7.29169H27.4584C26.8738 7.29169 26.3248 7.06384 25.9111 6.65082L23.2451 3.9848C22.5565 3.29622 21.6407 2.91669 20.6666 2.91669H14.3334C13.3593 2.91669 12.4435 3.29622 11.7549 3.9848L9.08893 6.65082C8.67521 7.06384 8.12622 7.29169 7.54161 7.29169H2.91669C1.30806 7.29169 0 8.59974 0 10.2083V29.1666C0 30.7752 1.30806 32.0833 2.91669 32.0833H32.0834C33.6919 32.0833 35.0001 30.7752 35.0001 29.1666V10.2083C35 8.59974 33.6919 7.29169 32.0833 7.29169ZM17.5 27.7083C12.675 27.7083 8.75 23.7833 8.75 18.9583C8.75 14.1333 12.675 10.2083 17.5 10.2083C22.325 10.2083 26.25 14.1333 26.25 18.9583C26.25 23.7833 22.325 27.7083 17.5 27.7083ZM29.1667 14.5833C28.3628 14.5833 27.7084 13.9289 27.7084 13.125C27.7084 12.3211 28.3628 11.6667 29.1667 11.6667C29.9706 11.6667 30.625 12.3211 30.625 13.125C30.625 13.9289 29.9706 14.5833 29.1667 14.5833Z"/>
+            </g>
+            <defs>
+              <clipPath id="clip0">
                 <rect width="35" height="35" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>  
-          </div>
+              </clipPath>
+            </defs>
+          </svg>  
         </div>
-      </article>
-    </section>
-  
-
-  
-    <!-- ================== Informações pessoais ================= -->
-    <section class="row w-100 d-flex justify-content-center" style="margin-top: 3em;">
-      <aside class="col-md-5 p-3" style="margin: 130px 0 0 0;">
-        <div class="mt-3">
-              <!--========== Informações pessoais ============-->
-          <article class="d-flex align-items-center">
-              <div style="margin-left: 54px; margin-right: 21px;">
-                <img src="../../assets/img/editar-perfil-cliente/pessoaPerfil.svg" alt="">
-              </div>
-              <h2 class="mb-0" style="font-size: 28px; font-weight: 400; ">Informações pessoais </h2>
-          </article>
-          <hr class="float-left" style="width: 80%; margin-left: 54px;">
-          <div class="form-group d-flex justify-content-center" style="margin-top: 5em;">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.nome" id="nome"  required>
-            <span class="linhaSpan"></span>
-            <label for="exampleInputNome" class="col-form-label">Nome</label>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.emailusuario" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
-            <span class="linhaSpan"></span>
-            <label for="exampleInputEmail1" class="col-form-label">Email</label>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.cpfusuario" mask="000.000.000-00"  required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label">CPF</label>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="date" class="form-control input-estilo" required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label labelDataNascimento">Data de nascimento</label>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="password" class="form-control input-estilo" (input)='conferirSenha($event)' value="{{senha}}"  name="senha" id="Password1" minlength="8"  required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label">Senha</label>
-          </div>
-          <div class="form-group d-flex justify-content-center mb-3">
-            <input type="password" class="form-control input-estilo" [ngModel]="loginUsuario.senha" name="confirmar_senha" id="Password2" minlength="8"  required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label">Confirmar senha</label>
-          </div>
-  
-        </div>
-        <div class="mt-5 ml-4">
-          <div class="mb-5">
-            <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
-              <div>
-                <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
-              </div>
-              <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Especialidade</h2>
-            </div>
-            <hr class="float-left" style="width: 80%; margin-left: 25px;">
-          </div>
-          <div class="form-group d-flex justify-content-center" style="margin-top: 89px;">
-            <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8"  required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label">Especialidade</label>
-          </div>  
-        </div>
-      </aside>
-  
-      <!-- ========= Linha Vertical do formulario ============= -->
-      <div class="col-md-1" style="height: 630px">
-        <div class=" mb-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 15em 4px 4px 4px;"></div>
       </div>
+    </article>
+  </section>
   
-      <!-- ============== Endereço e Especialidade ================ -->
-      <aside class="col-md-5 ml-5" style="margin-top: 205px;">
-        <div class="mt-3 ml-4">
-          <div class="mb-5 mt-5">
-            <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
-              <div>
-                <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
-              </div>
-              <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Endereço</h2>
-            </div>
-            <hr class="mb-5 float-left" style="width: 80%; margin-left: 25px;">
-          </div>
-          <div class="form-group mb-0">
-            <div class="d-flex mb-0 justify-content-center form-group w-100">
-              <div class="form-group w-50 d-flex justify-content-end mr-2">
-                <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.telefone" mask="(00) 00000-0000" id="nome"  required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label">Telefone</label>
-              </div>
-              <div class="form-group w-50 d-flex justify-content-start">
-                <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.cep" mask="00000-000"  required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label" style="left: 10px;">CEP</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8"  required>
-            <span class="linhaSpan"></span>
-            <label for="" class="col-form-label">Endereço</label>
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <textarea class="form-control input-estilo" [ngModel]="loginUsuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
-            <span class="linhaSpan"></span>
-            <label class="col-form-label">Complemento</label>
-          </div>
   
+  
+  <!-- ================== Informações pessoais ================= -->
+  <section class="row w-100 d-flex justify-content-center" style="margin-top: 3em;">
+    <aside class="col-md-5 p-3" style="margin: 130px 0 0 0;">
+      <div class="mt-3">
+        <!--========== Informações pessoais ============-->
+        <article class="d-flex align-items-center">
+          <div style="margin-left: 54px; margin-right: 21px;">
+            <img src="../../assets/img/editar-perfil-cliente/pessoaPerfil.svg" alt="">
+          </div>
+          <h2 class="mb-0" style="font-size: 28px; font-weight: 400; ">Informações pessoais </h2>
+        </article>
+        <hr class="float-left" style="width: 80%; margin-left: 54px;">
+        <div class="form-group d-flex justify-content-center" style="margin-top: 5em;">
+          <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.nome" id="nome"  required>
+          <span class="linhaSpan"></span>
+          <label for="exampleInputNome" class="col-form-label">Nome</label>
         </div>
-        <div class="mt-3 ml-4">
-          <div class="mb-5" style="margin-top: 65px;">
-            <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
-              <div>
-                <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
-              </div>
-              <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Descrição do perfil</h2>
-            </div>
-            <hr class="float-left" style="width: 80%; margin-left: 25px;">
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <textarea class="form-control input-estilo" [ngModel]="loginUsuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
-            <span class="linhaSpan"></span>
-            <label class="col-form-label">Descrição</label>
-          </div>
+        <div class="form-group d-flex justify-content-center">
+          <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.emailusuario" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
+          <span class="linhaSpan"></span>
+          <label for="exampleInputEmail1" class="col-form-label">Email</label>
         </div>
-      </aside>
-    </section> 
-  
-    <!-- =========== Botões de salvar e cancelar ==========-->
-    <div class="form-group d-flex justify-content-center" style="margin: 120px 0;">
-      <button routerLink="/perfil-cliente" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
-       <button (click)="salvar()" class="btn px-4 py-2 text-light rounded" style="background-color: #71F6A6; border-radius: 1px;width: 170px;">Salvar</button>
+        <div class="form-group d-flex justify-content-center">
+          <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.cpfusuario" mask="000.000.000-00"  required>
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label">CPF</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <input type="date" class="form-control input-estilo" required [(ngModel)]="usuario.datanascimento">
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label labelDataNascimento">Data de nascimento</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <input type="password" class="form-control input-estilo" (input)='conferirSenha($event)' value="{{senha}}"  name="senha" id="Password1" minlength="8"  required>
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label">Senha</label>
+        </div>
+        <div class="form-group d-flex justify-content-center mb-3">
+          <input type="password" class="form-control input-estilo"  name="confirmar_senha" id="Password2" minlength="8"  required>
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label">Confirmar senha</label>
+        </div>
+        
+      </div>
+      <div class="mt-5 ml-4">
+        <div class="mb-5">
+          <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
+            <div>
+              <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
+            </div>
+            <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Especialidade</h2>
+          </div>
+          <hr class="float-left" style="width: 80%; margin-left: 25px;">
+        </div>
+        <div class="form-group d-flex justify-content-center" style="margin-top: 89px;">
+          <input type="text" class="form-control input-estilo" name="senha" id="especialidade" minlength="8"  required [(ngModel)]="usuario.especialidade">
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label">Especialidade</label>
+        </div>  
+      </div>
+    </aside>
+    
+    <!-- ========= Linha Vertical do formulario ============= -->
+    <div class="col-md-1" style="height: 630px">
+      <div class=" mb-3" style="border-right: 1px solid #e5e5e5; height:100%; margin: 15em 4px 4px 4px;"></div>
     </div>
+    
+    <!-- ============== Endereço e Especialidade ================ -->
+    <aside class="col-md-5 ml-5" style="margin-top: 205px;">
+      <div class="mt-3 ml-4">
+        <div class="mb-5 mt-5">
+          <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
+            <div>
+              <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
+            </div>
+            <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Endereço</h2>
+          </div>
+          <hr class="mb-5 float-left" style="width: 80%; margin-left: 25px;">
+        </div>
+        <div class="form-group mb-0">
+          <div class="d-flex mb-0 justify-content-center form-group w-100">
+            <div class="form-group w-50 d-flex justify-content-end mr-2">
+              <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.telefone" mask="(00) 00000-0000" id="telefone"  required>
+              <span class="linhaSpan"></span>
+              <label class="col-form-label">Telefone</label>
+            </div>
+            <div class="form-group w-50 d-flex justify-content-start">
+              <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.cep" mask="00000-000"  required>
+              <span class="linhaSpan"></span>
+              <label class="col-form-label" style="left: 10px;">CEP</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <input type="text" class="form-control input-estilo" name="senha" id="endereco" minlength="8"  required>
+          <span class="linhaSpan"></span>
+          <label for="" class="col-form-label">Endereço</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <textarea class="form-control input-estilo" [(ngModel)]="usuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
+          <span class="linhaSpan"></span>
+          <label class="col-form-label">Complemento</label>
+        </div>
+        
+      </div>
+      <div class="mt-3 ml-4">
+        <div class="mb-5" style="margin-top: 65px;">
+          <div class="d-flex ml-4" style="margin: 0px 0 0 0;">
+            <div>
+              <img style="height: 33px;" src="../../assets/img/editar-perfil-cliente/localizacao (2) 2.svg" alt="">
+            </div>
+            <h2 class="ml-3" style="font-size: 28px; font-weight: 400;">Descrição do perfil</h2>
+          </div>
+          <hr class="float-left" style="width: 80%; margin-left: 25px;">
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <textarea class="form-control input-estilo" [(ngModel)]="usuario.descricaoUsuario" rows="4" style="resize: none;" id="mensagem"  required></textarea>
+          <span class="linhaSpan"></span>
+          <label class="col-form-label">Descrição</label>
+        </div>
+      </div>
+    </aside>
+  </section> 
+  
+  <!-- =========== Botões de salvar e cancelar ==========-->
+  <div class="form-group d-flex justify-content-center" style="margin: 120px 0;">
+    <button routerLink="/perfil-cliente" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
+    <button (click)="salvar()" class="btn px-4 py-2 text-light rounded" style="background-color: #71F6A6; border-radius: 1px;width: 170px;">Salvar</button>
+  </div>
   
   
-    <!-- Propaganda -->
+  <!-- Propaganda -->
   <section class="row mb-5" style="height: 319px;">
     <div class="col-9 gradiente">
       <p style="font-size: 35px; padding: 7% 0 0 10%">Quero Vender!</p>
@@ -171,33 +171,33 @@
       <img src="../../assets/img/perfil-cliente/exemplo.svg" style="width: 80%;">
     </div>
   </section>
-  </main>
-  
-  <!-- ========= Modal para editar a foto de perfil ============ -->
-    <main class="modal fade" id="popupFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered justify-content-center" style="max-width: 40em!important; margin: 5.75rem auto!important;">
-        <div class="modal-content" style=" width: 35em; height: 27em;">
-          <div class="modal-body">
-            <div class="d-block">
-              <div class="d-flex justify-content-center" style="font-weight: 100;">
-                <div class="position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 251px; height: 253px;bottom: 206px" >
-                  <img src="{{usuario.imagemusuario}}" class="imagemUsuario" alt="">
-                </div>
-              </div>
+</main>
+
+<!-- ========= Modal para editar a foto de perfil ============ -->
+<main class="modal fade" id="popupFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered justify-content-center" style="max-width: 40em!important; margin: 5.75rem auto!important;">
+    <div class="modal-content" style=" width: 35em; height: 27em;">
+      <div class="modal-body">
+        <div class="d-block">
+          <div class="d-flex justify-content-center" style="font-weight: 100;">
+            <div class="position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 251px; height: 253px;bottom: 206px" >
+              <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="Foto de perfil" style="object-fit: cover;">
             </div>
-            
-            <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
-            <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
-              <input type="text" class="form-control input-estilo" required>
-              <span class="linhaSpan"></span>
-              <label class="col-form-label">Url</label>
-            </div>
-          </div>
-    
-          <div class="d-flex justify-content-center mt-3 mb-5">
-            <button (click)="fecharPopup()" type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
-            <button (click)="salvar()" type="button" class="btn text-light py-2" style="background-color: #71F6A6; width: 30%;">Salvar</button>
           </div>
         </div>
+        
+        <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
+        <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
+          <input type="text" class="form-control input-estilo" required [(ngModel)]='usuario.imagemusuario'>
+          <span class="linhaSpan"></span>
+          <label class="col-form-label">Url</label>
+        </div>
       </div>
-    </main>
+      
+      <div class="d-flex justify-content-center mt-3 mb-5">
+        <button (click)="fecharPopup()" type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
+        <button (click)="salvar()" type="button" class="btn text-light py-2" style="background-color: #71F6A6; width: 30%;">Salvar</button>
+      </div>
+    </div>
+  </div>
+</main>

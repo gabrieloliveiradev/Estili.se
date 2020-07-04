@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="form-group d-flex justify-content-center">
-          <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8" required> 
+          <input type="text" class="form-control input-estilo" name="senha" id="Password1" minlength="8" required> 
           <span class="linhaSpan"></span>
           <label for="" class="col-form-label">Endereço</label>
         </div>
@@ -122,7 +122,7 @@
   <!-- =========== Botões de salvar e cancelar ==========-->
   <div class="form-group d-flex justify-content-center" style="margin: 120px 0;">
     <button [routerLink]="['/perfil-cliente', usuario.idusuario]" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
-    <button (click)="salvar()"class="btn px-4 py-2 text-light rounded" style="background-color: #71F6A6; border-radius: 1px;width: 170px;">Salvar</button>
+    <button (click)="salvar()"class="btn px-4 py-2 text-light rounded" [routerLink]="['/perfil-cliente', usuario.idusuario]" style="background-color: #71F6A6; border-radius: 1px;width: 170px;">Salvar</button>
   </div>
   
   

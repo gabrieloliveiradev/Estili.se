@@ -1,7 +1,7 @@
 <main class="container-fluid">
     <!-- Sessão inicial, banner -->
     <header class="container mt-5 mb-5">
-    <!-- Imagem que compõe o header -->
+        <!-- Imagem que compõe o header -->
         <div class="row">
             <div class="col-md-6 animação-banner-img">
                 <img style="width: 100%;" src="../../assets/img/produtos/bannerimage.png" alt="">
@@ -14,37 +14,37 @@
                     <div class="col-md-7 p-0">
                         <p class="text-center  text-md-left">Se encontre, personalize, escolha a costura
                             que tem mais a ver com você</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex justify-content-center w-100" style="height: 100px;margin-bottom: 150px;" data-toggle="tooltip" data-placement="top" title="Rolar para os produtos">
+            <div class="d-flex justify-content-center w-100" style="height: 100px;margin-bottom: 150px;" data-toggle="tooltip" data-placement="top" title="Rolar para os produtos">
                 <a (click)="ancora()" class="ancora"></a>
-        </div>
-    </header>
-
-    <!-- Local de pesquisa do produto -->
-    <article class="d-flex justify-content-center mt-5"  id="ancoradoNoArticle">
-        <div class="form-group d-flex justify-content-center" style="width: 60%;">
-            <input [(ngModel)]="nomeProduto" id="pesquisar"  type="text" class="form-control input-estilo" placeholder="Pesquisar..." name="pesquisa"
-                minlength="4" required>
-            <span class="linhaSpan"></span>
-        </div>
-        <div class="form-group d-flex justify-content-center">
-            <button (click)="pesquisarProduto()" class="btn ml-2 p-2 px-4 text-light" style="background-color: #DCD7D0;">Pesquisar</button>
-        </div>
-
-    </article>
-    <br>
-
-    <!-- Titulo, botão para categoria e icone de filtro -->
-
-    <article class="container-fluid d-flex justify-content-center mt-5">
-        <div class="row w-100">
-            <div class="col-4 col-md-3 d-flex justify-content-start dropleft order-2 order-md-1">
-                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: auto;" src="../../assets/img/produtos/icon-filtro.png"
+            </div>
+        </header>
+        
+        <!-- Local de pesquisa do produto -->
+        <article class="d-flex justify-content-center mt-5"  id="ancoradoNoArticle">
+            <div class="form-group d-flex justify-content-center" style="width: 60%;">
+                <input type="text" class="form-control input-estilo" placeholder="Pesquisar..." name="pesquisa"
+                minlength="4" required [(ngModel)]="nomeProduto">
+                <span class="linhaSpan"></span>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <button class="btn ml-2 p-2 px-4 text-light" (click)="pesquisarProduto()" style="background-color: #DCD7D0;">Pesquisar</button>
+            </div>
+            
+        </article>
+        <br>
+        
+        <!-- Titulo, botão para categoria e icone de filtro -->
+        
+        <article class="container-fluid d-flex justify-content-center mt-5">
+            <div class="row w-100">
+                <div class="col-4 col-md-3 d-flex justify-content-start dropleft order-2 order-md-1">
+                    <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer; width: auto;" src="../../assets/img/produtos/icon-filtro.png"
                     alt="Icone de filtro da página">
-        <!-- Filtro com animação -->
+                    <!-- Filtro com animação -->
                     <div class="dropdown-menu filtro">
                         <div class="d-flex justify-content-start mt-3">
                             <img class="ml-5 mr-5" style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png" alt="">
@@ -80,134 +80,141 @@
                             <p ><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
                             <p ><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou  mais</p>
                         </div>
-
+                        
                         <div class="p-3 d-flex justify-content-center">
                             <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
                         </div>
-
+                        
                     </div>
-                <!-- Fim do filtro -->
-            </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center order-3 order-md-2 mt-5 mt-md-0">
-                <h3 class="text-center font-roboto">Produtos em alta</h3>
-            </div>
-            <!-- <div class="col-8 col-md-3 d-flex justify-content-start align-items-center mb-md-0 order-1">
-                <button type="button" routerLink="/categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
+                    <!-- Fim do filtro -->
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center order-3 order-md-2 mt-5 mt-md-0">
+                    <h3 class="text-center font-roboto">Produtos em alta</h3>
+                </div>
+                <!-- <div class="col-8 col-md-3 d-flex justify-content-start align-items-center mb-md-0 order-1">
+                    <button type="button" routerLink="/categorias" class="btn text-light pl-2 pr-4 py-2 botao-categoria text-right"
                     style="background-color: #71F6A6;">Categorias</button>
-            </div> -->
-           
-        </div>
-    </article>
-
-    <!-- Sessão Produtos -->
-
-    <section class="container-fluid d-flex flex-column align-content-around justify-content-center" style="margin-top: 40px;">
-        <!-- Linha 1 - 4 produtos -->
-        <div class="row px-5 mb-5" >
-             <div *ngIf='pesquisa; else lista'>
-                <div *ngFor="let produto of listaProdutos" style="margin-left: 10em;" class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
-                    <div class="card-produto card-evento-hover" >
-                        <img class="w-100 card-img" src="{{produto.imagem1}}" alt=""> 
-                        <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="icone para adicionar ao carrinho" data-toggle="tooltip" data-placement="top" title="Adicionar ao carrinho">
-                        <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="top" title="Adicionar aos favoritos"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                    </div>
-                    <div class="card-descricao p-3 card-evento-hover">
-                        <h5 class="mt-4 font-roboto mb-0">{{produto.nomeProduto}}</h5>
-                        <div class="d-flex justify-content-between">
-                            <p style="font-size: 10px; color: gray; padding-top: 5px;">por</p>
-                            <p>R$ {{produto.preco}}</p>
-                            <!-- <p>R{{ produto.preco | currency }}</p>  -->
-                        </div>
-                    </div>
-                </div>
-             </div>
-            
-             <ng-template #lista>
-                <div *ngFor="let produto of listaProdutos" class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
-                    <div class="card-produto card-evento-hover" >
-                        <img class="w-100 card-img" src="{{produto.imagem1}}" alt=""> 
-                        <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="icone para adicionar ao carrinho" data-toggle="tooltip" data-placement="top" title="Adicionar ao carrinho">
-                        <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="top" title="Adicionar aos favoritos"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
-                    </div>
-                    <div class="card-descricao p-3 card-evento-hover">
-                        <h5 class="mt-4 font-roboto mb-0">{{produto.nomeProduto}}</h5>
-                        <div class="d-flex justify-content-between">
-                            <p style="font-size: 10px; color: gray; padding-top: 5px;">por {{produto.nome}}</p>
-                            <p>R$ {{produto.preco}}</p>
-                             <!-- <p>R{{ produto.preco | currency }}</p>  -->
-                        </div>
-                    </div>
-                </div>
-             </ng-template>
+                </div> -->
                 
-            
-        </div>
-    </section>
-</main>
-
-
-
-<!-- Modal para ver a imagem melhor detalhada e a descrição do produto-->
-<main class="modal fade" id="popupDescricao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog tamanhoPopupWidth">
-      <div class="modal-content tamanhoPopupHeight" style="background-color: #FBF8F8;">
-        <div class="modal-body">
-
-        <!-- Área onde estarão as imagens do produto -->
-          <div class="row">
-                <div class="col-md-6 mr-4" style="padding:30px; padding-left: 40px;">
-                    <div class="d-flex justify-content-start">
-                        <div class="mr-2" style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;"></div>
-                        <div style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;"></div>
-                    </div>
-                    <div class="mt-3 d-flex justify-content-center align-items-center" style="flex-direction: column;">
-                        <img class="w-100" style="height: 580px;" src="../../assets/img/produtos/Photo by Annisa Ica on Unsplash.jpg" alt="Imagem do produto ampliada">                           
+            </div>
+        </article>
+        
+        <!-- Sessão Produtos -->
+        
+        <section class="container-fluid d-flex flex-column align-content-around justify-content-center" style="margin-top: 40px;">
+            <!-- Linha 1 - 4 produtos -->
+            <div class="row px-5 mb-5" >
+                <ng-container *ngIf="pesquisa; else lista">
+                    <ng-container *ngFor="let produto of listaProdutos">
+                        <div *ngIf="authService.nomePreenchido(produto)"  class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo" (click)="findByIdProduto(produto.idproduto)">
+                            
+                            <div class="card-produto card-evento-hover" >
+                                <img class="w-100 card-img" style="object-fit: cover;" src="{{produto.imagem1}}" alt=""> 
+                                <img (click)="publicarCarrinho(produto)" class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="icone para adicionar ao carrinho" data-toggle="tooltip" data-placement="top" title="Adicionar ao carrinho">
+                                <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="top" title="Adicionar aos favoritos"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
+                            </div>
+                            <div class="card-descricao p-3 card-evento-hover" >
+                                <h5 class="mt-4 font-roboto mb-0">{{produto.nomeProduto}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p style="font-size: 10px; color: gray; padding-top: 5px;">por {{produto.nomeUsuario}}</p>
+                                    <p>R$ {{produto.preco}}</p>
+                                    <!-- <p>R{{ produto.preco | currency }}</p> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <ng-template #lista>
+                    <ng-container *ngFor="let produto of listaProdutos">
+                        <div *ngIf="authService.nomePreenchido(produto)"  class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai" data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo" (click)="findByIdProduto(produto.idproduto)">
+                            
+                            <div class="card-produto card-evento-hover" >
+                                <img class="w-100 card-img" style="object-fit: cover;" src="{{produto.imagem1}}" alt=""> 
+                                <img (click)="publicarCarrinho(produto)" class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png" alt="icone para adicionar ao carrinho" data-toggle="tooltip" data-placement="top" title="Adicionar ao carrinho">
+                                <svg class="card-svg-coracao d-none" viewBox="0 -28 512.001 512" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="top" title="Adicionar aos favoritos"><path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/></svg>       
+                            </div>
+                            <div class="card-descricao p-3 card-evento-hover" >
+                                <h5 class="mt-4 font-roboto mb-0">{{produto.nomeProduto}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p style="font-size: 10px; color: gray; padding-top: 5px;">por {{produto.nomeUsuario}}</p>
+                                    <p>R$ {{produto.preco}}</p>
+                                    <!-- <p>R{{ produto.preco | currency }}</p> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </ng-container>
+                </ng-template>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    <!-- Modal para ver a imagem melhor detalhada e a descrição do produto-->
+    <main class="modal fade" id="popupDescricao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog tamanhoPopupWidth">
+            <div class="modal-content tamanhoPopupHeight" style="background-color: #FBF8F8;">
+                <div class="modal-body">
+                    
+                    <!-- Área onde estarão as imagens do produto -->
+                    <div class="row">
+                        <div class="col-md-6 mr-4" style="padding:30px; padding-left: 40px;">
+                            <div class="d-flex justify-content-start">
+                                <div class="mr-2" style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;"></div>
+                                <div style="background-color: #DCD7D0; width: 25%; height: 100px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="mt-3 d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <img class="w-100" style="height: 580px; object-fit: cover;" src="{{produto.imagem1}}" alt="Imagem do produto ampliada">                           
+                            </div>
+                        </div>
+                        
+                        <!-- Área onde estão as informações do produto, nome, descrição, tamanho, pagamento e valor -->
+                        <div class="col-md-5 p-3 ml-4">
+                            <div class="d-block justify-content-center">
+                                
+                                <h1 class="font-roboto">{{produto.nomeProduto}}</h1>
+                                
+                                <div class="d-flex justify-content-start">
+                                    <a [routerLink]="['/perfil-vendedor', produto.idUsuario]" data-dismiss="modal" style="text-decoration: none; list-style: none;" class="d-flex">
+                                        <p style="font-size: 20px; color: gray; padding-top: 5px;">por {{produto.nomeUsuario}}</p>  
+                                        <svg class="svg-seta-direita" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                                        <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+                                        C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+                                        c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
+                                        <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                    </svg>
+                                </a>
+                            </div>         
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p class="m-0 font-roboto">Descrição do produto</p>
+                            <p style="color: #686363;">{{produto.descricao}}</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="m-0 font-roboto">Pagamento aceito</p>
+                            <p style="color: #686363;">Cartão de crédito, cartão de débito e boleto bancário</p>
+                        </div>
+                        <div class="mt-4 mb-5">
+                            <p class="m-0 font-roboto">Tamanho disponível</p>
+                            <p style="color: #686363;">PP, M, G, GG </p>
+                        </div>
+                        <div style="margin-top: 80px;">
+                            <h5 class="font-roboto">Valor: R$ {{produto.preco}}</h5>
+                        </div>
+                        
+                        <!-- Botões de adicionar ao carrinho e compra -->
+                        <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
+                            <button class="w-50 btn w-100 mb-2" (click)="publicarCarrinho(produto)" style="background-color: #DCD7D0; height: 50px;">Adicionar ao carrinho</button>
+                            <button class="w-50 btn w-100 text-light" (click)="acesso()"  data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo" style="background-color: #71F6A6; height: 50px;">Comprar</button>
+                        </div>
                     </div>
                 </div>
-
-        <!-- Área onde estão as informações do produto, nome, descrição, tamanho, pagamento e valor -->
-                <div class="col-md-5 p-3 ml-4">
-                    <div class="d-block justify-content-center">
-
-                        <h1 class="font-roboto">nome do produto</h1>
-
-                        <div class="d-flex justify-content-start">
-                            <p style="font-size: 20px; color: gray; padding-top: 5px;">por Carolina dos Santos</p>  
-                            <svg class="svg-seta-direita" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
-                            <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
-                                C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
-                                c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
-                            <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                            </svg>
-                        </div>         
-                    </div>
-
-                    <div class="mt-4">
-                        <p class="m-0 font-roboto">Descrição do produto</p>
-                        <p style="color: #686363;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum consequuntur sed, debitis laudantium temporibus itaque rerum atque inventore ducimus dolores architecto accusantium error dignissimos ut corrupti minus, quos rem unde?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nemo aliquid tempora modi accusamus adipisci harum reprehenderit! Modi quia,</p>
-                    </div>
-                    <div class="mt-4">
-                        <p class="m-0 font-roboto">Pagamento aceito</p>
-                        <p style="color: #686363;">Lorem ipsum dolor sit amet </p>
-                    </div>
-                    <div class="mt-4 mb-5">
-                        <p class="m-0 font-roboto">Tamanho disponível</p>
-                        <p style="color: #686363;">Lorem ipsum dolor sit amet consectetur </p>
-                    </div>
-                    <div style="margin-top: 80px;">
-                        <h5 class="font-roboto">Valor: R$20,00</h5>
-                    </div>
-
-                    <!-- Botões de adicionar ao carrinho e compra -->
-                    <div class="mt-4 w-100 d-block mt-3 justify-content-center align-items-center">
-                        <button class="w-50 btn w-100 mb-2" (click)="acesso()" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo" style="background-color: #DCD7D0; height: 50px;">Adicionar ao carrinho</button>
-                        <button class="w-50 btn w-100 text-light" (click)="acesso()" data-toggle="modal" data-target="#popupdeLogin" data-whatever="@mdo" style="background-color: #71F6A6; height: 50px;">Comprar</button>
-                    </div>
-                </div>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
 </main>
 
@@ -219,12 +226,12 @@
 
 
 <!-- <div class="container">
-
+    
     <h1 class="d-flex justify-content-center mb-5 mp-5">produto works!</h1>
     
     <div class="d-flex justify-content-center mb-5 mp-5">
-
+        
         <img src="https://fashionstamp.files.wordpress.com/2011/12/desenho-moda.jpg" alt="">
-
+        
     </div>
 </div> -->

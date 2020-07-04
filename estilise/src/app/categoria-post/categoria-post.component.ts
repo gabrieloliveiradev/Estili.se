@@ -21,7 +21,7 @@ export class CategoriaPostComponent implements OnInit {
   publicar(){  
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
       this.categoria = resp;
-      location.assign('/categorias')
+      alert("Categoria Postada")
     });
   }
 }

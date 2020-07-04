@@ -5,11 +5,11 @@
 .btnEditarFoto{
     right: 0;
     float: right;
-    top: 175px;
+    top: -70px;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 .btnImgCamera:hover{
     box-shadow: 0px 0px 9px 0px #0000006b;

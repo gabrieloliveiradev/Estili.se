@@ -40,13 +40,12 @@ export class EditarPerfilClienteComponent implements OnInit {
   
 
   salvar() {
-    location.assign('/perfil-cliente')
     localStorage.setItem('cpfusuario', this.loginUsuario.cpfusuario)
     localStorage.setItem('emailusuario', this.loginUsuario.emailusuario)
     localStorage.setItem('nome', this.loginUsuario.nome)
     localStorage.setItem('cep', this.loginUsuario.cep)
     localStorage.setItem('complemento', this.loginUsuario.complemento)
-    localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
+    // localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
       // this.router.navigate(['/perfil-cliente'])

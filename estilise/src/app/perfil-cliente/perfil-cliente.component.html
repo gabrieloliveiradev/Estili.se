@@ -4,13 +4,15 @@
 <div class="container">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2">
-        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" style="object-fit: cover;">
+      <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2" style="width: 160px; height: 160px; margin-top: 3rem; max-width: 160px; max-height: 160px;">
+        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
       </div>
       <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
         <div class="container d-flex justify-content-end align-items-center pl-0">
           <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">{{usuario.nome}}</p>
-          <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 5%;" >
+          <a [routerLink]="['/editar-perfil-profissional', usuario.idusuario]">
+            <img src="../../assets/img/perfil-cliente/editar.svg" style="width: 100%;" >
+          </a>
         </div>
         <hr>
         <div class="row">
@@ -22,7 +24,7 @@
           </ul>
           <ul class="col container">
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/senha.png" style="width: 5%;"></span> Senha: *********</p></li>
-            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.png" style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento}}</p></li>
+            <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/nascimento.png" style="width: 5%;"></span> Data de Nascimento: {{usuario.datanascimento | date: 'dd/MM/yyyy'}}</p></li>
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cep.png" style="width: 5%;"></span> CEP: {{usuario.cep}}</p></li>
             <li><p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/telefone.png" style="width: 5%;"></span> Telefone: {{usuario.telefone}}</p></li>
           </ul>
@@ -31,18 +33,18 @@
     </div>
   </div>
   
- <div *ngIf="auth.verificarCampos()">
-  <div style="text-align: center;">
-    <p style="font-size: 30px;">Seu perfil esta incompleto</p>
-    <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
-    <div *ngIf="auth.verificarProfissional(); else profissionais">
-      <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', usuario.idusuario]">Editar Perfil</button>
-    </div>
-    <div #profissionais>
-      <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar-perfil-profissional', usuario.idusuario]">Editar Perfil</button>
+  <div *ngIf="auth.verificarCampos()">
+    <div style="text-align: center;">
+      <p style="font-size: 30px;">Seu perfil esta incompleto</p>
+      <p style="width: 60%; margin-left: 20%;" class="mb-4">Precisamos que você preencha suas informações para que você possa realizar seus pedidos e ter o melhor do nosso serviço.</p>
+      <div *ngIf="auth.verificarProfissional(); else profissionais">
+        <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', usuario.idusuario]">Editar Perfil</button>
+      </div>
+      <div #profissionais>
+        <button type="button" class="btn botaoEditar mb-5" [routerLink]="['/editar', usuario.idusuario]">Editar Perfil</button>
+      </div>
     </div>
   </div>
- </div>
   
   <div class="row">
     <div class="col-5">
@@ -81,7 +83,7 @@
     </div>
   </div>
 </div>
-  <!-- Propaganda -->
+<!-- Propaganda -->
 <div class="row">
   <div class="col-9 gradiente">
     <p style="font-size: 35px; padding: 5% 0 0 10%">Quero Vender!</p>
@@ -115,10 +117,10 @@
                 <div class="d-block">
                   <p class="m-0 text-light">Validade</p>
                   <div class="d-flex">
-                  <p class="text-light" id="validadeMes">00</p>
-                  <p class="text-light" >/</p>
-                  <p class="text-light" id="validadeAno">00</p>
-                </div>
+                    <p class="text-light" id="validadeMes">00</p>
+                    <p class="text-light" >/</p>
+                    <p class="text-light" id="validadeAno">00</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -137,19 +139,19 @@
             </div>
             <div class="d-flex mt-2">
               <select class="" id="selectMes" (click)="substituirvalidade()" required>
-                  <option selected class="" disabled>Mês</option>
-                  <option class="">01</option>
-                  <option class="">02</option>
-                  <option class="">03</option>
-                  <option class="">04</option>
-                  <option class="">05</option>
-                  <option class="">06</option>
-                  <option class="">07</option>
-                  <option class="">08</option>
-                  <option class="">09</option>
-                  <option class="">10</option>
-                  <option class="">11</option>
-                  <option class="">12</option>
+                <option selected class="" disabled>Mês</option>
+                <option class="">01</option>
+                <option class="">02</option>
+                <option class="">03</option>
+                <option class="">04</option>
+                <option class="">05</option>
+                <option class="">06</option>
+                <option class="">07</option>
+                <option class="">08</option>
+                <option class="">09</option>
+                <option class="">10</option>
+                <option class="">11</option>
+                <option class="">12</option>
                 <!-- </select> -->
               </select>
               <div class="d-flex ml-2">

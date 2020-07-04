@@ -30,7 +30,7 @@ export class UsuariosService {
     return this.http.delete(`http://localhost:8080/usuarios/${id_usuario}`, this.token)
   }
   getAllProfissional() {
-    return this.http.get(`http://localhost:8080/usuarios/profissional/1`, this.token)
+    return this.http.get(`http://localhost:8080/usuarios/profissional/true`, this.token)
   }
   // profissionalPreenchido(){
   //   let preenchido = false;
