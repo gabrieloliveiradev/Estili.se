@@ -38,17 +38,15 @@ export class LoginClienteComponent implements OnInit {
       // localStorage.setItem('profissional', this.loginUsuario.profissional)
       localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
       localStorage.setItem('profissional', this.loginUsuario.profissional)
-      
+      localStorage.setItem('carrinho', "true")
+      let idusuario = this.loginUsuario.idusuario
 
       if(this.loginUsuario.profissional == "true"){
-        location.assign('/editar-perfil-profissional')
-        this.router.navigate(['/editar-perfil-profissional'])
-        profissional = true
+        // location.assign('/editar-profissional')
+        this.router.navigate(['/perfil-vendedor', idusuario])
       }else{
-        let idusuario = localStorage.getItem('idusuario')
-        location.assign('/perfil-cliente')
+        // location.assign('/perfil-cliente')
         this.router.navigate(['/perfil-cliente', idusuario])
-        profissional == false
       }
     }, err => {
           alert('Houve um erro ao entrar, verifique o email e a senha.')

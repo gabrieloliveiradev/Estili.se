@@ -6,7 +6,7 @@
     <!-- ============ Foto de perfil ============= -->
     <section class="w-100 d-flex justify-content-center">
       <article class="mt-4 rounded-circle imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
-        <img src="" class="imagemUsuario w-100 rounded-circle" alt="">
+        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="Foto de perfil" style="object-fit: cover;">
         <div class="position-relative btnEditarFoto">
           <!-- ======== Botão para editar a foto de perfil ======== -->
           <div class="rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
@@ -41,22 +41,22 @@
           </article>
           <hr class="float-left" style="width: 80%; margin-left: 54px;">
           <div class="form-group d-flex justify-content-center" style="margin-top: 5em;">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.nome" id="nome"  required>
+            <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.nome" id="nome"  required>
             <span class="linhaSpan"></span>
             <label for="exampleInputNome" class="col-form-label">Nome</label>
           </div>
           <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.emailusuario" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
+            <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.emailusuario" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
             <span class="linhaSpan"></span>
             <label for="exampleInputEmail1" class="col-form-label">Email</label>
           </div>
           <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.cpfusuario" mask="000.000.000-00"  required>
+            <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.cpfusuario" mask="000.000.000-00"  required>
             <span class="linhaSpan"></span>
             <label for="" class="col-form-label">CPF</label>
           </div>
           <div class="form-group d-flex justify-content-center">
-            <input type="date" class="form-control input-estilo" required>
+            <input type="date" class="form-control input-estilo" required [(ngModel)]="usuario.datanascimento">
             <span class="linhaSpan"></span>
             <label for="" class="col-form-label labelDataNascimento">Data de nascimento</label>
           </div>
@@ -66,7 +66,7 @@
             <label for="" class="col-form-label">Senha</label>
           </div>
           <div class="form-group d-flex justify-content-center mb-3">
-            <input type="password" class="form-control input-estilo" [ngModel]="loginUsuario.senha" name="confirmar_senha" id="Password2" minlength="8"  required>
+            <input type="password" class="form-control input-estilo"  name="confirmar_senha" id="Password2" minlength="8"  required>
             <span class="linhaSpan"></span>
             <label for="" class="col-form-label">Confirmar senha</label>
           </div>
@@ -83,7 +83,7 @@
             <hr class="float-left" style="width: 80%; margin-left: 25px;">
           </div>
           <div class="form-group d-flex justify-content-center" style="margin-top: 89px;">
-            <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8"  required>
+            <input type="text" class="form-control input-estilo" name="senha" id="especialidade" minlength="8"  required [(ngModel)]="usuario.especialidade">
             <span class="linhaSpan"></span>
             <label for="" class="col-form-label">Especialidade</label>
           </div>  
@@ -110,24 +110,24 @@
           <div class="form-group mb-0">
             <div class="d-flex mb-0 justify-content-center form-group w-100">
               <div class="form-group w-50 d-flex justify-content-end mr-2">
-                <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.telefone" mask="(00) 00000-0000" id="nome"  required>
+                <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.telefone" mask="(00) 00000-0000" id="telefone"  required>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label">Telefone</label>
               </div>
               <div class="form-group w-50 d-flex justify-content-start">
-                <input type="text" class="form-control input-estilo" [ngModel]="loginUsuario.cep" mask="00000-000"  required>
+                <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.cep" mask="00000-000"  required>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label" style="left: 10px;">CEP</label>
               </div>
             </div>
           </div>
           <div class="form-group d-flex justify-content-center">
-            <input type="password" class="form-control input-estilo" name="senha" id="Password1" minlength="8"  required>
+            <input type="text" class="form-control input-estilo" name="senha" id="endereco" minlength="8"  required>
             <span class="linhaSpan"></span>
             <label for="" class="col-form-label">Endereço</label>
           </div>
           <div class="form-group d-flex justify-content-center">
-            <textarea class="form-control input-estilo" [ngModel]="loginUsuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
+            <textarea class="form-control input-estilo" [(ngModel)]="usuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
             <span class="linhaSpan"></span>
             <label class="col-form-label">Complemento</label>
           </div>
@@ -144,7 +144,7 @@
             <hr class="float-left" style="width: 80%; margin-left: 25px;">
           </div>
           <div class="form-group d-flex justify-content-center">
-            <textarea class="form-control input-estilo" [ngModel]="loginUsuario.complemento" rows="4" style="resize: none;" id="mensagem"  required></textarea>
+            <textarea class="form-control input-estilo" [(ngModel)]="usuario.descricaoUsuario" rows="4" style="resize: none;" id="mensagem"  required></textarea>
             <span class="linhaSpan"></span>
             <label class="col-form-label">Descrição</label>
           </div>
@@ -181,14 +181,14 @@
             <div class="d-block">
               <div class="d-flex justify-content-center" style="font-weight: 100;">
                 <div class="position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 251px; height: 253px;bottom: 206px" >
-                  <img src="{{usuario.imagemusuario}}" class="imagemUsuario" alt="">
+                  <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="Foto de perfil" style="object-fit: cover;">
                 </div>
               </div>
             </div>
             
             <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
             <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
-              <input type="text" class="form-control input-estilo" required>
+              <input type="text" class="form-control input-estilo" required [(ngModel)]='usuario.imagemusuario'>
               <span class="linhaSpan"></span>
               <label class="col-form-label">Url</label>
             </div>

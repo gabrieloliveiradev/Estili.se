@@ -12,7 +12,9 @@ export class Produto {
     public tamanho:string
     public preco:number
     public idcompra:number
-    public idcategoria:number
-    public idusuario:number
+    public carrinho:string
+    public idUsuario:string
+    public nomeUsuario:string
+    public categoria:string
     public descricao:string
 }

@@ -9,7 +9,7 @@
 .btnEditarFoto{
     right: 0;
     float: right;
-    height: 100%;
+    top: -70px;
     display: flex;
     align-items: flex-end;
     cursor: pointer;

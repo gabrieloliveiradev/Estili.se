@@ -113,7 +113,7 @@ select {
     max-height: 38px;
     border-radius: 3px;
     border-color: #C9BBC3;
-    color: #C9BBC3;
+    color: #5f6461;
     background-color: #FCFCFC;
     font-family: "Roboto thin";
     padding: 7px;
@@ -121,7 +121,7 @@ select {
 
 select:focus, select:hover {
     border-color: #71F6A6;
-    color: #71F6A6;
+    color: #5f6461;
 }
 
 select {
