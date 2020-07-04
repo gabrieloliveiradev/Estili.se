@@ -95,6 +95,7 @@ export class PerfilVendedorComponent implements OnInit {
   publicar(produto: Produto){  
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       // resp.idusuarios = this.usuario.idusuario
+      let id = localStorage.getItem("idusuario")
       this.produto = resp;
       let selectCategoria = ((<HTMLSelectElement>document.getElementById("selectCategoria")).value)
       produto.categoria = String(selectCategoria)
@@ -104,8 +105,7 @@ export class PerfilVendedorComponent implements OnInit {
         this.produto = resp
       });
       let idusuario = this.loginUsuario.idusuario
-      location.assign('/perfil-vendedor')
-      this.router.navigate(['/perfil-vendedor', idusuario])
+      location.reload
     });
   }
   publicarNomeUsuario(produto: Produto){

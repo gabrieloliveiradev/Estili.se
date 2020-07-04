@@ -45,7 +45,7 @@ export class EditarPerfilProfissionalComponent implements OnInit {
     localStorage.setItem('nome', this.loginUsuario.nome)
     localStorage.setItem('cep', this.loginUsuario.cep)
     localStorage.setItem('complemento', this.loginUsuario.complemento)
-    localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
+    // localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
       this.router.navigate(['/perfil-vendedor', this.idusuario])
