@@ -137,6 +137,7 @@ export class PerfilVendedorComponent implements OnInit {
   }
 
   editarProduto(){
+    
     this.mostrarEditarProduto = true
   }
 

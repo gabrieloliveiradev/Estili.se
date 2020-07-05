@@ -13,14 +13,16 @@ export class EditarProdutoComponent implements OnInit {
 
   produto: Produto = new Produto
   usuario: Usuario = new Usuario
+
+
   constructor(private produtoService: ProdutoService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     let id =this.route.snapshot.params['id_produto']
-    this.findById(id)
+    this.findByIdProduto(id)
   }
 
-  findById(id:number){
+  findByIdProduto(id:number){
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto)=>{
       this.produto = resp
     })
@@ -28,7 +30,7 @@ export class EditarProdutoComponent implements OnInit {
   salvar(){
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      this.router.navigate(['/produtos'])
+      // this.router.navigate(['/produtos'])
     })
   }
 

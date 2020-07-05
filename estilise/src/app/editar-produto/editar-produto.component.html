@@ -25,14 +25,14 @@
                                 <!-- Imagem 2 -->
                                 <div class="card efeito-grow"
                                     style="background-color: #f7f7f7; width: 152px; height: 150px; border-radius: 5px;">
-                                    <img src="produto.imagem2" style="object-fit: cover;" height="100%"
+                                    <img src="{{produto.imagem2}}" style="object-fit: cover;" height="100%"
                                         class="card-img-top" alt="">
                                 </div>
 
                                 <!-- Imagem 3 -->
                                 <div class="card efeito-grow"
                                     style="background-color: #f7f7f7; width: 152px; height: 150px; border-radius: 5px; margin-left: 10px;">
-                                    <img src="produto.imagem3" style="object-fit: cover;" height="100%"
+                                    <img src="{{produto.imagem3}}" style="object-fit: cover;" height="100%"
                                         class="card-img-top" alt="">
                                 </div>
 
@@ -75,7 +75,7 @@
                             <div class="mt-5">
                                 <div class="form-group d-flex justify-content-center">
                                     <input type="text" class="form-control input-estilo inputNome" id="nome"
-                                        [(ngModel)]='produto.nomeProduto' required>
+                                    [(ngModel)]='produto.nomeProduto' required>
                                     <span class="linhaSpan"></span>
                                     <label for="exampleInputNome" class="col-form-label">Nome do produto</label>
                                 </div>
@@ -88,14 +88,14 @@
                                 </div>
                                 <div class="form-group d-flex justify-content-center">
                                     <input type="text" class="form-control input-estilo inputNome" id="nome"
-                                        [(ngModel)]='produto.preco' required>
+                                    [(ngModel)]='produto.preco' required>
                                     <span class="linhaSpan"></span>
                                     <label for="exampleInputNome" class="col-form-label">Preço</label>
                                 </div>
                                 <div class="d-flex mt-2">
                                     <div class="form-group d-flex justify-content-end w-50">
                                         <input type="text" class="form-control input-estilo inputNome" id="nome"
-                                            [(ngModel)]='produto.qtdestoque' required>
+                                        [(ngModel)]='produto.qtdestoque' required>
                                         <span class="linhaSpan"></span>
                                         <label for="exampleInputNome" class="col-form-label">Quantidade</label>
                                     </div>
@@ -182,9 +182,9 @@
                         </div>
                         <div class="d-block justify-content-center align-items-center" style="margin: 80px 59px;">
                             <button class="btn w-100 mb-2" data-dismiss="modal"
-                                style="background-color: #DCD7D0; height: 50px;">Cancelar</button>
+                                style="background-color: #DCD7D0; height: 50px;" data-dismiss="modal">Cancelar</button>
                             <button class="btn w-100 text-light"
-                                style="background-color: #71F6A6; height: 50px;" data-dismiss="modal">Salvar</button>
+                                style="background-color: #71F6A6; height: 50px;" data-dismiss="modal" (click)="salvar()">Salvar</button>
                         </div>
                     </div>
                 </div>
