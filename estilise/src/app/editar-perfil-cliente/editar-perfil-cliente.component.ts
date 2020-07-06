@@ -16,7 +16,7 @@ export class EditarPerfilClienteComponent implements OnInit {
   loginUsuario: loginUsuario = new loginUsuario
   senha:String
 
-  
+  idusuario =Number(localStorage.getItem('idusuario'))
   constructor(private usuariosService: UsuariosService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(){
@@ -48,7 +48,7 @@ export class EditarPerfilClienteComponent implements OnInit {
     // localStorage.setItem('idusuario', this.loginUsuario.idusuario.toString())
     this.usuariosService.putUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
-      // this.router.navigate(['/perfil-cliente'])
+      this.router.navigate(['/perfil-cliente', this.idusuario])
 
     })
   }

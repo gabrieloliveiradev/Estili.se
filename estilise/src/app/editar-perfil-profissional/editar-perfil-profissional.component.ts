@@ -23,7 +23,6 @@ export class EditarPerfilProfissionalComponent implements OnInit {
   ngOnInit(){
     var id = this.route.snapshot.params['id_usuario']
     this.findByIdUsuario(id)
-    window.scroll(0,0)
   }
   findByIdUsuario (id:number) {
     this.usuariosService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
