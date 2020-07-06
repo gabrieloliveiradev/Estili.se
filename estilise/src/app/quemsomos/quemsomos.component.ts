@@ -19,25 +19,48 @@ export class QuemsomosComponent implements OnInit {
   ngOnInit(): void {
     const element = document.querySelector('h1');
     const element2 = document.querySelector('p');
-    digitaTexto(element)
-    digitaTexto2(element2)
+    this.digitaTexto(element)
+    this.digitaTexto2(element2)
   }
-}
-
-function digitaTexto(elemento) {
-    const textoArray = elemento.innerHTML.split('');
-  elemento.innerHTML='';
-    textoArray.forEach((letra, i) =>{
-        setTimeout(()=>{
-
-          elemento.innerHTML +=letra;
-
-        }, 75 * i);
-
-    })
+  ancoraMissao(){
+    let ancora = document.querySelector("#ancoradoNaMissao")
+    if (ancora){
+      // window.scroll(800,800)
+      ancora.scrollIntoView({ behavior: 'smooth'})
+    }
     
   }
-  function digitaTexto2(elemento) {
+  ancoraVisao(){
+    let ancora = document.querySelector("#ancoradoNaVisao")
+    if (ancora){
+      ancora.scrollIntoView({ behavior: 'smooth'})
+    }
+    
+  }
+  ancoraValores(){
+    let ancora = document.querySelector("#ancoradoEmValores")
+    if (ancora){
+      ancora.scrollIntoView({ behavior: 'smooth',})
+
+    }
+    
+  }
+
+
+  digitaTexto(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML='';
+      textoArray.forEach((letra, i) =>{
+          setTimeout(()=>{
+
+            elemento.innerHTML +=letra;
+
+          }, 75 * i);
+
+      })
+      
+    }
+  digitaTexto2(elemento) {
     const textoArray = elemento.innerHTML.split('');
   elemento.innerHTML='';
     textoArray.forEach((letra, i) =>{
@@ -50,3 +73,4 @@ function digitaTexto(elemento) {
     })
     
   }
+}

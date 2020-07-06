@@ -1,7 +1,7 @@
 <!-- __________________________________INICIO__________________________________________________ -->
-<div class="container-fluid row justify-content-around">
+<div class=" justify-content-center">
     <header class="d-flex align-items-center justify-content-center">
-        <div class="text-white container-fluid row justify-content-center align-items-center" id="cardSobre">
+        <div class="text-white container-fluid row justify-content-center align-items-center" id="cardSobre" style="height: 30em!important;">
             <div class="d-flex flex-column align-items-center justify-content-around" id="caixa">
                 <h1 class="font-cookie display-4 verde-logo text-center" id="tituloHeader">Quem Somos</h1>
                 <img src="../../assets/img/quemsomos/fio.png" style="height: 15px; width: 110px;">
@@ -15,16 +15,29 @@
         </div>
     </header>
 
-    <!-- <div class="col-md-5 col-10 my-5 d-flex justify-content-center">
-            <video width="490" height="280" controls>
-                <source src="../../assets/img/quemsomos/ESTILI.SE.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                    </video>
-                </div> -->
+    <div class="my-5 d-flex justify-content-center">
+        <ul class="d-flex justify-content-center">
+            <li (click)="ancoraMissao()" class="mr-4 li-estilo">
+                <p style="font-size: 30px; cursor: pointer;">Missão</p>
+                <span class="linhaSpan"></span>
+            </li>
+            <li (click)="ancoraVisao()" class="mr-4 li-estilo">
+                <p style="font-size: 30px; cursor: pointer;">Visão</p>
+                <span class="linhaSpan"></span>
+            </li>
+            <li (click)="ancoraValores()" class="li-estilo">
+                <p style="font-size: 30px; cursor: pointer;">Valores</p>
+                <span class="linhaSpan"></span>
+            </li>
+        </ul>        
+    </div>
+    <div style="height: 5em;" id="ancoradoNaMissao">
+        
+    </div>
     <!-- Missáo -->
-    <div class="mb-md-3 container my-md-5">
-        <div class="row no-gutters">
-            <div class="col-md-8 pb-5">
+    <div style="margin-top: 5em;" >
+        <div class="row no-gutters d-flex justify-content-between">
+            <div class="col-md-5 pb-5 ml-5">
                 <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
                     <h3 class="text-md-left text-center">Missão</h3>
                     <p class="text-md-left text-center">A Estili.Se serve de elo entre o profissional e o
@@ -32,33 +45,34 @@
                         estilistas amadores promovendo a criatividade e ao mesmo tempo em que atinge a satisfação.</p>
                 </div>
             </div>
-            <div class="col-md-4 d-flex flex-column align-items-center">
+            <div class="col-md-5 d-flex flex-column align-items-center">
                 <img src="../../assets/img/quemsomos/Missão.jpg" class="card-img" alt="Missão">
             </div>
         </div>
+        <div id="ancoradoNaVisao"></div>
     </div>
-
+    <hr class="w-100 my-0" >
     <!-- visao -->
-    <div class="mb-3 container my-5" id="">
-        <div class="row no-gutters">
-            <div class="col-md-4 d-flex flex-column align-items-center">
+    <div class="" id="">
+        <div class="row no-gutters d-flex justify-content-between">
+            <div class="col-md-5 d-flex flex-column align-items-center">
                 <img src="../../assets/img/quemsomos/Visão.png" class="card-img" alt="Visão"></div>
 
-            <div class="col-md-8 ">
+            <div class="col-md-5 mr-5">
                 <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
                     <h3 class="text-md-right ml-md-auto text-center">Visão</h3>
-                    <p class="text-md-right text-center">Fazer que as pessoas economizem dinheiro ao aproveitar as
+                    <p id="ancoradoEmValores" class="text-md-right text-center">Fazer que as pessoas economizem dinheiro ao aproveitar as
                         promoções mais próximas e assim aquecer a economia local e aumentar o poder aquisitivo da
                         comunidade como um todo.</p>
                 </div>
             </div>
         </div>
     </div>
-
+    <hr class="w-100 my-0">
     <!-- Valores -->
-    <div class="mb-md-3 container my-md-5">
-        <div class="row no-gutters">
-            <div class="col-md-8 pb-5">
+    <div class="">
+        <div  class="row no-gutters d-flex justify-content-between">
+            <div class="col-md-5 pb-5 mt-5 ml-5">
                 <div class="card-body d-flex flex-column h-100 justify-content-center pb-5">
                     <h3 class="text-md-left text-center">Valores</h3>
                     <p class="text-md-left text-center">A Estili.Se serve de elo entre o profissional e o cliente como
@@ -66,7 +80,7 @@
                         promovendo a criatividade e ao mesmo tempo em que atinge a satisfação.</p>
                 </div>
             </div>
-            <div class="col-md-4 d-flex flex-column align-items-center">
+            <div class="col-md-5 d-flex flex-column align-items-center">
                 <img src="../../assets/img/quemsomos/Valores (2).jpg" class="card-img" alt="valores">
             </div>
         </div>
@@ -75,8 +89,8 @@
 
 
     <!-- NOSSA EQUIPE -->
-    <div class="col-12 my-5">
-        <h2 class="font-roboto verde-logo">NOSSO TIME</h2>
+    <div class="col-12" style="margin: 10em 0;">
+        <h2 class="font-roboto">NOSSO TIME</h2>
     </div>
 
     
@@ -181,7 +195,7 @@
         </div>
 
         <!-- GUILHERME -->
-        <div class="d-block">
+        <div class="d-block my-5">
             <h4>Guilherme Alves</h4>
             <div class="box">
             
@@ -212,7 +226,7 @@
             </div>
         </div>
         <!-- OTAVIO -->
-        <div class="d-block">
+        <div class="d-block my-5">
             <h4>Otavio Mendes</h4>
             <div class="box">
                 

@@ -42,7 +42,10 @@ export class PerfilVendedorComponent implements OnInit {
   mostrarPopupLogin: boolean = false
   mostrarEditarProduto: boolean = false
   listaCategorias: Categoria[]
+  listaProduto: Produto[]
   categoria: Categoria = new Categoria
+  mostrarExcluirProduto: boolean = false
+  idproduto = localStorage.getItem("idproduto")
   constructor(private usuarioService: UsuariosService,private produtoService: ProdutoService, private http: HttpClient, private route: ActivatedRoute, private router: Router, public authService: AuthService, private categoriaService: CategoriaService) {  }
   fecharPopup(){
     let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
@@ -51,6 +54,7 @@ export class PerfilVendedorComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllCategorias()
+    this.findAllProduto()
     var id = this.route.snapshot.params['id']
     this.findByIdUsuario(id)
     let idusuario = id
@@ -61,11 +65,16 @@ export class PerfilVendedorComponent implements OnInit {
     
     if(token == null){
       this.login = true
-      alert('Faça o login antes de acessar a página feed')
+      alert('Faça o login antes de acessar a página de perfil')
       this.mostrarPopupLogin = true
       // this.router.navigate(['/home'])
       this.fecharPopup() 
     }
+  }
+  findAllProduto(){
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+      this.listaProduto = resp;
+    });
   }
   findAllCategorias(){
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[])=>{
@@ -91,6 +100,7 @@ export class PerfilVendedorComponent implements OnInit {
       this.usuario=resp
     })
   }
+
   publicar(produto: Produto){  
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       // resp.idusuarios = this.usuario.idusuario
@@ -104,7 +114,6 @@ export class PerfilVendedorComponent implements OnInit {
         this.produto = resp
       });
       let idusuario = this.loginUsuario.idusuario
-      this.router.navigate(['/produtos'])
       location.reload
     });
   }
@@ -135,9 +144,31 @@ export class PerfilVendedorComponent implements OnInit {
     validadeMes.innerHTML = selectMes;
     validadeAno.innerHTML = selectAno;
   }
+  // findByIdProduto(idProduto: number){
+  //   this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
+  //     this.produto = resp;
+  //     localStorage.setItem('idproduto', String(this.produto.idproduto))
+  //   });
+  // }
 
-  popupdeEditarProduto(){
+  editarProduto(idProduto: number){
+    // this.findByIdProduto(Number(this.idproduto))
+    // localStorage.setItem('idproduto', String(this.produto.idproduto))
+    this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
+        this.produto = resp;
+        localStorage.setItem('idproduto', String(this.produto.idproduto))
+      });
     this.mostrarEditarProduto = true
+  }
+
+  excluirProduto(){
+    this.mostrarExcluirProduto = true
+    this.produtoService.getByIdProduto(this.produto.idproduto).subscribe((resp: Produto)=>{
+      this.produto = resp;
+      localStorage.setItem('idproduto', String(this.produto.idproduto))
+    });
+
+
   }
   
 }

@@ -2,7 +2,7 @@
 label{
     position: absolute;
     top: -3px!important;
-    left: 60px;
+    left: 77px;
     padding: 10px 0;
     font-size: 16px!important;
     color: rgb(185, 185, 185)!important;
@@ -15,7 +15,7 @@ label{
     max-width: 1250px!important;
 }
 .tamanhoPopupHeight{
-    height: 900px!important;
+    height: 1017px!important;
 }
 /* ========================== Formulários dos <input> */
 .form-group{
@@ -41,7 +41,7 @@ label{
 }
 .input-estilo:focus ~ label, .input-estilo:valid ~ label{ /* posicionamento do label em cima do input */
     top: -30px!important;
-    left: 50px;
+    left: 60px;
     font-size: 13px!important;
     font-style: normal;
     font-weight: 500;
@@ -63,6 +63,15 @@ label{
 .precoFormulario:focus~.precoLabel, .precoFormulario:valid~.precoLabel{
     top: -30px!important;
     left: 10px!important;
+    font-size: 15px!important;
+    font-style: normal;
+    font-weight: 500;
+    color: #71f6a6!important;
+}
+
+.input-estilo:focus ~ .labelInputURL, .input-estilo:valid ~ .labelInputURL{
+    top: -30px!important;
+    left: 0px!important;
     font-size: 15px!important;
     font-style: normal;
     font-weight: 500;
@@ -90,4 +99,9 @@ label{
 
 .modal-backdrop.show{
     display: flex;
+}
+/* ============ Cor produtos ========= */
+.corRoupa {
+    width: 46px;
+    height: 42px;
 }

@@ -238,19 +238,38 @@ width: 100%;}
 	transform: translateY(0);
 	transition-delay: 0.9s
 }
+/* ========================  Estilo do <span> */
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+  position: relative;
+  display: block;
+  width: 100%; 
+  bottom: 1px; 
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+  content: '';
+  height: 4px;
+  bottom: 0px;
+  width: 0;
+  position: absolute;
+  transition: .2s ease all;
+  background: #71f6a6;
+}
+.li-estilo:hover .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+  width:100%;
+}
 
-@keyframes neon{
+/* @keyframes neon{
   from{
     filter: drop-shadow(0 0 0 var(--cor-neon));
   }
   to{
     filter: drop-shadow(0 0 5px var(--cor-neon));
   }
-}
-h2{
+} */
+/* h2{
   animation: neon 1s alternate infinite ;
 }
 h2{
   --cor-neon: #118192;
-}
+} */
 /* social mb-0 list-inline mt-0 y-100 d-flex justify-content:center */

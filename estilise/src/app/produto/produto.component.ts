@@ -116,7 +116,6 @@ findByIdProduto(idProduto: number){
 }
 
 pesquisarProduto(){
-  // let nomeproduto = ((<HTMLInputElement>document.getElementById("pesquisar")).value)
   this.produtoService.findBynome(this.nomeProduto).subscribe((resp: Produto[]) => {
     this.listaProdutos = resp
     this.pesquisa = true

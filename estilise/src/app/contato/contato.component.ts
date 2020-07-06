@@ -21,11 +21,11 @@ export class ContatoComponent implements OnInit {
     }
   
   botao1 () {
-    let nome = ((<HTMLInputElement>document.getElementById("nome")))
-    let email = ((<HTMLInputElement>document.getElementById("email")))
-    let telefone = ((<HTMLInputElement>document.getElementById("telefone")))
-    let assunto = ((<HTMLInputElement>document.getElementById("assunto")))
-    if ( nome.value == "" || email.value == "" || telefone.value == "" || assunto.value == "") {
+    let nome = ((<HTMLInputElement>document.getElementById("nome")).value)
+    let email = ((<HTMLInputElement>document.getElementById("inputemail")).value)
+    let telefone = ((<HTMLInputElement>document.getElementById("telefone")).value)
+    let assunto = ((<HTMLInputElement>document.getElementById("assunto")).value)
+    if ( nome == "" || email == "" || telefone == "" || assunto == "") {
       alert("Favor preencher todos os campos.");
     } else {
     this.bloco1 = !this.bloco1;

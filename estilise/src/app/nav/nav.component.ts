@@ -72,6 +72,8 @@ export class NavComponent implements OnInit {
     this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
       
       this.produto = resp
+      
+      location.assign('/produtos')
 
     });
   }
