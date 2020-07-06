@@ -144,12 +144,12 @@ export class PerfilVendedorComponent implements OnInit {
     validadeMes.innerHTML = selectMes;
     validadeAno.innerHTML = selectAno;
   }
-  // findByIdProduto(idProduto: number){
-  //   this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
-  //     this.produto = resp;
-  //     localStorage.setItem('idproduto', String(this.produto.idproduto))
-  //   });
-  // }
+  findByIdProduto(idProduto: number){
+    this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
+      this.produto = resp;
+      localStorage.setItem('idproduto', String(this.produto.idproduto))
+    });
+  }
 
   editarProduto(idProduto: number){
     // this.findByIdProduto(Number(this.idproduto))

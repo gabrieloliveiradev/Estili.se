@@ -4,24 +4,29 @@
   
   <!-- ============ Foto de perfil ============= -->
   <section class="w-100 d-flex justify-content-center">
-    <article class="mt-4 rounded-circle fotoInicial imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
-      <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
-      <div class="">
-        <!-- ======== Botão para editar a foto de perfil ======== -->
-        <div  class="position-relative btnEditarFoto rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
-          <svg class="svg-btn-editar-foto" alt="botão para editar a foto do perfil" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-              <path d="M17.4997 26.25C21.5268 26.25 24.7914 22.9854 24.7914 18.9583C24.7914 14.9312 21.5268 11.6666 17.4997 11.6666C13.4726 11.6666 10.208 14.9312 10.208 18.9583C10.208 22.9854 13.4726 26.25 17.4997 26.25Z"/>
-              <path d="M32.0833 7.29169H27.4584C26.8738 7.29169 26.3248 7.06384 25.9111 6.65082L23.2451 3.9848C22.5565 3.29622 21.6407 2.91669 20.6666 2.91669H14.3334C13.3593 2.91669 12.4435 3.29622 11.7549 3.9848L9.08893 6.65082C8.67521 7.06384 8.12622 7.29169 7.54161 7.29169H2.91669C1.30806 7.29169 0 8.59974 0 10.2083V29.1666C0 30.7752 1.30806 32.0833 2.91669 32.0833H32.0834C33.6919 32.0833 35.0001 30.7752 35.0001 29.1666V10.2083C35 8.59974 33.6919 7.29169 32.0833 7.29169ZM17.5 27.7083C12.675 27.7083 8.75 23.7833 8.75 18.9583C8.75 14.1333 12.675 10.2083 17.5 10.2083C22.325 10.2083 26.25 14.1333 26.25 18.9583C26.25 23.7833 22.325 27.7083 17.5 27.7083ZM29.1667 14.5833C28.3628 14.5833 27.7084 13.9289 27.7084 13.125C27.7084 12.3211 28.3628 11.6667 29.1667 11.6667C29.9706 11.6667 30.625 12.3211 30.625 13.125C30.625 13.9289 29.9706 14.5833 29.1667 14.5833Z"/>
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="35" height="35" fill="white"/>
-              </clipPath>
-            </defs>
-          </svg>  
+    <article class=" mt-4 rounded-circle  fotoInicial imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
+      <div class="position-relative" style="height: 16em;">
+        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
+        <div>
+          <div class="position-relative btnEditarFoto ">
+            <!-- ======== Botão para editar a foto de perfil ======== -->
+            <div  class="rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
+              <svg class="svg-btn-editar-foto" alt="botão para editar a foto do perfil" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M17.4997 26.25C21.5268 26.25 24.7914 22.9854 24.7914 18.9583C24.7914 14.9312 21.5268 11.6666 17.4997 11.6666C13.4726 11.6666 10.208 14.9312 10.208 18.9583C10.208 22.9854 13.4726 26.25 17.4997 26.25Z"/>
+                  <path d="M32.0833 7.29169H27.4584C26.8738 7.29169 26.3248 7.06384 25.9111 6.65082L23.2451 3.9848C22.5565 3.29622 21.6407 2.91669 20.6666 2.91669H14.3334C13.3593 2.91669 12.4435 3.29622 11.7549 3.9848L9.08893 6.65082C8.67521 7.06384 8.12622 7.29169 7.54161 7.29169H2.91669C1.30806 7.29169 0 8.59974 0 10.2083V29.1666C0 30.7752 1.30806 32.0833 2.91669 32.0833H32.0834C33.6919 32.0833 35.0001 30.7752 35.0001 29.1666V10.2083C35 8.59974 33.6919 7.29169 32.0833 7.29169ZM17.5 27.7083C12.675 27.7083 8.75 23.7833 8.75 18.9583C8.75 14.1333 12.675 10.2083 17.5 10.2083C22.325 10.2083 26.25 14.1333 26.25 18.9583C26.25 23.7833 22.325 27.7083 17.5 27.7083ZM29.1667 14.5833C28.3628 14.5833 27.7084 13.9289 27.7084 13.125C27.7084 12.3211 28.3628 11.6667 29.1667 11.6667C29.9706 11.6667 30.625 12.3211 30.625 13.125C30.625 13.9289 29.9706 14.5833 29.1667 14.5833Z"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="35" height="35" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>  
+            </div>
+          </div>
         </div>
       </div>
+     
     </article>
   </section>
   

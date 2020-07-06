@@ -316,7 +316,7 @@
                     <div *ngFor="let produto of listaVendedor"
                         class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai mx-4"
                         data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
-                        <div  class="card-produto card-evento-hover">
+                        <div (click)="findByIdProduto(produto.idproduto)" class="card-produto card-evento-hover">
                             <img class="w-100 card-img imgProduto" style="object-fit: cover;" src="{{produto.imagem1}}" alt="">
                             <div [routerLink]="['/editar-produto', produto.idproduto]">
                                 <img class="card-img-editar p-2 d-none"  src="../../assets/img/perfil-vendedor/editar 1.svg"
@@ -411,7 +411,7 @@
                                         class="card-img-top h-100 w-100" alt="...">
                                 </div>
 
-                                <article class=" collapseModal mt-5">
+                                <article class=" collapseModal mt-5" style="width: 108%;">
                                     <div id="accordion">
                                         <div class="card">
                                             <div class="card-header" id="headingOne">
@@ -517,7 +517,7 @@
                                     <article class="modalForm d-flex justify-content-start mt-5">
                                         <!-- Quantidade -->
                                         <div class="modalForm form-group  w-60">
-                                            <input type="text" class="form-control formulario" minlength="4" required>
+                                            <input type="text" class="form-control formulario" required>
                                             <span class="linhaSpanModal qtLinha"></span>
                                             <label class="labelModal col-form-label">Quantidade</label>
                                         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../model/produto';
 import { ProdutoService } from '../service/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-deletar-produto',
@@ -11,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DeletarProdutoComponent implements OnInit {
 
   produto: Produto = new Produto
+  usuario: Usuario = new Usuario
   deletado:boolean = false
 
   idproduto = localStorage.getItem("idproduto")
@@ -35,7 +37,6 @@ export class DeletarProdutoComponent implements OnInit {
     this.produtoService.deleteProduto(idproduto).subscribe(()=>{
       let idusuario = Number(localStorage.getItem("idusuario"))
       this.router.navigate(['/perfil-vendedor', idusuario])
-      location.reload
     })
   }
   btnNao(){
