@@ -6,9 +6,9 @@
   <section class="w-100 d-flex justify-content-center">
     <article class="mt-4 rounded-circle fotoInicial imgPerfil" style="background-color: #efefef; width: 251px; height: 253px;">
       <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
-      <div class="position-relative btnEditarFoto">
+      <div class="">
         <!-- ======== Botão para editar a foto de perfil ======== -->
-        <div class="rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
+        <div  class="position-relative btnEditarFoto rounded-circle btnImgCamera d-flex justify-content-center align-items-center" style="background-color: #E0DEDE; width: 60px; height: 60px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
           <svg class="svg-btn-editar-foto" alt="botão para editar a foto do perfil" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path d="M17.4997 26.25C21.5268 26.25 24.7914 22.9854 24.7914 18.9583C24.7914 14.9312 21.5268 11.6666 17.4997 11.6666C13.4726 11.6666 10.208 14.9312 10.208 18.9583C10.208 22.9854 13.4726 26.25 17.4997 26.25Z"/>
@@ -162,8 +162,8 @@
       </div>
       
       <div class="d-flex justify-content-center mt-3 mb-5">
-        <button data-dismiss="modal" type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;">Cancelar</button>
-        <button (click)="salvar()" type="button" class="btn text-light py-2" style="background-color: #71F6A6; width: 30%;">Salvar</button>
+        <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
+        <button (click)="salvar()" type="button" class="btn text-light py-2" style="background-color: #71F6A6; width: 30%;"  data-dismiss="modal">Salvar</button>
       </div>
     </div>
   </div>

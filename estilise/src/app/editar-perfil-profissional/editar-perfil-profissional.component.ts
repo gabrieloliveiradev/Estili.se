@@ -31,10 +31,6 @@ export class EditarPerfilProfissionalComponent implements OnInit {
     })
   }
 
-  fecharPopup(){
-    location.assign('/editar-profissional')
-  }
-
   conferirSenha(event: any){
     this.senha = event.target.value;
   }

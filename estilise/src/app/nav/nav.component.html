@@ -157,7 +157,7 @@
                                     <div class="rounded-circle align-items-center imgPerfil" style="width: 40px; height: 40px;">
                                         <img src="{{usuario.imagemusuario}}" alt="" class="w-100 h-100 rounded-circle" style="object-fit: cover;">
                                     </div>
-                                    <p class="text-left w-50 pl-2"></p>
+                                    <p class="text-left w-50 pl-2">{{usuario.nome}}</p>
                                     <ng-container *ngIf="auth.btnProfissional(usuario)">
                                         <button [routerLink]="['/perfil-vendedor', id_usuario]" class="btn p-1 px-3 text-light" style="background-color: #DCD7D0;">Perfil</button>
                                     </ng-container>

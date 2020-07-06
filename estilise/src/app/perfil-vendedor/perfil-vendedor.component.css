@@ -326,14 +326,15 @@
   /*===============  Favorito ===============*/
 
   .card-produto:hover .card-svg-excluir {
-      display: flex!important;
-      width: 41px;
-      height: 41px;
-      right: 10px;
-      top: 61px;
-      border-radius: 3px;
-      position: absolute;
-      z-index: 1;
+    display: flex!important;
+    width: 41px;
+    height: 41px;
+    right: 10px!important;
+    top: 61px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
   }
   
   .card-produto:hover .card-img-editar {

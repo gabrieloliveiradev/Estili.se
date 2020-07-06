@@ -9,12 +9,12 @@
             <div class="container">
                 <div class="jumbotron">
                     <div class="row">
-                        <div class="col-md-2 col-xs-12 col-sm-4 col-lg-2"
-                            style="width: 160px; height: 160px; margin-top: 3rem; max-width: 160px; max-height: 160px;">
+                        <div class="col-md-3 col-xs-12 col-sm-5 col-lg-3"
+                            style="width: 160px; height: 199px; margin-top: 3rem; max-width: 203px; max-height: 203px;">
                             <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle"
                                 style="object-fit: cover;">
                         </div>
-                        <div class="col-md-10 col-xs-12 col-sm-8 col-lg-10">
+                        <div class="col-md-9 col-xs-12 col-sm-7 col-lg-9">
                             <div class="container d-flex justify-content-end align-items-center">
                                 <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
                                     {{usuario.nome}}</p>
@@ -316,13 +316,13 @@
                     <div *ngFor="let produto of listaVendedor"
                         class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai mx-4"
                         data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
-                        <div class="card-produto card-evento-hover">
-                            <img class="w-100 card-img" style="object-fit: cover;" src="{{produto.imagem1}}" alt="">
-                            <div class="p-5" data-toggle="modal" (click)="editarProduto()" data-target="#editarProduto" data-whatever="@mdo">
+                        <div  class="card-produto card-evento-hover">
+                            <img class="w-100 card-img imgProduto" style="object-fit: cover;" src="{{produto.imagem1}}" alt="">
+                            <div [routerLink]="['/editar-produto', produto.idproduto]">
                                 <img class="card-img-editar p-2 d-none"  src="../../assets/img/perfil-vendedor/editar 1.svg"
                                 alt="">
                             </div>
-                            <div class="p-5" data-toggle="modal" (click)="excluirProduto()" data-target="#excluirProduto">
+                            <div class="" style="visibility: hidden;"  data-toggle="modal" (click)="excluirProduto()" data-target="#excluirProduto">
                                 <img class="card-svg-excluir p-2" src="../../assets/img/perfil-vendedor/lixo 1.svg" alt="">
                             </div>
                         </div>

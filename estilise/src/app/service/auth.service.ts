@@ -13,6 +13,7 @@ export class AuthService {
   mostrarPopupCadastro: boolean = false
   mostrarPopupLogin: boolean = false
   usuario: Usuario = new Usuario
+  camposVazios:boolean = false
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   logar(loginUsuario: loginUsuario){
@@ -43,7 +44,6 @@ export class AuthService {
     return ok;
   }
   verificarCampos(){
-    let camposVazios = false
     let nome = localStorage.getItem('nome');
     let emailusuario = localStorage.getItem('emailusuario');
     let cpfusuario= localStorage.getItem('cpfusuario');
@@ -57,10 +57,10 @@ export class AuthService {
     let numero_casa = localStorage.getItem('numerocasa');
     let profissional = localStorage.getItem('profissional');
     let especialidade = localStorage.getItem('especialidade');
-    if(nome != null || nome != undefined || complemento != null || complemento != undefined || cpfusuario != null || cpfusuario != undefined || cep != null || cep != undefined || emailusuario != null || emailusuario != undefined){
-       camposVazios = true;
+    if(nome != "" && complemento != "" && cpfusuario != "" && cep != "" && emailusuario != ""){
+       this.camposVazios = true;
     }
-    return camposVazios
+    return this.camposVazios
   }
 
   popupCadastro(){

@@ -13,7 +13,7 @@ export class ProdutoService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
 
-  getAllProdutos (){
+  getAllProdutos(){
     return this.http.get('http://localhost:8080/produtos', this.token);
   }
   findBynome(nomeProduto: String){
@@ -26,7 +26,7 @@ export class ProdutoService {
     return this.http.post('http://localhost:8080/produtos', produto , this.token)
   }
   putProduto(produto: Produto) {
-    return this.http.put('http://localhost:8080/produtos', produto, this.token)
+    return this.http.put('http://localhost:8080/produtos', produto)
   }
   getByIdProduto(id_produto:number) {
     return this.http.get(`http://localhost:8080/produtos/${id_produto}`, this.token)

@@ -5,6 +5,8 @@ import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../service/auth.service';
 import { UsuariosService } from '../service/usuarios.service';
+import { cartao } from '../model/cartao';
+import { platformBrowserTesting } from '@angular/platform-browser/testing';
 
 @Component({
   selector: 'app-perfil-cliente',
@@ -30,9 +32,11 @@ export class PerfilClienteComponent implements OnInit {
   especialidade: string = localStorage.getItem('especialidade');
 
   loginUsuario : loginUsuario = new loginUsuario
+  cartao: cartao = new cartao
   login: boolean = false
   mostrarPopupLogin: boolean = false
-
+  mostrarCartao:boolean = false
+  cartaoValidadeMes = ((<HTMLInputElement>document.querySelector(".cartaoValidadeMes")))
   constructor(private router: Router, private http: HttpClient, public auth: AuthService,  public usuarioService: UsuariosService, private route: ActivatedRoute) { }
   
 
@@ -69,19 +73,32 @@ export class PerfilClienteComponent implements OnInit {
     let numerocartao = document.getElementById('numerocartao')
     let inputnumero = ((<HTMLInputElement>document.getElementById("inputnumero")).value)
     numerocartao.innerHTML = inputnumero;
+    this.cartao.numero = numerocartao.innerHTML
   }
   substituirnome(){
     let nomecartao= document.getElementById('nomecartao')
     let inputnome= ((<HTMLInputElement>document.getElementById("inputnome")).value)
     nomecartao.innerHTML = inputnome;
+    this.cartao.titular = nomecartao.innerHTML
   }
   substituirvalidade(){
     let validadeMes = document.getElementById("validadeMes")
     let validadeAno = document.getElementById("validadeAno")
-    let selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
+    var selectMes = ((<HTMLSelectElement>document.getElementById("selectMes")).value)
     let selectAno = ((<HTMLSelectElement>document.getElementById("selectAno")).value)
     validadeMes.innerHTML = selectMes;
     validadeAno.innerHTML = selectAno;
+    this.cartao.dataValidadeMes = validadeMes.innerHTML
+    this.cartao.dataValidadeAno = validadeAno.innerHTML
+
+  }
+
+  salvar(){
+    if(this.cartao.numero != "" && this.cartao.titular != "" && this.cartao.dataValidadeAno != "" && this.cartao.dataValidadeMes != "" && this.cartao.cvv != ""){
+      this.mostrarCartao = true
+    }else{
+      alert("erro")
+    }
   }
   
 }
