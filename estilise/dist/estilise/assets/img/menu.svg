@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83" height="81" viewBox="0 0 83 81">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_67" data-name="Retângulo 67" width="83" height="81" transform="translate(1556 1172)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_de_máscara_16" data-name="Grupo de máscara 16" transform="translate(-1556 -1172)" clip-path="url(#clip-path)">
+    <g id="icons8-cardápio" transform="translate(1548.594 1163.594)">
+      <path id="Caminho_447" data-name="Caminho 447" d="M48.906,10.7A38.208,38.208,0,1,0,87.113,48.906,38.208,38.208,0,0,0,48.906,10.7Z" fill="none" stroke="#fff" stroke-width="0.764"/>
+      <path id="Caminho_448" data-name="Caminho 448" d="M48.906,89.406a40.5,40.5,0,1,1,40.5-40.5A40.57,40.57,0,0,1,48.906,89.406Zm0-76.415A35.915,35.915,0,1,0,84.821,48.906,35.971,35.971,0,0,0,48.906,12.991Z" fill="#fff"/>
+      <path id="Caminho_449" data-name="Caminho 449" d="M66.1,39.736H31.712a2.292,2.292,0,1,1,0-4.585H66.1a2.292,2.292,0,1,1,0,4.585Zm0,11.462H31.712a2.292,2.292,0,0,1,0-4.585H66.1a2.292,2.292,0,1,1,0,4.585Z" fill="#fff"/>
+      <g id="Grupo_32" data-name="Grupo 32">
+        <path id="Caminho_450" data-name="Caminho 450" d="M66.1,62.66H31.712a2.292,2.292,0,1,1,0-4.585H66.1a2.292,2.292,0,1,1,0,4.585Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
