@@ -1,8 +1,8 @@
 <div class="container">
-
+    
     <!-- ============================================== Perfil ================================================ -->
     <main>
-
+        
         <article>
             <h1 class="d-flex justify-content-center mt-5">Loja</h1>
             <hr>
@@ -10,20 +10,20 @@
                 <div class="jumbotron">
                     <div class="row">
                         <div class="col-md-3 col-xs-12 col-sm-5 col-lg-3"
-                            style="width: 160px; height: 199px; margin-top: 3rem; max-width: 203px; max-height: 203px;">
-                            <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle"
-                                style="object-fit: cover;">
-                        </div>
-                        <div class="col-md-9 col-xs-12 col-sm-7 col-lg-9">
-                            <div class="container d-flex justify-content-end align-items-center">
-                                <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
-                                    {{usuario.nome}}</p>
+                        style="width: 160px; height: 199px; margin-top: 3rem; max-width: 203px; max-height: 203px;">
+                        <img src="{{usuario.imagemusuario}}" class="imagemUsuario w-100 h-100 rounded-circle"
+                        style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-9 col-xs-12 col-sm-7 col-lg-9">
+                        <div class="container d-flex justify-content-end align-items-center">
+                            <p style="font-size: large; font-weight: 200;" class="mr-auto mt-auto mb-0">
+                                {{usuario.nome}}</p>
                                 <ng-container *ngIf="donoPagina()">
                                     <button type="button" class="btn btn-link"
-                                        [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
-                                            src="../../assets/img/perfil-cliente/editar.svg"
-                                            style="width: 100%;"></button>
-
+                                    [routerLink]="['/editar-perfil-profissional', usuario.idusuario]"> <img
+                                    src="../../assets/img/perfil-cliente/editar.svg"
+                                    style="width: 100%;"></button>
+                                    
                                 </ng-container>
                             </div>
                             <hr>
@@ -31,300 +31,304 @@
                                 <ul class="col container">
                                     <li>
                                         <p><span style="width:50px;"><img
-                                                    src="../../assets/img/perfil-cliente/email.svg"
-                                                    style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p>
-                                    </li>
-                                    <li>
-                                        <p><span style="width:50px;"><img
-                                                    src="../../assets/img/perfil-cliente/endereço.svg"
-                                                    style="width: 5%;"></span> Endereço: </p>
-                                    </li>
-                                    <li>
-                                        <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
-                                                    style="width: 5%;"></span> Especialidades: {{usuario.especialidade}}
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
-                                                    style="width: 5%;"></span> Descrição: {{usuario.descricaoUsuario}}
-                                        </p>
-                                    </li>
-
-
-                                </ul>
-                                <ul class="col container">
-                                    <ng-container *ngIf="donoPagina()">
+                                            src="../../assets/img/perfil-cliente/email.svg"
+                                            style="width: 5%;"></span> E-mail: {{usuario.emailusuario}}</p>
+                                        </li>
                                         <li>
                                             <p><span style="width:50px;"><img
+                                                src="../../assets/img/perfil-cliente/endereço.svg"
+                                                style="width: 5%;"></span> Endereço: </p>
+                                            </li>
+                                            <li>
+                                                <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
+                                                    style="width: 5%;"></span> Especialidades: {{usuario.especialidade}}
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><span style="width:50px;"><img src="../../assets/img/perfil-cliente/cpf.svg"
+                                                    style="width: 5%;"></span> Descrição: {{usuario.descricaoUsuario}}
+                                                </p>
+                                            </li>
+                                            
+                                            
+                                        </ul>
+                                        <ul class="col container">
+                                            <ng-container *ngIf="donoPagina()">
+                                                <li>
+                                                    <p><span style="width:50px;"><img
                                                         src="../../assets/img/perfil-cliente/cpf.svg"
                                                         style="width: 5%;"></span> CPF: {{usuario.cpfusuario}}</p>
-                                        </li>
-                                        <li>
-                                            <p><span style="width:50px;"><img
-                                                        src="../../assets/img/perfil-cliente/complemento.svg"
-                                                        style="width: 5%;"></span> Complemento: {{usuario.complemento}}
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p><span style="width:50px;"><img
-                                                        src="../../assets/img/perfil-cliente/nascimento.svg"
-                                                        style="width: 5%;"></span> Data de Nascimento:
-                                                {{usuario.datanascimento | date: 'dd/MM/yyyy'}}
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p><span style="width:50px;"><img
-                                                        src="../../assets/img/perfil-cliente/cep.svg"
-                                                        style="width: 5%;"></span> CEP: {{usuario.cep}}</p>
-                                        </li>
-                                        <li>
-                                            <p><span style="width:50px;"><img
-                                                        src="../../assets/img/perfil-cliente/telefone.svg"
-                                                        style="width: 5%; color: #867E7E;"></span> Telefone:
-                                                {{usuario.telefone}}
-                                            </p>
-                                        </li>
-                                    </ng-container>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
-        <ng-container *ngIf="donoPagina()">
-            <article>
-                <ul id="formataNav"
-                    class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
-
-                    <li class="nav-item ">
-                        <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#'
-                            style="color: #686363;">
-                            Pontuação
-                            <br>
-                            <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                            <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                            <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                            <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
-                            <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item ">
-                        <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Reclamações
-                            <br>
-                            de vendas</a>
-                    </li>
-
-                    <li class="nav-item ">
-                        <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Prazo de
-                            entrega
-                            <br> nos correios</a>
-                    </li>
-
-                    <li class="nav-item ">
-                        <a class="nav-link texto p-2  " routerLink='/#' style="color: #686363;">Vendas <br>
-                            canceladas</a>
-                    </li>
-
-                </ul>
-
-            </article>
-
-            <!-- ============================================== Card Saldo ================================================ -->
-
-            <h1 class="d-flex justify-content-center mt-5">Meu Saldo</h1>
-            <hr>
-            <article>
-
-                <div class="d-flex justify-content-center mb-3">
-
-                    <div class="card cardSaldo text-white  mb-10 m-3 "
-                        style="max-width: 18rem; background-color:#118899;">
-
-                        <div id="fontSaldo" class="card-header text-white "> <img class="imgIcon"
-                                src="../../assets/img/icon/iconbag2.png" alt=""> Dinheiro em conta</div>
-                        <div class="card-body  text-white ">
-                            <h5 class="card-title">R$ 0,00</h5>
-                            <p class="card-text"> </p>
-                        </div>
-                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                            style="background-color: #037686;">Ver históirco
-                            ></a>
-                    </div>
-
-                    <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
-                        <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
-                                src="../../assets/img/icon/Iconhand2.png" alt="">Dinheiro disponivel</div>
-                        <div class="card-body  text-white">
-                            <h5 class="card-title">R$ 0,00</h5>
-                            <p class="card-text"> </p>
-                        </div>
-                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                            style="background-color: #037686;">Ver históirco
-                            ></a>
-                    </div>
-
-                    <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
-                        <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
-                                src="../../assets/img/icon/iconpig2.png" alt="">Dinheiro a retirar</div>
-                        <div class="card-body  text-white">
-                            <h5 class="card-title">R$ 0,00</h5>
-                            <p class="card-text"> </p>
-                        </div>
-                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                            style="background-color: #037686;">Ver históirco
-                            ></a>
-
-                    </div>
-
-                    <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
-                        <div class="card-header text-white"></div>
-                        <div class="card-body  text-white">
-                            <h5 class="card-title"><img class="imgIconRetirar"
-                                    src="../../assets/img/icon/iconsaque2.png" alt=""></h5>
-                            <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
-                                class="card-text">Retirar</a>
-                        </div>
-                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
-                            style="background-color: #037686;">Ver históirco
-                            ></a>
-                    </div>
-
-                </div>
-
-            </article>
-        </ng-container>
-        <!-- ============================================== Titulo Categoria Produtos ================================================ -->
-        <h1 class="d-flex justify-content-center mt-5 mb-3 ">Produtos</h1>
-        <hr>
-
-        <!--  =========================================== Pesquisar =============================================== -->
-        <article class="d-flex justify-content-center" style="margin-top: 150px;">
-            <div class="form-group d-flex justify-content-center" style="width: 60%;">
-                <input type="text" class="form-control input-estilo w-100" placeholder="Pesquisar..." name="pesquisa"
-                    minlength="4" required>
-                <span class="linhaSpan"></span>
-            </div>
-            <div class="form-group d-flex justify-content-center">
-                <button class="btn btn-light ml-2 p-2 px-4"
-                    style="background-color:whitesmoke; font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
-            </div>
-            <!--================================================  filtro    =========================================================== -->
-
-            <div class="col-md-3 d-flex justify-content-end dropleft">
-                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
-                    alt="Icone de filtro da página">
-
-                <!-- ====================================== Filtro com animação ================================================== -->
-                <div id="dropdownFiltro" class="dropdown-menu">
-                    <div class="d-flex justify-content-around mt-3">
-                        <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z"
-                                fill="#4B4A4A" />
-                        </svg>
-                        <h4>Filtro</h4>
-                        <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png"
-                            alt="">
-                    </div>
-
-                    <div class="p-3 mt-4" style="color: #686363;">
-                        <h6 class="mb-3">Filtrar por valor</h6>
-                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
-                    </div>
-                    <div class="p-3 mt-1" style="color: #686363;">
-                        <h6 class="mb-3">Filtrar por cor</h6>
-                        <div class="d-flex align-items-center mb-3">
-                            <div
-                                style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                            </div>
-                            <p class="m-0 ml-2">Preto</p>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <div
-                                style="background-color: rgb(146, 17, 140); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                            </div>
-                            <p class="m-0 ml-2">Roxo</p>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <div
-                                style="background-color: rgb(204, 186, 20); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                            </div>
-                            <p class="m-0 ml-2">Amarelo</p>
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <div
-                                style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
-                            </div>
-                            <p class="m-0 ml-2">Laranja</p>
-                        </div>
-                    </div>
-                    <div class="p-3 mt-4" style="color: #686363;">
-                        <h6 class="mb-3">Filtrar por data</h6>
-                        <p><input class="mr-3" type="checkbox" name="" id="">Recente</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
-                        <p><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou mais</p>
-                    </div>
-
-                    <div class="p-3 d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
-                    </div>
-
-                </div>
-
-                <!-- ================================================ Fim do filtro ============================================== -->
-
-            </div>
-
-        </article>
-
-        <!-- ============================================= Produtos =========================================== -->
-        <h6 class="d-flex justify-content-center maisRecente">Mais recentes</h6>
-
-        <article class="row mb-5 justify-content-center">
-            <section class="container-fluid d-flex flex-column align-content-around justify-content-center"
-                style="margin-top: 40px;">
-                <!-- Linha 1 - 4 produtos -->
-                <div class="row px-5 mb-5 justify-content-around">
-                    <ng-container *ngIf="donoPagina()">
-                        <div class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai mx-4"
-                            data-toggle="modal" data-target="#popupEditar" data-whatever="@mdo">
-                            <div class="card-produto card-evento-hover" style="background-color: lightgray;">
-                                <!-- <img class="w-100 card-img" src="../../assets/img/icon/Adicionar produto v3.jpeg" alt=""> -->
-                                <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png"
-                                    alt="">
-                            </div>
-                            <div class="card-descricao p-3 card-evento-hover">
-                                <h5 class="mt-4 font-roboto mb-0 ml-4" style="font-family: Roboto;            
-                                                                    letter-spacing: 0.1em; color: gray;">Adicionar
-                                    Produto</h5>
-                                <div class="d-flex justify-content-between">
-
-
+                                                    </li>
+                                                    <li>
+                                                        <p><span style="width:50px;"><img
+                                                            src="../../assets/img/perfil-cliente/complemento.svg"
+                                                            style="width: 5%;"></span> Complemento: {{usuario.complemento}}
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><span style="width:50px;"><img
+                                                            src="../../assets/img/perfil-cliente/nascimento.svg"
+                                                            style="width: 5%;"></span> Data de Nascimento:
+                                                            {{usuario.datanascimento | date: 'dd/MM/yyyy'}}
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><span style="width:50px;"><img
+                                                            src="../../assets/img/perfil-cliente/cep.svg"
+                                                            style="width: 5%;"></span> CEP: {{usuario.cep}}</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span style="width:50px;"><img
+                                                                src="../../assets/img/perfil-cliente/telefone.svg"
+                                                                style="width: 5%; color: #867E7E;"></span> Telefone:
+                                                                {{usuario.telefone}}
+                                                            </p>
+                                                        </li>
+                                                    </ng-container>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </article>
+                        <!-- ============================================== Pontuação do Vendedor e cia ================================================  -->
+                        <ng-container *ngIf="donoPagina()">
+                            <article>
+                                <ul id="formataNav"
+                                class="navbar navbar-expand-lg navbar-light bg-white mt-5 d-flex justify-content-center ">
+                                
+                                <li class="nav-item ">
+                                    <a id="pontoStar" class="nav-link texto p-2 border-right" routerLink='/#'
+                                    style="color: #686363;">
+                                    Pontuação
+                                    <br>
+                                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                                    <span class="glyphicon glyphicon glyphicon-star" style="color: yellow;"></span>
+                                    <span class="glyphicon glyphicon glyphicon-star" style="color: gray;"></span>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Reclamações
+                                    <br>
+                                    de vendas</a>
+                                </li>
+                                
+                                <li class="nav-item ">
+                                    <a class="nav-link texto p-2 border-right " routerLink='/#' style="color: #686363;">Prazo de
+                                        entrega
+                                        <br> nos correios</a>
+                                    </li>
+                                    
+                                    <li class="nav-item ">
+                                        <a class="nav-link texto p-2  " routerLink='/#' style="color: #686363;">Vendas <br>
+                                            canceladas</a>
+                                        </li>
+                                        
+                                    </ul>
+                                    
+                                </article>
+                                
+                                <!-- ============================================== Card Saldo ================================================ -->
+                                
+                                <h1 class="d-flex justify-content-center mt-5">Meu Saldo</h1>
+                                <hr>
+                                <article>
+                                    
+                                    <div class="d-flex justify-content-center mb-3">
+                                        
+                                        <div class="card cardSaldo text-white  mb-10 m-3 "
+                                        style="max-width: 18rem; background-color:#118899;">
+                                        
+                                        <div id="fontSaldo" class="card-header text-white "> <img class="imgIcon"
+                                            src="../../assets/img/icon/iconbag2.png" alt=""> Dinheiro em conta</div>
+                                            <div class="card-body  text-white ">
+                                                <h5 class="card-title">R$ 0,00</h5>
+                                                <p class="card-text"> </p>
+                                            </div>
+                                            <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                            style="background-color: #037686;">Ver históirco
+                                            ></a>
+                                        </div>
+                                        
+                                        <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                                            <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
+                                                src="../../assets/img/icon/Iconhand2.png" alt="">Dinheiro disponivel</div>
+                                                <div class="card-body  text-white">
+                                                    <h5 class="card-title">R$ 0,00</h5>
+                                                    <p class="card-text"> </p>
+                                                </div>
+                                                <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                                style="background-color: #037686;">Ver históirco
+                                                ></a>
+                                            </div>
+                                            
+                                            <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                                                <div id="fontSaldo" class="card-header text-white"><img class="imgIcon"
+                                                    src="../../assets/img/icon/iconpig2.png" alt="">Dinheiro a retirar</div>
+                                                    <div class="card-body  text-white">
+                                                        <h5 class="card-title">R$ 0,00</h5>
+                                                        <p class="card-text"> </p>
+                                                    </div>
+                                                    <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                                    style="background-color: #037686;">Ver históirco
+                                                    ></a>
+                                                    
+                                                </div>
+                                                
+                                                <div class="card cardSaldo text-white mb-3 m-3" style="max-width: 18rem; background-color:#118899;">
+                                                    <div class="card-header text-white"></div>
+                                                    <div class="card-body  text-white">
+                                                        <h5 class="card-title"><img class="imgIconRetirar"
+                                                            src="../../assets/img/icon/iconsaque2.png" alt=""></h5>
+                                                            <a id="fontSaldoRetirar" href="http://localhost:4200/perfil-vendedor"
+                                                            class="card-text">Retirar</a>
+                                                        </div>
+                                                        <a id="fontSaldo" href="http://localhost:4200/perfil-vendedor" class="card-footer text-white"
+                                                        style="background-color: #037686;">Ver históirco
+                                                        ></a>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </article>
+                                        </ng-container>
+                                        <!-- ============================================== Titulo Categoria Produtos ================================================ -->
+                                        <h1 class="d-flex justify-content-center mt-5 mb-3 ">Produtos</h1>
+                                        <hr>
+                                        
+                                        <!--  =========================================== Pesquisar =============================================== -->
+                                        <article class="d-flex justify-content-center" style="margin-top: 150px;">
+                                            <div class="form-group d-flex justify-content-center" style="width: 60%;">
+                                                <input type="text" class="form-control input-estilo w-100" placeholder="Pesquisar..." name="pesquisa"
+                                                minlength="4" required>
+                                                <span class="linhaSpan"></span>
+                                            </div>
+                                            <div class="form-group d-flex justify-content-center">
+                                                <button class="btn btn-light ml-2 p-2 px-4"
+                                                style="background-color:whitesmoke; font-family: Roboto; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.5);">Pesquisar</button>
+                                            </div>
+                                            <!--================================================  filtro    =========================================================== -->
+                                            
+                                            <div class="col-md-3 d-flex justify-content-end dropleft">
+                                                <img class="filtro-hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                style="cursor: pointer; width: 20%;" src="../../assets/img/produtos/icon-filtro.png"
+                                                alt="Icone de filtro da página">
+                                                
+                                                <!-- ====================================== Filtro com animação ================================================== -->
+                                                <div id="dropdownFiltro" class="dropdown-menu">
+                                                    <div class="d-flex justify-content-around mt-3">
+                                                        <svg width="13" height="31" style="cursor: pointer;" viewBox="0 0 17 31" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M2.51156 15.2298L16.4049 2.03519C16.7466 1.71068 16.7604 1.17646 16.4359 0.834772C16.1114 0.493079 15.5771 0.4793 15.2354 0.803808L0.723186 14.5862C0.381494 14.9107 0.367714 15.4449 0.692222 15.7866L14.4748 30.2926C14.634 30.4602 14.8517 30.5539 15.0654 30.5594C15.2791 30.5649 15.5011 30.4889 15.6689 30.3234C16.0106 29.9989 16.0244 29.4647 15.6999 29.123L2.51156 15.2298Z"
+                                                        fill="#4B4A4A" />
+                                                    </svg>
+                                                    <h4>Filtro</h4>
+                                                    <img style="width: 13%; cursor: pointer;" src="../../assets/img/produtos/configuracoes 2.png"
+                                                    alt="">
+                                                </div>
+                                                
+                                                <div class="p-3 mt-4" style="color: #686363;">
+                                                    <h6 class="mb-3">Filtrar por valor</h6>
+                                                    <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                                                    <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                                                    <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                                                    <p><input class="mr-3" type="checkbox" name="" id="">De R$ 10,00 a R$ 20,00</p>
+                                                </div>
+                                                <div class="p-3 mt-1" style="color: #686363;">
+                                                    <h6 class="mb-3">Filtrar por cor</h6>
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div
+                                                        style="background-color: black; border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                                                    </div>
+                                                    <p class="m-0 ml-2">Preto</p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div
+                                                    style="background-color: rgb(146, 17, 140); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                                                </div>
+                                                <p class="m-0 ml-2">Roxo</p>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div
+                                                style="background-color: rgb(204, 186, 20); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                                            </div>
+                                            <p class="m-0 ml-2">Amarelo</p>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div
+                                            style="background-color: rgb(204, 71, 9); border-radius: 2px; width: 30px; height: 30px; cursor: pointer;">
+                                        </div>
+                                        <p class="m-0 ml-2">Laranja</p>
+                                    </div>
+                                </div>
+                                <div class="p-3 mt-4" style="color: #686363;">
+                                    <h6 class="mb-3">Filtrar por data</h6>
+                                    <p><input class="mr-3" type="checkbox" name="" id="">Recente</p>
+                                    <p><input class="mr-3" type="checkbox" name="" id="">A 1 mês</p>
+                                    <p><input class="mr-3" type="checkbox" name="" id="">A 5 meses</p>
+                                    <p><input class="mr-3" type="checkbox" name="" id="">A 1 ano ou mais</p>
+                                </div>
+                                
+                                <div class="p-3 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary px-4 py-2">Aplicar</button>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- ================================================ Fim do filtro ============================================== -->
+                            
                         </div>
-                    </ng-container>
-                    <div *ngFor="let produto of listaVendedor"
+                        
+                    </article>
+                    
+                    <!-- ============================================= Produtos =========================================== -->
+                    <h6 class="d-flex justify-content-center maisRecente">Mais recentes</h6>
+                    
+                    <article class="row mb-5 justify-content-center">
+                        <section class="container-fluid d-flex flex-column align-content-around justify-content-center"
+                        style="margin-top: 40px;">
+                        <!-- Linha 1 - 4 produtos -->
+                        <div class="row px-5 mb-5 justify-content-around">
+                            <ng-container *ngIf="donoPagina()">
+                                <div class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai mx-4"
+                                data-toggle="modal" data-target="#popupEditar" data-whatever="@mdo">
+                                <div class="card-produto card-evento-hover" style="background-color: lightgray;">
+                                    <!-- <img class="w-100 card-img" src="../../assets/img/icon/Adicionar produto v3.jpeg" alt=""> -->
+                                    <img class="card-img-adicionar d-none" src="../../assets/img/produtos/img-adicionar.png"
+                                    alt="">
+                                </div>
+                                <div class="card-descricao p-3 card-evento-hover">
+                                    <h5 class="mt-4 font-roboto mb-0 ml-4" style="font-family: Roboto;            
+                                    letter-spacing: 0.1em; color: gray;">Adicionar
+                                    Produto</h5>
+                                    <div class="d-flex justify-content-between">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <div *ngFor="let produto of listaVendedor"
                         class="col-12 mb-5 d-flex flex-column align-items-center col-md-6 col-lg-4 col-xl-3 card-div-elemento-pai mx-4"
                         data-toggle="modal" data-target="#popupDescricao" data-whatever="@mdo">
                         <div (click)="findByIdProduto(produto.idproduto)" class="card-produto card-evento-hover">
                             <img class="w-100 card-img imgProduto" style="object-fit: cover;" src="{{produto.imagem1}}" alt="">
-                            <div [routerLink]="['/editar-produto', produto.idproduto]">
-                                <img class="card-img-editar p-2 d-none"  src="../../assets/img/perfil-vendedor/editar 1.svg"
-                                alt="">
-                            </div>
-                            <div class="" style="visibility: hidden;"  data-toggle="modal" (click)="excluirProduto()" data-target="#excluirProduto">
-                                <img class="card-svg-excluir p-2" src="../../assets/img/perfil-vendedor/lixo 1.svg" alt="">
-                            </div>
+                            <ng-container *ngIf="donoPagina()">
+                                <div [routerLink]="['/editar-produto', produto.idproduto]">
+                                    <img class="card-img-editar p-2 d-none"  src="../../assets/img/perfil-vendedor/editar 1.svg"
+                                    alt="">
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="donoPagina()">
+                                <div class="" style="visibility: hidden;"  data-toggle="modal" (click)="excluirProduto()" data-target="#excluirProduto">
+                                    <img class="card-svg-excluir p-2" src="../../assets/img/perfil-vendedor/lixo 1.svg" alt="">
+                                </div>
+                            </ng-container>
                         </div>
                         <div class="card-descricao p-3 card-evento-hover">
                             <h5 class="mt-4 font-roboto mb-0">{{produto.nomeProduto}}</h5>
@@ -338,379 +342,379 @@
                 </div>
             </section>
         </article>
-
+        
         <!-- ============================================= Botões Ver Todos e Itens por Página ===================================== -->
         <hr>
         <article class="botoesProduto, d-flex justify-content-center mt-5 mb-3">
             <div class="dropdown">
                 <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Itens por página.
-                </a>
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Itens por página.
+            </a>
+            
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">10 Itens por página.</a>
+                <a class="dropdown-item" href="#">20 Itens por página.</a>
+                <a class="dropdown-item" href="#">30 Itens por página.</a>
+                <a class="dropdown-item" href="#">40 Itens por página.</a>
+                <a class="dropdown-item" href="#">50 Itens por página.</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-light">Ver todos</button>
+    </article>
+    
+</main>
 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">10 Itens por página.</a>
-                    <a class="dropdown-item" href="#">20 Itens por página.</a>
-                    <a class="dropdown-item" href="#">30 Itens por página.</a>
-                    <a class="dropdown-item" href="#">40 Itens por página.</a>
-                    <a class="dropdown-item" href="#">50 Itens por página.</a>
+<div class="modal" id="popupEditar" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable modalScreen">
+        
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                
+                <h6 class="modal-title d-flex align-justify-center">Adicionar Produto</h6>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <!-- Área onde estarão as imagens do produto e o Formulario -->
+                <div class="row">
+                    
+                    <div class="col-md-6 mr-5 " style="padding:30px; padding-left: 150px;">
+                        
+                        <!-- Imagem 1 -->
+                        <div class="d-flex justify-content-stard">
+                            
+                            <div class="card mr-2 efeito-grow"
+                            style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
+                            <img src="{{produto.imagem1}}" style="object-fit: cover;"
+                            class="card-img-top h-100 w-100" alt="...">
+                        </div>
+                        
+                        <!-- Imagem 2 -->
+                        <div class="card efeito-grow"
+                        style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
+                        <img src="{{produto.imagem2}}" style="object-fit: cover;"
+                        class="card-img-top h-100 w-100" alt="...">
+                    </div>
+                    
+                    <!-- Imagem 3 -->
+                    <div class="card efeito-grow"
+                    style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
+                    <img src="{{produto.imagem3}}" style="object-fit: cover;"
+                    class="card-img-top h-100 w-100" alt="...">
                 </div>
             </div>
-            <button type="button" class="btn btn-light">Ver todos</button>
-        </article>
-
-    </main>
-
-        <div class="modal" id="popupEditar" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-scrollable modalScreen">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h6 class="modal-title d-flex align-justify-center">Adicionar Produto</h6>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+            <!-- Imagem Previa -->
+            <div class="card mt-3"
+            style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
+            <img src="{{produto.imagem1}}" style="object-fit: cover;"
+            class="card-img-top h-100 w-100" alt="...">
+        </div>
+        
+        <article class=" collapseModal mt-5" style="width: 108%;">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link btnCollapse" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            Ver tabela de medidas
                         </button>
+                    </h5>
+                </div>
+                
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                data-parent="#accordion">
+                <div class="card-body">
+                    <nav class="nav_tabs">
+                        <ul class="container">
+                            <li>
+                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                                checked>
+                                <label for="tab1" class="tab_label">Tabela de
+                                    Medidas</label>
+                                    <div class="tab-content">
+                                        <article>
+                                            <img class="medida"
+                                            src="../../assets/img/icon/tab num.PNG/"
+                                            alt="">
+                                        </article>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="tabs" class="rd_tab"
+                                    id="tab2">
+                                    <label for="tab2" class="tab_label">Como Medir</label>
+                                    <div class="tab-content">
+                                        <article>
+                                            <img class="medida"
+                                            src="../../assets/img/icon/tab med.PNG"
+                                            alt="">
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="modal-body">
-
-                        <!-- Área onde estarão as imagens do produto e o Formulario -->
-                        <div class="row">
-
-                            <div class="col-md-6 mr-5 " style="padding:30px; padding-left: 150px;">
-
-                                <!-- Imagem 1 -->
-                                <div class="d-flex justify-content-stard">
-
-                                    <div class="card mr-2 efeito-grow"
-                                        style="background-color:  #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="{{produto.imagem1}}" style="object-fit: cover;"
-                                            class="card-img-top h-100 w-100" alt="...">
-                                    </div>
-
-                                    <!-- Imagem 2 -->
-                                    <div class="card efeito-grow"
-                                        style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px;">
-                                        <img src="{{produto.imagem2}}" style="object-fit: cover;"
-                                            class="card-img-top h-100 w-100" alt="...">
-                                    </div>
-
-                                    <!-- Imagem 3 -->
-                                    <div class="card efeito-grow"
-                                        style="background-color: #858382; width: 25%; height: 150px; border-radius: 5px; margin-left: 10px;">
-                                        <img src="{{produto.imagem3}}" style="object-fit: cover;"
-                                            class="card-img-top h-100 w-100" alt="...">
-                                    </div>
-                                </div>
-                                <!-- Imagem Previa -->
-                                <div class="card mt-3"
-                                    style="  width: 500px; height: 600px; background-color: #858382; border-radius: 5px;">
-                                    <img src="{{produto.imagem1}}" style="object-fit: cover;"
-                                        class="card-img-top h-100 w-100" alt="...">
-                                </div>
-
-                                <article class=" collapseModal mt-5" style="width: 108%;">
-                                    <div id="accordion">
-                                        <div class="card">
-                                            <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link btnCollapse" data-toggle="collapse"
-                                                        data-target="#collapseOne" aria-expanded="false"
-                                                        aria-controls="collapseOne">
-                                                        Ver tabela de medidas
-                                                    </button>
-                                                </h5>
-                                            </div>
-
-                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <nav class="nav_tabs">
-                                                        <ul class="container">
-                                                            <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
-                                                                    checked>
-                                                                <label for="tab1" class="tab_label">Tabela de
-                                                                    Medidas</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab num.PNG/"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <input type="radio" name="tabs" class="rd_tab"
-                                                                    id="tab2">
-                                                                <label for="tab2" class="tab_label">Como Medir</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab med.PNG"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-
-                            </div>
-
-                            <!--============================================== Formularios ================================================-->
-
-                            <div class="caixa-formulario col-md-5 p-3 ml-4">
-
-                                <!--Campo Texto -->
-                                <div>
-
-                                    <!-- Nome do Produto -->
-                                    <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required
-                                            [(ngModel)]="produto.nomeProduto">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">Nome do Produto</label>
-                                    </div>
-
-                                    <!-- Descrição do Produto -->
-                                    <div class="caixa-formulario">
-                                        <div class="form-group d-flex justify-content-center">
-                                            <textarea class="form-control formulario w-100" rows="6"
-                                                style="width: 100pxg; height: 100px; resize: none;" required
-                                                [(ngModel)]="produto.descricao"></textarea>
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">Descrição do Produto</label>
-                                        </div>
-                                    </div>
-
-                                    <!-- Tipo de Tecido do Produto -->
-                                    <div class="modalForm form-group d-flex justify-content-center">
-                                        <input class="form-control w-100 formulario " required
-                                            [(ngModel)]="produto.material">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="labelModal col-form-label">Tipo de tecido</label>
-                                    </div>
-
-                                    <!-- Preço do produto -->
-                                    <div class="modalForm input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text formulario">R$</span>
-                                        </div>
-
-                                        <input type="text" class="form-control formulario precoFormulario" required
-                                            aria-label="Quantia" [(ngModel)]="produto.preco">
-                                        <span class="linhaSpanModal"></span>
-                                        <label class="col-form-label precoLabel ">Preço</label>
-                                        <div class="input-group-append">
-                                        </div>
-                                    </div>
-
-                                    <!-- Quantidade e Categoria -->
-                                    <article class="modalForm d-flex justify-content-start mt-5">
-                                        <!-- Quantidade -->
-                                        <div class="modalForm form-group  w-60">
-                                            <input type="text" class="form-control formulario" required>
-                                            <span class="linhaSpanModal qtLinha"></span>
-                                            <label class="labelModal col-form-label">Quantidade</label>
-                                        </div>
-                                        <!-- Categoria  -->
-                                        <select class="custom-select custom-select-sm btn btn-outline-dark"
-                                            id="selectCategoria">
-                                            <option selected disabled>Categoria</option>
-                                            <ng-container *ngFor="let categoria of listaCategorias">
-                                                <option value="{{categoria.nomecategoria}}">{{categoria.nomecategoria}}
-                                                </option>
-                                            </ng-container>
-                                        </select>
-
-                                    </article>
-
-                                    <!-- Imagem 01 Produto -->
-                                    <article class="modalForm d-flex justify-content-center mt-5">
-
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" minlength="4"
-                                                required [(ngModel)]="produto.imagem1">
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da primeira imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-
-                                    </article>
-
-                                    <!-- Imagem 02 Produto-->
-                                    <article class="modalForm d-flex justify-content-center">
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" minlength="4"
-                                                required [(ngModel)]="produto.imagem2">
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da segunda imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-                                    </article>
-
-                                    <!-- Imagem 03 Produto -->
-                                    <article class="modalForm d-flex justify-content-center mt-5">
-
-                                        <div class="modalForm form-group d-flex justify-content-center w-100">
-                                            <input type="text" class="form-control formulario w-100" minlength="4"
-                                                required [(ngModel)]="produto.imagem3">
-                                            <span class="linhaSpanModal"></span>
-                                            <label class="labelModal col-form-label">URL da terceira imagem</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
-                                        </div>
-
-                                    </article>
-
-                                </div>
-
-                                <!-- Cores de roupas-->
-                                <article>
-                                    <h6>Cores disponiveis</h6>
-                                    <hr style="width: 300px;">
-
-                                    <div>
-                                        <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
-                                            aria-label="Toolbar with button groups">
-
-                                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color: black;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color: white;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:red ;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:blue ;"></button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
-                                                <button type="button" class="corRoupa btn btn-outline-info"
-                                                    style="background-color:yellow ;"></button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!-- Tamanhos de roupas -->
-                                <article>
-                                    <h6>Tamanos disponiveis</h6>
-                                    <hr style="width: 300px;">
-
-                                    <div>
-                                        <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
-                                            aria-label="Toolbar with button groups">
-
-                                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">PP</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">P</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">M</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">G</button>
-                                            </div>
-                                            <div class="btn-group mr-2" role="group" aria-label="Fifth group">
-                                                <button type="button" class="numRoupa btn btn-outline-dark">GG</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!--Modal Tabela de Medidas -->
-                                <article>
-                                    <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Tabela de Medidas</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Fechar">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <!-- Tabela de Medidas -->
-                                                    <nav class="nav_tabs">
-                                                        <ul class="container">
-                                                            <li>
-                                                                <input type="radio" id="tab1" class="rd_tab" name="tabs"
-                                                                    checked>
-                                                                <label for="tab1" class="tab_label">Tabela de
-                                                                    Medidas</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab num.PNG/"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <input type="radio" name="tabs" class="rd_tab"
-                                                                    id="tab2">
-                                                                <label for="tab2" class="tab_label">Como Medir</label>
-                                                                <div class="tab-content">
-                                                                    <article>
-                                                                        <img class="medida"
-                                                                            src="../../assets/img/icon/tab med.PNG"
-                                                                            alt="">
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!-- Botão Salvar e Fechar -->
-                                <div>
-                                    <div class="modal-footer justify-content-center mt-5">
-                                        <button type="button" class="btn btn-outline-danger" style="width: 20%;"
-                                            data-dismiss="modal">Fechar</button>
-                                        <button class=" btn btn-outline-dark" style="width: 30%; border-color: #71f6a6;"
-                                            (click)="publicar(produto)" data-dismiss="modal">Salvar</button>
-                                    </div>
-                                </div>
-                                <!-- Fim Botão Salvar -->
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
+    </article>
+    
+    
+</div>
+
+<!--============================================== Formularios ================================================-->
+
+<div class="caixa-formulario col-md-5 p-3 ml-4">
+    
+    <!--Campo Texto -->
+    <div>
+        
+        <!-- Nome do Produto -->
+        <div class="modalForm form-group d-flex justify-content-center">
+            <input class="form-control w-100 formulario " required
+            [(ngModel)]="produto.nomeProduto">
+            <span class="linhaSpanModal"></span>
+            <label class="labelModal col-form-label">Nome do Produto</label>
+        </div>
+        
+        <!-- Descrição do Produto -->
+        <div class="caixa-formulario">
+            <div class="form-group d-flex justify-content-center">
+                <textarea class="form-control formulario w-100" rows="6"
+                style="width: 100pxg; height: 100px; resize: none;" required
+                [(ngModel)]="produto.descricao"></textarea>
+                <span class="linhaSpanModal"></span>
+                <label class="labelModal col-form-label">Descrição do Produto</label>
+            </div>
+        </div>
+        
+        <!-- Tipo de Tecido do Produto -->
+        <div class="modalForm form-group d-flex justify-content-center">
+            <input class="form-control w-100 formulario " required
+            [(ngModel)]="produto.material">
+            <span class="linhaSpanModal"></span>
+            <label class="labelModal col-form-label">Tipo de tecido</label>
+        </div>
+        
+        <!-- Preço do produto -->
+        <div class="modalForm input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text formulario">R$</span>
+            </div>
+            
+            <input type="text" class="form-control formulario precoFormulario" required
+            aria-label="Quantia" [(ngModel)]="produto.preco">
+            <span class="linhaSpanModal"></span>
+            <label class="col-form-label precoLabel ">Preço</label>
+            <div class="input-group-append">
+            </div>
+        </div>
+        
+        <!-- Quantidade e Categoria -->
+        <article class="modalForm d-flex justify-content-start mt-5">
+            <!-- Quantidade -->
+            <div class="modalForm form-group  w-60">
+                <input type="text" class="form-control formulario" required>
+                <span class="linhaSpanModal qtLinha"></span>
+                <label class="labelModal col-form-label">Quantidade</label>
+            </div>
+            <!-- Categoria  -->
+            <select class="custom-select custom-select-sm btn btn-outline-dark"
+            id="selectCategoria">
+            <option selected disabled>Categoria</option>
+            <ng-container *ngFor="let categoria of listaCategorias">
+                <option value="{{categoria.nomecategoria}}">{{categoria.nomecategoria}}
+                </option>
+            </ng-container>
+        </select>
+        
+    </article>
+    
+    <!-- Imagem 01 Produto -->
+    <article class="modalForm d-flex justify-content-center mt-5">
+        
+        
+        <div class="modalForm form-group d-flex justify-content-center w-100">
+            <input type="text" class="form-control formulario w-100" minlength="4"
+            required [(ngModel)]="produto.imagem1">
+            <span class="linhaSpanModal"></span>
+            <label class="labelModal col-form-label">URL da primeira imagem</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+        </div>
+        
+        
+    </article>
+    
+    <!-- Imagem 02 Produto-->
+    <article class="modalForm d-flex justify-content-center">
+        
+        <div class="modalForm form-group d-flex justify-content-center w-100">
+            <input type="text" class="form-control formulario w-100" minlength="4"
+            required [(ngModel)]="produto.imagem2">
+            <span class="linhaSpanModal"></span>
+            <label class="labelModal col-form-label">URL da segunda imagem</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+        </div>
+        
+    </article>
+    
+    <!-- Imagem 03 Produto -->
+    <article class="modalForm d-flex justify-content-center mt-5">
+        
+        <div class="modalForm form-group d-flex justify-content-center w-100">
+            <input type="text" class="form-control formulario w-100" minlength="4"
+            required [(ngModel)]="produto.imagem3">
+            <span class="linhaSpanModal"></span>
+            <label class="labelModal col-form-label">URL da terceira imagem</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark ml-1">Adicionar</button>
+        </div>
+        
+    </article>
+    
+</div>
+
+<!-- Cores de roupas-->
+<article>
+    <h6>Cores disponiveis</h6>
+    <hr style="width: 300px;">
+    
+    <div>
+        <div class="btn-toolbar d-flex justify-content-center" role="toolbar"
+        aria-label="Toolbar with button groups">
+        
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="corRoupa btn btn-outline-info"
+            style="background-color: black;"></button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <button type="button" class="corRoupa btn btn-outline-info"
+            style="background-color: white;"></button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Third group">
+            <button type="button" class="corRoupa btn btn-outline-info"
+            style="background-color:red ;"></button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+            <button type="button" class="corRoupa btn btn-outline-info"
+            style="background-color:blue ;"></button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+            <button type="button" class="corRoupa btn btn-outline-info"
+            style="background-color:yellow ;"></button>
+        </div>
+        
+    </div>
+</div>
+</article>
+
+<!-- Tamanhos de roupas -->
+<article>
+    <h6>Tamanos disponiveis</h6>
+    <hr style="width: 300px;">
+    
+    <div>
+        <div class="btn-toolbar d-flex justify-content-center " role="toolbar"
+        aria-label="Toolbar with button groups">
+        
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="numRoupa btn btn-outline-dark">PP</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <button type="button" class="numRoupa btn btn-outline-dark">P</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Third group">
+            <button type="button" class="numRoupa btn btn-outline-dark">M</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+            <button type="button" class="numRoupa btn btn-outline-dark">G</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Fifth group">
+            <button type="button" class="numRoupa btn btn-outline-dark">GG</button>
+        </div>
+        
+    </div>
+</div>
+</article>
+
+<!--Modal Tabela de Medidas -->
+<article>
+    <div class="modal" id="popupTabela" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tabela de Medidas</h5>
+                    <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Tabela de Medidas -->
+                <nav class="nav_tabs">
+                    <ul class="container">
+                        <li>
+                            <input type="radio" id="tab1" class="rd_tab" name="tabs"
+                            checked>
+                            <label for="tab1" class="tab_label">Tabela de
+                                Medidas</label>
+                                <div class="tab-content">
+                                    <article>
+                                        <img class="medida"
+                                        src="../../assets/img/icon/tab num.PNG/"
+                                        alt="">
+                                    </article>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="tabs" class="rd_tab"
+                                id="tab2">
+                                <label for="tab2" class="tab_label">Como Medir</label>
+                                <div class="tab-content">
+                                    <article>
+                                        <img class="medida"
+                                        src="../../assets/img/icon/tab med.PNG"
+                                        alt="">
+                                    </article>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Botão Salvar e Fechar -->
+<div>
+    <div class="modal-footer justify-content-center mt-5">
+        <button type="button" class="btn btn-outline-danger" style="width: 20%;"
+        data-dismiss="modal">Fechar</button>
+        <button class=" btn btn-outline-dark" style="width: 30%; border-color: #71f6a6;"
+        (click)="publicar(produto)" data-dismiss="modal">Salvar</button>
+    </div>
+</div>
+<!-- Fim Botão Salvar -->
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
 
 
 
