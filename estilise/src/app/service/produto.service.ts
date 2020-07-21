@@ -40,4 +40,7 @@ export class ProdutoService {
   getByIdUsuario(idUsuario:number) {
     return this.http.get(`http://localhost:8080/produtos/idusuario/${idUsuario}`, this.token)
   }
+  findByCategoria(categoria:String) {
+    return this.http.get(`http://localhost:8080/produtos/categoria/${categoria}`, this.token)
+  }
 }

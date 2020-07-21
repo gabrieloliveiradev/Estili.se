@@ -71,6 +71,7 @@ export class PerfilVendedorComponent implements OnInit {
       this.fecharPopup() 
     }
   }
+
   findAllProduto(){
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
       this.listaProduto = resp;
@@ -95,6 +96,7 @@ export class PerfilVendedorComponent implements OnInit {
       this.listaVendedor=resp
     })
   }
+  
   findByIdUsuario (id:number) {
     this.usuarioService.getByIdUsuario(id).subscribe((resp:Usuario)=>{
       this.usuario=resp

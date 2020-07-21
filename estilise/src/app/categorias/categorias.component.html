@@ -1,7 +1,7 @@
 <main class="container-fluid" >
     <h1 class="text-center my-5" style="font-family: Roboto Thin;">Categorias</h1>
     <div class="row justify-content-center">
-        <section class=" mb-5" *ngFor="let categoria of listaCategorias">
+        <section class=" mb-5" *ngFor="let categoria of listaCategorias" (click)="findByIdCategoria(categoria.idcategoria)">
             <a [routerLink]="['/produtos', categoria.nomecategoria]" class="text-decoration-none">
                 <div id="categoria-card" class="col-3 d-flex flex-column align-items-center justify-content-center mx-3">
                     <img class="" src="{{categoria.imagemcategoria}}" alt="" style="width: 100%; height: 100%; object-fit: cover; max-width: 300px; max-height: 300px;">

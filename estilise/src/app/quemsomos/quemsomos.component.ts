@@ -17,8 +17,8 @@ export class QuemsomosComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const element = document.querySelector('h1');
-    const element2 = document.querySelector('p');
+    const element = document.getElementById('tituloHeader');
+    const element2 = document.getElementById('texto');
     this.digitaTexto(element)
     this.digitaTexto2(element2)
   }

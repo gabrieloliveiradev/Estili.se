@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'politica', component: PoliticaComponent},
   { path: 'contato', component: ContatoComponent},
   { path: 'produtos', component: ProdutoComponent},
+  { path: 'produtos/:nomeCategoria', component: ProdutoComponent},
   { path: 'categorias', component: CategoriasComponent },
   { path: 'profissionais', component: ProfissionaisComponent },
   { path: 'users', component: ListaUsuariosComponent},

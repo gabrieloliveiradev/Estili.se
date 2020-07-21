@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/produto';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Usuario } from '../model/usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -31,10 +31,16 @@ export class ProdutoComponent implements OnInit {
   nomeProduto: string
   pesquisa: boolean = false
   lista:boolean = false
-  constructor(private produtoService: ProdutoService, private router: Router,public authService: AuthService) { }
+  constructor(private produtoService: ProdutoService, private router: Router,public authService: AuthService, private route: ActivatedRoute) { }
   
   ngOnInit() {
-    this.findAllProdutos()
+    let nomeCategoria = this.route.snapshot.params['nomeCategoria']
+    this.findByCategoria(nomeCategoria)
+    if(nomeCategoria == undefined || nomeCategoria == "undefined"){
+      this.findAllProdutos()
+      // alert(nomeCategoria)
+    }
+    
     let item:string = localStorage.getItem('deletarOk')
     if(item == "true"){
       this.alerta = true
@@ -43,85 +49,90 @@ export class ProdutoComponent implements OnInit {
         location.assign('/produtos')
       }, 3000)
     }
+    
   }
-
+  
   findAllCarrinho(){
     this.produtoService.getAllCarrinho().subscribe((resp: Produto[])=>{
       this.listaCarrinho = resp;
     });
   }
-
-
-findAllProdutos(){
-  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-    this.listaProdutos = resp;
-  });
-}
-fecharPopup(){
-  let fechar = document.getElementById('popupDescricao')
-  fechar.removeAttribute('data-target')
-  let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
-  teste.style.display = 'none'
-}
-acesso(){
-  let token = localStorage.getItem('token')
-  if(token == null){
-    alert('Faça o login antes de acessar os produtos !!!')
-    this.login = true
-    this.fecharPopup()
-    this.router.navigate(['/home'])
-    this.mostrarPopupLogin = true
-  }else{
-    let popupLoginFechar = document.getElementById('popupdeLogin')
-    popupLoginFechar.removeAttribute('data-target')
-    this.mostrarPopupLogin = false
+  
+  findByCategoria (categoria:String) {
+    this.produtoService.findByCategoria(categoria).subscribe((resp:Produto[])=>{
+      this.listaProdutos=resp
+    })
   }
-}
-
-// ---------------- Ancora
-ancora(){
-  let ancora = document.querySelector("#ancoradoNoArticle")
-  if (ancora){
-    ancora.scrollIntoView({ behavior: 'smooth'})
+  findAllProdutos(){
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+      this.listaProdutos = resp;
+    });
+  }
+  fecharPopup(){
+    let fechar = document.getElementById('popupDescricao')
+    fechar.removeAttribute('data-target')
+    let teste = ((<HTMLInputElement>document.querySelector(".modal-backdrop.show")))
+    teste.style.display = 'none'
+  }
+  acesso(){
+    let token = localStorage.getItem('token')
+    if(token == null){
+      alert('Faça o login antes de acessar os produtos !!!')
+      this.login = true
+      this.fecharPopup()
+      this.router.navigate(['/home'])
+      this.mostrarPopupLogin = true
+    }else{
+      let popupLoginFechar = document.getElementById('popupdeLogin')
+      popupLoginFechar.removeAttribute('data-target')
+      this.mostrarPopupLogin = false
+    }
   }
   
-}
-publicarCarrinho(produto: Produto){
-  produto.carrinho = localStorage.getItem("carrinho")
-  this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
-    this.produto = resp
-    alert("Produto adicionado ao carrinho")
-  });
-}
-publicar(){  
-  this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
-    // resp.nomeUsuario = localStorage.getItem('nome')
-    this.produto = resp;
-    location.assign('/produtos')
-  });
-  this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
-    this.produto.nomeUsuario = localStorage.getItem('nome')
-    alert("Produto adicionado ao carrinho")
-  });
-}
-findAllProduto(){
-  this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-    this.listaProdutos = resp;
-  });
-}
-findByIdProduto(idProduto: number){
-  this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
-    this.produto = resp;
-  });
-}
-
-pesquisarProduto(){
-  this.produtoService.findBynome(this.nomeProduto).subscribe((resp: Produto[]) => {
-    this.listaProdutos = resp
-    this.pesquisa = true
-  }, err =>{
-    console.log(err)
+  // ---------------- Ancora
+  ancora(){
+    let ancora = document.querySelector("#ancoradoNoArticle")
+    if (ancora){
+      ancora.scrollIntoView({ behavior: 'smooth'})
+    }
+    
   }
-  )
-}
+  publicarCarrinho(produto: Produto){
+    produto.carrinho = localStorage.getItem("carrinho")
+    this.produtoService.putProduto(produto).subscribe((resp: Produto)=>{
+      this.produto = resp
+      alert("Produto adicionado ao carrinho")
+    });
+  }
+  publicar(){  
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+      // resp.nomeUsuario = localStorage.getItem('nome')
+      this.produto = resp;
+      location.assign('/produtos')
+    });
+    this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
+      this.produto.nomeUsuario = localStorage.getItem('nome')
+      alert("Produto adicionado ao carrinho")
+    });
+  }
+  findAllProduto(){
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
+      this.listaProdutos = resp;
+    });
+  }
+  findByIdProduto(idProduto: number){
+    this.produtoService.getByIdProduto(idProduto).subscribe((resp: Produto)=>{
+      this.produto = resp;
+    });
+  }
+  
+  pesquisarProduto(){
+    this.produtoService.findBynome(this.nomeProduto).subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+      this.pesquisa = true
+    }, err =>{
+      console.log(err)
+    }
+    )
+  }
 }

@@ -17,7 +17,6 @@ export class CategoriasComponent implements OnInit {
 
   listaCategorias: Categoria[]
   categoria: Categoria = new Categoria
-
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(){
@@ -27,6 +26,12 @@ export class CategoriasComponent implements OnInit {
   findAllCategorias(){
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[])=>{
       this.listaCategorias = resp;
+    });
+  }
+  findByIdCategoria(idCategoria: number){
+    this.categoriaService.getByIdCategoria(idCategoria).subscribe((resp: Categoria)=>{
+      this.categoria = resp;
+      alert(this.categoria.idcategoria)
     });
   }
 }

@@ -64,7 +64,6 @@
                                             Sair
                                         </p>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -76,9 +75,9 @@
                             <div class="dropdown">
                                 <div class="dropdown-menu dropdown-menu-right border-0 dropPerfilMenu " style="width: 287px; background-color: white; margin-top: 35px;" aria-labelledby="dropdownMenuButton">
                                     <div class="d-flex justify-content-between align-items-center p-3  list-group-item-action dropMenu" id="list-profile-list" style=" outline: 0; border: 0;">
-                                        <p class="w-100 pl-2 slist-group-item "  style="font-size: 14px;" id="carrinhoStatus">Não há itens</p>
+                                        <p class="w-100 pl-2 slist-group-item "  style="font-size: 14px;" >Não há itens</p>
                                         <div class="rounded align-items-center text-center mr-1 text-light d-flex justify-content-center" style="width: 25px; height: 20px; background-color: #dad4d4;">
-                                            <p style="font-size: small;" id="carrinhoNumero">0</p>
+                                            <p style="font-size: small;" >0</p>
                                         </div>
                                     </div>
                                     <hr class="mx-3" style="border-color: #E5E5E5;">
@@ -127,19 +126,19 @@
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
         
         <ul class="navbar-nav ml-auto d-md-flex d-none justify-content-center align-items-center mg-md-transparent">
-            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar">
                 <a class="nav-link" routerLink="/categorias">CATEGORIAS</a>
             </li>
-            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar">
                 <a class="nav-link" routerLink="/profissionais">PROFISSIONAIS</a>
             </li>
-            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar">
                 <a class="nav-link" routerLink="/produtos">PRODUTOS</a>
             </li>
-            <li class="nav-item d-flex itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item d-flex itens-navegar">
                 <a class="nav-link" routerLink="/quemsomos">SOBRE</a>
             </li>
-            <li class="nav-item itens-navegar" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <li class="nav-item itens-navegar">
                 <a class="nav-link" routerLink="/contato">CONTATO</a>
             </li>
             <div *ngIf="auth.btnSair()">
